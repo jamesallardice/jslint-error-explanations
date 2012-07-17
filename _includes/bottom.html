@@ -1,0 +1,23 @@
+			<hr class="dark">
+			<div class="row">
+				<div class="span12">
+	    			JSLint Error Explanations is brought to you by <a href="http://www.jamesallardice.com/">James Allardice</a>. Copyright &copy; 2012.
+				</div>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+		<script src="/assets/codemirror/codemirror.js"></script>
+		<script src="/assets/codemirror/javascript.js"></script>
+		<script>
+			var codeMirrorOpts = {
+				indentWithTabs: true
+			};
+			$(function () {
+				$("textarea").each(function () {
+					CodeMirror.fromTextArea(this);
+				});
+			});
+		</script>
+	</body>
+</html>
