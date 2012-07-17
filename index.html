@@ -1,0 +1,15 @@
+---
+layout: default
+title: Making Your Feelings Better
+---
+<h2 class="section-header">JSLint Errors</h2>
+<ul id="posts">
+    {% for post in site.posts %}
+    <li>
+        <h3><a href="{{ post.url }}/">{{ post.title }}</a></h3>
+        <p>
+            {{ post.content | strip_html | strip_newlines | truncatewords:50 }}
+        </p>
+    </li>
+    {% endfor %}
+</ul>
