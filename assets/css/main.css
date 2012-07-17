@@ -115,6 +115,24 @@ div.jslint {
     box-shadow: 3px 3px 3px 2px #999;
     margin-bottom: 15px;
 }
+div.jslint-result-error {
+    background-color: #900;
+    margin-left: -20px;
+    padding: 5px 0 5px 10px;
+    border-radius: 0 10px 0 0;
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 1px 0 1px 1px #900;
+}
+div.jslint-result-success {
+    background-color: #090;
+    margin-left: -20px;
+    padding: 5px 0 5px 10px;
+    border-radius: 0 10px 0 0;
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 1px 0 1px 1px #090;
+}
 p.standout {
     border: 1px dashed #ccc;
     background-color: #f8f8f8;

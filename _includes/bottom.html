@@ -18,6 +18,8 @@
 						result = JSLINT(editor.getValue());
 					outputHolder.find(".jslint-result").text(function () {
 						return result ? "JSLint found no errors." : "JSLint found errors.";
+					}).removeClass("jslint-result-success jslint-result-error").addClass(function () {
+						return result ? "jslint-result-success" : "jslint-result-error";
 					});
 					//console.log(JSLINT(editor.getValue()));
 				}
