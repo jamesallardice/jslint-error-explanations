@@ -1,0 +1,121 @@
+@font-face {
+    font-family: 'UbuntuRegular';
+    src: url('/assets/fonts/Ubuntu-R.eot');
+    src: url('/assets/fonts/Ubuntu-R.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/Ubuntu-R.woff') format('woff'),
+         url('/assets/fonts/Ubuntu-R.ttf') format('truetype'),
+         url('/assets/fonts/Ubuntu-R.svg#UbuntuRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    margin-top: 20px;
+    padding-bottom:10px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: UbuntuRegular, Arial;
+}
+h1 {
+    font-size: 48px;
+}
+h2 {
+    font-size: 22px;
+    font-weight: 100;
+}
+h4 {
+    font-size: 14px;
+    font-weight: 100;
+}
+.grey {
+    color: #888;
+}
+.bold {
+    font-weight: bold;
+}
+h1 a {
+    color: inherit;
+}
+h1 a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+h2 .header-sub {
+    font-size: 14px;
+}
+hr.dark {
+    border-top: 1px solid #ddd;
+    margin-top: 7px;
+}
+ul.spaced li {
+    padding-bottom: 15px;
+}
+.main-header {
+    padding-bottom: 20px;
+}
+h2.section-header {
+    padding-bottom: 10px;
+}
+img.profile-mini {
+    width: 48px;
+    height: 48px;
+}
+#intro-mini {
+    cursor: pointer;
+}
+#intro-mini:hover #intro-hint a {
+    color: #005580;
+    text-decoration: underline;
+}
+#intro-hint {
+    line-height: 48px;
+}
+#social-links {
+    list-style-type: none;
+    margin-left: 0;
+}
+#social-links li {
+    padding: 0;
+    margin: 0;
+    line-height: 24px;
+}
+#social-links li img {
+    width:24px;
+    height:24px;
+}
+#posts {
+    list-style-type: none;
+    margin-left: 0;
+}
+#posts li {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0 10px 0;
+}
+#posts li:first-child {
+    padding-top: 0;
+}
+#posts h3 {
+    font-family: UbuntuRegular, Arial;
+    font-size: 16px;
+    font-weight: normal;
+}
+#posts div.metadata {
+    color: #888;
+    line-height: 30px;
+}
+#posts div.tags {
+    text-align: right;
+}
+p.standout {
+    border: 1px dashed #ccc;
+    background-color: #f8f8f8;
+    padding: 8px;
+}
+span.code {
+    font-family: Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace, serif;
+}
+#github {
+    position: fixed;
+    top: 0;
+    left: 0;
+    border: 0;
+}
