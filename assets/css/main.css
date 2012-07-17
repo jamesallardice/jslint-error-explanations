@@ -105,6 +105,16 @@ img.profile-mini {
 #posts div.tags {
     text-align: right;
 }
+div.jslint {
+    border: 1px solid #ccc;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow: 3px 3px 3px 2px #999;
+    -webkit-box-shadow: 3px 3px 3px 2px #999;
+    box-shadow: 3px 3px 3px 2px #999;
+    margin-bottom: 15px;
+}
 p.standout {
     border: 1px dashed #ccc;
     background-color: #f8f8f8;

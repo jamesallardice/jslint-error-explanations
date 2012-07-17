@@ -6,12 +6,13 @@
   position: relative;
   /* This prevents unwanted scrollbars from showing up on the body and wrapper in IE. */
   overflow: hidden;
+  border-right: 1px solid #999;
 }
 
 .CodeMirror-scroll {
   overflow-x: auto;
-  overflow-y: hidden;
-  height: 300px;
+  overflow-y: visible;
+  height: auto;
   /* This is needed to prevent an IE[67] bug where the scrolled content
      is visible outside of the scrolling box. */
   position: relative;
