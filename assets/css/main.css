@@ -135,7 +135,15 @@ div.jslint-result-success {
 }
 div.jslint-messages {
     margin-left: -20px;
+    margin-top: -3px;
     padding: 5px 0 5px 10px;
+}
+div.jslint-messages p {
+    margin: 0 0 0 -10px;
+    padding: 4px 0 4px 10px;
+}
+div.jslint-messages p:nth-child(odd) {
+    background-color: #eee;
 }
 p.standout {
     border: 1px dashed #ccc;
