@@ -22,9 +22,21 @@ h2 {
     font-size: 22px;
     font-weight: 100;
 }
+h3 {
+    font-size: 16px;
+    font-weight: 100;
+}
 h4 {
     font-size: 14px;
     font-weight: 100;
+}
+blockquote {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: #f6f6f6;
+}
+blockquote + p {
+    margin-top: -4px;
 }
 .grey {
     color: #888;
