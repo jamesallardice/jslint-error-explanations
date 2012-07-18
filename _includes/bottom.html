@@ -19,6 +19,7 @@
 					result = JSLINT(editor.getValue()),
 					errors = JSLINT.errors,
 					numErrors = errors.length,
+					output,
 					i;
 				outputHolder.find(".jslint-result").text(function () {
 					return result ? "JSLint found no errors." : "JSLint found errors.";
@@ -26,14 +27,22 @@
 					return result ? "jslint-result-success" : "jslint-result-error";
 				});
 				messageHolder.empty();
+				console.log(errors);
 				for (i = 0; i < numErrors; i++) {
-					messageHolder.append("<p>" + errors[i].reason + "</p>");
+					output = "";
+					if (errors[i]) {
+						output += "<p><span>Line " + errors[i].line + ":</span> ";
+						output += errors[i].reason;
+						output += "</p>"
+						messageHolder.append(output);
+					}
 				}
-				codeMirror.height(Math.max(codeMirror.height(), outputHolder.height()));
+				codeMirror.height(Math.max(codeMirror.find(".CodeMirror-scroll").height(), outputHolder.height()));
 			}
 
 			var codeMirrorOpts = {
 				indentWithTabs: true,
+				indentUnit: 4,
 				onKeyEvent: runLint
 			};
 

@@ -141,6 +141,9 @@ div.jslint-messages p {
     margin: 0 0 0 -10px;
     padding: 4px 0 4px 10px;
 }
+div.jslint-messages p span {
+    color: #777;
+}
 div.jslint-messages p:nth-child(odd) {
     background-color: #eee;
 }
