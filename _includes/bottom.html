@@ -23,6 +23,7 @@
 				}).removeClass("jslint-result-success jslint-result-error").addClass(function () {
 					return result ? "jslint-result-success" : "jslint-result-error";
 				});
+				messageHolder.empty();
 				for (i = 0; i < numErrors; i++) {
 					messageHolder.append("<p>" + errors[i].reason + "</p>");
 				}
