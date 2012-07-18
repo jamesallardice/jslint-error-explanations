@@ -12,7 +12,9 @@
 		<script src="/assets/codemirror/javascript.js"></script>
 		<script>
 			function runLint(editor) {
-				var outputHolder = $(editor.getInputField()).closest(".jslint").find(".jslint-output"),
+				var editorInput = $(editor.getInputField()),
+					codeMirror = editorInput.closest(".CodeMirror"),
+					outputHolder = editorInput.closest(".jslint").find(".jslint-output"),
 					messageHolder = outputHolder.find(".jslint-messages"),
 					result = JSLINT(editor.getValue()),
 					errors = JSLINT.errors,
@@ -27,6 +29,7 @@
 				for (i = 0; i < numErrors; i++) {
 					messageHolder.append("<p>" + errors[i].reason + "</p>");
 				}
+				codeMirror.height(Math.max(codeMirror.height(), outputHolder.height()));
 			}
 
 			var codeMirrorOpts = {

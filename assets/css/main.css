@@ -135,7 +135,6 @@ div.jslint-result-success {
 }
 div.jslint-messages {
     margin-left: -20px;
-    margin-top: -3px;
     padding: 5px 0 5px 10px;
 }
 div.jslint-messages p {
