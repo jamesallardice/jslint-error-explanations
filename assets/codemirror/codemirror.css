@@ -10,7 +10,6 @@
 }
 
 .CodeMirror-scroll {
-  overflow-x: auto;
   overflow-y: visible;
   height: auto;
   /* This is needed to prevent an IE[67] bug where the scrolled content
@@ -55,6 +54,9 @@
   z-index: 10;
   background-color: #f7f7f7;
   border-right: 1px solid #eee;
+  -webkit-border-radius: 10px 0 0 0;
+  -moz-border-radius: 10px 0 0 0;
+  border-radius: 10px 0 0 0;
   min-width: 2em;
   height: 100%;
 }
