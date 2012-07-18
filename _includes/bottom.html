@@ -16,7 +16,8 @@
 					codeMirror = editorInput.closest(".CodeMirror"),
 					outputHolder = editorInput.closest(".jslint").find(".jslint-output"),
 					messageHolder = outputHolder.find(".jslint-messages"),
-					result = JSLINT(editor.getValue()),
+					jslintopts = codeMirror.prev().data("jslintopts") || {},
+					result = JSLINT(editor.getValue(), jslintopts),
 					errors = JSLINT.errors,
 					numErrors = errors.length,
 					output,
@@ -27,7 +28,6 @@
 					return result ? "jslint-result-success" : "jslint-result-error";
 				});
 				messageHolder.empty();
-				console.log(errors);
 				for (i = 0; i < numErrors; i++) {
 					output = "";
 					if (errors[i]) {
