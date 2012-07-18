@@ -11,24 +11,36 @@
 		<script src="/assets/codemirror/codemirror.js"></script>
 		<script src="/assets/codemirror/javascript.js"></script>
 		<script>
+			function runLint(editor) {
+				var outputHolder = $(editor.getInputField()).closest(".jslint").find(".jslint-output"),
+					messageHolder = outputHolder.find(".jslint-messages"),
+					result = JSLINT(editor.getValue()),
+					errors = JSLINT.errors,
+					numErrors = errors.length,
+					i;
+				outputHolder.find(".jslint-result").text(function () {
+					return result ? "JSLint found no errors." : "JSLint found errors.";
+				}).removeClass("jslint-result-success jslint-result-error").addClass(function () {
+					return result ? "jslint-result-success" : "jslint-result-error";
+				});
+				for (i = 0; i < numErrors; i++) {
+					messageHolder.append("<p>" + errors[i].reason + "</p>");
+				}
+			}
+
 			var codeMirrorOpts = {
 				indentWithTabs: true,
-				onKeyEvent: function (editor) {
-					var outputHolder = $(editor.getInputField()).closest(".jslint").find(".jslint-output"),
-						result = JSLINT(editor.getValue());
-					outputHolder.find(".jslint-result").text(function () {
-						return result ? "JSLint found no errors." : "JSLint found errors.";
-					}).removeClass("jslint-result-success jslint-result-error").addClass(function () {
-						return result ? "jslint-result-success" : "jslint-result-error";
-					});
-					//console.log(JSLINT(editor.getValue()));
-				}
+				onKeyEvent: runLint
 			};
+
 			$(function () {
+				var jslintOutputs = $(".jslint-output");
+				jslintOutputs.append("<div class='jslint-result'></div>");
+				jslintOutputs.append("<div class='jslint-messages'></div>");
 				$("textarea").each(function () {
-					CodeMirror.fromTextArea(this, codeMirrorOpts);
+					var mirror = CodeMirror.fromTextArea(this, codeMirrorOpts);
+					runLint(mirror);
 				});
-				$(".jslint-output").append("<div class='jslint-result'></div>");
 			});
 		</script>
 	</body>
