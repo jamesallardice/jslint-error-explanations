@@ -38,10 +38,10 @@
 			};
 
 			$(function () {
-				var jslintOutputs = $(".jslint-output");
-				jslintOutputs.append("<div class='jslint-result'></div>");
-				jslintOutputs.append("<div class='jslint-messages'></div>");
 				$("textarea").each(function () {
+					var $this = $(this);
+					$this.wrap("<div class='row'><div class='jslint span12'><div class='row'><div class='span7'></div></div></div></div>");
+					$this.closest(".row").append("<div class='jslint-output span5'><div class='jslint-result'></div><div class='jslint-messages'></div></div>");
 					var mirror = CodeMirror.fromTextArea(this, codeMirrorOpts);
 					runLint(mirror);
 				});
