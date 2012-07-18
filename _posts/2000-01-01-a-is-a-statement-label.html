@@ -1,30 +1,48 @@
 --- 
-title: "'a' is a statement label"
+title: "'{a}' is a statement label"
 layout: post
 ---
 <p>
-	JSLint will throw the "'a' is a statement label" error when it encounters a reference that shares an identifier with a label defined in the same scope.
+	<h3>When do I get this error?</h3>
 </p>
 <p>
-	Here's some example code:
+	JSLint will throw the "'{a}' is a statement label" error when it encounters <strong>a reference that shares an identifier with a label defined in the same scope</strong>. In the following example there is a variable declared in the global execution context with the identifier <span class="code">x</span>. Inside the <span class="code">test</span> function, there is a <span class="code">for</span> statement with a label that also has the identifier <span class="code">x</span>. JSLint throws the error when we attempt to refer to the <span class="code">x</span> variable in the outer scope:
 </p>
 <textarea>
-var x = 0;
+var x = 0; //Variable with identifier 'x'
 
 function test() {
 	"use strict";
 	var i;
-	x:
+
+x: //Label with identifer 'x'
+
 	for (i = 0; i < 10; i += 1) {
-		x = i;
+
+		x = i; //Reference to 'x' variable in outer scope
+
 		if (i === 5) {
-			break x;
+			break x; //Reference to 'x' label
 		}
 	}
 }
 
-test();
-</textarea>
+test();</textarea>
 <p>
-	Notice the declaration of <span class="code">x</span> in the global execution context (outside of the <span class="code">test</span> function).
+	<h3>Why do I get this error?</h3>
+</p>
+<p>
+	This error is raised to help <strong>improve the readability of your code</strong>. It may be confusing to others (and to you, if you revisit your code some time in the future) to have various references using the same identifier but to refer to completely different things.
+</p>
+<p>
+	However, the code in the example above is valid and will not cause problems in any environment. Read on if you would like to understand the actual behaviour of the code.
+</p>
+<p>
+	The ECMAScript 5 specification states the following (<a href="http://es5.github.com/#x12.12" target="_blank">section &sect;12.12</a>):
+</p>
+<blockquote>
+	The production <em>Identifier : Statement</em> is evaluated by adding <em>Identifier</em> to the label set of <em>Statement</em> and then evaluating <em>Statement</em>.
+</blockquote>
+<p>
+	Every statement has a label set (it's empty by default for most statements, except loops and switch statements which have an implicit label so you can break out of them). When you give a statement a label, the identifier of that label is added to the label set. The label set is completely separate from the variable environment of the scope, so there is no potential for naming conflicts between label identifiers and variable identifiers. Therefore, this JSLint error is designed purely to make your code clearer and easier to follow.
 </p>
