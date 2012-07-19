@@ -1,0 +1,24 @@
+--- 
+title: "Currently, ADsafe does not operate on whole HTML documents. It operates on &lt;div&gt; fragments and .js files"
+layout: post
+---
+<p>
+	<h3>When do I get this error?</h3>
+</p>
+<p>
+	JSLint throws the "Currently, ADsafe does not operate on whole HTML documents. It operates on &lt;div&gt; fragments and .js files" error when the <span class="code">adsafe</span> and <span class="code">fragment</span> options are set to <span class="code">true</span> (they're <span class="code">false</span> by default) and you pass it <strong>an HTML fragment that contains an <span class="code">&lt;html&gt;</span> tag before the opening ADsafe widget <span class="code">&lt;div&gt;</span> tag</strong>. Here's an example:
+</p>
+<textarea data-jslintopts='{ "adsafe": true, "fragment": true }'>
+&lt;html&gt;
+	&lt;div id="WIDGET_"&gt;
+		&lt;script&gt;
+			ADSAFE.go("WIDGET_");
+		&lt;/script&gt;
+	&lt;/div&gt;
+&lt;/html&gt;</textarea>
+<p>
+	<h3>Why do I get this error?</h3>
+</p>
+<p>
+	This error is raised because <strong>JSLint doesn't know how to continue</strong>. Since JSLint is primarily a JavaScript parser, it doesn't expect an HTML fragment by default. By passing the <span class="code">fragment</span> option to JSLint it will look for a specific markup structure, and only that structure. There can be no parent elements in the fragment.
+</p>

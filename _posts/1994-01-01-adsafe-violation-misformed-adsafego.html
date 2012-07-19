@@ -1,0 +1,25 @@
+--- 
+title: "ADsafe violation: Misformed ADSAFE.go"
+layout: post
+---
+<p>
+	<h3>When do I get this error?</h3>
+</p>
+<p>
+	JSLint throws the "ADsafe violation: Misformed ADSAFE.go" error when the <span class="code">adsafe</span> and <span class="code">fragment</span> options are set to <span class="code">true</span> (they're <span class="code">false</span> by default) and <strong>the call to the <span class="code">ADSAFE.go</span> method does not pass the correct argument types</strong>. Here's an example:
+</p>
+<textarea data-jslintopts='{ "adsafe": true, "fragment": true }'>
+&lt;div id="WIDGET_"&gt;
+	&lt;script&gt;
+		ADSAFE.go("WIDGET_");
+	&lt;/script&gt;
+&lt;/div&gt;</textarea>
+<p>
+	<h3>Why do I get this error?</h3>
+</p>
+<p>
+	This error is raised when JSLint encounters code that <strong>violates the rules of the ADsafe subset of JavaScript</strong>. It is a fatal error that signifies a severe problem with ADsafe code and will have to be fixed before your ADsafe code will execute.
+</p>
+<p>
+	The <span class="code">ADSAFE.go</span> method requires two arguments. The first must be the name of the widget, and the second must be a function. If the second argument is not passed in (it is <span class="code">undefined</span>) or is any type other than a function, JSLint will throw this error.
+</p>
