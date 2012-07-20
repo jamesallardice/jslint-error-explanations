@@ -66,7 +66,7 @@ Explanations of all the (sometimes cryptic) error messages thrown by JSLint.
  - 1934-01-01-expected-a-number-between-0-and-1-and-instead-saw-a.html
  - 1933-01-01-expected-an-id-and-instead-saw-a.html
  - 1932-01-01-expected-an-identifier-and-instead-saw-a.html
- - 1931-01-01-expected-an-identifier-and-instead-saw-a-a-reserved-word.html
+ - ~~1931-01-01-expected-an-identifier-and-instead-saw-a-a-reserved-word.html~~
  - 1930-01-01-expected-a-linear-unit-and-instead-saw-a.html
  - 1929-01-01-expected-a-lang-code-and-instead-saw-a.html
  - 1928-01-01-expected-a-css-media-type-and-instead-saw-a.html

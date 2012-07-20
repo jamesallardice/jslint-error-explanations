@@ -162,7 +162,7 @@ p.standout {
     background-color: #f8f8f8;
     padding: 8px;
 }
-span.code {
+.code {
     font-family: Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace, serif;
 }
 #github {

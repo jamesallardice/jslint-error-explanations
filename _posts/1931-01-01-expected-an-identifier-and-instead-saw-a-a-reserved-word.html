@@ -1,0 +1,89 @@
+--- 
+title: "Expected an identifier and instead saw '{a}' (a reserved word)"
+layout: post
+---
+<p>
+	<h3>When do I get this error?</h3>
+</p>
+<p>
+	JSLint will throw the "Expected an identifier and instead saw '{a}' (a reserved word)" error when it expects <strong>a reference to an identifier but finds a keyword that is reserved by the language</strong>. In the following example we attempt to declare a variable with the identifier <span class="code">default</span>, which is a reserved word:
+</p>
+<textarea>
+var default = 10;</textarea>
+<p>
+	<h3>Why do I get this error?</h3>
+</p>
+<p>
+	This error is raised to highlight a <strong>JavaScript syntax error</strong>. Your code will not run if you do not fix this error. Reserved words are special identifiers that are set aside by the ECMAScript specification for special use.
+</p>
+<p>
+	The specification defines three sets of reserved words. The first set is "keywords", which are all used by the current version of the language. Here's the full list (<a href="http://es5.github.com/#x7.6.1.1" target="_blank">ES5 &sect;7.6.1.1</a>):
+</p>
+<table class="table table-striped code">
+	<tr>
+		<td>break</td>
+		<td>case</td>
+		<td>catch</td>
+		<td>continue</td>
+		<td>debugger</td>
+		<td>default</td>
+		<td>delete</td>
+	</tr>
+	<tr>
+		<td>do</td>
+		<td>else</td>
+		<td>finally</td>
+		<td>for</td>
+		<td>function</td>
+		<td>if</td>
+		<td>in</td>
+	</tr>
+	<tr>
+		<td>instanceof</td>
+		<td>new</td>
+		<td>return</td>
+		<td>switch</td>
+		<td>this</td>
+		<td>throw</td>
+		<td>try</td>
+	</tr>
+	<tr>
+		<td>typeof</td>
+		<td>var</td>
+		<td>void</td>
+		<td>while</td>
+		<td colspan="3">with</td>
+	</tr>
+</table>
+<p>
+	The second set is "future reserved words", which are not currently used by the language but are expected to be used in the future. They are reserved now so that future code is backwards compatible. Here's the full list (<a href="http://es5.github.com/#x7.6.1.2" target="_blank">ES5 &sect;7.6.1.2</a>):
+</p>
+<table class="table table-striped code">
+	<tr>
+		<td>class</td>
+		<td>const</td>
+		<td>enum</td>
+		<td>export</td>
+		<td>extends</td>
+		<td>import</td>
+		<td>super</td>
+	</tr>
+</table>
+<p>
+	The third set is made up of identifiers that are also considered future reserved words, when they occur within <em>strict mode code</em>. JSLint will treat them in the same way as all of the previously listed reserved words, regardless of whether the code is in strict mode or not. Here's the list:
+</p>
+<table class="table table-striped code">
+	<tr>
+		<td>implements</td>
+		<td>interface</td>
+		<td>let</td>
+		<td>package</td>
+		<td>private</td>
+		<td>protected</td>
+		<td>public</td>
+	</tr>
+	<tr>
+		<td>static</td>
+		<td colspan="6">yield</td>
+	</tr>
+</table>
