@@ -94,28 +94,26 @@ img.profile-mini {
     width:24px;
     height:24px;
 }
-#posts {
+.posts {
     list-style-type: none;
     margin-left: 0;
 }
-#posts li {
+.posts li {
     border-bottom: 1px solid #eee;
     padding: 10px 0 10px 0;
+    height: 100px;
+    overflow: hidden;
 }
-#posts li:first-child {
+.posts li:first-child {
     padding-top: 0;
 }
-#posts h3 {
+.posts li:last-child {
+    border: none;
+}
+.posts h3 {
     font-family: UbuntuRegular, Arial;
     font-size: 16px;
     font-weight: normal;
-}
-#posts div.metadata {
-    color: #888;
-    line-height: 30px;
-}
-#posts div.tags {
-    text-align: right;
 }
 div.jslint {
     border: 1px solid #ccc;

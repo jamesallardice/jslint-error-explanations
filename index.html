@@ -6,7 +6,7 @@ title: Making Your Feelings Better
 <h2 class="section-header">JSLint Errors</h2>
 <div class="row">
 	<div class="span6">
-		<ul id="posts">
+		<ul class="posts">
 		    {% for post in site.posts limit:num_posts %}
 		    <li>
 		        <h3><a href="{{ post.url }}/">{{ post.title }}</a></h3>
@@ -18,7 +18,7 @@ title: Making Your Feelings Better
 		</ul>
 	</div>
 	<div class="span6">
-		<ul id="posts">
+		<ul class="posts">
 		    {% for post in site.posts offset:num_posts %}
 		    <li>
 		        <h3><a href="{{ post.url }}/">{{ post.title }}</a></h3>
