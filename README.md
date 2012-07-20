@@ -133,7 +133,7 @@ Explanations of all the (sometimes cryptic) error messages thrown by JSLint.
  - 1867-01-01-stopping.html
  - 1866-01-01-strange-loop.html
  - 1865-01-01-strict-violation.html
- - 1864-01-01-a-is-better-written-in-dot-notation.html
+ - ~~1864-01-01-a-is-better-written-in-dot-notation.html~~
  - 1863-01-01-unexpected-sync-method-a.html
  - 1862-01-01-a-a-must-be-within-b.html
  - 1861-01-01-unexpected-todo-comment.html

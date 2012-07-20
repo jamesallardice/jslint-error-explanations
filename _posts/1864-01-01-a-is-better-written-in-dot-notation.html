@@ -1,0 +1,34 @@
+--- 
+title: "['{a}'] is better written in dot notation"
+layout: post
+---
+<p>
+	<h3>When do I get this error?</h3>
+</p>
+<p>
+	JSLint will throw the "['{a}'] is better written in dot notation" error when it encounters an attempt to <strong>access a property using a string literal and square bracket notation, when that property name is not a reserved word</strong>. In the following example we attempt to access the <span class="code">prop</span> property of the <span class="code">x</span> object:
+</p>
+<textarea>
+var x = {
+		prop: 10
+	},
+	y = x['prop'];</textarea>
+<p>
+	<h3>Why do I get this error?</h3>
+</p>
+<p>
+	This error is raised to highlight an <strong>unnecessarily verbose and potentially confusing piece of code</strong>. It is very common in many programming languages to use dot notation when referring to properties of an object. There is no problem with either syntax, and both will work in all environments. However, by using dot notation where possible, you can save three characters every time. Here's the above snippet, this time with dot notation:
+</p>
+<textarea>
+var x = {
+		prop: 10
+	},
+	y = x.prop;</textarea>
+<p>
+	However, it's important to remember that you have to use the square bracket notation if you want to access a property whose identifier is a reserved word. JSLint will not raise this error in that situation. In the following example, <span class="code">x</span> has a property with the identifier <span class="code">class</span>. Notice that JSLint does not throw an error, even though we are using square bracket notation:
+</p>
+<textarea>
+var x = {
+		'class': 10
+	},
+	y = x['class'];</textarea>
