@@ -1,0 +1,32 @@
+--- 
+title: "Unnecessary use strict"
+layout: post
+---
+<p>
+	<h3>When do I get this error?</h3>
+</p>
+<p>
+	JSLint will throw the "Unnecessary use strict" error when it encounters an occurence of <strong>the <span class="code">"use strict"</span> directive in code that is already running in strict mode</strong>. In the following example we have a <span class="code">"use strict"</span> directive in the global scope, and another in the function:
+</p>
+<textarea>
+function Example() {
+
+	//This directive applies to all contained scopes
+	"use strict";
+
+	this.method = function () {
+		"use strict";
+	};
+}</textarea>
+<p>
+	<h3>Why do I get this error?</h3>
+</p>
+<p>
+	This error is raised to highlight a <strong>completely pointless piece of code</strong>. The <span class="code">"use strict"</span> directive applies to the scope in which it appears, and any descendant execution contexts. Here's what the ECMAScript 5 specification tells us about strict mode and functions (<a href="http://es5.github.com/#x10.1.1" target="_blank">section &sect;10.1.1</a>):
+</p>
+<blockquote>
+	Function code that is part of a <em>FunctionDeclaration</em>, <em>FunctionExpression</em>, or accessor <em>PropertyAssignment</em> is strict function code if its <em>FunctionDeclaration</em>, <em>FunctionExpression</em>, or <em>PropertyAssignment</em> is contained in strict mode code or if the function code begins with a Directive Prologue that contains a Use Strict Directive.
+</blockquote>
+<p>
+	If JSLint throws this error at you, you can safely remove the highlighted instances of the <span class="code">"use strict"</span> directive.
+</p>

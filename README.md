@@ -154,7 +154,7 @@ Explanations of all the (sometimes cryptic) error messages thrown by JSLint.
  - 1846-01-01-unexpected-space-between-a-and-b.html
  - 1845-01-01-unexpected-typeof-compare-directly-with-a.html
  - 1844-01-01-it-is-not-necessary-to-initialize-a-to-undefined.html
- - 1843-01-01-unnecessary-use-strict.html
+ - ~~1843-01-01-unnecessary-use-strict.html~~
  - 1842-01-01-unreachable-a-after-b.html
  - 1841-01-01-unrecognized-style-attribute-a.html
  - 1840-01-01-unrecognized-tag.html
