@@ -123,7 +123,7 @@ Explanations of all the (sometimes cryptic) error messages thrown by JSLint.
  - 1877-01-01-do-not-mutate-parameter-a-when-using-arguments.html
  - 1876-01-01-unexpected-parameter-a-in-get-b-function.html
  - 1875-01-01-expected-parameter-value-in-set-a-function.html
- - 1874-01-01-missing-radix-parameter.html
+ - ~~1874-01-01-missing-radix-parameter.html~~
  - 1873-01-01-read-only.html
  - 1872-01-01-redefinition-of-a.html
  - 1871-01-01-reserved-name-a.html
