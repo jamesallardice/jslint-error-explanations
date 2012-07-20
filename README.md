@@ -172,7 +172,7 @@ Explanations of all the (sometimes cryptic) error messages thrown by JSLint.
  - 1828-01-01-weird-condition.html
  - 1827-01-01-weird-construction-delete-new.html
  - 1826-01-01-weird-program.html
- - 1825-01-01-weird-relation.html
+ - ~~1825-01-01-weird-relation.html~~
  - 1824-01-01-weird-ternary.html
  - 1823-01-01-wrap-an-immediate-function-invocation-in-parentheses.html
  - 1822-01-01-wrap-the-regexp-literal-in-parens.html

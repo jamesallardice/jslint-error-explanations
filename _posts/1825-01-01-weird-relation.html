@@ -1,0 +1,41 @@
+--- 
+title: "Weird relation"
+layout: post
+---
+<p>
+	<h3>When do I get this error?</h3>
+</p>
+<p>
+	JSLint will throw the "Weird relation" error when it encounters <strong>a comparison in which the left and right hand sides are "similar"</strong>, or <strong>a comparison in which either the left or right hand side is a string literal and the other is a numeric literal</strong>. In the following example we attempt to compare <span class="code">x</span> with itself:
+</p>
+<textarea>
+var x = 10;
+if (x === x) {
+	x = 20;
+}</textarea>
+<p>
+	<h3>Why do I get this error?</h3>
+</p>
+<p>
+	This error is raised to highlight a <strong>potentially confusing and potentially pointless piece of code</strong>. There are almost no situations in which you would need to compare something to itself.
+</p>
+<p>
+	There is, however, one use case for this kind of comparison. Since the special Number value <span class="code">NaN</span> is never equal to itself, you can use a self-comparison to check whether some value is <span class="code">NaN</span>. The following example will return <span class="code">true</span> only if the value is <span class="code">NaN</span>.
+</p>
+<textarea>
+var x = parseInt("x", 10); //Results in NaN
+if (x !== x) {
+	/* We will only end up in here if 'x' is NaN but
+	 * JSLint doesn't like it */
+	x = 20;
+}</textarea>
+<p>
+	If you are receiving this error for this specific use case, you can either ignore the error and let your script fail the JSLint test, or you can use the built-in <span class="code">isNaN</span> function instead. Here's the above snippet rewritten:
+</p>
+<textarea>
+var x = parseInt("x", 10); //Results in NaN
+if (isNaN(x)) {
+	/* We will only end up in here if 'x' is NaN and
+	 * this time JSLint is happy */
+	x = 20;
+}</textarea>
