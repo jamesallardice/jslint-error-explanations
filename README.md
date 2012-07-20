@@ -149,7 +149,7 @@ Explanations of all the (sometimes cryptic) error messages thrown by JSLint.
  - 1851-01-01-unexpected-character-a-in-b.html
  - 1850-01-01-unexpected-comment.html
  - 1849-01-01-unexpected-else-after-return.html
- - 1848-01-01-unexpected-label-a.html
+ - ~~1848-01-01-unexpected-label-a.html~~
  - 1847-01-01-unexpected-property-a.html
  - 1846-01-01-unexpected-space-between-a-and-b.html
  - 1845-01-01-unexpected-typeof-compare-directly-with-a.html
