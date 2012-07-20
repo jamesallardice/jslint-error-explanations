@@ -38,7 +38,7 @@ Explanations of all the (sometimes cryptic) error messages thrown by JSLint.
  - 1962-01-01-bad-style.html
  - 1961-01-01-bad-type.html
  - 1960-01-01-bad-url-a.html
- - 1959-01-01-do-not-wrap-function-literals-in-parens-unless-they-are-immediately-invoked.html
+ - ~~1959-01-01-do-not-wrap-function-literals-in-parens-unless-they-are-immediately-invoked.html~~
  - 1958-01-01-combine-this-with-the-previous-var-statement.html
  - 1957-01-01-expected-a-conditional-expression-and-saw-an-assignment.html
  - 1956-01-01-confusing-use-of-a.html
