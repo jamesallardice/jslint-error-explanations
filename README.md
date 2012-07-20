@@ -168,7 +168,7 @@ Explanations of all the (sometimes cryptic) error messages thrown by JSLint.
  - 1832-01-01-use-a-named-parameter.html
  - 1831-01-01-a-was-used-before-it-was-defined.html
  - 1830-01-01-variable-a-was-not-declared-correctly.html
- - 1829-01-01-weird-assignment.html
+ - ~~1829-01-01-weird-assignment.html~~
  - 1828-01-01-weird-condition.html
  - 1827-01-01-weird-construction-delete-new.html
  - 1826-01-01-weird-program.html
