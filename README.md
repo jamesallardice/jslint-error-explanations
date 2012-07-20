@@ -48,7 +48,7 @@ Explanations of all the (sometimes cryptic) error messages thrown by JSLint.
  - 1952-01-01-a-css-file-should-begin-with-charset-utf-8.html
  - 1951-01-01-unexpected-dangling-_-in-a.html
  - 1950-01-01-dangerous-comment.html
- - 1949-01-01-only-properties-should-be-deleted.html
+ - ~~1949-01-01-only-properties-should-be-deleted.html~~
  - 1948-01-01-duplicate-a.html
  - 1947-01-01-empty-block.html
  - 1946-01-01-empty-case.html
