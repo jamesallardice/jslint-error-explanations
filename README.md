@@ -33,3 +33,7 @@ The best way to understand the structure and style of the articles is to read th
  - All `textarea` elements are automatically converted into simple interactive JSLint-enabled editors. You can pass options to JSLint with the `data-jslintopts` attribute. Its value should be a JSON string:
 
    `<textarea data-jslintopts='{ "adsafe": true, "fragment": true }'></textarea>`
+
+## License
+
+All articles on the site are licensed under the <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License (CC BY-SA 3.0)</a>. That means you are free to do whatever you like with them, as long as you include a notice that the content was found on this site.
