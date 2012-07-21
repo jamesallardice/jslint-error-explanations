@@ -142,7 +142,7 @@ Explanations of all the (sometimes cryptic) error messages thrown by JSLint.
  - 1858-01-01-a-trailing-decimal-point-can-be-confused-with-a-dot.html
  - 1857-01-01-type-is-unnecessary.html
  - 1856-01-01-unclosed-string.html
- - 1855-01-01-unclosed-comment.html
+ - ~~1855-01-01-unclosed-comment.html~~
  - 1854-01-01-unclosed-regular-expression.html
  - 1853-01-01-unescaped-a.html
  - 1852-01-01-unexpected-a.html

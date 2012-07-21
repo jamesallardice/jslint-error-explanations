@@ -1,0 +1,31 @@
+--- 
+title: "Unclosed comment"
+layout: post
+---
+<p>
+	<h3>When do I get this error?</h3>
+</p>
+<p>
+	JSLint will throw the "Unclosed comment" error when it encounters <strong>a multiline comment that does not end with the characters <span class="code">*/</span></strong>. Here's an example:
+</p>
+<textarea>
+/* This is a comment
+ * but I forgot to
+ * close it.</textarea>
+<p>
+	<h3>Why do I get this error?</h3>
+</p>
+<p>
+	This error is raised to highlight a <strong>JavaScript syntax error</strong>. The ECMAScript 5 specification lists the following grammar for multiline comments (<a href="http://es5.github.com/#x7.4" target="_blank">section &sect;7.4</a>):
+</p>
+<blockquote>
+	<em>MultiLineComment</em> ::<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;<span class="code">/*</span> <em>MultiLineCommentChars</em><sub>opt</sub> <span class="code">*/</span>
+</blockquote>
+<p>
+	We can see from the above quote that multiline comments must end with the <span class="code">*/</span> characters. If you have an unclosed multiline comment a syntax error will be thrown when the interpreter reaches the end of the file. Here's the above snippet once more, except we've closed the comment this time:
+</p>
+<textarea>
+/* This is a comment
+ * but I remembered to
+ * close it. */</textarea>
