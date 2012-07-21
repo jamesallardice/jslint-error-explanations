@@ -160,7 +160,7 @@ Explanations of all the (sometimes cryptic) error messages thrown by JSLint.
  - 1840-01-01-unrecognized-tag.html
  - 1839-01-01-unsafe-character.html
  - 1838-01-01-javascript-url.html
- - 1837-01-01-use-the-array-literal-notation.html
+ - ~~1837-01-01-use-the-array-literal-notation.html~~
  - 1836-01-01-spaces-are-hard-to-count-use-a.html
  - ~~1835-01-01-use-the-charat-method.html~~ (seems to be unused)
  - 1834-01-01-use-the-object-literal-notation.html

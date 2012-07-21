@@ -1,0 +1,29 @@
+--- 
+title: "Use the array literal notation []"
+layout: post
+---
+<p>
+	<h3>When do I get this error?</h3>
+</p>
+<p>
+	JSLint will throw the "Use the array literal notation []" error when it encounters <strong>a call to the <span class="code">Array</span> constructor with the <span class="code">new</span> operator</strong>. Here's an example:
+</p>
+<textarea>
+var x = new Array();</textarea>
+<p>
+	<h3>Why do I get this error?</h3>
+</p>
+<p>
+	This error is raised to highlight a <strong>potentially dangerous and unnecessarily verbose piece of code</strong>. Before we look at why that above snippet is potentially dangerous, here's a rewritten version using array literal notation that passes JSLint. Notice that it's significantly shorter:
+</p>
+<textarea>
+var x = [];</textarea>
+<p>
+	Since the <span class="code">Array</span> constructor is actually just a property of the global object, it can be overwritten. If it has been overwritten, then it's possible the first example above will generate a type error. For example, if you had run something like <span class="code">Array = 50</span>, a type error would be thrown because <span class="code">Array</span> is no longer a function.
+</p>
+<p>
+	Here's an example in which we overwrite the <span class="code">Array</span> constructor. Note that JSLint does not know that's what has happened. Therefore, it takes the safe approach and forbids the of the <span class="code">Array</span> constructor completely:
+</p>
+<textarea data-jslintopts='{"browser":true}'>
+window.Array = 50;
+var x = new Array(); //TypeError: Array is not a function</textarea>
