@@ -1,0 +1,52 @@
+--- 
+title: "Function statements are not invocable. Wrap the whole function invocation in parens"
+layout: post
+---
+<p>
+	<h3>When do I get this error?</h3>
+</p>
+<p>
+	JSLint will throw the "Function statements are not invocable. Wrap the whole function invocation in parens" error when it encounters <strong>a function declaration followed by a pair of invoking parentheses</strong>. In the following example we declare a function <span class="code">example</span> and then attempt to immediately invoke it:
+</p>
+<textarea>
+function example() {
+	"use strict";
+}();</textarea>
+<p>
+	<h3>Why do I get this error?</h3>
+</p>
+<p>
+	This error is raised to highlight a <strong>JavaScript syntax error</strong>. Your code will not run if you do not fix this error.
+</p>
+<p>
+	The ECMAScript 5 specification states (<a href="http://es5.github.com/#x11.2.3" target="_blank">section &sect;11.2.3</a>) that only function expressions can be invoked:
+</p>
+<blockquote>
+	<em>CallExpression</em> : <em>MemberExpression Arguments</em><br>
+	<em>MemberExpression</em> : <em>FunctionExpression</em>
+</blockquote>
+<p>
+	Since our example above is a function <em>declaration</em> (which JSLint likes to call a function <em>statement</em> - that can be a bit confusing, and I'll explain why shortly) it cannot be part of a call expression (since it's not a function expression as the grammar quoted above requires).
+</p>
+<p>
+	The second part of the error message tells you how to fix it. By turning the function declaration into an expression we ensure that it can be part of a call expression and can therefore be immediately invoked. To do so, we simply need to wrap the declaration, and the invoking parentheses, in another pair of parentheses:
+</p>
+<textarea>
+(function example() {
+	"use strict";
+}());</textarea>
+<p>
+	This works because we've added a new construct, the <em>grouping operator</em> (<a href="http://es5.github.com/#x11.1.6" target="_blank">ES5 &sect;11.1.6</a>). The specification defines the grammar for the grouping operator as follows:
+</p>
+<blockquote>
+	<em>PrimaryExpression</em> : <span class="code">(</span> <em>Expression</em> <span class="code">)</span>
+</blockquote>
+<p>
+	So in this case, our function is actually treated as a function expression, which can be part of a call expression, and can therefore be immediately invoked.
+</p>
+<p>
+	<h4>Confusion over function declarations and statements</h4>
+</p>
+<p>
+	The terminology JSLint chooses to use for this error message can be a bit misleading. The ECMAScript specification, and the majority of other sources, will refer to a function <em>declaration</em>. JSLint, however, calls it a function <em>statement</em>. There is nothing really wrong with that, but Mozilla implemented an extension to ECMAScript in the Gecko engine called function statements. They are non-standard and it's unlikely you will come across one, so I won't go into detail, but just bear it in mind that when JSLint talks about function statements, it's talking about function declarations.
+</p>

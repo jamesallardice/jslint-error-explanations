@@ -89,7 +89,7 @@ Explanations of all the (sometimes cryptic) error messages thrown by JSLint.
  - 1911-01-01-function-statements-should-not-be-placed-in-blocks.html
  - 1910-01-01-the-function-constructor-is-eval.html
  - 1909-01-01-dont-make-functions-within-a-loop.html
- - 1908-01-01-function-statements-are-not-invocable.html
+ - ~~1908-01-01-function-statements-are-not-invocable.html~~
  - 1907-01-01-use-the-function-form-of-use-strict.html
  - 1906-01-01-html-confusion-in-regular-expression-a.html
  - 1905-01-01-avoid-html-event-handlers.html
