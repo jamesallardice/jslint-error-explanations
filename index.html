@@ -3,7 +3,28 @@ layout: default
 title: Making Your Feelings Better
 ---
 {% capture num_posts %}{{ site.posts | size | divided_by:2 }}{% endcapture %}
-<h2 class="section-header">JSLint Errors</h2>
+<div class="row">
+	<div class="span6">
+		<h2>
+			JSLint Errors
+		</h2>
+	</div>
+	<div class="span6">
+		<form class="form-horizontal pull-right">
+			<fieldset>
+				<div class="control-group">
+					<div class="controls">
+						<div class="input-prepend">
+							<span class="add-on">
+								<img src="/assets/images/magnifier.png" alt="Search">
+							</span><input id="filter" placeholder="Search JSLint error messages">
+						</div>
+					</div>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+</div>
 <div class="row">
 	<div class="span6">
 		<ul class="posts">
