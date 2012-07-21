@@ -1,0 +1,25 @@
+--- 
+title: "Nested comment"
+layout: post
+---
+<p>
+	<h3>When do I get this error?</h3>
+</p>
+<p>
+	JSLint will throw the "Nested comment" error when it encounters <strong>the characters <span class="code">/*</span> inside a multiline comment</strong>. Here's an example:
+</p>
+<textarea>
+/* This is a multiline comment.
+/* It's valid JavaScript,
+/* but JSLint doesn't like it */</textarea>
+<p>
+	<h3>Why do I get this error?</h3>
+</p>
+<p>
+	This error is raised to highlight a <strong>potentially dangerous piece of code</strong>. While it is valid to include the <span class="code">/*</span> string in a multiline comment, it is not valid to include the <span class="code">*/</span> string. If you were to do so, everything following the first <span class="code">*/</span> will be parsed as if it is <em>not part of the comment</em>. Here's an example (notice the syntax highlighting which demonstrates the error):
+</p>
+<textarea>
+/* This is a /*nested*/ comment*/</textarea>
+<p>
+	Like it does for many of its errors, JSLint takes the safe approach and forbids the use of the string <span class="code">/*</span> anywhere in a multiline comment.
+</p>

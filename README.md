@@ -111,7 +111,7 @@ Explanations of all the (sometimes cryptic) error messages thrown by JSLint.
  - 1889-01-01-move-the-invocation-into-the-parens-that-contain-the-function.html
  - 1888-01-01-move-var-declarations-to-the-top-of-the-function.html
  - 1887-01-01-missing-name-in-function-statement.html
- - 1986-01-01-nested-comment.html
+ - ~~1986-01-01-nested-comment.html~~
  - 1885-01-01-nested-not.html
  - 1884-01-01-do-not-use-a-as-a-constructor.html
  - 1883-01-01-a-has-not-been-fully-defined-yet.html
