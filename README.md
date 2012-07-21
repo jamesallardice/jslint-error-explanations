@@ -148,7 +148,7 @@ Explanations of all the (sometimes cryptic) error messages thrown by JSLint.
  - 1852-01-01-unexpected-a.html
  - 1851-01-01-unexpected-character-a-in-b.html
  - 1850-01-01-unexpected-comment.html
- - 1849-01-01-unexpected-else-after-return.html
+ - ~~1849-01-01-unexpected-else-after-return.html~~
  - ~~1848-01-01-unexpected-label-a.html~~
  - 1847-01-01-unexpected-property-a.html
  - 1846-01-01-unexpected-space-between-a-and-b.html
@@ -162,7 +162,7 @@ Explanations of all the (sometimes cryptic) error messages thrown by JSLint.
  - 1838-01-01-javascript-url.html
  - 1837-01-01-use-the-array-literal-notation.html
  - 1836-01-01-spaces-are-hard-to-count-use-a.html
- - 1835-01-01-use-the-charat-method.html
+ - ~~1835-01-01-use-the-charat-method.html~~ (seems to be unused)
  - 1834-01-01-use-the-object-literal-notation.html
  - 1833-01-01-use-the-or-operator.html
  - 1832-01-01-use-a-named-parameter.html
