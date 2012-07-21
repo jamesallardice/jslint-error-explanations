@@ -18,7 +18,7 @@ $(function () {
 		postColumns.hide();
 
 		visible = posts.filter(function () {
-			return $(this).find("h3").text().indexOf(search) > -1;
+			return $(this).find("h3").text().toLowerCase().indexOf(search) > -1;
 		});
 
 		perColumn = Math.ceil(visible.length / 2);
