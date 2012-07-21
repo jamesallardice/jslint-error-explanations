@@ -1,0 +1,62 @@
+--- 
+title: "'{a}' is not a label"
+layout: post
+---
+<p>
+	<h3>When do I get this error?</h3>
+</p>
+<p>
+	JSLint will throw the "'{a}' is not a label" error when it encounters <strong>a <span class="code">break</span> or <span class="code">continue</span> statement referencing a label that does not exist</strong>. In the following example we try to break out of a <span class="code">for</span> loop to the <span class="code">example</span> label:
+</p>
+<textarea>
+function labelExample() {
+	"use strict";
+	var i;
+	for (i = 0; i < 10; i += 1) {
+		if (i === 5) {
+			break example;
+		}
+	}
+}</textarea>
+<p>
+	<h3>Why do I get this error?</h3>
+</p>
+<p>
+	This error is raised to highlight a <strong>JavaScript syntax error</strong>. It is not valid to reference an identifier that does not appear in the label set of the enclosing statement. This is stated in the ECMAScript 5 specification (<a href="http://es5.github.com/#x12.7" target="_blank">section &sect;12.7</a> and <a href="http://es5.github.com/#x12.8" target="_blank">section &sect;12.8</a>):
+</p>
+<blockquote>
+	A program is considered syntactically incorrect if...<br><br>
+	<ul>
+		<li>...</li>
+		<li>
+			The program contains a <span class="code">break</span> statement with the optional <em>Identifier</em>, where <em>Identifier</em> does not appear in the label set of an enclosing ... <em>Statement</em>.
+		</li>
+	</ul>
+</blockquote>
+<p>
+	In the snippet above, the <span class="code">for</span> statement has not been explicitly labelled, and therefore there is no label in its label set with the identifier <span class="code">example</span>. When the interpreter reaches the <span class="code">break</span> statement a syntax error will be thrown. This can be avoided by either removing the identifier from the <span class="code">break</span> statement:
+</p>
+<textarea>
+function labelExample() {
+	"use strict";
+	var i;
+	for (i = 0; i < 10; i += 1) {
+		if (i === 5) {
+			break;
+		}
+	}
+}</textarea>
+<p>
+	Or adding a label with the correct identifer to the label set of the <span class="code">for</span> statement:
+</p>
+<textarea>
+function labelExample() {
+	"use strict";
+	var i;
+example:
+	for (i = 0; i < 10; i += 1) {
+		if (i === 5) {
+			break example;
+		}
+	}
+}</textarea>

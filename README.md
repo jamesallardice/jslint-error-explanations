@@ -116,7 +116,7 @@ Explanations of all the (sometimes cryptic) error messages thrown by JSLint.
  - 1884-01-01-do-not-use-a-as-a-constructor.html
  - 1883-01-01-a-has-not-been-fully-defined-yet.html
  - 1882-01-01-a-is-not-a-function.html
- - 1881-01-01-a-is-not-a-label.html
+ - ~~1881-01-01-a-is-not-a-label.html~~
  - 1880-01-01-a-is-out-of-scope.html
  - 1879-01-01-a-should-not-be-greater-than-b.html
  - 1878-01-01-dont-use-octal-a-use-instead.html
