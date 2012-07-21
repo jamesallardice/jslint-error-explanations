@@ -43,7 +43,7 @@ Explanations of all the (sometimes cryptic) error messages thrown by JSLint.
  - 1957-01-01-expected-a-conditional-expression-and-saw-an-assignment.html
  - 1956-01-01-confusing-use-of-a.html
  - 1955-01-01-confusing-regular-expression.html
- - 1954-01-01-a-constructor-name-a-should-start-with-an-uppercase-letter.html
+ - ~~1954-01-01-a-constructor-name-a-should-start-with-an-uppercase-letter.html~~
  - 1953-01-01-unexpected-control-character-a.html
  - 1952-01-01-a-css-file-should-begin-with-charset-utf-8.html
  - 1951-01-01-unexpected-dangling-_-in-a.html

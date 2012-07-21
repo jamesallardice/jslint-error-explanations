@@ -1,0 +1,31 @@
+--- 
+title: "A constructor name '{a}' should start with an uppercase letter"
+layout: post
+---
+<p>
+	<h3>When do I get this error?</h3>
+</p>
+<p>
+	JSLint will throw the "A constructor name '{a}' should start with an uppercase letter" error when it encounters <strong>a function whose identifier begins with a lowercase letter and is later referenced as the operand to the <span class="code">new</span> operator</strong>. In the following example we declare a "class" <span class="code">myClass</span> and then attempt to instantiate it:
+</p>
+<textarea>
+function myClass() {
+	"use strict";
+}
+
+var myInstance = new myClass();</textarea>
+<p>
+	<h3>Why do I get this error?</h3>
+</p>
+<p>
+	This error is raised to highlight a <strong>lack of convention</strong>. It is common practice for constructor function identifiers to begin with an uppercase letter. JSLint simply enforces this convention. Here's the above snippet rewritten to pass JSLint. Notice that the only difference is the uppercase "M":
+</p>
+<textarea>
+function MyClass() {
+	"use strict";
+}
+
+var myInstance = new MyClass();</textarea>
+<p>
+	It is worth bearing in mind that this is only a convention and is not required by the language in any way. You can safely ignore this error if you prefer to name your constructor functions differently. By setting the <span class="code">newcap</span> option, you can tell JSLint to allow lowercase constructors.
+</p>
