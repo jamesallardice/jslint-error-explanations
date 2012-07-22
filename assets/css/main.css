@@ -67,33 +67,6 @@ ul.spaced li {
 h2.section-header {
     padding-bottom: 10px;
 }
-img.profile-mini {
-    width: 48px;
-    height: 48px;
-}
-#intro-mini {
-    cursor: pointer;
-}
-#intro-mini:hover #intro-hint a {
-    color: #005580;
-    text-decoration: underline;
-}
-#intro-hint {
-    line-height: 48px;
-}
-#social-links {
-    list-style-type: none;
-    margin-left: 0;
-}
-#social-links li {
-    padding: 0;
-    margin: 0;
-    line-height: 24px;
-}
-#social-links li img {
-    width:24px;
-    height:24px;
-}
 .posts {
     list-style-type: none;
     margin-left: 0;
