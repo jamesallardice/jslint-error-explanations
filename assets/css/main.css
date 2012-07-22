@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'UbuntuRegular';
-    src: url('/assets/fonts/Ubuntu-R.eot');
-    src: url('/assets/fonts/Ubuntu-R.eot?#iefix') format('embedded-opentype'),
-         url('/assets/fonts/Ubuntu-R.woff') format('woff'),
-         url('/assets/fonts/Ubuntu-R.ttf') format('truetype'),
-         url('/assets/fonts/Ubuntu-R.svg#UbuntuRegular') format('svg');
+    src: url('{{ site.url }}/assets/fonts/Ubuntu-R.eot');
+    src: url('{{ site.url }}/assets/fonts/Ubuntu-R.eot?#iefix') format('embedded-opentype'),
+         url('{{ site.url }}/assets/fonts/Ubuntu-R.woff') format('woff'),
+         url('{{ site.url }}/assets/fonts/Ubuntu-R.ttf') format('truetype'),
+         url('{{ site.url }}/assets/fonts/Ubuntu-R.svg#UbuntuRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
