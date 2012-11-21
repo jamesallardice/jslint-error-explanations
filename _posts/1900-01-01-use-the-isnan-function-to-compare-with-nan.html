@@ -1,0 +1,46 @@
+--- 
+title: "Use the isNaN function to compare with NaN"
+layout: post
+---
+<p>
+	<h3>When do I get this error?</h3>
+</p>
+<p>
+	JSLint will throw the "Use the isNaN function to compare with NaN" error when it encounters <strong>a comparison in which one side is <span class="code">NaN</span></strong>. In the following example we attempt to convert a string into a number with the <span class="code">parseInt</span> function, which returns <span class="code">NaN</span> when it can't perform such a conversion:
+</p>
+<textarea>
+var x = parseInt("myString", 10);
+if (x === NaN) {
+	x = 10; // x was not a number
+}</textarea>
+<p>
+	<h3>Why do I get this error?</h3>
+</p>
+<p>
+	This error is raised to highlight <strong>code that doesn't work as you expect it to</strong>. Your code will run without error, but will not behave as you expect.
+</p>
+<p>
+	<span class="code">NaN</span> is a special value of the Number type. It's used to represent any of the "not-a-number" values represented by the double-precision 64-bit format as specified by the IEEE Standard for Binary Floating-Point Arithmetic. <span class="code">NaN</span> has the unique property of not being equal to <em>anything</em>, including itself. That is to say, that the condition <span class="code">NaN !== NaN</span> evaluates to <span class="code">true</span>.
+</p>
+<p>
+	The strict equality comparison algorithm (<a href="http://es5.github.com/#x11.9.6" target="_blank">ES5 &sect;11.9.6</a>) specifically handles the <span class="code">NaN</span> value:
+</p>
+<blockquote>
+The comparison <em>x</em> === <em>y</em>, where <em>x</em> and <em>y</em> are values, produces true or false. Such a comparison is performed as follows:<br>
+...<br>
+4. If Type(<em>x</em>) is Number then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;a. If <em>x</em> is NaN, return false.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;b. If <em>y</em> is NaN, return false.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;...
+</blockquote>
+<p>
+	Note that the abstract equality comparison algorithm (<a href="http://es5.github.com/#x11.9.3" target="_blank">ES5 &sect;11.9.3</a>) behaves in exactly the same way. This means that when you attempt to compare something to <span class="code">NaN</span>, the condition will always evaluate to <span class="code">false</span>.
+</p>
+<p>
+	To fix this error, as the message suggests, you can use the <span class="code">isNaN</span> function, which is a built-in property of the global object. It's defined in <a href="http://es5.github.com/#x15.1.2.4" target="_blank">ES5 &sect; 15.1.2.4</a> and simply returns <span class="code">true</span> if its argument coerces to <span class="code">NaN</span>, and <span class="code">false</span> if it does not:
+</p>
+<textarea>
+var x = parseInt("myString", 10);
+if (isNaN(x)) {
+    x = 10;
+}</textarea>
