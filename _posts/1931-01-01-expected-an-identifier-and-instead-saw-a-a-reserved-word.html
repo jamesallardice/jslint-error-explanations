@@ -11,10 +11,17 @@ layout: post
 <textarea>
 var default = 10;</textarea>
 <p>
+	This error can also be thrown when JSLint encounters an object property identifier that is a reserved word. This is valid in the ECMAScript 5 specification, but was not valid previously. In this example we attempt to declare an object property with the identifier <span class="code">default</span>:
+</p>
+<textarea>
+var x = {
+	default: "a default value"
+};</textarea>
+<p>
 	<h3>Why do I get this error?</h3>
 </p>
 <p>
-	This error is raised to highlight a <strong>JavaScript syntax error</strong>. Your code will not run if you do not fix this error. Reserved words are special identifiers that are set aside by the ECMAScript specification for special use.
+	For the first example above, this error is raised to highlight a <strong>JavaScript syntax error</strong>. Your code will not run if you do not fix this error. Reserved words are special identifiers that are set aside by the ECMAScript specification for special use.
 </p>
 <p>
 	The specification defines three sets of reserved words. The first set is "keywords", which are all used by the current version of the language. Here's the full list (<a href="http://es5.github.com/#x7.6.1.1" target="_blank">ES5 &sect;7.6.1.1</a>):
@@ -87,3 +94,18 @@ var default = 10;</textarea>
 		<td colspan="6">yield</td>
 	</tr>
 </table>
+<p>
+	For the second example above, this error is raised to highlight a <strong>potential JavaScript syntax error</strong>. Your code will not run in browsers that do not support this feature of ECMAScript 5 (notably Internet Explorer 8 and below). If you do not care about these older browsers, you can tell JSLint to ignore this syntax by using the <span class="code">es5</span> directive:
+</p>
+<textarea>
+/*jslint es5: true */
+var x = {
+	default: "a default value"
+};</textarea>
+<p>
+	However, if you <em>do</em> need your code to run in older browsers, you will need to change your syntax slightly and quote the identifier so it's treated as a string rather than a reserved word:
+</p>
+<textarea>
+var x = {
+	"default": "a default value"
+};</textarea>
