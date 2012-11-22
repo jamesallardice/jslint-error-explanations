@@ -73,7 +73,7 @@ h2.section-header {
 }
 .posts li {
     border-bottom: 1px solid #eee;
-    padding: 10px 0 10px 0;
+    padding: 10px 0 15px 0;
     height: 100px;
     overflow: hidden;
 }
