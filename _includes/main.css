@@ -68,6 +68,9 @@ ul.spaced li {
 h2.section-header {
     padding-bottom: 10px;
 }
+.form-horizontal {
+    margin: 0 0 10px;
+}
 .posts {
     list-style-type: none;
     margin-left: 0;
