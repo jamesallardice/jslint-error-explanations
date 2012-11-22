@@ -96,7 +96,8 @@ div.jslint {
     -moz-box-shadow: 3px 3px 3px 2px #999;
     -webkit-box-shadow: 3px 3px 3px 2px #999;
     box-shadow: 3px 3px 3px 2px #999;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    margin-top: 5px;
 }
 div.jslint-result-error {
     background-color: #900;
