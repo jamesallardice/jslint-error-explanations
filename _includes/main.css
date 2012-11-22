@@ -126,8 +126,8 @@ div.jslint-messages {
     padding: 5px 0 5px 10px;
 }
 div.jslint-messages p {
-    margin: 0 0 0 -10px;
-    padding: 4px 0 4px 10px;
+    margin: -4px 0 0 -10px;
+    padding: 6px 0 4px 10px;
 }
 div.jslint-messages p span {
     color: #777;
