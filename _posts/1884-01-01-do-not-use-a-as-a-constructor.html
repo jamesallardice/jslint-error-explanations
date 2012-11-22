@@ -1,0 +1,35 @@
+--- 
+title: "Do not use {a} as a constructor"
+layout: post
+---
+<p>
+	<h3>When do I get this error?</h3>
+</p>
+<p>
+	JSLint will throw the "Do not use {a} as a constructor" error when it encounters <strong>a call to <span class="code">String</span>, <span class="code">Number</span> or <span class="code">Boolean</span> preceded by the <span class="code">new</span> operator</strong>. In the following example we attempt to assign some values to variables by invoking these functions as constructors:
+</p>
+<textarea>
+var str = new String("hello"),
+	num = new Number(10),
+    bool = new Boolean(false);</textarea>
+<p>
+	<h3>Why do I get this error?</h3>
+</p>
+<p>
+	This error is raised to highlight a <strong>bad practice</strong> and a piece of code that may <strong>not work as you intend it to</strong>. Your code could run without error if you do not change it, but could be confusing to other developers and could also behave in unexpected ways.
+</p>
+<p>
+	The <span class="code">String</span>, <span class="code">Number</span> and <span class="code">Boolean</span> constructor functions return <em>objects</em> of type <span class="code">String</span>, <span class="code">Number</span> and <span class="code">Boolean</span>, which is rarely what you want. Usually, you want <em>literal</em> string, number or boolean values, because strictly comparing an object to a literal will always return <span class="code">false</span>.
+</p>
+<p>
+	To fix this error, use literal values rather than their corresponding wrapper objects:
+</p>
+<textarea>
+var str = "hello",
+	num = 10,
+    bool = false;</textarea>
+<p>
+	Note that this does not cause you to lose any functionality, since literal values are internally cast to instances of the appropriate type when you call a method on them. Also note that you are free to use these functions to perform type conversions i.e. by invoking them without the <span class="code">new</span> operator:
+</p>
+<textarea>
+var str = String(10);</textarea>
