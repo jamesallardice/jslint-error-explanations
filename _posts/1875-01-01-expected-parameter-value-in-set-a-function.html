@@ -1,0 +1,49 @@
+--- 
+title: "Expected parameter (value) in set '{a}' function"
+layout: post
+---
+<p>
+	<h3>When do I get this error?</h3>
+</p>
+<p>
+	JSLint will throw the "Expected parameter (value) in set '{a}' function" error when it encounters <strong>multiple named arguments in the signature of a property setter function, none of which have the identifier <span class="code">value</span></strong>. In the following example we create an object <span class="code">x</span> with a getter and setter. The getter will always return half of the set value (since getters and setters are an ECMAScript 5 feature we need to set the <span class="code">es5</span> option, otherwise JSLint will not recognise them):
+</p>
+<textarea>
+/*jslint es5: true */
+var x = {
+	real: 10,
+	get x () {
+		"use strict";
+		return this.real / 2;
+	},
+	set x (val, y) {
+		"use strict";
+		this.real = val;
+	}
+};</textarea>
+<p>
+	<h3>Why do I get this error?</h3>
+</p>
+<p>
+	This error is raised to highlight a <strong>lack of convention</strong> and a <strong>completely pointless piece of code</strong>. Your code will run without error if you do not change it, but could be confusing to other developers and adds unnecessary bytes to the weight of your script.
+</p>
+<p>
+	ECMAScript 5 added new syntax for object property getter and setter functions. The specification states the following in reference to getters (<a href="http://es5.github.com/#x8.6.1" target="_blank">ES5 &sect;8.6.1</a>):
+</p>
+<blockquote>The function’s [[Call]] internal method... is called with an arguments list containing the assigned value as its sole argument each time a set access of the property is performed.</blockquote>
+<p>
+	Since the runtime will only ever pass a single argument to the function, there is no need to provide more than one named argument in the function signature. By convention, this single argument should be named <span class="code">value</span>, since it will be used to set the value of something. To fix this error, simply remove any additional named arguments, and rename the first one to <span class="code">value</span>:
+</p>
+<textarea>
+/*jslint es5: true */
+var x = {
+	real: 10,
+	get x () {
+		"use strict";
+		return this.real / 2;
+	},
+	set x (value) {
+		"use strict";
+		this.real = value;
+	}
+};</textarea>
