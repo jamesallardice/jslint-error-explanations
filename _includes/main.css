@@ -17,6 +17,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 {
     font-size: 48px;
+    padding-bottom: 5px;
 }
 h2 {
     font-size: 22px;
@@ -73,7 +74,7 @@ h2.section-header {
 }
 .posts li {
     border-bottom: 1px solid #eee;
-    padding: 10px 0 10px 0;
+    padding: 10px 0 15px 0;
     height: 100px;
     overflow: hidden;
 }
@@ -96,7 +97,8 @@ div.jslint {
     -moz-box-shadow: 3px 3px 3px 2px #999;
     -webkit-box-shadow: 3px 3px 3px 2px #999;
     box-shadow: 3px 3px 3px 2px #999;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    margin-top: 5px;
 }
 div.jslint-result-error {
     background-color: #900;
