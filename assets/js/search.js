@@ -6,6 +6,9 @@ $(function () {
 		postColumns = $(".posts"),
 		posts = postColumns.find("li");
 
+	input.val("");
+	console.log("ok");
+
 	input.on("keyup", function () {
 
 		var search = this.value.toLowerCase(),
