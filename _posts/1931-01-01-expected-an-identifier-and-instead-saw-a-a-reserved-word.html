@@ -109,3 +109,16 @@ var x = {
 var x = {
 	"default": "a default value"
 };</textarea>
+<h3>JSLint bug alert!</h3>
+<p>
+	If you set the <span class="code">es5</span> JSLint option to <span class="code">true</span> there is a chance you will come across a bug in the JSLint parser. The problem is that JSLint will not warn you about invalid JavaScript that will in fact cause a syntax error. If you rely on JSLint to give confidence in your code when deploying to your production environment, this could potentially be a major issue.
+</p>
+<p>
+	Consider the second example on this page, which JSLint correctly flags as containing an error. By setting the <span class="code">es5</span> option to <span class="code">true</span>, you can prevent warnings for this kind of syntax, as shown in the third example on this page. However, in this situation, JSLint will not give you a warning for code like this:
+</p>
+<textarea>
+/*jslint es5: true */
+var default = 10; // Syntax error!</textarea>
+<p>
+	The above example will generate a syntax error in all JavaScript environments, regardless of ECMAScript 5 support. You cannot use a reserved word as a variable or function identifier.
+</p>
