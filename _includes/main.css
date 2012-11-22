@@ -139,6 +139,12 @@ div.jslint-messages p span {
 div.jslint-messages p:nth-child(odd) {
     background-color: #eee;
 }
+li .jslint.span12 {
+    width: 905px;
+}
+li .jslint.span12 .span7 {
+    width: 505px;
+}
 p.standout {
     border: 1px dashed #ccc;
     background-color: #f8f8f8;

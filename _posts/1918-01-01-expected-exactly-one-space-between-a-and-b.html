@@ -1,0 +1,58 @@
+--- 
+title: "Expected exactly one space between '{a}' and '{b}'"
+layout: post
+---
+<p>
+	<h3>When do I get this error?</h3>
+</p>
+<p>
+	JSLint will throw the "Expected exactly one space between '{a}' and '{b}'" error when it encounters <strong>a number of spaces that is not equal to one</strong> in the following situations (there are numerous other examples that can cause this error, but these are some of the common ones):
+</p>
+<ul>
+	<li>
+		Between any keyword (such as <span class="code">if</span>, <span class="code">for</span> or <span class="code">while</span>) and its associated opening parenthesis:
+		<textarea>
+var x = true;
+if(x) {
+    x = false;
+}</textarea>
+	</li>
+	<li>
+		Between the <span class="code">function</span> keyword and its associated opening parenthesis, when the function is parsed as an expression (but not when it's parsed as a function declaration):
+		<textarea>
+var x = function() {
+    "use strict";
+};</textarea>
+	</li>
+	<li>
+		Between a closing parenthesis and its associated opening curly brace (such as in a function statement, if statement, switch statement etc):
+		<textarea>
+var x = true;
+if (x){
+	x = false;
+}</textarea>
+	</li>
+</ul>
+<p>
+	<h3>Why do I get this error?</h3>
+</p>
+<p>
+	This error is raised to highlight a <strong>lack of convention</strong> and a possibly <strong>sloppy coding style</strong>. Your code will run without error if you do not change it, but may contravene best practices and look messy to other developers.
+</p>
+<p>
+	If you are happy with your coding style, you can tell JSLint to ignore whitespace (or the lack of whitespace) by setting the <span class="code">white</span> option to <span class="code">true</span>:
+</p>
+<textarea>
+/*jslint white: true */
+var x = true;
+if(x) {
+    x = false;
+}</textarea>
+<p>
+	However, if you are <a href="http://globaldev.co.uk/2012/11/maintaining-consistent-javascript-with-jslint/" target="_blank">using JSLint to enforce a consistent style</a>, you will probably want to listen to what the error tells you, and just make sure you always use the correct whitespace:
+</p>
+<textarea>
+var x = true;
+if (x) {
+    x = false;
+}</textarea>
