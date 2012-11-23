@@ -1,0 +1,53 @@
+--- 
+title: "Unexpected dangling '_' in '{a}'"
+layout: post
+---
+<p>
+	<h3>When do I get this error?</h3>
+</p>
+<p>
+	JSLint will throw the "Unexpected dangling '_' in '{a}'" error when it encounters <strong>an identifier that begins or ends with the underscore character</strong>. In the following example we use several such identifiers:
+</p>
+<textarea>
+var _x = 10,
+	y = {
+		z_: 20
+	};
+
+function _test() {
+	"use strict";
+}</textarea>
+<p>
+	<h3>Why do I get this error?</h3>
+</p>
+<p>
+	This error is raised to highlight a <strong>lack of convention</strong>. Your code will run without error if you do not change it, but could be confusing to other developers, and could also indicate a lack of understanding of the language.
+</p>
+<p>
+	Identifiers prefixed with the underscore character are often used to indicate a private variable. Since JavaScript doesn't have a real notion of "private", this can be misleading.
+</p>
+<p>
+	You can fix the error by setting the <span class="code">nomen</span> (short for <em>nomenclature</em>) option to <span class="code">true</span>:
+</p>
+<textarea>
+/*jslint nomen: true */
+var _x = 10,
+	y = {
+		z_: 20
+	};
+
+function _test() {
+	"use strict";
+}</textarea>
+<p>
+	Alternatively, you can simply remove the underscore character from the start or end of your identifiers (note that use of this character elsewhere in identifiers is accepted):
+</p>
+<textarea>
+var x = 10,
+	y = {
+		z: 20
+	};
+
+function test_with_underscores() {
+	"use strict";
+}</textarea>
