@@ -48,7 +48,9 @@
 				lineNumbers: true,
 				fixedGutter: true,
 				lineWrapping: true,
-				onKeyEvent: runLint
+				onKeyEvent: function (editor) {
+					runLint(editor, $(editor.getInputField()).closest(".jslint").find(".jslint-choice-lint").hasClass("btn-inverse") ? "JSHint" : "JSLint");
+				}
 			};
 
 			$(function () {
