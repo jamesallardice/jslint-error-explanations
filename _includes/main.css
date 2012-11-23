@@ -87,6 +87,7 @@ h2.section-header {
 }
 .posts li:last-child {
     border: none;
+    padding-bottom: 5px;
 }
 .posts h3 {
     font-family: UbuntuRegular, Arial;
