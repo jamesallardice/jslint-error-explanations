@@ -1,0 +1,17 @@
+--- 
+title: "A constructor name should start with an uppercase letter"
+layout: post
+jshint: true
+---
+<p>
+	<h3>When do I get this error?</h3>
+</p>
+<p>
+	JSHint will throw the "A constructor name '{a}' should start with an uppercase letter" error when it encounters <strong>an identifier following the <span class="code">new</span> operator, when the <span class="code">newcap</span> option is set to <span class="code">true</span> and the identifier in question is not an own property of the global object</strong>. In the following example we attempt to instantiate a "class" <span class="code">myClass</span> (we can assume that it has been declared elsewhere):
+</p>
+<textarea data-linter="JSHint">
+/*jshint newcap: true */
+var myInstance = new myClass();</textarea>
+<p>
+	This is the JSHint equivalent of the "<a href="/a-constructor-name-a-should-start-with-an-uppercase-letter">A constructor name '{a}' should start with an uppercase letter</a>" error from JSLint. although it occurs under slightly different circumstances. More detail about the root cause and reasons behind it can be found on the page for the JSLint message.
+</p>
