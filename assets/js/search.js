@@ -1,10 +1,13 @@
+/*global $ */
+
 $(function () {
 
 	"use strict";
 
 	var input = $("#filter"),
 		postColumns = $(".posts"),
-		posts = postColumns.find("li");
+		posts = postColumns.find("li"),
+		rMultiSpaces = /\s{2,}/g;
 
 	input.val("").on("keyup", function () {
 
@@ -18,7 +21,7 @@ $(function () {
 		postColumns.hide();
 
 		visible = posts.filter(function () {
-			return $(this).find("h3").text().toLowerCase().indexOf(search) > -1;
+			return $(this).find("h3").text().toLowerCase().indexOf(search.replace(rMultiSpaces, " ")) > -1;
 		});
 
 		perColumn = Math.ceil(visible.length / 2);
