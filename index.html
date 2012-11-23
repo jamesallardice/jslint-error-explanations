@@ -30,7 +30,15 @@ title: Making Your Feelings Better
 		<ul class="posts">
 		    {% for post in site.posts limit:num_posts %}
 		    <li>
-		        <h3><a href="{{ post.url }}/">{{ post.title }}</a></h3>
+		        <h3>
+		        	{% if post.jslint %}
+		        	<span class="label label-success">JSLint</span>
+		        	{% endif %}
+		        	{% if post.jshint %}
+		        	<span class="label label-important">JSHint</span>
+		        	{% endif %}
+		        	<a href="{{ post.url }}/">{{ post.title }}</a>
+		        </h3>
 		        <p>
 		            {{ post.content | strip_html | strip_newlines | truncatewords:30 }}
 		        </p>
@@ -42,7 +50,15 @@ title: Making Your Feelings Better
 		<ul class="posts">
 		    {% for post in site.posts offset:num_posts %}
 		    <li>
-		        <h3><a href="{{ post.url }}/">{{ post.title }}</a></h3>
+		        <h3>
+		        	{% if post.jslint %}
+		        	<span class="label label-success">JSLint</span>
+		        	{% endif %}
+		        	{% if post.jshint %}
+		        	<span class="label label-important">JSHint</span>
+		        	{% endif %}
+		        	<a href="{{ post.url }}/">{{ post.title }}</a>
+		        </h3>
 		        <p>
 		            {{ post.content | strip_html | strip_newlines | truncatewords:30 }}
 		        </p>
