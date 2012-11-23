@@ -33,7 +33,7 @@
 					output = "";
 					if (errors[i]) {
 						output += "<p><span>Line " + errors[i].line + ":</span> ";
-						output += errors[i].reason;
+						output += $("<div>").text(errors[i].reason).html();
 						output += "</p>"
 						messageHolder.append(output);
 					}
