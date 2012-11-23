@@ -69,6 +69,12 @@ ul.spaced li {
 h2.section-header {
     padding-bottom: 10px;
 }
+.social {
+    padding-top: 10px;
+}
+.fb-like {
+    top: -3px;
+}
 .form-horizontal {
     margin: 0 0 10px;
 }
