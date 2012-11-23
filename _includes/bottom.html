@@ -55,12 +55,13 @@
 
 			$(function () {
 				$("textarea").each(function () {
-					var $this = $(this);
+					var $this = $(this),
+						linter = $this.data("linter") || "JSLint";
 					$this.wrap("<div class='row'><div class='jslint span12'><div class='row'><div class='span7'></div></div></div></div>");
-					$this.closest(".row").append("<div class='jslint-output span5'><div class='jslint-result'><span class='result-output'></span><span class='jslint-choice pull-right'><button class='btn btn-mini jslint-choice-lint'>JSLint</button> <button class='btn btn-inverse btn-mini jslint-choice-hint'>JSHint</button></div><div class='jslint-messages'></div></div>");
+					$this.closest(".row").append("<div class='jslint-output span5'><div class='jslint-result'><span class='result-output'></span><span class='jslint-choice pull-right'><button class='btn btn-mini jslint-choice-lint'>JSLint</button> <button class='btn btn-mini jslint-choice-hint'>JSHint</button></div><div class='jslint-messages'></div></div>").find(linter === "JSLint" ? ".jslint-choice-hint" : ".jslint-choice-lint").addClass("btn-inverse");
 					var mirror = CodeMirror.fromTextArea(this, codeMirrorOpts);
 					$this.data("cmInstance", mirror);
-					runLint(mirror, "JSLint");
+					runLint(mirror, linter);
 				});
 				$("body").on("click", ".jslint-choice-lint", function () {
 					var $this = $(this);
