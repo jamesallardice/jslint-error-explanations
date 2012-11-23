@@ -103,6 +103,18 @@ h2.section-header {
 .posts li p {
     margin-top: 7px;
 }
+#error {
+    display: none;
+}
+.error {
+    border: 1px solid #600;
+    background-color: #ffb0b0;
+    padding: 8px;
+    color: #300;
+}
+.error img {
+    vertical-align: top;
+}
 div.jslint {
     border: 1px solid #ccc;
     -webkit-border-radius: 10px;
