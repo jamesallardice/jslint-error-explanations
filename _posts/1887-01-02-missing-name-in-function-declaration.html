@@ -1,0 +1,18 @@
+--- 
+title: "Missing name in function declaration"
+layout: post
+tags: jshint
+---
+<p>
+	<h3>When do I get this error?</h3>
+</p>
+<p>
+	JSHint will throw the "Missing name in function declaration" error when it encounters <strong>the <span class="code">function</span> keyword, where it would be parsed as a statement, followed immediately by an opening parenthesis</strong>. In the following example we attempt to define a function but forget to give it an identifier.
+</p>
+<textarea>
+function () {
+	"use strict";
+}</textarea>
+<p>
+	This is the JSHint equivalent of the "<a href="/missing-name-in-function-statement">Missing name in function statement</a>" error from JSLint. More detail can be found on the page for the JSLint message.
+</p>

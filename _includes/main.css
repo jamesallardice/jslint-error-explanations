@@ -126,6 +126,9 @@ div.jslint {
     margin-bottom: 20px;
     margin-top: 5px;
 }
+span.jslint-choice {
+    margin-right: 5px;
+}
 div.jslint-result-error {
     background-color: #900;
     margin-left: -20px;

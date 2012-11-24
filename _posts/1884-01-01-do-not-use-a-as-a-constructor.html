@@ -1,28 +1,31 @@
 --- 
 title: "Do not use {a} as a constructor"
 layout: post
+tags: jslint jshint
 ---
 <p>
 	<h3>When do I get this error?</h3>
 </p>
 <p>
-	JSLint will throw the "Do not use {a} as a constructor" error when it encounters <strong>a call to <span class="code">String</span>, <span class="code">Number</span> or <span class="code">Boolean</span> preceded by the <span class="code">new</span> operator</strong>. In the following example we attempt to assign some values to variables by invoking these functions as constructors:
+	JSLint and JSHint will throw the "Do not use {a} as a constructor" error when they encounter <strong>a call to <span class="code">String</span>, <span class="code">Number</span>, <span class="code">Boolean</span>, <span class="code">Math</span> or <span class="code">JSON</span> preceded by the <span class="code">new</span> operator</strong>. In the following example we attempt to assign some values to variables by invoking these functions as constructors:
 </p>
 <textarea>
 var str = new String("hello"),
 	num = new Number(10),
-    bool = new Boolean(false);</textarea>
+    bool = new Boolean(false),
+	math = new Math(),
+	json = new JSON({ myProp: 10 });</textarea>
 <p>
 	<h3>Why do I get this error?</h3>
 </p>
 <p>
-	This error is raised to highlight a <strong>bad practice</strong> and a piece of code that may <strong>not work as you intend it to</strong>. Your code could run without error if you do not change it, but could be confusing to other developers and could also behave in unexpected ways.
+	This error is raised to highlight a <strong>bad practice</strong> and a piece of code that may <strong>not work as you intend it to</strong>. It can also highlight a possible <strong>fatal JavaScript error</strong>. Your code could run without error if you do not change it, but could be confusing to other developers and could also behave in unexpected ways.
 </p>
 <p>
 	The <span class="code">String</span>, <span class="code">Number</span> and <span class="code">Boolean</span> constructor functions return <em>objects</em> of type <span class="code">String</span>, <span class="code">Number</span> and <span class="code">Boolean</span>, which is rarely what you want. Usually, you want <em>literal</em> string, number or boolean values, because strictly comparing an object to a literal will always return <span class="code">false</span>.
 </p>
 <p>
-	To fix this error, use literal values rather than their corresponding wrapper objects:
+	In the case of these objects, to fix this error, use literal values rather than their corresponding wrapper objects:
 </p>
 <textarea>
 var str = "hello",
@@ -33,3 +36,8 @@ var str = "hello",
 </p>
 <textarea>
 var str = String(10);</textarea>
+<p>
+	The case is a little different for the <span class="code">Math</span> and <span class="code">JSON</span> objects. These two objects are not functions, and cannot be constructed. Attempts to instantiate them will result in a <span class="code">TypeError</span>. If you're trying to serialize an object into a JSON string, you need to use the <span class="code">JSON.stringify</span> method instead:
+</p>
+<textarea>
+var json = JSON.stringify({ myProp: 10 });</textarea>

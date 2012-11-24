@@ -1,17 +1,18 @@
 --- 
 title: "Expected an identifier and instead saw '{a}' (a reserved word)"
 layout: post
+tags: jslint jshint
 ---
 <p>
 	<h3>When do I get this error?</h3>
 </p>
 <p>
-	JSLint will throw the "Expected an identifier and instead saw '{a}' (a reserved word)" error when it expects <strong>a reference to an identifier but finds a keyword that is reserved by the language</strong>. In the following example we attempt to declare a variable with the identifier <span class="code">default</span>, which is a reserved word:
+	JSLint and JSHint will throw the "Expected an identifier and instead saw '{a}' (a reserved word)" error when they expect <strong>a reference to an identifier but finds a keyword that is reserved by the language</strong>. In the following example we attempt to declare a variable with the identifier <span class="code">default</span>, which is a reserved word:
 </p>
 <textarea>
 var default = 10;</textarea>
 <p>
-	This error can also be thrown when JSLint encounters an object property identifier that is a reserved word. This is valid in the ECMAScript 5 specification, but was not valid previously. In this example we attempt to declare an object property with the identifier <span class="code">default</span>:
+	This error can also be thrown when JSLint or JSHint encounters an object property identifier that is a reserved word. This is valid in the ECMAScript 5 specification, but was not valid previously. In this example we attempt to declare an object property with the identifier <span class="code">default</span>:
 </p>
 <textarea>
 var x = {
@@ -110,10 +111,13 @@ var x = {
 	"default": "a default value"
 };</textarea>
 <p>
-	<h3>JSLint bug alert!</h3>
+	<h3>JSLint and JSHint bug alert!</h3>
 </p>
 <p>
-	If you set the <span class="code">es5</span> JSLint option to <span class="code">true</span> there is a chance you will come across a bug in the JSLint parser. The problem is that JSLint will not warn you about invalid JavaScript that will in fact cause a syntax error. If you rely on JSLint to give confidence in your code when deploying to your production environment, this could potentially be a major issue.
+	If you set the <span class="code">es5</span> JSLint or JSHint option to <span class="code">true</span> there is a chance you will come across a bug in the JSLint parser. The problem is that JSLint will not warn you about invalid JavaScript that will in fact cause a syntax error. If you rely on JSLint to give confidence in your code when deploying to your production environment, this could potentially be a major issue.
+</p>
+<p>
+	The bug remains in JSHint (which started life as a straight fork of JSLint), but I have <a href="https://github.com/jshint/jshint/issues/744" target="blank">raised an issue on GitHub</a> and prepared a pull request to fix the bug. This article will be updated if and when the bug is fixed in both JSLint and JSHint.
 </p>
 <p>
 	Consider the second example on this page, which JSLint correctly flags as containing an error. By setting the <span class="code">es5</span> option to <span class="code">true</span>, you can prevent warnings for this kind of syntax, as shown in the third example on this page. However, in this situation, JSLint will not give you a warning for code like this:

@@ -1,12 +1,13 @@
 --- 
 title: "Unexpected parameter '{a}' in get {b} function"
 layout: post
+tags: jslint jshint
 ---
 <p>
 	<h3>When do I get this error?</h3>
 </p>
 <p>
-	JSLint will throw the "Unexpected parameter '{a}' in get {b} function" error when it encounters <strong>an named argument in the signature of a property getter function</strong>. In the following example we create an object <span class="code">x</span> with a getter and setter. The getter will always return half of the set value (since getters and setters are an ECMAScript 5 feature we need to set the `es5` option, otherwise JSLint will not recognise them):
+	JSLint and JSHint will throw the "Unexpected parameter '{a}' in get {b} function" error when they encounter <strong>a named argument in the signature of a property getter function</strong>. In the following example we create an object <span class="code">x</span> with a getter and setter. The getter will always return half of the set value (since getters and setters are an ECMAScript 5 feature we need to set the `es5` option, otherwise JSLint will not recognise them):
 </p>
 <textarea>
 /*jslint es5: true */

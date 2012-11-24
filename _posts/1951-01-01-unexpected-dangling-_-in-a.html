@@ -1,12 +1,13 @@
 --- 
 title: "Unexpected dangling '_' in '{a}'"
 layout: post
+tags: jslint jshint
 ---
 <p>
 	<h3>When do I get this error?</h3>
 </p>
 <p>
-	JSLint will throw the "Unexpected dangling '_' in '{a}'" error when it encounters <strong>an identifier that begins or ends with the underscore character</strong>. In the following example we use several such identifiers:
+	JSLint will throw the "Unexpected dangling '_' in '{a}'" error when it encounters <strong>an identifier that begins or ends with the underscore character</strong>. JSHint will throw this error in the same situation, but only <strong>if the <span class="code">nomen</span> option is set to <span class="code">true</span></strong>. In the following example we use several such identifiers:
 </p>
 <textarea>
 var _x = 10,
@@ -27,7 +28,7 @@ function _test() {
 	Identifiers prefixed with the underscore character are often used to indicate a private variable. Since JavaScript doesn't have a real notion of "private", this can be misleading.
 </p>
 <p>
-	You can fix the error by setting the <span class="code">nomen</span> (short for <em>nomenclature</em>) option to <span class="code">true</span>:
+	If you're using JSLint, you can fix the error by setting the <span class="code">nomen</span> (short for <em>nomenclature</em>) option to <span class="code">true</span>. Conversely, if you're using JSHint, you can simply remove the same option:
 </p>
 <textarea>
 /*jslint nomen: true */

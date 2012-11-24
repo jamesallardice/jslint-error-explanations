@@ -1,12 +1,13 @@
 --- 
 title: "Use the isNaN function to compare with NaN"
 layout: post
+tags: jslint jshint
 ---
 <p>
 	<h3>When do I get this error?</h3>
 </p>
 <p>
-	JSLint will throw the "Use the isNaN function to compare with NaN" error when it encounters <strong>a comparison in which one side is <span class="code">NaN</span></strong>. In the following example we attempt to convert a string into a number with the <span class="code">parseInt</span> function, which returns <span class="code">NaN</span> when it can't perform such a conversion:
+	JSLint and JSHint will throw the "Use the isNaN function to compare with NaN" error when they encounter <strong>a comparison in which one side is <span class="code">NaN</span></strong>. In the following example we attempt to convert a string into a number with the <span class="code">parseInt</span> function, which returns <span class="code">NaN</span> when it can't perform such a conversion:
 </p>
 <textarea>
 var x = parseInt("myString", 10);

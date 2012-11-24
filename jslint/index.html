@@ -2,11 +2,11 @@
 layout: default
 title: Making Your Feelings Better
 ---
-{% capture num_posts %}{{ site.posts | size | divided_by:2 }}{% endcapture %}
+{% capture num_posts %}{{ site.tags.jslint | size | divided_by:2 }}{% endcapture %}
 <div class="row">
 	<div class="span6">
 		<h2 id="posts-title">
-			JSLint &amp; JSHint Error Messages
+			JSLint Error Messages
 		</h2>
 	</div>
 	<div class="span6">
@@ -28,9 +28,9 @@ title: Making Your Feelings Better
 <div class="row">
 	<div class="span6">
 		<ul class="posts">
-		    {% for post in site.posts limit:num_posts %}
+		    {% for post in site.tags.jslint limit:num_posts %}
 		    <li>
-		        <h3>
+		    	<h3>
 		        	{% for tag in post.tags %}
 		        	{% if tag == "jslint" %}
 		        	<a href="/{{ tag }}" class="label label-success">JSLint</a>
@@ -49,9 +49,9 @@ title: Making Your Feelings Better
 	</div>
 	<div class="span6">
 		<ul class="posts">
-		    {% for post in site.posts offset:num_posts %}
+		    {% for post in site.tags.jslint offset:num_posts %}
 		    <li>
-		        <h3>
+		    	<h3>
 		        	{% for tag in post.tags %}
 		        	{% if tag == "jslint" %}
 		        	<a href="/{{ tag }}" class="label label-success">JSLint</a>
@@ -72,7 +72,7 @@ title: Making Your Feelings Better
 <div class="row" id="error">
 	<div class="span12">
 		<p class="error">
-			<img src="/assets/images/error.png"> Sorry, but we couldn't find any JSLint or JSHint error messages that match your search.<br><br><strong>Tip</strong>: if your search contains variable or function identifiers from your own code, try removing them. All of our article titles are generic and use placeholders instead of the identifiers that JSLint and JSHint will actually include in your error message.
+			<img src="/assets/images/error.png"> Sorry, but we couldn't find any JSLint errors that match your search.<br><br><strong>Tip</strong>: if your search contains variable or function identifiers from your own code, try removing them. All of our article titles are generic and use placeholders instead of the identifiers that JSLint will actually include in your error message.
 		</p>
 	</div>
 </div>

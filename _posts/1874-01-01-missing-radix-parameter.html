@@ -1,12 +1,13 @@
 --- 
 title: "Missing radix parameter"
 layout: post
+tags: jslint jshint
 ---
 <p>
 	<h3>When do I get this error?</h3>
 </p>
 <p>
-	JSLint will throw the "Missing radix parameter" error when it encounters <strong>a call to the <span class="code">parseInt</span> function that only has one argument</strong>. Here's an example:
+	JSLint and JSHint will throw the "Missing radix parameter" error when they encounter <strong>a call to the <span class="code">parseInt</span> function that only has one argument</strong>. Here's an example:
 </p>
 <textarea>
 parseInt("10");</textarea>
@@ -27,10 +28,10 @@ parseInt("10");</textarea>
 	As of ECMAScript 5, this quirk of <span class="code">parseInt</span> has been removed. However, since it's likely you will want your code to run successfully in older environments that do not support ES5, you should always pass a radix to <span class="code">parseInt</span>.
 </p>
 <p>
-	<h4>An small oversight in JSLint</h4>
+	<h4>An small oversight in JSLint and JSHint</h4>
 </p>
 <p>
-	Note that JSLint does <em>not</em> check the type of the second argument. It only checks that there is one. Therefore, the following snippet does not generate an error, even though it behaves as if you didn't pass in a radix at all. Just something to be wary of when using the <span class="code">parseInt</span> function:
+	Note that neither JSLint nor JSHint make an attempt to check the type of the second argument. They only checks that there is one. Therefore, the following snippet does not generate an error, even though it behaves as if you didn't pass in a radix at all. Just something to be wary of when using the <span class="code">parseInt</span> function:
 </p>
 <textarea>
 parseInt("10", null);</textarea>
