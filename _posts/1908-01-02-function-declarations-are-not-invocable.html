@@ -1,0 +1,18 @@
+--- 
+title: "Function declarations are not invocable. Wrap the whole function invocation in parens"
+layout: post
+tags: jshint
+---
+<p>
+	<h3>When do I get this error?</h3>
+</p>
+<p>
+	JSHint will throw the "Function declarations are not invocable. Wrap the whole function invocation in parens" error when it encounters <strong>a function declaration followed by a pair of invoking parentheses</strong>. In the following example we declare a function <span class="code">example</span> and then attempt to immediately invoke it:
+</p>
+<textarea data-linter="JSHint">
+function example() {
+	"use strict";
+}();</textarea>
+<p>
+	This is the JSHint equivalent of the "<a href="/function-statements-are-not-invocable">Function statements are not invocable</a>" error from JSLint. More detail can be found on the page for the JSLint message.
+</p>

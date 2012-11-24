@@ -7,9 +7,10 @@ tags: jslint jshint
 	<h3>When do I get this error?</h3>
 </p>
 <p>
-	JSLint will throw the "Wrap an immediate function invocation in parentheses" error when it encounters <strong>an immediately invoked function expression that is not wrapped in parentheses</strong>. In the following example we assign the <em>return value</em> of the anonymous function the variable <span class="code">x</span>:
+	JSLint will throw the "Wrap an immediate function invocation in parentheses" error when it encounters <strong>an immediately invoked function expression that is not wrapped in parentheses</strong>. JSHint will throw this error in the same situation, but only <strong>if the <span class="code">immed</span> option is set to <span class="code">true</span></strong>. In the following example we assign the <em>return value</em> of the anonymous function the variable <span class="code">x</span>:
 </p>
 <textarea>
+/*jshint immed: true */
 var x = function () {
     "use strict";
     return {
