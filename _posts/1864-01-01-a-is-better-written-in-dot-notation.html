@@ -33,3 +33,12 @@ var x = {
 		'class': 10
 	},
 	y = x['class'];</textarea>
+<p>
+	If you're using JSHint it's also possible to suppress this error by setting the <span class="code">sub</span> option to <span class="code">true</span>:
+</p>
+<textarea data-linter="JSHint">
+/*jshint sub: true */
+var x = {
+	prop: 10
+	},
+	y = x['prop'];</textarea>
