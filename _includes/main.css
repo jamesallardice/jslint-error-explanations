@@ -32,6 +32,11 @@ h4 {
     font-size: 14px;
     font-weight: 100;
 }
+h6 {
+    margin-bottom: 25px;
+    font-family: Arial;
+    text-transform: none;
+}
 blockquote {
     padding-top: 4px;
     padding-bottom: 4px;
