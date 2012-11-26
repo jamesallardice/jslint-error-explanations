@@ -1,0 +1,34 @@
+--- 
+title: "A leading decimal point can be confused with a dot: '{a}'" 
+layout: post
+tags: jslint jshint
+---
+<p>
+	<h3>When do I get this error?</h3>
+</p>
+<p>
+	JSLint and JSHint will throw the "A leading decimal point can be confused with a dot: '{a}'" error when they encounter <strong>a numeric literal preceded by a <span class="code">.</span> character which itself is not preceded by a decimal integer literal</strong>. Here's an example in which we attempt to assign the value <span class="code">0.5</span> to the variable <span class="code">x</span>:
+</p>
+<textarea>
+var x = .5;</textarea>
+<p>
+	<h3>Why do I get this error?</h3>
+</p>
+<p>
+	This error is raised to highlight a <strong>potentially confusing piece of code</strong>. Your code will run without error if you do not address this issue but it could be confusing to other developers.
+</p>
+<p>
+	The ECMAScript standard states that it is syntactically valid for a numeric literal to begin with a <span class="code">.</span> character (<a href="http://es5.github.com/#A.1" target="_blank">ES5 Annex 1</a>):
+</p>
+<blockquote><em>DecimalLiteral</em> <span class="code">::</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<em>DecimalIntegerLiteral</em> <span class="code">.</span> <em>DecimalDigits</em><sub>opt</sub> <em>ExponentPart</em><sub>opt</sub><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="code">.</span> <em>DecimalDigits ExponentPart</em><sub>opt</sub><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<em>DecimalIntegerLiteral ExponentPart</em><sub>opt</sub></blockquote>
+<p>
+	The second production in the grammar quoted above shows the situation we encounter in the example at the top of this page. However, since the <span class="code">.</span> character is ambiguous (it's also commonly seen in use as a "member operator", to access a property of an object), JSLint and JSHint prefer the explicit first production from the above grammar, just to make your code easier to understand.
+</p>
+<p>
+	To fix this error, simply prepend a <span class="code">0</span> to your number:
+</p>
+<textarea>
+var x = 0.5;</textarea>
