@@ -1,0 +1,44 @@
+--- 
+title: "Too many parameters per function ({a})"
+layout: post
+tags: jslint jshint
+---
+<p>
+	<h3>When do I get this error?</h3>
+</p>
+<p>
+	JSHint will throw the "Too many parameters per function ({a})" error when it encounters <strong>a function signature with more named arguments than specified by the <span class="code">maxparams</span> option</strong>. Here's an example in which we attempt to declare a function that takes 3 arguments:
+</p>
+<textarea data-linter="JSHint">
+/*jshint maxparams: 2 */
+function Person(name, age, gender) {
+	"use strict";
+	this.name = name;
+	this.age = age;
+	this.gender = gender;
+}</textarea>
+<p>
+	<h3>Why do I get this error?</h3>
+</p>
+<p>
+	This error is raised to highlight a <strong>deviation from a coding style</strong>. The ECMAScript standard does not specify a minimum or maximum number of arguments a function can accept (<a href="http://es5.github.com/#x13" target="_blank">ES5 &sect;13</a>):
+</p>
+<blockquote><em>FunctionDeclaration</em> <span class="code">:</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="code">function</span> <em>Identifier</em> <span class="code">(</span> <em>FormalParameterList</em><sub>opt</sub> <span class="code">)</span> <span class="code">{</span> <em>FunctionBody</em> <span class="code">}</span><br><br>
+<em>FormalParameterList</em> <span class="code">:</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<em>Identifier</em><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<em>FormalParameterList</em> <span class="code">,</span> <em>Identifier</em></blockquote>
+<p>
+	You can see from the grammar quoted above that any number of formal parameters are valid syntax. However, you may wish to enforce a maximum number to help keep code readable and maintainable. A common strategy is to accept a single argument e.g. <span class="code">options</span>, which is usually an object with various properties.
+</p>
+<p>
+	We could rewrite our <span class="code">Person</span> constructor above to accept two arguments and therefore conform to the specified coding style (this is not a great example - you would probably want to check for the existence of the various <span class="code">settings</span> keys and perhaps provide default values):
+</p>
+<textarea data-linter="JSHint">
+/*jshint maxparams: 2 */
+function Person(settings) {
+	"use strict";
+	this.name = settings.name;
+	this.age = settings.age;
+	this.gender = settings.gender;
+}</textarea>
