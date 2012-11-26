@@ -17,7 +17,9 @@ JSLint Error Explanations runs on Jekyll, and if you've already got that install
 
  - `cd` into the repository directory and run the following command:
 
-    `jekyll --auto --server`
+    `jekyll --auto --server --url localhost`
+
+ - By setting the `--url` argument to `localhost`, the local version of the site will load unminified versions of JSLint and JSHint which is useful for debugging and investigating the messages they produce. If you'd rather load the minified files, just remove the `--url` argument.
 
  - Jekyll should now build the site automatically, and will watch for changes to any of the files, rebuilding when necessary.
  - Navigate to *http://localhost:4000* to see the site running on your machine (obviously, you will need to change the port if you have configured Jekyll differently. 4000 is the default.)
