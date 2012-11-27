@@ -21,6 +21,7 @@
                 {{content}}
             </div>
         </div>
+        {% if site.url != "localhost" %}
         <div class="row" id="ads">
             <div class="span12">
                 <script type="text/javascript"><!--
@@ -43,6 +44,7 @@
                 <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
             </div>
         </div>
+        {% endif %}
     </div>
 </div>
 {% include bottom.html %}
