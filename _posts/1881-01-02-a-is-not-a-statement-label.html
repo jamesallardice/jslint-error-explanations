@@ -9,7 +9,7 @@ tags: jshint
 <p>
 	JSHint will throw the "'{a}' is not a statement label" error when it encounters <strong>a <span class="code">break</span> or <span class="code">continue</span> statement referencing a label that does not exist</strong>. In the following example we try to break out of a <span class="code">for</span> loop to the <span class="code">example</span> label.
 </p>
-<textarea>
+<textarea  data-linter="JSHint">
 function labelExample() {
 	"use strict";
 	var i;
