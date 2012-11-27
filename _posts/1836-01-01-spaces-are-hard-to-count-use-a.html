@@ -7,7 +7,7 @@ tags: jslint jshint
 	<h3>When do I get this error?</h3>
 </p>
 <p>
-	JSLint will throw the "Spaces are hard to count. Use {% raw %}{{a}}{% endraw %}" error when it encounters <strong>a regular expression literal containing multiple consecutive space characters</strong>. In the following example we define a regular expression that will match the string "three&nbsp;&nbsp;&nbsp;spaces" (there are three spaces between the two words):
+	JSLint and JSHint will throw the "Spaces are hard to count. Use {% raw %}{{a}}{% endraw %}" error when they encounter <strong>a regular expression literal containing multiple consecutive space characters</strong>. In the following example we define a regular expression that will match the string "three&nbsp;&nbsp;&nbsp;spaces" (there are three spaces between the two words):
 </p>
 <textarea>
 var regex = /three   spaces/;</textarea>
