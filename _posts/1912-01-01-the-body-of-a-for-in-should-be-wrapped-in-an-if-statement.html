@@ -1,0 +1,69 @@
+--- 
+title: "The body of a for in should be wrapped in an if statement to filter unwanted properties from the prototype"
+layout: post
+tags: jslint jshint
+---
+<p>
+	<h3>When do I get this error?</h3>
+</p>
+<p>
+	JSLint will throw the "The body of a for in should be wrapped in an if statement to filter unwanted properties from the prototype" error when it encounters <strong>a <span class="code">for-in</span> statement in which the first statement is not an <span class="code">if</span> statement which contains a call to the <span class="code">hasOwnProperty</span> method</strong>. JSHint is a little more leniant and will throw this error when the first statement of the <span class="code">for-in</span> statement <strong>is not an <span class="code">if</span> statement, and the <span class="code">forin</span> option is set to <span class="code">true</span></strong>. Here's an example in which we attempt to enumerate the properties of an object:
+</p>
+<textarea>
+/*jslint devel: true */
+/*jshint forin: true */
+
+var me = {
+		name: "James",
+		age: 23
+	},
+	prop;
+
+for (prop in me) {
+	alert(me[prop]);
+}</textarea>
+<p>
+	<h3>Why do I get this error?</h3>
+</p>
+<p>
+	This error is raised to highlight <strong>bad practice</strong> and <strong>code that may not work as you expect it to</strong>. Your code may run without error, depending on whether you've extended the prototype of the object you're trying to enumerate, or, for example, <span class="code">Object.prototype</span>, but it's bad practice and could lead to problems in the future.
+</p>
+<p>
+	The <span class="code">for-in</span> construct will enumerate all enumerable properties of an object, whether they belong to the object itself or an object in its prototype chain. Consider the following example, in which we add a completely useless <span class="code">random</span> method to <span class="code">Object.prototype</span>:
+</p>
+<textarea>
+Object.prototype.random = function () {
+	"use strict";
+	return Math.random();
+};</textarea>
+<p>
+	After the above snippet has executed, all objects in our script will have access to that <span class="code">random</span> method (via their prototype chain, all the way down to <span>Object.prototype</span>). Since we have not defined our method as non-enumerable (which is only possible in ECMAScript 5 environments that support the <span class="code">Object.create</span> and <span class="code">Object.defineProperty</span> methods), it will be enumerated along with any other enumerable properties by a <span class="code">for-in</span> loop.
+</p>
+<p>
+	However, all objects also inherit a method called <span class="code">hasOwnProperty</span>, which can be used to check whether or not an object has a property with a given identifier that belongs to it and not to its prototype, or any objects down its prototype chain (<a href="http://es5.github.com/#x15.2.4.5" target="_blank">ES5 &sect;15.2.4.5</a>):
+</p>
+<blockquote>3. Let <em>desc</em> be the result of calling the [[GetOwnProperty]] internal method of <em>O</em> passing <em>P</em> as the argument.<br>
+4. If <em>desc</em> is undefined, return false.<br>
+5. Return true.</blockquote>
+<p>
+	The "[[GetOwnProperty]] internal method" (<a href="http://es5.github.com/#x8.12.1" target="_blank">ES5 &sect;8.12.1</a>) returns a value that tells the engine whether or not the object in question has an "own property" with the given identifier. And "own property" is defined as follows (<a href="http://es5.github.com/#x4.3.30" target="_blank">ES5 &sect;4.3.30</a>):
+</p>
+<blockquote>property that is directly contained by its object</blockquote>
+<p>
+	In our example, since the <span class="code">random</span> method would be accessible (via inheritance) to the <span class="code">me</span> object, but isn't an "own property" of it, we would need to use the <span class="code">hasOwnProperty</span> method to ensure it's not enumerated:
+</p>
+<textarea>
+/*jslint devel: true */
+/*jshint forin: true */
+
+var me = {
+		name: "James",
+		age: 23
+	},
+	prop;
+
+for (prop in me) {
+	if (me.hasOwnProperty(prop)) {
+		alert(me[prop]);
+	}
+}</textarea>
