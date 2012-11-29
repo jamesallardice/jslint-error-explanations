@@ -1,0 +1,30 @@
+--- 
+title: "Bad escapement of EOL. Use option multistr if needed"
+layout: post
+tags: jshint
+---
+<p>
+	<h3>When do I get this error?</h3>
+</p>
+<p>
+	JSHint will throw the "Bad escapement of EOL. Use option multistr if needed" error when it encounters <strong>a multiline string</strong>. In the following example we attempt to assign a multiline string to the variable <span class="code">myString</span>:
+</p>
+<textarea data-linter="JSHint">
+var myString = "Line 1 \
+				Line 2";</textarea>
+<p>
+	<h3>Why do I get this error?</h3>
+</p>
+<p>
+	This error is raised to highlight the use of <strong>a newer language feature that might not be supported</strong> in all the environments in which your code should run. In particular, various older browsers will be likely to throw syntax errors when parsing your script.
+</p>
+<p>
+	More detail can be found on the page for the JSLint "<a href="/this-is-an-es5-feature">This is an ES5 feature</a>" error, since JSLint raises that error in the same situation.
+</p>
+<p>
+	However, to fix this error in JSHint you need to use a different option to JSLint. As the message suggests, you can simply set the <span class="code">multistr</span> option to <span class="code">true</span>:
+</p>
+<textarea data-linter="JSHint">
+/*jshint multistr: true */
+var myString = "Line 1 \
+				Line 2";</textarea>
