@@ -111,13 +111,15 @@ var x = {
 	"default": "a default value"
 };</textarea>
 <p>
-	<h3>JSLint and JSHint bug alert!</h3>
+	<h3>JSLint <del>and JSHint</del> bug alert!</h3>
+</p>
+<p class="standout">
+	<strong>Updated 5th December 2012</strong>. As of today, this bug has been fixed in JSHint. The online tool has not yet been updated, so that still contains the bug. Currently, the bug remains in JSLint. Further updates will be added if/when the issue is fixed in JSLint.
+<p>
+	If you set the <span class="code">es5</span> JSLint <del>or JSHint</del> option to <span class="code">true</span> there is a chance you will come across a bug in the JSLint parser. The problem is that JSLint will not warn you about invalid JavaScript that will in fact cause a syntax error. If you rely on JSLint to give confidence in your code when deploying to your production environment, this could potentially be a major issue.
 </p>
 <p>
-	If you set the <span class="code">es5</span> JSLint or JSHint option to <span class="code">true</span> there is a chance you will come across a bug in the JSLint parser. The problem is that JSLint will not warn you about invalid JavaScript that will in fact cause a syntax error. If you rely on JSLint to give confidence in your code when deploying to your production environment, this could potentially be a major issue.
-</p>
-<p>
-	The bug remains in JSHint (which started life as a straight fork of JSLint), but I have <a href="https://github.com/jshint/jshint/issues/744" target="blank">raised an issue on GitHub</a> and prepared a pull request to fix the bug. This article will be updated if and when the bug is fixed in both JSLint and JSHint.
+	<del>The bug remains in JSHint (which started life as a straight fork of JSLint), but I have <a href="https://github.com/jshint/jshint/issues/744" target="blank">raised an issue on GitHub</a> and prepared a pull request to fix the bug. This article will be updated if and when the bug is fixed in both JSLint and JSHint.</del>
 </p>
 <p>
 	Consider the second example on this page, which JSLint correctly flags as containing an error. By setting the <span class="code">es5</span> option to <span class="code">true</span>, you can prevent warnings for this kind of syntax, as shown in the third example on this page. However, in this situation, JSLint will not give you a warning for code like this:
