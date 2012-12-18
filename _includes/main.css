@@ -1,3 +1,4 @@
+/* Fonts */
 @font-face {
     font-family: 'UbuntuRegular';
     src: url('/assets/fonts/Ubuntu-R.eot');
@@ -8,6 +9,73 @@
     font-weight: normal;
     font-style: normal;
 }
+
+/* Codemirror style additions and overwrites */
+.CodeMirror {
+    height: auto;
+    border-right: 1px solid #999;
+}
+.CodeMirror-gutters {
+    -webkit-border-radius: 10px 0 0 10px;
+    -moz-border-radius: 10px 0 0 10px;
+    border-radius: 10px 0 0 10px;
+}
+
+/* Inline linter styles */
+div.jslint {
+    border: 1px solid #ccc;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow: 3px 3px 3px 2px #999;
+    -webkit-box-shadow: 3px 3px 3px 2px #999;
+    box-shadow: 3px 3px 3px 2px #999;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+span.jslint-choice {
+    margin-right: 5px;
+}
+div.jslint-result-error {
+    background-color: #900;
+    margin-left: -20px;
+    padding: 5px 0 5px 10px;
+    border-radius: 0 10px 0 0;
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 1px 0 1px 1px #900;
+}
+div.jslint-result-success {
+    background-color: #090;
+    margin-left: -20px;
+    padding: 5px 0 5px 10px;
+    border-radius: 0 10px 0 0;
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 1px 0 1px 1px #090;
+}
+div.jslint-messages {
+    margin-left: -20px;
+    padding: 5px 0 5px 10px;
+}
+div.jslint-messages p {
+    margin: -4px 0 0 -10px;
+    padding: 6px 0 4px 10px;
+}
+div.jslint-messages p span {
+    color: #777;
+}
+div.jslint-messages p:nth-child(odd) {
+    background-color: #eee;
+}
+li .jslint.span12 {
+    width: 905px;
+}
+li .jslint.span12 .span7 {
+    width: 505px;
+}
+
+/* Site styles */
 body {
     margin-top: 20px;
     padding-bottom:10px;
@@ -119,58 +187,6 @@ h2.section-header {
 }
 .error img {
     vertical-align: top;
-}
-div.jslint {
-    border: 1px solid #ccc;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    -moz-box-shadow: 3px 3px 3px 2px #999;
-    -webkit-box-shadow: 3px 3px 3px 2px #999;
-    box-shadow: 3px 3px 3px 2px #999;
-    margin-bottom: 20px;
-    margin-top: 5px;
-}
-span.jslint-choice {
-    margin-right: 5px;
-}
-div.jslint-result-error {
-    background-color: #900;
-    margin-left: -20px;
-    padding: 5px 0 5px 10px;
-    border-radius: 0 10px 0 0;
-    color: #fff;
-    font-weight: bold;
-    box-shadow: 1px 0 1px 1px #900;
-}
-div.jslint-result-success {
-    background-color: #090;
-    margin-left: -20px;
-    padding: 5px 0 5px 10px;
-    border-radius: 0 10px 0 0;
-    color: #fff;
-    font-weight: bold;
-    box-shadow: 1px 0 1px 1px #090;
-}
-div.jslint-messages {
-    margin-left: -20px;
-    padding: 5px 0 5px 10px;
-}
-div.jslint-messages p {
-    margin: -4px 0 0 -10px;
-    padding: 6px 0 4px 10px;
-}
-div.jslint-messages p span {
-    color: #777;
-}
-div.jslint-messages p:nth-child(odd) {
-    background-color: #eee;
-}
-li .jslint.span12 {
-    width: 905px;
-}
-li .jslint.span12 .span7 {
-    width: 505px;
 }
 p.standout {
     border: 1px dashed #ccc;
