@@ -1,1 +1,5 @@
+# Jekyll-created directory
 _site/
+
+# Annoying OS X files
+.DS_Store
