@@ -9,12 +9,14 @@
 		{% if site.url == "localhost" %}
 		<script src="/assets/jslint/jslint.js"></script>
 		<script src="/assets/jslint/jshint.js"></script>
+		<script src="/assets/codemirror/codemirror.js"></script>
+		<script src="/assets/codemirror/javascript.js"></script>
 		{% else %}
 		<script src="/assets/jslint/jslint.min.js"></script>
 		<script src="/assets/jslint/jshint.min.js"></script>
+		<script src="/assets/codemirror/codemirror.min.js"></script>
+		<script src="/assets/codemirror/javascript.min.js"></script>
 		{% endif %}
-		<script src="/assets/codemirror/codemirror.js"></script>
-		<script src="/assets/codemirror/javascript.js"></script>
 		<script src="/assets/js/search.js"></script>
 		<script>
 			function runLint(editor, tool) {
