@@ -47,7 +47,7 @@
 				"<ul class='dropdown-menu'>",
 					"<li><span class='heading'>JSLint Version</span></li>",
 					"<li class='divider'></li>",
-					"<li data-file='jslint-20121217.min.js'><a href='#'>2012-12-17</a></li>",
+					"<li data-file='jslint-20121217.min.js'><a href='#'>2012-12-17 (Latest)</a></li>",
 					"<li data-file='jslint-20121214.min.js'><a href='#'>2012-12-14</a></li>",
 					"<li data-file='jslint-20120713.min.js'><a href='#'>2012-07-13 <i class='icon-ok'></i></a></li>",
 				"</ul>",
@@ -62,7 +62,12 @@
 				"<ul class='dropdown-menu'>",
 					"<li><span class='heading'>JSHint Version</span></li>",
 					"<li class='divider'></li>",
-					"<li data-file='jshint-r12.min.js'><a href='#'>r12</a></li>",
+					"<li data-file='jshint-r12.min.js'><a href='#'>r12 (Latest)</a></li>",
+					"<li data-file='jshint-r11.min.js'><a href='#'>r11</a></li>",
+					"<li data-file='jshint-r10.min.js'><a href='#'>r10</a></li>",
+					"<li data-file='jshint-r09.min.js'><a href='#'>r09</a></li>",
+					"<li data-file='jshint-r08.min.js'><a href='#'>r08</a></li>",
+					"<li data-file='jshint-r07.min.js'><a href='#'>r07</a></li>",
 				"</ul>",
 			"</div>"
 		].join("");
