@@ -101,7 +101,6 @@
 				$this.closest("ul").find("li[data-file] i").remove();
 			}
 			$this.find("a").append(" <i class='icon-ok'></i>");
-			console.log(script);
 			$.getScript(script, function () {
 				runLint($this.closest(".jslint-output").prev().find("textarea").data("cmInstance"), isLint ? "JSLint" : "JSHint");
 			});
