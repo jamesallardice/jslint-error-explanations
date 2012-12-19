@@ -75,6 +75,17 @@ li .jslint.span12 .span7 {
     width: 505px;
 }
 
+/* Bootstrap style addtions and overrides */
+.dropdown-menu li span.heading {
+    display: block;
+    padding: 3px 15px 0 15px;
+    clear: both;
+    font-weight: bold;
+    line-height: 18px;
+    color: #333333;
+    white-space: nowrap;
+}
+
 /* Site styles */
 body {
     margin-top: 20px;
