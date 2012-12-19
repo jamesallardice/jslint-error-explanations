@@ -33,7 +33,7 @@ div.jslint {
     margin-bottom: 20px;
     margin-top: 5px;
 }
-span.jslint-choice {
+.jslint-choice {
     margin-right: 5px;
 }
 div.jslint-result-error {
@@ -73,6 +73,17 @@ li .jslint.span12 {
 }
 li .jslint.span12 .span7 {
     width: 505px;
+}
+
+/* Bootstrap style addtions and overrides */
+.dropdown-menu li span.heading {
+    display: block;
+    padding: 3px 15px 0 15px;
+    clear: both;
+    font-weight: bold;
+    line-height: 18px;
+    color: #333333;
+    white-space: nowrap;
 }
 
 /* Site styles */

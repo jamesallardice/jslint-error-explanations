@@ -4,21 +4,21 @@ layout: post
 tags: jshint
 ---
 <p>
-	<h3>When do I get this error?</h3>
+    <h3>When do I get this error?</h3>
 </p>
 <p>
-	JSHint will throw the "'{a}' is not a statement label" error when it encounters <strong>a <span class="code">break</span> or <span class="code">continue</span> statement referencing a label that does not exist</strong>. In the following example we try to break out of a <span class="code">for</span> loop to the <span class="code">example</span> label.
+    JSHint will throw the "'{a}' is not a statement label" error when it encounters <strong>a <span class="code">break</span> or <span class="code">continue</span> statement referencing a label that does not exist</strong>. In the following example we try to break out of a <span class="code">for</span> loop to the <span class="code">example</span> label.
 </p>
 <textarea  data-linter="JSHint">
 function labelExample() {
-	"use strict";
-	var i;
-	for (i = 0; i < 10; i += 1) {
-		if (i === 5) {
-			break example;
-		}
-	}
+    "use strict";
+    var i;
+    for (i = 0; i < 10; i += 1) {
+        if (i === 5) {
+            break example;
+        }
+    }
 }</textarea>
 <p>
-	This is the JSHint equivalent of the "<a href="/a-is-not-a-label">'{a}' is not a label</a>" error from JSLint. More detail can be found on the page for the JSLint message.
+    This is the JSHint equivalent of the "<a href="/a-is-not-a-label">'{a}' is not a label</a>" error from JSLint. More detail can be found on the page for the JSLint message.
 </p>

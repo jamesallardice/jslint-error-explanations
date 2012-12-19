@@ -4,21 +4,21 @@ layout: post
 tags: jslint jshint
 ---
 <p>
-	<h3>When do I get this error?</h3>
+    <h3>When do I get this error?</h3>
 </p>
 <p>
-	JSLint will throw the "Stopping. ({a}% scanned)" error when it encounters <strong>a JavaScript syntax error</strong> and cannot continue to reliably parse the program. JSHint will throw this error in the same situation, but only <strong>if the <span class="code">passfail</span> option is set to <span class="code">true</span></strong>. In the following example we have half a variable statement which is invalid and cannot be parsed as a complete JavaScript program:
+    JSLint will throw the "Stopping. ({a}% scanned)" error when it encounters <strong>a JavaScript syntax error</strong> and cannot continue to reliably parse the program. JSHint will throw this error in the same situation, but only <strong>if the <span class="code">passfail</span> option is set to <span class="code">true</span></strong>. In the following example we have half a variable statement which is invalid and cannot be parsed as a complete JavaScript program:
 </p>
 <textarea>
 var</textarea>
 <p>
-	<h3>Why do I get this error?</h3>
+    <h3>Why do I get this error?</h3>
 </p>
 <p>
-	This error is raised to highlight a <strong>JavaScript syntax error</strong> and the fact that <strong>the parser cannot reliably finish parsing your program</strong>. Your code will not run unless you fix this error.
+    This error is raised to highlight a <strong>JavaScript syntax error</strong> and the fact that <strong>the parser cannot reliably finish parsing your program</strong>. Your code will not run unless you fix this error.
 </p>
 <p>
-	The exact cause will depend on your program, but other errors are usually raised along side this one that should guide you to the problem with your code. In our example, the variable statement is missing an identifier:
+    The exact cause will depend on your program, but other errors are usually raised along side this one that should guide you to the problem with your code. In our example, the variable statement is missing an identifier:
 </p>
 <textarea>
 var x;</textarea>

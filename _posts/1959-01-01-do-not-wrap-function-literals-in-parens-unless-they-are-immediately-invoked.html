@@ -4,30 +4,30 @@ layout: post
 tags: jslint jshint
 ---
 <p>
-	<h3>When do I get this error?</h3>
+    <h3>When do I get this error?</h3>
 </p>
 <p>
-	JSLint will throw the "Do not wrap function literals in parens unless they are to be immediately invoked" error when it encounters <strong>a function expression wrapped in parentheses with no following invoking parentheses</strong>. JSHint will throw this error in the same situation, but only <strong>if the <span class="code">immed</span> option is set to <span class="code">true</span></strong>. In the following example we assign a function expression to a variable <span class="code">x</span>:
+    JSLint will throw the "Do not wrap function literals in parens unless they are to be immediately invoked" error when it encounters <strong>a function expression wrapped in parentheses with no following invoking parentheses</strong>. JSHint will throw this error in the same situation, but only <strong>if the <span class="code">immed</span> option is set to <span class="code">true</span></strong>. In the following example we assign a function expression to a variable <span class="code">x</span>:
 </p>
 <textarea>
 var x = (function () {
-	"use strict";
-	return 10;
+    "use strict";
+    return 10;
 });</textarea>
 <p>
-	<h3>Why do I get this error?</h3>
+    <h3>Why do I get this error?</h3>
 </p>
 <p>
-	This error is raised to highlight a <strong>potentially confusing piece of code</strong>. It is common in JavaScript to see immediately invoked function expressions. Here's the above snippet again, this time with the invoking parentheses. Notice how subtle the difference is:
+    This error is raised to highlight a <strong>potentially confusing piece of code</strong>. It is common in JavaScript to see immediately invoked function expressions. Here's the above snippet again, this time with the invoking parentheses. Notice how subtle the difference is:
 </p>
 <textarea>
 var x = (function () {
-	"use strict";
-	return 10;
+    "use strict";
+    return 10;
 }());</textarea>
 <p>
-	While the difference may not look like much, the two snippets are completely different in their behaviour. The first example (which does not pass JSLint) will result in a function expression assigned to <span class="code">x</span>. The second snippet will result in the <em>return value</em> of that function assigned to <span class="code">x</span>.
+    While the difference may not look like much, the two snippets are completely different in their behaviour. The first example (which does not pass JSLint) will result in a function expression assigned to <span class="code">x</span>. The second snippet will result in the <em>return value</em> of that function assigned to <span class="code">x</span>.
 </p>
 <p>
-	When you see a function expression wrapped in parentheses, you would usually expect it to be an immediately invoked function expression. When it isn't, there is greater potential for confusion and misunderstanding of your code.
+    When you see a function expression wrapped in parentheses, you would usually expect it to be an immediately invoked function expression. When it isn't, there is greater potential for confusion and misunderstanding of your code.
 </p>

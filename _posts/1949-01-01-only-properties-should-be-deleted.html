@@ -4,25 +4,25 @@ layout: post
 tags: jslint
 ---
 <p>
-	<h3>When do I get this error?</h3>
+    <h3>When do I get this error?</h3>
 </p>
 <p>
-	JSLint will throw the "Only properties should be deleted" error when it encounters <strong>the <span class="code">delete</span> operator when its operand does not appear to be an object property</strong>. In the following example we declare a variable <span class="code">x</span> and then attempt to delete it:
+    JSLint will throw the "Only properties should be deleted" error when it encounters <strong>the <span class="code">delete</span> operator when its operand does not appear to be an object property</strong>. In the following example we declare a variable <span class="code">x</span> and then attempt to delete it:
 </p>
 <textarea>
 var x = 10;
 delete x;</textarea>
 <p>
-	<h3>Why do I get this error?</h3>
+    <h3>Why do I get this error?</h3>
 </p>
 <p>
-	This error is raised to highlight <strong>code that probably doesn't work as you expect it to</strong>. The <span class="code">delete</span> operator will only delete the properties of objects. It cannot "delete" variables or anything else. Here's a valid use of the <span class="code">delete</span> operator. Notice how this time there are no JSLint errors:
+    This error is raised to highlight <strong>code that probably doesn't work as you expect it to</strong>. The <span class="code">delete</span> operator will only delete the properties of objects. It cannot "delete" variables or anything else. Here's a valid use of the <span class="code">delete</span> operator. Notice how this time there are no JSLint errors:
 </p>
 <textarea>
 var x = {
-	prop: 10
+    prop: 10
 };
 delete x.prop;</textarea>
 <p>
-	It's useful to remember that the <span class="code">delete</span> operator will return <span class="code">true</span> in all cases, unless its operand is a property that cannot be deleted.
+    It's useful to remember that the <span class="code">delete</span> operator will return <span class="code">true</span> in all cases, unless its operand is a property that cannot be deleted.
 </p>

@@ -4,42 +4,42 @@ layout: post
 tags: jslint
 ---
 <p>
-	<h3>When do I get this error?</h3>
+    <h3>When do I get this error?</h3>
 </p>
 <p>
-	JSLint will throw the "Unexpected sync method: '{a}'" error when it encounters <strong>an attempt to access a property whose identifier ends with the string "<span class="code">Sync</span>"</strong>. In the following example we attempt to get an array of file names within a directory (this is a Node.js example):
+    JSLint will throw the "Unexpected sync method: '{a}'" error when it encounters <strong>an attempt to access a property whose identifier ends with the string "<span class="code">Sync</span>"</strong>. In the following example we attempt to get an array of file names within a directory (this is a Node.js example):
 </p>
 <textarea>
 /*jslint node: true */
 var fs = require("fs"),
-	files = fs.readdirSync("myDirectory");</textarea>
+    files = fs.readdirSync("myDirectory");</textarea>
 <p>
-	Note that although the error messages states "method", JSLint will actually raise this error for an attempt to access any property that fits the criteria, whether it's a method or not (it doesn't check to see if a pair of invoking parentheses follow the identifier).
+    Note that although the error messages states "method", JSLint will actually raise this error for an attempt to access any property that fits the criteria, whether it's a method or not (it doesn't check to see if a pair of invoking parentheses follow the identifier).
 </p>
 <p>
-	<h3>Why do I get this error?</h3>
+    <h3>Why do I get this error?</h3>
 </p>
 <p>
-	This error is raised to highlight a <strong>lack of convention</strong> and possible <strong>bad practice</strong>. Your code should run without problems if you don't change it, but there are likely to be better ways to acheive the same result.
+    This error is raised to highlight a <strong>lack of convention</strong> and possible <strong>bad practice</strong>. Your code should run without problems if you don't change it, but there are likely to be better ways to acheive the same result.
 </p>
 <p>
-	In Node.js in particular, there are many asynchronous methods that provide synchronous equivalents. For example, there is a <span class="code"><a href="http://nodejs.org/api/fs.html#fs_fs_readdir_path_callback" target="_blank">readdir</span></a> method that is the asynchronous version of the <span class="code"><a href="http://nodejs.org/api/fs.html#fs_fs_readdirsync_path" target="_blank">readdirSync</a> method in our example above.
+    In Node.js in particular, there are many asynchronous methods that provide synchronous equivalents. For example, there is a <span class="code"><a href="http://nodejs.org/api/fs.html#fs_fs_readdir_path_callback" target="_blank">readdir</span></a> method that is the asynchronous version of the <span class="code"><a href="http://nodejs.org/api/fs.html#fs_fs_readdirsync_path" target="_blank">readdirSync</a> method in our example above.
 </p>
 <p>
-	In almost all situations it's preferrable to use the asynchronous method over the synchronous one. The reason is that synchronous methods will block execution until they have finished doing whatever they need to do. In the browser this can result in an apparently "frozen" page. To fix this issue, simply rework your code to use the asynchronous version of the method:
+    In almost all situations it's preferrable to use the asynchronous method over the synchronous one. The reason is that synchronous methods will block execution until they have finished doing whatever they need to do. In the browser this can result in an apparently "frozen" page. To fix this issue, simply rework your code to use the asynchronous version of the method:
 </p>
 <textarea>
 /*jslint node: true */
 var fs = require("fs");
 
 fs.readdir("myDirectory", function (err, files) {
-	"use strict";
+    "use strict";
     // This callback is passed the data we need
 });</textarea>
 <p>
-	Alternatively, if you have a real need to use synchronous methods, you can surpress this error by setting the <span class="code">stupid</span> option to <span class="code">true</span>. You can tell by the name of the option how Douglas Crockford, author of JSLint, feels about this:
+    Alternatively, if you have a real need to use synchronous methods, you can surpress this error by setting the <span class="code">stupid</span> option to <span class="code">true</span>. You can tell by the name of the option how Douglas Crockford, author of JSLint, feels about this:
 </p>
 <textarea>
 /*jslint node: true, stupid: true */
 var fs = require("fs"),
-	files = fs.readdirSync("myDirectory");</textarea>
+    files = fs.readdirSync("myDirectory");</textarea>
