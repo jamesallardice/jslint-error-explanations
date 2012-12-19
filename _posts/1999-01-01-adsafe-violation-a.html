@@ -4,47 +4,47 @@ layout: post
 tags: jslint
 ---
 <p>
-	<h3>When do I get this error?</h3>
+    <h3>When do I get this error?</h3>
 </p>
 <p>
-	JSLint will throw the "ADsafe violation: '{a}'" error in a number of situations, but only when the <span class="code">adsafe</span> option is set to <span class="code">true</span> (it's <span class="code">false</span> by default). For more information on ADsafe, see the <a href="http://www.adsafe.org/">ADsafe website</a>. Following is a list of potential causes of this error.
+    JSLint will throw the "ADsafe violation: '{a}'" error in a number of situations, but only when the <span class="code">adsafe</span> option is set to <span class="code">true</span> (it's <span class="code">false</span> by default). For more information on ADsafe, see the <a href="http://www.adsafe.org/">ADsafe website</a>. Following is a list of potential causes of this error.
 </p>
 <p>
-	The use of a variable statement in the global execution context:
+    The use of a variable statement in the global execution context:
 </p>
 <textarea data-jslintopts='{ "adsafe": true }'>
 var x = 10; //Global variable
 
 ADSAFE.lib("adsafelib", function () {
-	"use strict";
+    "use strict";
 });</textarea>
 <p>
-	The use of <span class="code">this</span> in ADsafe code:
+    The use of <span class="code">this</span> in ADsafe code:
 </p>
 <textarea data-jslintopts='{ "adsafe": true }'>
 ADSAFE.lib("adsafelib", function () {
-	"use strict";
-	this.x = 10;
+    "use strict";
+    this.x = 10;
 });</textarea>
 <p>
-	The use of the <span class="code">arguments</span> object in ADsafe code:
+    The use of the <span class="code">arguments</span> object in ADsafe code:
 </p>
 <textarea data-jslintopts='{ "adsafe": true }'>
 ADSAFE.lib("adsafelib", function () {
-	"use strict";
-	var arg = arguments[0];
+    "use strict";
+    var arg = arguments[0];
 });</textarea>
 <p>
-	The use of the <span class="code">eval</span> function in ADsafe code:
+    The use of the <span class="code">eval</span> function in ADsafe code:
 </p>
 <textarea data-jslintopts='{ "adsafe": true }'>
 ADSAFE.lib("adsafelib", function () {
-	"use strict";
-	eval("var x = 10;");
+    "use strict";
+    eval("var x = 10;");
 });</textarea>
 <p>
-	<h3>Why do I get this error?</h3>
+    <h3>Why do I get this error?</h3>
 </p>
 <p>
-	This error is raised when JSLint encounters code that <strong>violates the rules of the ADsafe subset of JavaScript</strong>. It is a fatal error that signifies a severe problem with ADsafe code and will have to be fixed before your ADsafe code will execute.
+    This error is raised when JSLint encounters code that <strong>violates the rules of the ADsafe subset of JavaScript</strong>. It is a fatal error that signifies a severe problem with ADsafe code and will have to be fixed before your ADsafe code will execute.
 </p>

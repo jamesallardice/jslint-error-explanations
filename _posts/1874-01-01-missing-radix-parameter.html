@@ -4,34 +4,34 @@ layout: post
 tags: jslint jshint
 ---
 <p>
-	<h3>When do I get this error?</h3>
+    <h3>When do I get this error?</h3>
 </p>
 <p>
-	JSLint and JSHint will throw the "Missing radix parameter" error when they encounter <strong>a call to the <span class="code">parseInt</span> function that only has one argument</strong>. Here's an example:
+    JSLint and JSHint will throw the "Missing radix parameter" error when they encounter <strong>a call to the <span class="code">parseInt</span> function that only has one argument</strong>. Here's an example:
 </p>
 <textarea>
 parseInt("10");</textarea>
 <p>
-	<h3>Why do I get this error?</h3>
+    <h3>Why do I get this error?</h3>
 </p>
 <p>
-	This error is raised to highlight a <strong>potential oversight that could lead to problems</strong>. The second argument of the <span class="code">parseInt</span> function is used to specify a radix. If no radix is specified, the function can return suprising results. 
+    This error is raised to highlight a <strong>potential oversight that could lead to problems</strong>. The second argument of the <span class="code">parseInt</span> function is used to specify a radix. If no radix is specified, the function can return suprising results. 
 </p>
 <p>
-	If no radix is specified and the string begins with a <span class="code">0</span>, the string will be interpreted as an octal (base 8) number. For example, <span class="code">parseInt("010");</span> will return <span class="code">8</span>, and not <span class="code">10</span>. This behaviour was allowed by the ECMAScript 3 specification. However, here's what the ECMAScript 5 specification has to say:
+    If no radix is specified and the string begins with a <span class="code">0</span>, the string will be interpreted as an octal (base 8) number. For example, <span class="code">parseInt("010");</span> will return <span class="code">8</span>, and not <span class="code">10</span>. This behaviour was allowed by the ECMAScript 3 specification. However, here's what the ECMAScript 5 specification has to say:
 </p>
 <blockquote>
-	The <span class="code">parseInt</span> function produces an integer value dictated by interpretation of the contents of the <em>string</em> argument according to the specified <em>radix</em>. Leading white space in string is ignored. If <em>radix</em> is undefined or 0, it is assumed to be 10 except when the number begins with the character pairs <span class="code">0x</span> or <span class="code">0X</span>, in which case a radix of 16 is assumed.
+    The <span class="code">parseInt</span> function produces an integer value dictated by interpretation of the contents of the <em>string</em> argument according to the specified <em>radix</em>. Leading white space in string is ignored. If <em>radix</em> is undefined or 0, it is assumed to be 10 except when the number begins with the character pairs <span class="code">0x</span> or <span class="code">0X</span>, in which case a radix of 16 is assumed.
 </blockquote>
 <p>
 <p>
-	As of ECMAScript 5, this quirk of <span class="code">parseInt</span> has been removed. However, since it's likely you will want your code to run successfully in older environments that do not support ES5, you should always pass a radix to <span class="code">parseInt</span>.
+    As of ECMAScript 5, this quirk of <span class="code">parseInt</span> has been removed. However, since it's likely you will want your code to run successfully in older environments that do not support ES5, you should always pass a radix to <span class="code">parseInt</span>.
 </p>
 <p>
-	<h4>An small oversight in JSLint and JSHint</h4>
+    <h4>An small oversight in JSLint and JSHint</h4>
 </p>
 <p>
-	Note that neither JSLint nor JSHint make an attempt to check the type of the second argument. They only checks that there is one. Therefore, the following snippet does not generate an error, even though it behaves as if you didn't pass in a radix at all. Just something to be wary of when using the <span class="code">parseInt</span> function:
+    Note that neither JSLint nor JSHint make an attempt to check the type of the second argument. They only checks that there is one. Therefore, the following snippet does not generate an error, even though it behaves as if you didn't pass in a radix at all. Just something to be wary of when using the <span class="code">parseInt</span> function:
 </p>
 <textarea>
 parseInt("10", null);</textarea>

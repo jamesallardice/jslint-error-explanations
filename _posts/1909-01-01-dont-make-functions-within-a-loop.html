@@ -4,33 +4,10 @@ layout: post
 tags: jslint jshint
 ---
 <p>
-	<h3>When do I get this error?</h3>
+    <h3>When do I get this error?</h3>
 </p>
 <p>
-	JSLint and JSHint will throw the "Don't make functions within a loop" error when they encounter <strong>a function statement or expression within a <span class="code">for</span>, <span class="code">while</span> or <span class="code">do</span> statement</strong>. In the following example we attempt to add a click event listener to each element with a given class name. The event handler is intended to overwrite the contents of the clicked element with the value of <span class="code">i</span> at a specific iteration of the loop:
-</p>
-<textarea>
-/*jslint browser: true, plusplus: true */
-
-var elems = document.getElementsByClassName("myClass"), i;
-
-for (i = 0; i < elems.length; i++) {
-	elems[i].addEventListener("click", function () {
-		"use strict";
-		this.innerHTML = i;
-	});
-}</textarea>
-<p>
-	<h3>Why do I get this error?</h3>
-</p>
-<p>
-	This error is raised to highlight a piece of code that <strong>may not work as you expect it to</strong> and could also indicate a <strong>misunderstanding of how the language works</strong>. Your code may run without any problems if you do not fix this error, but in some situations it could behave unexpectedly.
-</p>
-<p>
-	In the example above, when you click on one of the affected elements and trigger the event handler, the content will change to the final value of <span class="code">i</span>. If there are 4 elements in the <span class="code">NodeList</span> referred to by <span class="code">elems</span>, the content of each element will end up being "4".
-</p>
-<p>
-	To work around this, we need to capture the value of <span class="code">i</span> at each iteration of the loop and ensure that it's that value that is referred to by the click event handler bound at this iteration. A common solution is to wrap the body of the loop in an immediately invoked function expression (IIFE), creating a closure that captures the value of the variable:
+    JSLint and JSHint will throw the "Don't make functions within a loop" error when they encounter <strong>a function statement or expression within a <span class="code">for</span>, <span class="code">while</span> or <span class="code">do</span> statement</strong>. In the following example we attempt to add a click event listener to each element with a given class name. The event handler is intended to overwrite the contents of the clicked element with the value of <span class="code">i</span> at a specific iteration of the loop:
 </p>
 <textarea>
 /*jslint browser: true, plusplus: true */
@@ -38,15 +15,38 @@ for (i = 0; i < elems.length; i++) {
 var elems = document.getElementsByClassName("myClass"), i;
 
 for (i = 0; i < elems.length; i++) {
-	(function (i) {
-		"use strict";
-		elems[i].addEventListener("click", function () {
-			this.innerHTML = i;
-		});
-	}());
+    elems[i].addEventListener("click", function () {
+        "use strict";
+        this.innerHTML = i;
+    });
 }</textarea>
 <p>
-	This will work as we expect it to, with each element getting the correct value of <span class="code">i</span>, but it's definitely starting to look messy and becoming harder to read (and therefore harder to maintain). And in any case, since there's still a function within the loop, JSLint and JSHint will still complain. To fix the issue, we need to move the function out of the loop, and maintain the closure:
+    <h3>Why do I get this error?</h3>
+</p>
+<p>
+    This error is raised to highlight a piece of code that <strong>may not work as you expect it to</strong> and could also indicate a <strong>misunderstanding of how the language works</strong>. Your code may run without any problems if you do not fix this error, but in some situations it could behave unexpectedly.
+</p>
+<p>
+    In the example above, when you click on one of the affected elements and trigger the event handler, the content will change to the final value of <span class="code">i</span>. If there are 4 elements in the <span class="code">NodeList</span> referred to by <span class="code">elems</span>, the content of each element will end up being "4".
+</p>
+<p>
+    To work around this, we need to capture the value of <span class="code">i</span> at each iteration of the loop and ensure that it's that value that is referred to by the click event handler bound at this iteration. A common solution is to wrap the body of the loop in an immediately invoked function expression (IIFE), creating a closure that captures the value of the variable:
+</p>
+<textarea>
+/*jslint browser: true, plusplus: true */
+
+var elems = document.getElementsByClassName("myClass"), i;
+
+for (i = 0; i < elems.length; i++) {
+    (function (i) {
+        "use strict";
+        elems[i].addEventListener("click", function () {
+            this.innerHTML = i;
+        });
+    }());
+}</textarea>
+<p>
+    This will work as we expect it to, with each element getting the correct value of <span class="code">i</span>, but it's definitely starting to look messy and becoming harder to read (and therefore harder to maintain). And in any case, since there's still a function within the loop, JSLint and JSHint will still complain. To fix the issue, we need to move the function out of the loop, and maintain the closure:
 </p>
 <textarea>
 /*jslint browser: true, plusplus: true */
@@ -54,12 +54,12 @@ for (i = 0; i < elems.length; i++) {
 var elems = document.getElementsByClassName("myClass"), i;
 
 function makeClickHandler(i) {
-	"use strict";
-	return function () {
-		this.innerHTML = i;
-	};
+    "use strict";
+    return function () {
+        this.innerHTML = i;
+    };
 }
 
 for (i = 0; i < elems.length; i++) {
-	elems[i].addEventListener("click", makeClickHandler(i));
+    elems[i].addEventListener("click", makeClickHandler(i));
 }</textarea>

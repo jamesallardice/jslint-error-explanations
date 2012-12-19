@@ -4,35 +4,35 @@ layout: post
 tags: jslint jshint
 ---
 <p>
-	<h3>When do I get this error?</h3>
+    <h3>When do I get this error?</h3>
 </p>
 <p>
-	JSLint and JSHint will throw the "A regular expression literal can be confused with '/='" error when they encounter <strong>a regular expression literal that begins with the <span class="code">=</span> character</strong>. In the following example we attempt to assign a regular expression literal to match the string "<span class="code">=1</span>" to the variable <span class="code">x</span>:
+    JSLint and JSHint will throw the "A regular expression literal can be confused with '/='" error when they encounter <strong>a regular expression literal that begins with the <span class="code">=</span> character</strong>. In the following example we attempt to assign a regular expression literal to match the string "<span class="code">=1</span>" to the variable <span class="code">x</span>:
 </p>
 <textarea>
 var regex = /=1/;</textarea>
 <p>
-	<h3>Why do I get this error?</h3>
+    <h3>Why do I get this error?</h3>
 </p>
 <p>
-	This error is raised to highlight a <strong>potentially confusing piece of code</strong>. Your code will run fine if you do not fix this error, but it may be confusing to others, especially at first glance to someone quickly searching through your script.
+    This error is raised to highlight a <strong>potentially confusing piece of code</strong>. Your code will run fine if you do not fix this error, but it may be confusing to others, especially at first glance to someone quickly searching through your script.
 </p>
 <p>
-	The <span class="code">/</span> character is ambiguous in JavaScript. It can either signify the start or end of a regular expression literal, as it does in the example above, or it can be interpreted as the division operator. Like most of the arithmetic operators, the division operator can be combined with the assignment operator to produce a shorthand:
+    The <span class="code">/</span> character is ambiguous in JavaScript. It can either signify the start or end of a regular expression literal, as it does in the example above, or it can be interpreted as the division operator. Like most of the arithmetic operators, the division operator can be combined with the assignment operator to produce a shorthand:
 </p>
 <textarea>
 var x = 10;
 x /= 5; // Shorthand division-assignment operator</textarea>
 <p>
-	This ambiguity is not a problem because the parser should always be able to differentiate between the two uses. However, you can see why the regular expression example at the top of this page could cause initial confusion.
+    This ambiguity is not a problem because the parser should always be able to differentiate between the two uses. However, you can see why the regular expression example at the top of this page could cause initial confusion.
 </p>
 <p>
-	To solve this issue, you can simply escape the <span class="code">=</span> character in the regular expression. This will behave in exactly the same way but since the <span class="code">=</span> character is no longer the first, the error is not raised:
+    To solve this issue, you can simply escape the <span class="code">=</span> character in the regular expression. This will behave in exactly the same way but since the <span class="code">=</span> character is no longer the first, the error is not raised:
 </p>
 <textarea>
 var regex = /\=1/;</textarea>
 <p>
-	Alternatively, you can use the <span class="code">RegExp</span> constructor, which removes the need for the delimiting <span class="code">/</span> characters:
+    Alternatively, you can use the <span class="code">RegExp</span> constructor, which removes the need for the delimiting <span class="code">/</span> characters:
 </p>
 <textarea>
 var regex = new RegExp("=1");</textarea>
