@@ -94,6 +94,7 @@
 				isLint = $this.closest(".btn-group").attr("id") === "linter-choice-lint",
 				script = "/assets/linters/" + (isLint ? "jslint" : "jshint") + "/" + $this.data("file");
 			e.preventDefault();
+			$this.closest(".jslint-result").next().empty().append("<p><img src='/assets/images/loading.gif' alt='Loading'> Working...</p>");
 			if (window.location.hostname === "localhost") {
 				// Dev mode, use unminified files
 				script = script.replace(".min", "");
