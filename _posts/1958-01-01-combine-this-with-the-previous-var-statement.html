@@ -4,48 +4,48 @@ layout: post
 tags: jslint
 ---
 <p>
-	<h3>When do I get this error?</h3>
+    <h3>When do I get this error?</h3>
 </p>
 <p>
-	JSLint will throw the "Combine this with the previous 'var' statement" error when it encounters <strong>multiple variable statements within a function</strong>. Here's an example in which we attempt to declare two variables <span class="code">x</span> and <span class="code">y</span> with two separate <span class="code">var</span> statements:
-</p>
-<textarea>
-function example() {
-	"use strict";
-	var x = 10;
-	var y = 20;
-}</textarea>
-<p>
-	<h3>Why do I get this error?</h3>
-</p>
-<p>
-	This error is raised to highlight a <strong>lack of convention</strong> and could also indicate a <strong>misunderstanding of how the language works</strong>. In many languages, you have the concept of <em>block scope</em>, in which variables can be declared within a block and scoped only to that block. JavaScript does not have block scope. Instead, it has <em>function scope</em>, in which variables can only be scoped to a function. This error is raised to help prevent the misunderstanding of code like this:
+    JSLint will throw the "Combine this with the previous 'var' statement" error when it encounters <strong>multiple variable statements within a function</strong>. Here's an example in which we attempt to declare two variables <span class="code">x</span> and <span class="code">y</span> with two separate <span class="code">var</span> statements:
 </p>
 <textarea>
 function example() {
-	"use strict";
-	var x = 10;
-	if (x === 10) {
-		var y = 20;
-	}
+    "use strict";
+    var x = 10;
+    var y = 20;
 }</textarea>
 <p>
-	In the above example, the variable <span class="code">y</span> is declared regardless of whether the <span class="code">if</span> statement body is entered or not. It is only assigned a value when the <span class="code">if</span> statement body is executed, but it's <em>declared</em> (and will have a value of <span class="code">undefined</span>) no matter what.
+    <h3>Why do I get this error?</h3>
 </p>
 <p>
-	To help prevent the misunderstanding that JavaScript exhibits block scope, JSLint will raise this warning to get you to declare all variables at once. You can fix it by moving the declaration of <span class="code">y</span> out of the block and combining it with the declaration of <span class="code">x</span>:
+    This error is raised to highlight a <strong>lack of convention</strong> and could also indicate a <strong>misunderstanding of how the language works</strong>. In many languages, you have the concept of <em>block scope</em>, in which variables can be declared within a block and scoped only to that block. JavaScript does not have block scope. Instead, it has <em>function scope</em>, in which variables can only be scoped to a function. This error is raised to help prevent the misunderstanding of code like this:
 </p>
 <textarea>
 function example() {
-	"use strict";
-	var x = 10,
-		y;
-	if (x === 10) {
-		y = 20;
-	}
+    "use strict";
+    var x = 10;
+    if (x === 10) {
+        var y = 20;
+    }
 }</textarea>
 <p>
-	The fact that JSLint does not allow you to simply have multiple variable statements outside of the block is just the coding convention preferred by the author, Douglas Crockford. The use of the comma to group variable declarations into a single statement can make the code easier to follow. The use of the comma character in variable statements is documented as follows (<a href="http://es5.github.com/#x12.2" target="_blank">ES5 &sect;12.2</a>):
+    In the above example, the variable <span class="code">y</span> is declared regardless of whether the <span class="code">if</span> statement body is entered or not. It is only assigned a value when the <span class="code">if</span> statement body is executed, but it's <em>declared</em> (and will have a value of <span class="code">undefined</span>) no matter what.
+</p>
+<p>
+    To help prevent the misunderstanding that JavaScript exhibits block scope, JSLint will raise this warning to get you to declare all variables at once. You can fix it by moving the declaration of <span class="code">y</span> out of the block and combining it with the declaration of <span class="code">x</span>:
+</p>
+<textarea>
+function example() {
+    "use strict";
+    var x = 10,
+        y;
+    if (x === 10) {
+        y = 20;
+    }
+}</textarea>
+<p>
+    The fact that JSLint does not allow you to simply have multiple variable statements outside of the block is just the coding convention preferred by the author, Douglas Crockford. The use of the comma to group variable declarations into a single statement can make the code easier to follow. The use of the comma character in variable statements is documented as follows (<a href="http://es5.github.com/#x12.2" target="_blank">ES5 &sect;12.2</a>):
 </p>
 <blockquote><em>VariableStatement</em> <span class="code">:</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="code">var</span> <em>VariableDeclarationList</em> <span class="code">;</span><br><br>
@@ -53,4 +53,4 @@ function example() {
 &nbsp;&nbsp;&nbsp;&nbsp;<em>VariableDeclaration</em><br>
 &nbsp;&nbsp;&nbsp;&nbsp;<em>VariableDeclarationList</em> <span class="code">,</span> <em>VariableDeclaration</em></blockquote>
 <p>
-	It's worth noting that in this case the comma is <em>not</em> interpreted as a grouping operator, but is rather part of the syntax allowed in a variable statement.
+    It's worth noting that in this case the comma is <em>not</em> interpreted as a grouping operator, but is rather part of the syntax allowed in a variable statement.

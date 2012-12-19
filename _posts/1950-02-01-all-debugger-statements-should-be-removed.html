@@ -4,28 +4,28 @@ layout: post
 tags: jshint
 ---
 <p>
-	<h3>When do I get this error?</h3>
+    <h3>When do I get this error?</h3>
 </p>
 <p>
-	JSHint will throw the "All 'debugger' statements should be removed" error when it encounters <strong>a <span class="code">debugger</span> statement</strong>. In the following useless example we attempt to use the <span class="code">debugger</span> statement:
+    JSHint will throw the "All 'debugger' statements should be removed" error when it encounters <strong>a <span class="code">debugger</span> statement</strong>. In the following useless example we attempt to use the <span class="code">debugger</span> statement:
 </p>
 <textarea data-linter="JSHint">
 debugger;</textarea>
 <p>
-	<h3>Why do I get this error?</h3>
+    <h3>Why do I get this error?</h3>
 </p>
 <p>
-	This error is raised to highlight <strong>a lack of convention</strong> and <strong>possible oversight by the developer</strong>. The <span class="code">debugger</span> statement is used to tell the environment in which the code is running to open a debugger if one is available and treat the statement as a breakpoint (<a href="http://es5.github.com/#x12.15" target="_blank">ES5 &sect;12.15</a>):
+    This error is raised to highlight <strong>a lack of convention</strong> and <strong>possible oversight by the developer</strong>. The <span class="code">debugger</span> statement is used to tell the environment in which the code is running to open a debugger if one is available and treat the statement as a breakpoint (<a href="http://es5.github.com/#x12.15" target="_blank">ES5 &sect;12.15</a>):
 </p>
 <blockquote>Evaluating the <em>DebuggerStatement</em> production may allow an implementation to cause a breakpoint when run under a debugger. If a debugger is not present or active this statement has no observable effect.</blockquote>
 <p>
-	This can be useful during development to get an insight into how your code behaves, or to inspect the value of variables at runtime. However it's highly unlikely that you want to keep <span class="code">debugger</span> statements in production code. For that reason, JSHint prefers them to be removed.
+    This can be useful during development to get an insight into how your code behaves, or to inspect the value of variables at runtime. However it's highly unlikely that you want to keep <span class="code">debugger</span> statements in production code. For that reason, JSHint prefers them to be removed.
 </p>
 <p>
-	<h4>A note about JSLint</h4>
+    <h4>A note about JSLint</h4>
 </p>
 <p>
-	JSLint does not have a dedicated error message for this syntax. Instead it uses one of its more generic messages, "Unexpected '{a}'", in the form of "Unexpected 'debugger'":
+    JSLint does not have a dedicated error message for this syntax. Instead it uses one of its more generic messages, "Unexpected '{a}'", in the form of "Unexpected 'debugger'":
 </p>
 <textarea>
 debugger;</textarea>

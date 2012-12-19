@@ -4,22 +4,22 @@ layout: post
 tags: jslint
 ---
 <p>
-	<h3>When do I get this error?</h3>
+    <h3>When do I get this error?</h3>
 </p>
 <p>
-	JSLint throws the "ADSAFE: Use the fragment option" error when the <span class="code">adsafe</span> option is set to <span class="code">true</span> (it's <span class="code">false</span> by default) and <strong>you pass it a fragment of HTML without having set the <span class="code">fragment</span> option to <span class="code">true</span></strong>. Here's an example:
+    JSLint throws the "ADSAFE: Use the fragment option" error when the <span class="code">adsafe</span> option is set to <span class="code">true</span> (it's <span class="code">false</span> by default) and <strong>you pass it a fragment of HTML without having set the <span class="code">fragment</span> option to <span class="code">true</span></strong>. Here's an example:
 </p>
 <textarea data-jslintopts='{ "adsafe": true }'>
 &lt;div id="adsafe-widget"&gt;
-	&lt;script&gt;
-		ADSAFE.lib("adsafelib", function () {
-			"use strict";
-		});
-	&lt;/script&gt;
+    &lt;script&gt;
+        ADSAFE.lib("adsafelib", function () {
+            "use strict";
+        });
+    &lt;/script&gt;
 &lt;/div&gt;</textarea>
 <p>
-	<h3>Why do I get this error?</h3>
+    <h3>Why do I get this error?</h3>
 </p>
 <p>
-	This error is raised because <strong>JSLint doesn't know how to continue</strong>. Since JSLint is primarily a JavaScript parser, it doesn't expect an HTML fragment by default. The error can be fixed simply by passing the <span class="code">fragment</span> option to JSLint.
+    This error is raised because <strong>JSLint doesn't know how to continue</strong>. Since JSLint is primarily a JavaScript parser, it doesn't expect an HTML fragment by default. The error can be fixed simply by passing the <span class="code">fragment</span> option to JSLint.
 </p>

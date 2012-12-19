@@ -4,23 +4,23 @@ layout: post
 tags: jslint
 ---
 <p>
-	<h3>When do I get this error?</h3>
+    <h3>When do I get this error?</h3>
 </p>
 <p>
-	JSLint throws the "ADsafe autocomplete violation" error when the <span class="code">adsafe</span> and <span class="code">fragment</span> options are both set to <span class="code">true</span> (they're <span class="code">false</span> by default) and you pass it a fragment of HTML that contains <strong>an <span class="code">input</span> element with no <span class="code">autocomplete</span> attribute whose value is <span class="code">off</span></strong>. Here's an example:
+    JSLint throws the "ADsafe autocomplete violation" error when the <span class="code">adsafe</span> and <span class="code">fragment</span> options are both set to <span class="code">true</span> (they're <span class="code">false</span> by default) and you pass it a fragment of HTML that contains <strong>an <span class="code">input</span> element with no <span class="code">autocomplete</span> attribute whose value is <span class="code">off</span></strong>. Here's an example:
 </p>
 <textarea data-jslintopts='{ "adsafe": true, "fragment": true }'>
 &lt;div id="WIDGET_"&gt;
-	&lt;input type="text"&gt;
-	&lt;script&gt;
-		ADSAFE.go("WIDGET_", function (dom) {
-			"use strict";
-		});
-	&lt;/script&gt;
+    &lt;input type="text"&gt;
+    &lt;script&gt;
+        ADSAFE.go("WIDGET_", function (dom) {
+            "use strict";
+        });
+    &lt;/script&gt;
 &lt;/div&gt;</textarea>
 <p>
-	<h3>Why do I get this error?</h3>
+    <h3>Why do I get this error?</h3>
 </p>
 <p>
-	This error is raised when JSLint encounters code that <strong>violates the rules of the ADsafe subset of JavaScript</strong>. It is a fatal error that signifies a severe problem with ADsafe code and will have to be fixed before your ADsafe code will execute.
+    This error is raised when JSLint encounters code that <strong>violates the rules of the ADsafe subset of JavaScript</strong>. It is a fatal error that signifies a severe problem with ADsafe code and will have to be fixed before your ADsafe code will execute.
 </p>

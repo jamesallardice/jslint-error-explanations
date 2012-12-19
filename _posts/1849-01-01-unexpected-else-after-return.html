@@ -4,31 +4,31 @@ layout: post
 tags: jslint
 ---
 <p>
-	<h3>When do I get this error?</h3>
+    <h3>When do I get this error?</h3>
 </p>
 <p>
-	JSLint will throw the "Unexpected 'else' after 'return'" error when it encounters <strong>an <span class="code">else</span> block following an <span class="code">if</span> block that contains a <span class="code">return</span> statement</strong>. Here's some example code:
+    JSLint will throw the "Unexpected 'else' after 'return'" error when it encounters <strong>an <span class="code">else</span> block following an <span class="code">if</span> block that contains a <span class="code">return</span> statement</strong>. Here's some example code:
 </p>
 <textarea>
 function example(x) {
-	"use strict";
-	if (x) {
-		return 1;
-	} else {
-		return 2;
-	}
+    "use strict";
+    if (x) {
+        return 1;
+    } else {
+        return 2;
+    }
 }</textarea>
 <p>
-	<h3>Why do I get this error?</h3>
+    <h3>Why do I get this error?</h3>
 </p>
 <p>
-	This error is raised to highlight a <strong>completely pointless piece of code</strong>. If execution enters the <span class="code">if</span> block, the function will return. There will be no way execution can enter the <span class="code">else</span> block. Therefore, you can simply omit the <span class="code">else</span> block and place its contents directly after the <span class="code">if</span> block. Here's the above snippet again, without the error:
+    This error is raised to highlight a <strong>completely pointless piece of code</strong>. If execution enters the <span class="code">if</span> block, the function will return. There will be no way execution can enter the <span class="code">else</span> block. Therefore, you can simply omit the <span class="code">else</span> block and place its contents directly after the <span class="code">if</span> block. Here's the above snippet again, without the error:
 </p>
 <textarea>
 function example(x) {
-	"use strict";
-	if (x) {
-		return 1;
-	}
-	return 2;
+    "use strict";
+    if (x) {
+        return 1;
+    }
+    return 2;
 }</textarea>

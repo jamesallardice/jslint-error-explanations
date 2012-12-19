@@ -4,43 +4,43 @@ layout: post
 tags: jslint jshint
 ---
 <p>
-	<h3>When do I get this error?</h3>
+    <h3>When do I get this error?</h3>
 </p>
 <p>
-	JSLint and JSHint will throw the "eval is evil" error when they encounter <strong>an invocation of the <span class="code">eval</span> function</strong>. Here's an example in which we use <span class="code">eval</span> to access an object property:
-</p>
-<textarea>
-var myString = "x",
-	myObject = {
-		x: 10
-	},
-	value = eval("myObject." + myString);</textarea>
-<p>
-	<h3>Why do I get this error?</h3>
-</p>
-<p>
-	There are numerous reasons for this error. Some of the major ones include <strong>potentially dangerous code</strong> and a likelihood of <strong>a misunderstanding of the language</strong>. It can also indicate <strong>slow, inefficient code</strong>. For more details, Angus Croll's article <a href="http://javascriptweblog.wordpress.com/2010/04/19/how-evil-is-eval/">How evil is eval?</a> is highly recommended.
-</p>
-<p>
-	It's well-documented that <span class="code">eval</span> is probably the most misused feature of JavaScript. The main reason for this is that there is almost always a <em>better way to achieve the same thing</em>. It's quite likely that if you're reading this, you are trying to do something like our example above - access an object property with a string. There's a <em>much</em> better way to do that, using the square bracket syntax to access properties with a variable.:
+    JSLint and JSHint will throw the "eval is evil" error when they encounter <strong>an invocation of the <span class="code">eval</span> function</strong>. Here's an example in which we use <span class="code">eval</span> to access an object property:
 </p>
 <textarea>
 var myString = "x",
-	myObject = {
-		x: 10
-	},
-	value = myObject[myString];</textarea>
+    myObject = {
+        x: 10
+    },
+    value = eval("myObject." + myString);</textarea>
 <p>
-	The <span class="code">eval</span> function is slow. If you're using it unecessarily, you're slowing down your program for no reason. The cause of this is the fact that the engine has to parse the argument as a complete new program (<a href="http://es5.github.com/#x15.1.2.1" target="_blank">ES5 &sect;15.1.2.1</a>):
+    <h3>Why do I get this error?</h3>
+</p>
+<p>
+    There are numerous reasons for this error. Some of the major ones include <strong>potentially dangerous code</strong> and a likelihood of <strong>a misunderstanding of the language</strong>. It can also indicate <strong>slow, inefficient code</strong>. For more details, Angus Croll's article <a href="http://javascriptweblog.wordpress.com/2010/04/19/how-evil-is-eval/">How evil is eval?</a> is highly recommended.
+</p>
+<p>
+    It's well-documented that <span class="code">eval</span> is probably the most misused feature of JavaScript. The main reason for this is that there is almost always a <em>better way to achieve the same thing</em>. It's quite likely that if you're reading this, you are trying to do something like our example above - access an object property with a string. There's a <em>much</em> better way to do that, using the square bracket syntax to access properties with a variable.:
+</p>
+<textarea>
+var myString = "x",
+    myObject = {
+        x: 10
+    },
+    value = myObject[myString];</textarea>
+<p>
+    The <span class="code">eval</span> function is slow. If you're using it unecessarily, you're slowing down your program for no reason. The cause of this is the fact that the engine has to parse the argument as a complete new program (<a href="http://es5.github.com/#x15.1.2.1" target="_blank">ES5 &sect;15.1.2.1</a>):
 </p>
 <blockquote>When the <span class="code">eval</span> function is called with one argument <em>x</em>, the following steps are taken:<br><br>
 &nbsp;&nbsp;&nbsp;&nbsp;1. If Type(<em>x</em>) is not String, return <em>x</em>.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;2. Let <em>prog</em> be the ECMAScript code that is the result of parsing <em>x</em> as a <em>Program</em>.</blockquote>
 <p>
-	Because <span class="code">eval</span> therefore allows for arbitrary execution of a complete JavaScript program, it can also result in difficult debugging. If you are running large amounts of code through <span class="code">eval</span> you will not get useful errors. The line numbers reported in the errors will correspond to the call to <span class="code">eval</span> only, and not the actual code that caused the problem.
+    Because <span class="code">eval</span> therefore allows for arbitrary execution of a complete JavaScript program, it can also result in difficult debugging. If you are running large amounts of code through <span class="code">eval</span> you will not get useful errors. The line numbers reported in the errors will correspond to the call to <span class="code">eval</span> only, and not the actual code that caused the problem.
 </p>
 <p>
-	However, in the situation where you absolutely have to use <em>eval</em>, you can tell both JSLint and JSHint to allow it. But you should only do this as a last resort. Just set the <span class="code">evil</span> option to <span class="code">true</span>:
+    However, in the situation where you absolutely have to use <em>eval</em>, you can tell both JSLint and JSHint to allow it. But you should only do this as a last resort. Just set the <span class="code">evil</span> option to <span class="code">true</span>:
 </p>
 <textarea>
 /*jslint evil: true */

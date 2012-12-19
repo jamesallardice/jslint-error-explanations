@@ -4,47 +4,47 @@ layout: post
 tags: jslint jshint
 ---
 <p>
-	<h3>When do I get this error?</h3>
+    <h3>When do I get this error?</h3>
 </p>
 <p>
-	JSLint and JSHint will throw the "Unexpected parameter '{a}' in get {b} function" error when they encounter <strong>a named argument in the signature of a property getter function</strong>. In the following example we create an object <span class="code">x</span> with a getter and setter. The getter will always return half of the set value (since getters and setters are an ECMAScript 5 feature we need to set the `es5` option, otherwise JSLint will not recognise them):
+    JSLint and JSHint will throw the "Unexpected parameter '{a}' in get {b} function" error when they encounter <strong>a named argument in the signature of a property getter function</strong>. In the following example we create an object <span class="code">x</span> with a getter and setter. The getter will always return half of the set value (since getters and setters are an ECMAScript 5 feature we need to set the `es5` option, otherwise JSLint will not recognise them):
 </p>
 <textarea>
 /*jslint es5: true */
 var x = {
-	real: 10,
-	get x (value) {
-		"use strict";
-		return this.real / 2;
-	},
-	set x (value) {
-		"use strict";
-		this.real = value;
-	}
+    real: 10,
+    get x (value) {
+        "use strict";
+        return this.real / 2;
+    },
+    set x (value) {
+        "use strict";
+        this.real = value;
+    }
 };</textarea>
 <p>
-	<h3>Why do I get this error?</h3>
+    <h3>Why do I get this error?</h3>
 </p>
 <p>
-	This error is raised to highlight a <strong>completely pointless and potentially confusing piece of code</strong>. Your code will run without error if you do not change it, but could be confusing to other developers and adds unnecessary bytes to the weight of your script.
+    This error is raised to highlight a <strong>completely pointless and potentially confusing piece of code</strong>. Your code will run without error if you do not change it, but could be confusing to other developers and adds unnecessary bytes to the weight of your script.
 </p>
 <p>
-	ECMAScript 5 added new syntax for object property getter and setter functions. The specification states the following in reference to getters (<a href="http://es5.github.com/#x8.6.1" target="_blank">ES5 &sect;8.6.1</a>):
+    ECMAScript 5 added new syntax for object property getter and setter functions. The specification states the following in reference to getters (<a href="http://es5.github.com/#x8.6.1" target="_blank">ES5 &sect;8.6.1</a>):
 </p>
 <blockquote>The function’s [[Call]] internal method... is called with an empty arguments list to return the property value each time a get access of the property is performed.</blockquote>
 <p>
-	Since the runtime will never pass any arguments to the getter function, there is no need to provide any named arguments in the function signature. Simply remove them to fix the error:
+    Since the runtime will never pass any arguments to the getter function, there is no need to provide any named arguments in the function signature. Simply remove them to fix the error:
 </p>
 <textarea>
 /*jslint es5: true */
 var x = {
-	real: 10,
-	get x () {
-		"use strict";
-		return this.real / 2;
-	},
-	set x (value) {
-		"use strict";
-		this.real = value;
-	}
+    real: 10,
+    get x () {
+        "use strict";
+        return this.real / 2;
+    },
+    set x (value) {
+        "use strict";
+        this.real = value;
+    }
 };</textarea>

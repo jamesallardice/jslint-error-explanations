@@ -4,28 +4,28 @@ layout: post
 tags: jslint jshint
 ---
 <p>
-	<h3>When do I get this error?</h3>
+    <h3>When do I get this error?</h3>
 </p>
 <p>
-	JSLint and JSHint will throw the "Do not assign to the exception parameter" error when they encounter <strong>an assignment inside a <span class="code">catch</span> block to the identifer associated with that block</strong>. In the following example we attempt to assign a new value to the exception parameter <span class="code">e</span>:
+    JSLint and JSHint will throw the "Do not assign to the exception parameter" error when they encounter <strong>an assignment inside a <span class="code">catch</span> block to the identifer associated with that block</strong>. In the following example we attempt to assign a new value to the exception parameter <span class="code">e</span>:
 </p>
 <textarea>
 try {
-	// Some code that might throw an exception
+    // Some code that might throw an exception
 } catch (e) {
-	e = 10;
+    e = 10;
 }</textarea>
 <p>
-	<h3>Why do I get this error?</h3>
+    <h3>Why do I get this error?</h3>
 </p>
 <p>
-	This error is raised to highlight <strong>a lack of convention</strong>. The obvious issue with assigning something to an exception parameter is that you lose access to the value passed to the <span class="code">catch</span> block completely. There is nothing like the <span class="code">arguments</span> object that will allow you to get back a reference to it. This could be confusing to other developers maintaining your code in the future.
+    This error is raised to highlight <strong>a lack of convention</strong>. The obvious issue with assigning something to an exception parameter is that you lose access to the value passed to the <span class="code">catch</span> block completely. There is nothing like the <span class="code">arguments</span> object that will allow you to get back a reference to it. This could be confusing to other developers maintaining your code in the future.
 </p>
 <p>
-	<h4>A note regarding the exception parameter</h4>
+    <h4>A note regarding the exception parameter</h4>
 </p>
 <p>
-	According to the ECMAScript specification, a <span class="code">catch</span> block has its own lexical environment, which is created upon entering the block. The lexical environment maintains a reference to the lexical environment from which it was entered, which means you have access to variables defined in outer scopes. The lexical environment created when entering the <span class="code">catch</span> block gets a binding between the identifier and the exception value passed to the block (<a href="http://es5.github.com/#x12.14">ES5 &sect;12.14</a>):
+    According to the ECMAScript specification, a <span class="code">catch</span> block has its own lexical environment, which is created upon entering the block. The lexical environment maintains a reference to the lexical environment from which it was entered, which means you have access to variables defined in outer scopes. The lexical environment created when entering the <span class="code">catch</span> block gets a binding between the identifier and the exception value passed to the block (<a href="http://es5.github.com/#x12.14">ES5 &sect;12.14</a>):
 </p>
 <blockquote>The production <em>Catch</em> <span class="code">: catch (</span> <em>Identifier</em> <span class="code">)</span> <em>Block</em> is evaluated as follows:<br><br>
 &nbsp;&nbsp;&nbsp;&nbsp;1. Let <em>C</em> be the parameter that has been passed to this production.<br>
@@ -39,8 +39,8 @@ try {
 &nbsp;&nbsp;&nbsp;&nbsp;9. Return <em>B</em>.<br><br>
 <strong>NOTE</strong> No matter how control leaves the <em>Block</em> the LexicalEnvironment is always restored to its former state.</blockquote>
 <p>
-	That note at the end is important. When the <span class="code">catch</span> block exits, we return to the original lexical environment. This means that the binding for the identifier in the <span class="code">catch</span> block will cease to exist (since the lexical environment that contained it no longer exists).
+    That note at the end is important. When the <span class="code">catch</span> block exits, we return to the original lexical environment. This means that the binding for the identifier in the <span class="code">catch</span> block will cease to exist (since the lexical environment that contained it no longer exists).
 </p>
 <p>
-	However, in Internet Explorer 8 and below, the <span class="code">catch</span> block identifier leaks into the outer scope. In those browsers, you could accidently be assigning a value to the exception parameter, rather than a variable with the same identifier in an outer scope. For more information, have a read of this <a href="http://weblog.bocoup.com/the-catch-with-try-catch/" target="_blank">excellent article by Ben Alman</a>.
+    However, in Internet Explorer 8 and below, the <span class="code">catch</span> block identifier leaks into the outer scope. In those browsers, you could accidently be assigning a value to the exception parameter, rather than a variable with the same identifier in an outer scope. For more information, have a read of this <a href="http://weblog.bocoup.com/the-catch-with-try-catch/" target="_blank">excellent article by Ben Alman</a>.
 </p>

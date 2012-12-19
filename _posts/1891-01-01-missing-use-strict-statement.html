@@ -4,34 +4,34 @@ layout: post
 tags: jslint jshint
 ---
 <p>
-	<h3>When do I get this error?</h3>
+    <h3>When do I get this error?</h3>
 </p>
 <p>
-	JSLint will throw the "Missing 'use strict' statement" error when it encounters <strong>a function that does not contain the strict mode directive, and none of whose ancestor scopes contain the strict mode directive</strong>. JSHint will throw this error in the same situation, but only when the <span class="code">strict</span> option is set to <span class="code">true</span>. Here's an example of a function that does not run in strict mode:
+    JSLint will throw the "Missing 'use strict' statement" error when it encounters <strong>a function that does not contain the strict mode directive, and none of whose ancestor scopes contain the strict mode directive</strong>. JSHint will throw this error in the same situation, but only when the <span class="code">strict</span> option is set to <span class="code">true</span>. Here's an example of a function that does not run in strict mode:
 </p>
 <textarea>
 /*jshint strict: true */
 function example() {
-	var x = 10;
+    var x = 10;
 }</textarea>
 <p>
-	<h3>Why do I get this error?</h3>
+    <h3>Why do I get this error?</h3>
 </p>
 <p>
-	The main reason this error is raised is to highlight a <strong>lack of convention</strong>. However, as JavaScript engines move forward, this error will increasingly be helpful as it should highlight areas of code that <strong>may not work as you expect them to</strong>, or may even cause fatal JavaScript errors.
+    The main reason this error is raised is to highlight a <strong>lack of convention</strong>. However, as JavaScript engines move forward, this error will increasingly be helpful as it should highlight areas of code that <strong>may not work as you expect them to</strong>, or may even cause fatal JavaScript errors.
 </p>
 <p>
-	A "use strict" statement is an example of a <em>directive</em>, which can appear as the first statement of a program or a function (<a href="http://es5.github.com/#x14.1" target="_blank">ES5 &sect;14.1</a>):
+    A "use strict" statement is an example of a <em>directive</em>, which can appear as the first statement of a program or a function (<a href="http://es5.github.com/#x14.1" target="_blank">ES5 &sect;14.1</a>):
 </p>
 <blockquote>A Directive Prologue is the longest sequence of <em>ExpressionStatement</em> productions occurring as the initial <em>SourceElement</em> productions of a <em>Program</em> or <em>FunctionBody</em> and where each <em>ExpressionStatement</em> in the sequence consists entirely of a <em>StringLiteral</em> token followed a semicolon. The semicolon may appear explicitly or may be inserted by automatic semicolon insertion. A Directive Prologue may be an empty sequence.</blockquote>
 <p>
-	The Use Strict directive can be used to force the engine to conform to a strict subset of the language, as defined in <a href="http://es5.github.com/#C" target="_blank">ES5 Annex C</a>. It has become something of a convention to run all JavaScript code in strict mode, to avoid falling into traps that are apparent in the non-strict language. See the previous link or the corresponding <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode" target="_blank">MDN article</a> for the details of the differences in strict mode.
+    The Use Strict directive can be used to force the engine to conform to a strict subset of the language, as defined in <a href="http://es5.github.com/#C" target="_blank">ES5 Annex C</a>. It has become something of a convention to run all JavaScript code in strict mode, to avoid falling into traps that are apparent in the non-strict language. See the previous link or the corresponding <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode" target="_blank">MDN article</a> for the details of the differences in strict mode.
 <p>
-	You can fix this error by simply adding a Use Strict directive to the function, or to an ancestor function:
+    You can fix this error by simply adding a Use Strict directive to the function, or to an ancestor function:
 </p>
 <textarea>
 /*jshint strict: true */
 function example() {
-	"use strict";
-	var x = 10;
+    "use strict";
+    var x = 10;
 }</textarea>
