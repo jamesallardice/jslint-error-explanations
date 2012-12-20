@@ -29,7 +29,6 @@
 	}
 
 	var codeMirrorOpts = {
-			indentWithTabs: true,
 			indentUnit: 4,
 			lineNumbers: true,
 			fixedGutter: true,
