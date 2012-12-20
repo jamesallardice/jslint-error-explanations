@@ -9,7 +9,7 @@ tags: jshint
 <p>
     JSHint will throw the "Missing name in function declaration" error when it encounters <strong>the <span class="code">function</span> keyword, where it would be parsed as a statement, followed immediately by an opening parenthesis</strong>. In the following example we attempt to define a function but forget to give it an identifier.
 </p>
-<textarea>
+<textarea data-linter="JSHint">
 function () {
     "use strict";
 }</textarea>
