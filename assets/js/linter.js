@@ -39,7 +39,7 @@
 			}
 		},
 		jslintSelection = [
-			"<div id='linter-choice-lint' class='btn-group' style='float: left'>",
+			"<div class='btn-group linter-choice-lint' style='float: left'>",
 				"<button class='btn btn-mini dropdown-toggle jslint-choice-lint' data-toggle='dropdown'>",
 					"JSLint ",
 					"<span class='caret'></span>",
@@ -54,7 +54,7 @@
 			"</div>"
 		].join(""),
 		jshintSelection = [
-			"<div id='linter-choice-hint' class='btn-group' style='float: left'>",
+			"<div class='btn-group linter-choice-hint' style='float: left'>",
 				"<button class='btn btn-mini btn-inverse dropdown-toggle jslint-choice-hint' data-toggle='dropdown'>",
 					"JSHint ",
 					"<span class='caret'></span>",
@@ -81,8 +81,11 @@
 			$this.wrap("<div class='row'><div class='jslint span12'><div class='row'><div class='span7'></div></div></div></div>");
 			$this.closest(".row").append("<div class='jslint-output span5'><div class='jslint-result'><span class='result-output'></span><div class='jslint-choice pull-right'>" + jslintSelection + " " + jshintSelection + "</div></div><div class='jslint-messages'></div></div>");
 			if (linter === "JSHint") {
-				$("#linter-choice-hint").find("button").removeClass("btn-inverse").end().find("li[data-file] a").append(" <i class='icon-ok'></i>");
-				$("#linter-choice-lint").find("button").addClass("btn-inverse").end().find("li[data-file] i").remove();
+				if (!file) {
+					file = $this.closest(".row").find(".linter-choice-hint").find("li[data-file]").eq(0).data("file");
+				}
+				$this.closest(".row").find(".linter-choice-hint").find("button").removeClass("btn-inverse").end().find("li[data-file='" + file + "'] a").append(" <i class='icon-ok'></i>");
+				$this.closest(".row").find(".linter-choice-lint").find("button").addClass("btn-inverse").end().find("li[data-file] i").remove();
 			}
 			mirror = CodeMirror.fromTextArea(this, codeMirrorOpts);
 			$this.data("cmInstance", mirror);
