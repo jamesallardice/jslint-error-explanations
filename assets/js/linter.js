@@ -102,7 +102,7 @@
 		$("body").on("click", ".jslint-choice .btn-group li", function (e) {
 			var $this = $(this),
 				btnGroup = $this.closest(".btn-group"),
-				isLint = $this.closest(".btn-group").attr("id") === "linter-choice-lint",
+				isLint = $this.closest(".btn-group").hasClass("linter-choice-lint"),
 				script = "/assets/linters/" + (isLint ? "jslint" : "jshint") + "/" + $this.data("file");
 			e.preventDefault();
 			$this.closest(".jslint-result").next().empty().append("<p><img src='/assets/images/loading.gif' alt='Loading'> Working...</p>");
