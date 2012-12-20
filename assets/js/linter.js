@@ -76,6 +76,7 @@
 		$("textarea").each(function () {
 			var $this = $(this),
 				linter = $this.data("linter") || "JSLint",
+				file = $this.data("file"),
 				mirror;
 			$this.wrap("<div class='row'><div class='jslint span12'><div class='row'><div class='span7'></div></div></div></div>");
 			$this.closest(".row").append("<div class='jslint-output span5'><div class='jslint-result'><span class='result-output'></span><div class='jslint-choice pull-right'>" + jslintSelection + " " + jshintSelection + "</div></div><div class='jslint-messages'></div></div>");
@@ -85,7 +86,14 @@
 			}
 			mirror = CodeMirror.fromTextArea(this, codeMirrorOpts);
 			$this.data("cmInstance", mirror);
-			runLint(mirror, linter);
+			if (file) {
+				$.getScript("/assets/linters/" + linter.toLowerCase() + "/" + file, function () {
+					$("#linter-choice-" + (linter === "JSLint" ? "lint" : "hint")).find("i.icon-ok").remove().end().find("li[data-file='" + file + "'] a").append(" <i class='icon-ok'></i>");
+					runLint(mirror, linter);
+				});
+			} else {
+				runLint(mirror, linter);
+			}
 		});
 		$(".dropdown-toggle").dropdown();
 		$("body").on("click", ".jslint-choice .btn-group li", function (e) {
