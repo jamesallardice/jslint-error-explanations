@@ -1,0 +1,33 @@
+--- 
+title: "The Function constructor is eval"
+layout: post
+tags: jslint jshint
+---
+<p>
+    <h3>When do I get this error?</h3>
+</p>
+<p>
+    JSLint and JSHint will throw the "The Function constructor is eval" error when they encounter <strong>a call to the <span class="code">Function</span> constructor function preceded by the <span class="code">new</span> operator</strong>. Here's a simple example which defines a function to add two numbers:
+</p>
+<textarea>
+var x = new Function("a", "b", "return a + b");</textarea>
+<p>
+    <h3>Why do I get this error?</h3>
+</p>
+<p>
+    This error is raised to highlight the use of a <strong>bad practice</strong>. By passing a string to the <span class="code">Function</span> constructor, you are requiring the engine to parse that string much in the way it has to when you call the <span class="code">eval</span> function. For full details of why this is a problem, see the article on the related message, "<a href="/eval-is-evil">eval is evil</a>".
+</p>
+<p>
+    In simple cases like that of our example above, you can fix the issue by using a <em>function declaration</em> or <em>function expression</em>:
+</p>
+<textarea>
+var x = function (a, b) {
+    "use strict";
+    return a + b;
+};</textarea>
+<p>
+    In more advanced cases where you really need to use the <span class="code">Function</span> constructor, you can set the <span class="code">evil</span> option to <span class="code">true</span> to prevent both JSLint and JSHint from complaining about it:
+</p>
+<textarea>
+/*jslint evil: true */
+var x = new Function("a", "b", "return a + b");</textarea>
