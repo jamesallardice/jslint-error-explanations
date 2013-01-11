@@ -1,0 +1,76 @@
+--- 
+title: "Read only"
+layout: post
+tags: jslint jshint
+---
+<p>
+    <h3>When do I get this error?</h3>
+</p>
+<p>
+    JSLint and JSHint will throw the "Read only" error when they encounter an attempt to <strong>assign a value to built-in native object</strong>. In the following example we attempt to overwrite <span class="code">String</span> constructor function:
+</p>
+<textarea>
+String = function () {
+    "use strict";
+    return "Overwritten";
+};</textarea>
+<p>
+    <h3>Why do I get this error?</h3>
+</p>
+<p>
+    This error is raised to highlight a <strong>potentially dangerous piece of code</strong>. Your code will may fine if you do not fix this error, but it may be confusing to others, especially at first glance to someone quickly searching through your script, and it may break third party scripts.
+</p>
+<p>
+    It is perfectly valid to overwrite any of the native built-in functions, but there are limited use cases for it. JSLint and JSHint both forbid this practice completely and do not provide an option to allow it.
+</p>
+<p>
+    The list of read only functions used by JSLint is as follows:
+<p>
+<table class="table table-striped code">
+    <tr>
+        <td>Array</td>
+        <td>Boolean</td>
+        <td>Date</td>
+        <td>decodeURI</td>
+        <td>decodeURIComponent</td>
+        <td>encodeURI</td>
+        <td>encodeURIComponent</td>
+    </tr>
+    <tr>
+        <td>Error</td>
+        <td>eval</td>
+        <td>EvalError</td>
+        <td>Function</td>
+        <td>isFinite</td>
+        <td>isNaN</td>
+        <td>JSON</td>
+    </tr>
+    <tr>
+        <td>Math</td>
+        <td>Number</td>
+        <td>Object</td>
+        <td>parseInt</td>
+        <td>parseFloat</td>
+        <td>RangeError</td>
+        <td>ReferenceError</td>
+    </tr>
+    <tr>
+        <td>RegExp</td>
+        <td>String</td>
+        <td>SyntaxError</td>
+        <td>TypeError</td>
+        <td colspan="3">URIError</td>
+    </tr>
+</table>
+<p>
+    JSHint uses the same list, but adds a few extra identifiers to it:
+</p>
+<table class="table table-striped code">
+    <tr>
+        <td>hasOwnProperty</td>
+        <td>Map</td>
+        <td>NaN</td>
+        <td>Set</td>
+        <td>WeakMap</td>
+    </tr>
+</table>
