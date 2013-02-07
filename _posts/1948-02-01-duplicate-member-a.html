@@ -1,0 +1,33 @@
+--- 
+title: "Duplicate member '{a}'"
+layout: post
+tags: jshint
+---
+<p>
+    <h3>When do I get this error?</h3>
+</p>
+<p>
+    JSHint will throw the "Duplicate member '{a}'" error when it encounters <strong>an object literal that contains more than one property with the same identifier</strong>. In the following example we attempt to assign an object containing two properties with the identifier <span class="code">y</span> to a variable <span class="code">x</span>:
+</p>
+<textarea data-linter="JSHint">
+var x = {
+    y: 10,
+    y: 20
+};</textarea>
+<p>
+    <h3>Why do I get this error?</h3>
+</p>
+<p>
+    This error is raised to highlight <strong>code that may not work as you expect</strong> and a <strong>possible syntax error</strong>. In strict mode, your code will raise a syntax error. Otherwise, it will run without error but you will most likely get unexpected results.
+</p>
+<p>
+    The specification states the following, where <em>previous</em> is the result of calling <span class="code">[[GetOwnProperty]]</span> on the object in question with the identifier we are trying to add to it (<a href="http://es5.github.com/#x11.1.5" target="_blank">ES5 &sect;11.1.5</a>):
+</p>
+<blockquote>If <em>previous</em> is not undefined then throw a SyntaxError exception if any of the following conditions are true<br>
+&nbsp;&nbsp;&nbsp;&nbsp;a. This production is contained in strict code...</blockquote>
+<p>
+    So, when your code is running in strict mode, a syntax error will be thrown if you attempt to define multiple properties with the same identifier. When <em>not</em> in strict mode, no error is thrown but usually the latest definition will override any earlier definitions and you may experience some strange bugs if the naming was unintentional. Another good reason to always run your code in strict mode.
+</p>
+<p>
+    <strong>Note:</strong> if you are using JSLint instead of JSHint, this error will present itself as "Duplicate '{a}'", which is more generic and used to cover various "duplicate" situations.
+</p>
