@@ -17,7 +17,7 @@
                     <a href="{{ post.url }}/">{{ post.title }}</a>
                 </h3>
                 <p>
-                    {{ post.content | strip_html | strip_newlines | truncatewords:30 }}
+                    {{ post.content | strip_html | strip_newlines | replace: "When do I get this error?", "" | truncatewords:30 }}
                 </p>
             </li>
             {% endfor %}
@@ -40,7 +40,7 @@
                     <a href="{{ post.url }}/">{{ post.title }}</a>
                 </h3>
                 <p>
-                    {{ post.content | strip_html | strip_newlines | truncatewords:30 }}
+                    {{ post.content | strip_html | strip_newlines | replace: "When do I get this error?", "" | truncatewords:30 }}
                 </p>
             </li>
             {% endfor %}
