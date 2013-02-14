@@ -3,9 +3,11 @@
         <h2 id="posts-title">
             {{ title }}
         </h2>
+        {% if !noBack %}
         <h6>
             <i class="icon-arrow-left"></i> <a href="/">Back to all JSLint &amp; JSHint error messages</a>
         </h6>
+        {% endif %}
     </div>
     <div class="span6">
         <form class="form-horizontal pull-right">
