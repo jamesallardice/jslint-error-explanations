@@ -1,4 +1,4 @@
-{% capture num_posts %}{{ posts | size | divided_by:2 }}{% endcapture %}
+{% capture num_posts %}{{ posts | size | divided_by: 2 | plus: 1 }}{% endcapture %}
 <div class="row">
     <div class="span6">
         <ul class="posts">
