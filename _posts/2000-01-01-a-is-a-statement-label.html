@@ -47,3 +47,6 @@ test();</textarea>
 <p>
     Every statement has a label set (it's empty by default for most statements, except loops and switch statements which have an implicit label so you can break out of them). When you give a statement a label, the identifier of that label is added to the label set. The label set is completely separate from the variable environment of the scope, so there is no potential for naming conflicts between label identifiers and variable identifiers. Therefore, this JSLint and JSHint error is designed purely to make your code clearer and easier to follow.
 </p>
+<p class="standout">
+    In JSHint 1.0.0 and above you have the ability to ignore any warning with a <a href="http://jshint.com/docs/#options" target="_blank">special option syntax</a>. The identifier of this warning is <strong>W037</strong>. This means you can tell JSHint to not issue this warning with the <code>/*jshint -W037 */</code> directive.
+</p>

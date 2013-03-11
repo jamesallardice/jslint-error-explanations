@@ -1,0 +1,19 @@
+--- 
+title: "The object literal notation {} is preferrable"
+layout: post
+tags: jshint
+---
+<p>
+    <h3>When do I get this error?</h3>
+</p>
+<p>
+    JSHint (version 1.0.0 and above) will throw the "The object literal notation {} is preferrable" error when it encounters <strong>a call to the <span class="code">Object</span> constructor preceded by the <span class="code">new</span> operator</strong>. Here's an example:
+</p>
+<textarea data-linter="JSHint">
+var x = new Object();</textarea>
+<p>
+    This is the equivalent of the JSLint and older JSHint "<a href="/use-the-object-literal-notation">Use the object literal notation {}</a>" warning. More detail can be found on the page for that message.
+</p>
+<p class="standout">
+    In JSHint 1.0.0 and above you have the ability to ignore any warning with a <a href="http://jshint.com/docs/#options" target="_blank">special option syntax</a>. The identifier of this warning is <strong>W010</strong>. This means you can tell JSHint to not issue this warning with the <code>/*jshint -W010 */</code> directive.
+</p>

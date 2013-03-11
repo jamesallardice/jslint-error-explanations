@@ -44,3 +44,6 @@ try {
 <p>
     However, in Internet Explorer 8 and below, the <span class="code">catch</span> block identifier leaks into the outer scope. In those browsers, you could accidently be assigning a value to the exception parameter, rather than a variable with the same identifier in an outer scope. For more information, have a read of this <a href="http://weblog.bocoup.com/the-catch-with-try-catch/" target="_blank">excellent article by Ben Alman</a>.
 </p>
+<p class="standout">
+    In JSHint 1.0.0 and above you have the ability to ignore any warning with a <a href="http://jshint.com/docs/#options" target="_blank">special option syntax</a>. The identifier of this warning is <strong>W022</strong>. This means you can tell JSHint to not issue this warning with the <code>/*jshint -W022 */</code> directive.
+</p>

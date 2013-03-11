@@ -7,7 +7,7 @@ tags: jslint jshint
     <h3>When do I get this error?</h3>
 </p>
 <p>
-    JSLint will throw the "Do not wrap function literals in parens unless they are to be immediately invoked" error when it encounters <strong>a function expression wrapped in parentheses with no following invoking parentheses</strong>. JSHint will throw this error in the same situation, but only <strong>if the <span class="code">immed</span> option is set to <span class="code">true</span></strong>. In the following example we assign a function expression to a variable <span class="code">x</span>:
+    JSLint will throw the "Do not wrap function literals in parens unless they are to be immediately invoked" error when it encounters <strong>a function expression wrapped in parentheses with no following invoking parentheses</strong>. JSHint (before version 1.0.0) will throw this error in the same situation, but only <strong>if the <span class="code">immed</span> option is set to <span class="code">true</span></strong>. In the following example we assign a function expression to a variable <span class="code">x</span>:
 </p>
 <textarea>
 var x = (function () {
@@ -30,4 +30,7 @@ var x = (function () {
 </p>
 <p>
     When you see a function expression wrapped in parentheses, you would usually expect it to be an immediately invoked function expression. When it isn't, there is greater potential for confusion and misunderstanding of your code.
+</p>
+<p class="standout">
+    In JSHint 1.0.0 and above this warning has changed to "<a href="/wrapping-non-iife-function-literals-in-parens">Wrapping non-IIFE function literals in parens is unnecessary</a>". More detail can be found the page dedicated to that message.
 </p>

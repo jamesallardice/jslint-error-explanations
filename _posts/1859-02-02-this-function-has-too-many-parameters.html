@@ -1,0 +1,25 @@
+--- 
+title: "This function has too many parameters"
+layout: post
+tags: jshint
+---
+<p>
+    <h3>When do I get this error?</h3>
+</p>
+<p>
+    JSHint will throw the "This function has too many parameters" error when it encounters <strong>a function signature with more named arguments than specified by the <span class="code">maxparams</span> option</strong>. Here's an example in which we attempt to declare a function that takes 3 arguments:
+</p>
+<textarea data-linter="JSHint">
+/*jshint maxparams: 2 */
+function Person(name, age, gender) {
+    "use strict";
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+}</textarea>
+<p>
+    This is the equivalent of the older JSHint "<a href="/too-many-parameters-per-function">Too many parameters per function</a>" warning. More detail can be found on the page for that message.
+</p>
+<p class="standout">
+    In JSHint 1.0.0 and above you have the ability to ignore any warning with a <a href="http://jshint.com/docs/#options" target="_blank">special option syntax</a>. The identifier of this warning is <strong>W072</strong>. This means you can tell JSHint to not issue this warning with the <code>/*jshint -W072 */</code> directive.
+</p>

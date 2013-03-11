@@ -7,7 +7,7 @@ tags: jshint
     <h3>When do I get this error?</h3>
 </p>
 <p>
-    JSHint will throw the "All 'debugger' statements should be removed" error when it encounters <strong>a <span class="code">debugger</span> statement</strong>. In the following useless example we attempt to use the <span class="code">debugger</span> statement:
+    JSHint (before version 1.0.0) will throw the "All 'debugger' statements should be removed" error when it encounters <strong>a <span class="code">debugger</span> statement</strong>. In the following useless example we attempt to use the <span class="code">debugger</span> statement:
 </p>
 <textarea data-linter="JSHint">
 debugger;</textarea>
@@ -29,3 +29,6 @@ debugger;</textarea>
 </p>
 <textarea>
 debugger;</textarea>
+<p class="standout">
+    In JSHint 1.0.0 and above this warning has changed to "<a href="/forgotten-debugger-statement">Forgotten 'debugger' statement?</a>". More detail can be found the page dedicated to that message.
+</p>

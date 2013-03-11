@@ -7,7 +7,7 @@ tags: jslint jshint
     <h3>When do I get this error?</h3>
 </p>
 <p>
-    JSLint and JSHint will throw the "Use the array literal notation []" error when they encounter <strong>a call to the <span class="code">Array</span> constructor with the <span class="code">new</span> operator</strong>. Here's an example:
+    JSLint and JSHint (before version 1.0.0) will throw the "Use the array literal notation []" error when they encounter <strong>a call to the <span class="code">Array</span> constructor with the <span class="code">new</span> operator</strong>. Here's an example:
 </p>
 <textarea>
 var x = new Array();</textarea>
@@ -28,3 +28,6 @@ var x = [];</textarea>
 <textarea data-jslintopts='{"browser":true}'>
 window.Array = 50;
 var x = new Array(); //TypeError: Array is not a function</textarea>
+<p class="standout">
+    In JSHint 1.0.0 and above this warning has changed to "<a href="/the-array-literal-notation-is-preferrable">The array literal notation [] is preferrable</a>". More detail can be found the page dedicated to that message.
+</p>

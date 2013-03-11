@@ -34,5 +34,8 @@ tags: jslint jshint
     <h4>JSHint bug alert!</h4>
  </p>
  <p>
-    As you may have noticed if you have switched one of the example above to use JSHint instead of JSLint, a large number of the same error appear to get generated for the first unclosed comment, to the point where the parser gives up and tells you that there are too many errors.
+    <del>As you may have noticed if you have switched one of the example above to use JSHint instead of JSLint, a large number of the same error appear to get generated for the first unclosed comment, to the point where the parser gives up and tells you that there are too many errors.</del> <strong>Fixed as of JSHint 1.0.0</strong>.
  </p>
+ <p class="standout">
+    In JSHint 1.0.0 and above you have the ability to ignore any warning with a <a href="http://jshint.com/docs/#options" target="_blank">special option syntax</a>. Since this message relates to a fatal syntax error you cannot disable it.
+</p>

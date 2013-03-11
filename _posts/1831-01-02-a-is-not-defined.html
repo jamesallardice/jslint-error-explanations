@@ -1,0 +1,25 @@
+--- 
+title: "'{a}' is not defined"
+layout: post
+tags: jshint
+---
+<p>
+    <h3>When do I get this error?</h3>
+</p>
+<p>
+    JSHint will throw the "'{a}' is not defined" error when it encounters a reference to <strong>an identifier that has not been declared as part of a <span class="code">var</span> or <span class="code">function</span> statement</strong>, and the <strong><span class="code">undef</span> option is set to <span class="code">true</span></strong>.
+</p>
+<p>
+    In the following example we attempt to set the value of the variable <span class="code">x</span> that has not been defined, and then attempt to alert the value of that variable. We also attempt to set the value of <span class="code">y</span> to the return value of a function which has not been defined:
+</p>
+<textarea data-linter="JSHint">
+/*jshint undef: true */
+var y = someFunction();
+x = 10;
+alert(x);</textarea>
+<p>
+    This is the equivalent of the JSLint "<a href="/a-was-used-before-it-was-defined">'{a}' was used before it was defined</a>" warning. More detail can be found on the page for that message.
+</p>
+<p class="standout">
+    In JSHint 1.0.0 and above you have the ability to ignore any warning with a <a href="http://jshint.com/docs/#options" target="_blank">special option syntax</a>. The identifier of this warning is <strong>W117</strong>. This means you can tell JSHint to not issue this warning with the <code>/*jshint -W117 */</code> directive.
+</p>

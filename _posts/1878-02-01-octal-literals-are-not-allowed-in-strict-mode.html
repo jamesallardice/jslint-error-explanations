@@ -35,10 +35,13 @@ tags: jshint
 <em>OctalDigit</em> <span class="code">::</span> one of<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="code">0 1 2 3 4 5 6 7</span></blockquote>
 <p>
-    The reason behind the message text is likely the fact that the V8 engine (and potentially others) do not differentiate the syntax error message for these two situations. However, it's worth bearing in mind that in this particular case, we are dealing with an octal escape sequence and not an octal literal. Also note that the use of an actual octal literal in strict mode does cause a syntax error, but causes JSHint to raise a different warning:
+    The reason behind the message text is likely the fact that the V8 engine (and potentially others) do not differentiate the syntax error message for these two situations. However, it's worth bearing in mind that in this particular case, we are dealing with an octal escape sequence and not an octal literal. Also note that the use of an actual octal literal in strict mode does cause a syntax error, but causes JSHint (prior to version 1.0.0) to raise a different warning:
 </p>
-<textarea data-linter="JSHint">
+<textarea data-linter="JSHint" data-file="jshint-r12.min.js">
 (function () {
     "use strict";
     var x = 07;
 }());</textarea>
+<p class="standout">
+    In JSHint 1.0.0 and above you have the ability to ignore any warning with a <a href="http://jshint.com/docs/#options" target="_blank">special option syntax</a>. The identifier of this warning is <strong>W115</strong>. This means you can tell JSHint to not issue this warning with the <code>/*jshint -W115 */</code> directive.
+</p>

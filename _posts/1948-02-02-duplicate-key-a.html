@@ -1,0 +1,22 @@
+--- 
+title: "Duplicate key '{a}'"
+layout: post
+tags: jshint
+---
+<p>
+    <h3>When do I get this error?</h3>
+</p>
+<p>
+    JSHint (version 1.0.0 and above) will throw the "Duplicate key '{a}'" error when it encounters <strong>an object literal that contains more than one property with the same identifier</strong>. In the following example we attempt to assign an object containing two properties with the identifier <span class="code">y</span> to a variable <span class="code">x</span>:
+</p>
+<textarea data-linter="JSHint">
+var x = {
+    y: 10,
+    y: 20
+};</textarea>
+<p>
+    This is the equivalent of the older JSHint "<a href="/duplicate-member-a">Duplicate member '{a}'</a>" warning. More detail can be found on the page for that message.
+</p>
+<p class="standout">
+    In JSHint 1.0.0 and above you have the ability to ignore any warning with a <a href="http://jshint.com/docs/#options" target="_blank">special option syntax</a>. The identifier of this warning is <strong>W075</strong>. This means you can tell JSHint to not issue this warning with the <code>/*jshint -W075 */</code> directive.
+</p>
