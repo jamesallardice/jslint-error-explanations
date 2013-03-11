@@ -124,6 +124,13 @@ blockquote {
 blockquote + p {
     margin-top: -4px;
 }
+p {
+    line-height: 20px;
+    margin-bottom: 15px;
+}
+p:last-child {
+    margin-bottom: 9px;
+}
 .grey {
     color: #888;
 }
