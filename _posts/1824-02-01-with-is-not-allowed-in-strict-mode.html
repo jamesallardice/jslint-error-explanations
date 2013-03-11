@@ -1,0 +1,54 @@
+--- 
+title: "'with' is not allowed in strict mode"
+layout: post
+tags: jshint
+---
+<p>
+    <h3>When do I get this error?</h3>
+</p>
+<p>
+    JSHint will throw the "'with' is not allowed in strict mode" error when it encounters <strong>a <span class="code">with<span> statement inside code running in strict mode</strong>. In the following example we attempt to use a <span class="code">with</span> statement inside a function that contains a strict mode directive::
+</p>
+<textarea data-linter="JSHint">
+function example() {
+    "use strict";
+    var a = {
+        b: 10
+    };
+    with (a) {
+        b = 20;
+    }
+}</textarea>
+<p>
+    <h3>Why do I get this error?</h3>
+</p>
+<p>
+    This error is raised to highlight a <strong>JavaScript syntax error</strong>. Your code will fail if you do not resolve this issue. The ECMAScript 5 specification clearly states that the presence of a <span class="code">with</span> statement within strict mode code is illegal (<a href="http://es5.github.com/#x12.10.1" target="_blank">ES5 &sect;12.10.1</a>):
+</p>
+<blockquote>Strict mode code may not include a <em>WithStatement</em>. The occurrence of a <em>WithStatement</em> in such a context is treated as a SyntaxError.</blockquote>
+<p>
+    You can solve this problem by reworking code that uses <span class="code">with</span> statements to fully qualify the "namespace". The following example will behave in exactly the same way as the first example above:
+</p>
+<textarea data-linter="JSHint">
+function example() {
+    "use strict";
+    var a = {
+        b: 10
+    };
+    a.b = 20;
+}</textarea>
+<p>
+    If you rely upon the behaviour of the <span class="code">with</span> statement for a valid use-case, your only option is to ensure your code does not run in strict mode. This results in a different message from JSHint, but one that can be surpressed (in version 1.0.0 and above) with the appropriate warning identifier flag:
+</p>
+<textarea data-linter="JSHint">
+function example() {
+    var a = {
+        b: 10
+    };
+    with (a) {
+        b = 20;
+    }
+}</textarea>
+ <p class="standout">
+    In JSHint 1.0.0 and above you have the ability to ignore any warning with a <a href="http://jshint.com/docs/#options" target="_blank">special option syntax</a>. Since this message relates to a fatal syntax error you cannot disable it.
+</p>
