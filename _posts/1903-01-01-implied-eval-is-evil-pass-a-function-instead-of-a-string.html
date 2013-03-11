@@ -7,7 +7,7 @@ tags: jslint jshint
     <h3>When do I get this error?</h3>
 </p>
 <p>
-    JSLint and JSHint will throw the "Implied eval is evil. Pass a function instead of a string" error when they encounter <strong>a call to the <span class="code">setTimeout</span> or <span class="code">setInterval</span> functions in which the first argument is a string</strong>. Here's an example that should pop up a browser alert after one second:
+    JSLint and JSHint (before version 1.0.0) will throw the "Implied eval is evil. Pass a function instead of a string" error when they encounter <strong>a call to the <span class="code">setTimeout</span> or <span class="code">setInterval</span> functions in which the first argument is a string</strong>. Here's an example that should pop up a browser alert after one second:
 </p>
 <textarea>
 /*jslint browser: true */
