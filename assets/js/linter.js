@@ -62,7 +62,8 @@
 				"<ul class='dropdown-menu'>",
 					"<li><span class='heading'>JSHint Version</span></li>",
 					"<li class='divider'></li>",
-					"<li data-file='jshint-r12.min.js'><a href='#'>r12 (Latest)</a></li>",
+					"<li data-file='jshint-1.1.0.min.js'><a href='#'>1.1.0 (Latest)</a></li>",
+					"<li data-file='jshint-r12.min.js'><a href='#'>r12</a></li>",
 					"<li data-file='jshint-r11.min.js'><a href='#'>r11</a></li>",
 					"<li data-file='jshint-r10.min.js'><a href='#'>r10</a></li>",
 					"<li data-file='jshint-r09.min.js'><a href='#'>r09</a></li>",
@@ -91,7 +92,7 @@
 			$this.data("cmInstance", mirror);
 			if (file) {
 				$.getScript("/assets/linters/" + linter.toLowerCase() + "/" + file, function () {
-					$("#linter-choice-" + (linter === "JSLint" ? "lint" : "hint")).find("i.icon-ok").remove().end().find("li[data-file='" + file + "'] a").append(" <i class='icon-ok'></i>");
+					$(".linter-choice-" + (linter === "JSLint" ? "lint" : "hint")).find("i.icon-ok").remove().end().find("li[data-file='" + file + "'] a").append(" <i class='icon-ok'></i>");
 					runLint(mirror, linter);
 				});
 			} else {
