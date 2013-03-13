@@ -1,0 +1,85 @@
+--- 
+title: "'{a}' is defined but never used"
+layout: post
+tags: jshint
+---
+<p>
+    <h3>When do I get this error?</h3>
+</p>
+<p>
+    JSHint will throw the "'{a}' is defined but never used" error when it encounters <strong>a variable or function declaration, or function arguments, with an identifier that is not referred to in a visible scope</strong>, but only <strong>when the <span class="code">unused</span> option is set to <span class="code">true</span></strong>. In the following example there are various unused identifiers:
+</p>
+<textarea data-linter="JSHint">
+/*jshint unused: true */
+var x = 1,
+    y;
+
+function example() {}</textarea>
+<p>
+    <h3>Why do I get this error?</h3>
+</p>
+<p>
+    This error is raised to highlight <strong>potentially useless code</strong>. Your code will run without error if you just ignore this warning, but it could be doing unnecessary work and could be confusing to other developers exposed to your code.
+</p>
+<p>
+    When you declare a variable or a function in JavaScript there is no obligation to use it later on. Therefore, code such as the example above is perfectly valid but also completely useless. If this warning relates to variables that are simply defined and never used, you can simply remove those variable declarations completely. However, sometimes you may declare variables in one file but use them in another. If that's the case, you can use the <span class="code">exported</span> directive to tell JSHint about them:
+</p>
+<textarea data-linter="JSHint">
+/*jshint unused: true */
+/*exported x, example */
+var x = 1,
+    y;
+
+function example() {}</textarea>
+<p>
+    In this example we have told JSHint that the identifiers <span class="code">x</span> and <span class="code">example</span> are used by external scripts so it no longer warns us about them.
+</p>
+<p>
+    <h3>A change in JSHint 1.1.0</h3>
+</p>
+    As of JSHint 1.1.0, the behaviour of the <span class="code">unused</span> option has changed when it comes to function parameters. Prior to 1.1.0, setting the option would generate warnings about any function parameters that are not used inside the function. The following example is running against JSHint 1.0.0:
+</p>
+<textarea data-linter="JSHint" data-file="jshint-1.0.0.min.js">
+/*jshint unused: true */
+(function (a, b, c) {
+    /* Do not use any of the parameters */
+}());</textarea>
+<p>
+    If you switch the version of JSHint in the above example to 1.1.0, you should notice that there's now only a single warning instead of three. By default, JSHint 1.1.0 and above will only issue a warning if the <em>last function parameter</em> is unused. The reasoning behind this is explained by <a href="https://github.com/jshint/jshint/issues/607" target="_blank">this issue</a> (and expanded upon in <a href="https://github.com/jshint/jshint/issues/778" target="_blank">this one</a>). Basically, a common pattern, especially in Node.js, is to use the first parameter of a callback function as an error object, and the second as the data you are expecting. It is relatively common to simply ignore this error object, but you still need to identify it in the function signature if you want named access to the following arguments.
+</p>
+<p>
+    However, if you don't like this new default behaviour, don't worry. The <span class="code">unused</span> option now accepts a value that configures how it works:
+</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th style="width: 20%">Option value</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><span class="code">vars</span></td>
+            <td>Only warn about unused variable and function declarations. Don't warn about any function parameters.</td>
+        </tr>
+        <tr>
+            <td><span class="code">last-param</span></td>
+            <td>Warn about unused variable and function declarations and the last parameter of functions. This is the default value if you set the option to <span class="code">true</span>.</td>
+        </tr>
+        <tr>
+            <td><span class="code">strict</span></td>
+            <td>Warn about unused variable and function declarations and all parameters of functions. This is the equivalent to the pre-1.1.0 behaviour.</td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    Following that, here's another example in which we don't care about unused function parameters at all:
+</p>
+<textarea data-linter="JSHint">
+/*jshint unused: vars */
+(function (a, b, c) {
+    /* Do not use any of the parameters */
+}());</textarea>
+<p class="standout">
+    In JSHint 1.0.0 and above you have the ability to ignore any warning with a <a href="http://jshint.com/docs/#options" target="_blank">special option syntax</a>. The identifier of this warning is <strong>W098</strong>. This means you can tell JSHint to not issue this warning with the <code>/*jshint -W098 */</code> directive.
+</p>
