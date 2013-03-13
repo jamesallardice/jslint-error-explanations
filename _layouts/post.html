@@ -18,6 +18,17 @@
 		{{ content }}
 	</div>
 </div>
+<hr>
+<div class="row author">
+	<div class="span12">
+		{% assign author = site.authors[page.author] %}
+		<img src="{{ author.avatar }}" alt="{{ author.name }}">
+		<p>This article was written by <strong>{{ author.name }}</strong>, {{ author.desc }}</p>
+		<p>
+			You can <a href="https://twitter.com/{{ author.twitter }}">follow him on Twitter</a>, <a href="https://github.com/{{ author.github }}">fork him on GitHub</a> and <a href="{{ author.gplus }}">find him on Google+</a>.
+		</p>
+	</div>
+</div>
 {% if site.url != "localhost" %}
 <div class="row" id="ads">
 	<div class="span12">

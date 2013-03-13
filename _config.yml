@@ -1,2 +1,11 @@
 permalink: /:title
 url: "http://jslinterrors.com"
+
+authors:
+    jallardice:
+        name: James Allardice
+        avatar: https://gravatar.com/avatar/321be24529d43c2bacc7167337299e3d.png
+        gplus: https://plus.google.com/110229746715330149995?rel=author
+        twitter: james_allardice
+        github: jamesallardice
+        desc: "a young, enthusiastic JavaScript developer at <a href='http://globalpersonals.co.uk/' target='_blank'>Global Personals</a>. He is passionate about writing clean, maintainable JavaScript and uses JSHint on a daily basis to help achieve this."

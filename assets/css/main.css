@@ -214,6 +214,11 @@ p.standout {
 .code {
     font-family: Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace, serif;
 }
+.author img {
+    float: left;
+    margin-right: 10px;
+    border: 4px solid #ccc;
+}
 #github {
     position: fixed;
     top: 0;
