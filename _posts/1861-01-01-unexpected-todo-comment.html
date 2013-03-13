@@ -19,5 +19,9 @@ author: jallardice
     This error is raised to highlight a <strong>lack of convention</strong>. Comments that start with the word "TODO" are commonly used to mark unfinished parts of code. JSLint takes the safe approach and assumes that your code is not production-ready if it contains such comments.
 </p>
 <p>
-    If you are happy with "TODO" comments being in your code, you can pass the <span class="code">todo</span> option to JSLint to tell it to ignore them.
+    If you are happy with "TODO" comments being in your code, you can pass the <span class="code">todo</span> option to JSLint to tell it to ignore them:
 </p>
+<textarea>
+/*jslint todo: true */
+
+// TODO: Finish writing about JSLint errors</textarea>
