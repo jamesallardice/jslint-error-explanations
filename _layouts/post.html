@@ -18,6 +18,7 @@
 		{{ content }}
 	</div>
 </div>
+{% if page.author %}
 <hr>
 <div class="row author">
 	<div class="span12">
@@ -29,6 +30,7 @@
 		</p>
 	</div>
 </div>
+{% endif %}
 {% if site.url != "localhost" %}
 <div class="row" id="ads">
 	<div class="span12">
