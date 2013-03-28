@@ -8,9 +8,9 @@ author: jallardice
     <h3>When do I get this error?</h3>
 </p>
 <p>
-    JSLint throws the "ADSAFE violation: bad id" error when the <span class="code">adsafe</span> and <span class="code">fragment</span> options are set to <span class="code">true</span> (they're <span class="code">false</span> by default) and <strong>you pass it a fragment of HTML that includes a <span class="code">div</span> element with an <span class="code">id</span> attribute value that does not conform to the ADsafe rules</strong>. Here's an example:
+    JSLint (prior to version 2013-03-18) throws the "ADSAFE violation: bad id" error when the <span class="code">adsafe</span> and <span class="code">fragment</span> options are set to <span class="code">true</span> (they're <span class="code">false</span> by default) and <strong>you pass it a fragment of HTML that includes a <span class="code">div</span> element with an <span class="code">id</span> attribute value that does not conform to the ADsafe rules</strong>. Here's an example:
 </p>
-<textarea data-jslintopts='{ "adsafe": true, "fragment": true }'>
+<textarea data-jslintopts='{ "adsafe": true, "fragment": true }' data-file="jslint-20130205.min.js">
 &lt;div id="adsafe-widget"&gt;
     &lt;script&gt;
         ADSAFE.go("adsafe-widget", function () {
@@ -30,3 +30,9 @@ author: jallardice
 <blockquote>
     The <span class="code">&lt;div&gt;</span> element must have an <span class="code">id</span>. The <span class="code">id</span> must contain only upper case ASCII letters with a trailing _ character.
 </blockquote>
+<p class="standout">
+    In a commit on 20th March 2013, HTML, CSS and ADsafe parsing functionality was removed from JSLint. If you rely upon this functionality, you will be unable to upgrade JSLint to a version beyond that date.
+</p>
+<p class="standout">
+    In <a href="https://github.com/douglascrockford/JSLint/commit/267939b9168419312782a8533e35c60243215d56" target="_blank">a commit</a> on 20th March 2013, HTML, CSS and ADsafe parsing functionality was removed from JSLint. If you rely upon this functionality, you will be unable to upgrade JSLint to a version beyond that date.
+</p>

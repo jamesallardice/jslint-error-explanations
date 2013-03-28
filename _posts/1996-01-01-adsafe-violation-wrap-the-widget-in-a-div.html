@@ -8,9 +8,9 @@ author: jallardice
     <h3>When do I get this error?</h3>
 </p>
 <p>
-    JSLint throws the "ADsafe violation: Wrap the widget in a div" error when the <span class="code">adsafe</span> and <span class="code">fragment</span> options are set to <span class="code">true</span> (they're <span class="code">false</span> by default) and you pass it <strong>a fragment of HTML that is not wrapped in a <span class="code">div</span> element</strong>. Here's an example:
+    JSLint (prior to version 2013-03-18) throws the "ADsafe violation: Wrap the widget in a div" error when the <span class="code">adsafe</span> and <span class="code">fragment</span> options are set to <span class="code">true</span> (they're <span class="code">false</span> by default) and you pass it <strong>a fragment of HTML that is not wrapped in a <span class="code">div</span> element</strong>. Here's an example:
 </p>
-<textarea data-jslintopts='{ "adsafe": true, "fragment": true }'>
+<textarea data-jslintopts='{ "adsafe": true, "fragment": true }' data-file="jslint-20130205.min.js">
 &lt;script&gt;
     ADSAFE.go("adsafe-widget", function () {
         "use strict";
@@ -28,3 +28,6 @@ author: jallardice
 <blockquote>
     The <span class="code">&lt;div&gt;</span> element must have an <span class="code">id</span>. The <span class="code">id</span> must contain only upper case ASCII letters with a trailing _ character.
 </blockquote>
+<p class="standout">
+    In <a href="https://github.com/douglascrockford/JSLint/commit/267939b9168419312782a8533e35c60243215d56" target="_blank">a commit</a> on 20th March 2013, HTML, CSS and ADsafe parsing functionality was removed from JSLint. If you rely upon this functionality, you will be unable to upgrade JSLint to a version beyond that date.
+</p>

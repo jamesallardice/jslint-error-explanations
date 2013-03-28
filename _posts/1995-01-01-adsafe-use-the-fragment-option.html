@@ -8,9 +8,9 @@ author: jallardice
     <h3>When do I get this error?</h3>
 </p>
 <p>
-    JSLint throws the "ADSAFE: Use the fragment option" error when the <span class="code">adsafe</span> option is set to <span class="code">true</span> (it's <span class="code">false</span> by default) and <strong>you pass it a fragment of HTML without having set the <span class="code">fragment</span> option to <span class="code">true</span></strong>. Here's an example:
+    JSLint (prior to version 2013-03-18) throws the "ADSAFE: Use the fragment option" error when the <span class="code">adsafe</span> option is set to <span class="code">true</span> (it's <span class="code">false</span> by default) and <strong>you pass it a fragment of HTML without having set the <span class="code">fragment</span> option to <span class="code">true</span></strong>. Here's an example:
 </p>
-<textarea data-jslintopts='{ "adsafe": true }'>
+<textarea data-jslintopts='{ "adsafe": true }' data-file="jslint-20130205.min.js">
 &lt;div id="adsafe-widget"&gt;
     &lt;script&gt;
         ADSAFE.lib("adsafelib", function () {
@@ -23,4 +23,7 @@ author: jallardice
 </p>
 <p>
     This error is raised because <strong>JSLint doesn't know how to continue</strong>. Since JSLint is primarily a JavaScript parser, it doesn't expect an HTML fragment by default. The error can be fixed simply by passing the <span class="code">fragment</span> option to JSLint.
+</p>
+<p class="standout">
+    In <a href="https://github.com/douglascrockford/JSLint/commit/267939b9168419312782a8533e35c60243215d56" target="_blank">a commit</a> on 20th March 2013, HTML, CSS and ADsafe parsing functionality was removed from JSLint. If you rely upon this functionality, you will be unable to upgrade JSLint to a version beyond that date.
 </p>

@@ -8,12 +8,12 @@ author: jallardice
     <h3>When do I get this error?</h3>
 </p>
 <p>
-    JSLint will throw the "ADsafe violation: '{a}'" error in a number of situations, but only when the <span class="code">adsafe</span> option is set to <span class="code">true</span> (it's <span class="code">false</span> by default). For more information on ADsafe, see the <a href="http://www.adsafe.org/">ADsafe website</a>. Following is a list of potential causes of this error.
+    JSLint (prior to version 2013-03-18) will throw the "ADsafe violation: '{a}'" error in a number of situations, but only when the <span class="code">adsafe</span> option is set to <span class="code">true</span> (it's <span class="code">false</span> by default). For more information on ADsafe, see the <a href="http://www.adsafe.org/">ADsafe website</a>. Following is a list of potential causes of this error.
 </p>
 <p>
     The use of a variable statement in the global execution context:
 </p>
-<textarea data-jslintopts='{ "adsafe": true }'>
+<textarea data-jslintopts='{ "adsafe": true }' data-file="jslint-20130205.min.js">
 var x = 10; //Global variable
 
 ADSAFE.lib("adsafelib", function () {
@@ -22,7 +22,7 @@ ADSAFE.lib("adsafelib", function () {
 <p>
     The use of <span class="code">this</span> in ADsafe code:
 </p>
-<textarea data-jslintopts='{ "adsafe": true }'>
+<textarea data-jslintopts='{ "adsafe": true }' data-file="jslint-20130205.min.js">
 ADSAFE.lib("adsafelib", function () {
     "use strict";
     this.x = 10;
@@ -30,7 +30,7 @@ ADSAFE.lib("adsafelib", function () {
 <p>
     The use of the <span class="code">arguments</span> object in ADsafe code:
 </p>
-<textarea data-jslintopts='{ "adsafe": true }'>
+<textarea data-jslintopts='{ "adsafe": true }' data-file="jslint-20130205.min.js">
 ADSAFE.lib("adsafelib", function () {
     "use strict";
     var arg = arguments[0];
@@ -38,7 +38,7 @@ ADSAFE.lib("adsafelib", function () {
 <p>
     The use of the <span class="code">eval</span> function in ADsafe code:
 </p>
-<textarea data-jslintopts='{ "adsafe": true }'>
+<textarea data-jslintopts='{ "adsafe": true }' data-file="jslint-20130205.min.js">
 ADSAFE.lib("adsafelib", function () {
     "use strict";
     eval("var x = 10;");
@@ -48,4 +48,7 @@ ADSAFE.lib("adsafelib", function () {
 </p>
 <p>
     This error is raised when JSLint encounters code that <strong>violates the rules of the ADsafe subset of JavaScript</strong>. It is a fatal error that signifies a severe problem with ADsafe code and will have to be fixed before your ADsafe code will execute.
+</p>
+<p class="standout">
+    In <a href="https://github.com/douglascrockford/JSLint/commit/267939b9168419312782a8533e35c60243215d56" target="_blank">a commit</a> on 20th March 2013, HTML, CSS and ADsafe parsing functionality was removed from JSLint. If you rely upon this functionality, you will be unable to upgrade JSLint to a version beyond that date.
 </p>

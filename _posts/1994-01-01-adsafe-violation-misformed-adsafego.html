@@ -8,9 +8,9 @@ author: jallardice
     <h3>When do I get this error?</h3>
 </p>
 <p>
-    JSLint throws the "ADsafe violation: Misformed ADSAFE.go" error when the <span class="code">adsafe</span> and <span class="code">fragment</span> options are set to <span class="code">true</span> (they're <span class="code">false</span> by default) and <strong>the call to the <span class="code">ADSAFE.go</span> method does not pass the correct argument types</strong>. Here's an example:
+    JSLint (prior to version 2013-03-18) throws the "ADsafe violation: Misformed ADSAFE.go" error when the <span class="code">adsafe</span> and <span class="code">fragment</span> options are set to <span class="code">true</span> (they're <span class="code">false</span> by default) and <strong>the call to the <span class="code">ADSAFE.go</span> method does not pass the correct argument types</strong>. Here's an example:
 </p>
-<textarea data-jslintopts='{ "adsafe": true, "fragment": true }'>
+<textarea data-jslintopts='{ "adsafe": true, "fragment": true }' data-file="jslint-20130205.min.js">
 &lt;div id="WIDGET_"&gt;
     &lt;script&gt;
         ADSAFE.go("WIDGET_");
@@ -24,4 +24,7 @@ author: jallardice
 </p>
 <p>
     The <span class="code">ADSAFE.go</span> method requires two arguments. The first must be the name of the widget, and the second must be a function. If the second argument is not passed in (it is <span class="code">undefined</span>) or is any type other than a function, JSLint will throw this error.
+</p>
+<p class="standout">
+    In <a href="https://github.com/douglascrockford/JSLint/commit/267939b9168419312782a8533e35c60243215d56" target="_blank">a commit</a> on 20th March 2013, HTML, CSS and ADsafe parsing functionality was removed from JSLint. If you rely upon this functionality, you will be unable to upgrade JSLint to a version beyond that date.
 </p>
