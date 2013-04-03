@@ -1,0 +1,36 @@
+--- 
+title: "Move 'var' declarations to the top of the function"
+layout: post
+tags: jslint
+author: jallardice
+---
+<p>
+    <h3>When do I get this error?</h3>
+</p>
+<p>
+    JSLint will throw the "Move 'var' declarations to the top of the function" error when it encounters <strong>a variable declaration in a <span class="code">for</span> loop initialiser</strong>. Here's an example in which we have a simple <span class="code">for</span> loop that counts up to 10:
+</p>
+<textarea>
+for (var i = 0; i < 10; i++) {
+    // Do stuff
+}</textarea>
+<p>
+    <h3>Why do I get this error?</h3>
+</p>
+<p>
+    This error is raised to highlight a possible <strong>misunderstanding of the language</strong>. Your code will most likely work as expected if you do not resolve this issue, but you may have misunderstood how JavaScript handles variable declarations.
+</p>
+<p>
+    All declarations are <em>hoisted</em> to the top of the scope in which they appear. Variables in JavaScript have function scope, not block scope. In many other languages, the variable <span class="code">i</span> in the above example would be scopes to the <span class="code">for</span> loop body and would not be accessible to the containing scope. In JavaScript, this is not the case and the variable is actually accessible in the containing scope, although it won't have a value until the loop initialiser has been executed.
+</p>
+<p>
+    To fix this issue, simply move the variable declaration out of the loop initialiser. This makes the code read the way it is actually interpreted:
+</p>
+<textarea>
+var i;
+for (i = 0; i < 10; i += 1) {
+    // Do stuff
+}</textarea>
+<p>
+    For more detailed information see the related message, "<a href="/combine-this-with-the-previous-var-statement">Combine this with the previous 'var' statement</a>".
+</p>
