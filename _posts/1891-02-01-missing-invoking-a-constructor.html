@@ -1,0 +1,44 @@
+--- 
+title: "Missing '()' invoking a constructor"
+layout: post
+tags: jshint
+author: jallardice
+---
+<p>
+    <h3>When do I get this error?</h3>
+</p>
+<p>
+    JSHint will throw the "Missing '()' invoking a constructor" error when it encounters <strong>a <span class="code">new<span> expression that is not immediately followed by a pair of parentheses</strong>. In the following example we create an instance of the built-in <span class="code">Date</span> constructor:
+</p>
+<textarea data-linter="JSHint">
+var d = new Date;</textarea>
+<p>
+    <h3>Why do I get this error?</h3>
+</p>
+<p>
+    This error is raised to highlight a <strong>lack of convention</strong>. Your code will work without error if you do not resolve this issue but you may be contravening coding styles and best practices. The ECMAScript 5 specification shows that <span class="code">new</span> expressions do not have to be followed by a pair of parentheses. The parentheses are only required when arguments are being passed to the constructor (<a href="http://es5.github.com/#x11.2" target="_blank">ES5 &sect;11.2</a>):
+</p>
+<blockquote>
+<em>MemberExpression</em> :<br>
+&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="code">new</span> <em>MemberExpression Arguments</em><br><br>
+<em>NewExpression</em> :<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<em>MemberExpression</em><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="code">new</span> <em>NewExpression</em><br><br>
+<em>Arguments</em> :<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="code">( )</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="code">(</span> <em>ArgumentList</em> <span class="code">)</span></blockquote>
+<p>
+    The grammar can be a bit confusing, but in essence the above shows that the <em>Arguments</em> nonterminal is optional. If you do not need to pass arguments to the constructor you can leave it out. However, many style guides would recommend that the parentheses are always included for consistency, and to make it immediately clear that an invocation is taking place.
+</p>
+<p>
+    Consider the fact that omitting the parentheses from a normal (non-constructor) function invocation will cause the expression to evaluate to a reference to that function, rather than the return value of it. By missing the parentheses on a constructor call your code may be less self-explanatory. To fix the issue you can simply add the missing parentheses:
+</p>
+<textarea data-linter="JSHint">
+var d = new Date();</textarea>
+<p>
+    There is no standard option to surpress this message. Note that JSLint also raises a warning in this situation, but it uses a more generic "Missing '{a}'" message which is used in several places.
+</p>
+<p class="standout">
+    In JSHint 1.0.0 and above you have the ability to ignore any warning with a <a href="http://jshint.com/docs/#options" target="_blank">special option syntax</a>. The identifier of this warning is <strong>W064</strong>. This means you can tell JSHint to not issue this warning with the <code>/*jshint -W064 */</code> directive.
+</p>
