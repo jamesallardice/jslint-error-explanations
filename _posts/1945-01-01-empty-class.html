@@ -1,0 +1,41 @@
+--- 
+title: "Empty class"
+layout: post
+tags: jslint jshint
+author: jallardice
+---
+<p>
+    <h3>When do I get this error?</h3>
+</p>
+<p>
+    JSLint and JSHint (prior to version 1.0.0) will throw the "Empty class" error when it encounters <strong>a regular expression literal containing an empty character class</strong>. Note that it will not raise this error for calls to the <span class="code">RegExp</span> constructor. The following example defines a regular expression including an empty character class:
+</p>
+<textarea>
+var r = /^abc[]/;</textarea>
+<p>
+    <h3>Why do I get this error?</h3>
+</p>
+<p>
+    The error is raised to highlight <strong>code that may not work as you expect it to</strong>. According to the regular expression grammar in the ECMAScript standard, empty character classes are allowed (<a href="http://es5.github.com/#A.7" target="_blank">ES5 A.7</a>):
+</p>
+<blockquote>
+<em>CharacterClass</em> ::<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="code">[</span> [lookahead &#8713; {^}] <em>ClassRanges</em> <span class="code">]</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="code">[</span> ^ <em>ClassRanges</em> <span class="code">]</span><br><br>
+<em>ClassRanges</em> ::<br>
+&nbsp;&nbsp;&nbsp;&nbsp;[empty]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<em>NonemptyClassRanges</em>
+</blockquote>
+<p>
+    However, an empty character class can never match anything, meaning the regular expression in the example above will always fail to match. Since it's unlikely you intended such behaviour, a warning is raised to highlight the fact that you may have overlooked something, or simply made a small typo.
+</p>
+<p>
+    There is no JSLint or JSHint option that can be set to surpress this error. The best way to resolve it is to simply remove any empty character classes from the regular expressions in question:
+</p>
+<textarea>
+var r = /^abc/;</textarea>
+<p>
+    However, if you really do need an empty character class, you can use the <span class="code">RegExp</span> constructor to create your regular expression:
+</p>
+<textarea>
+var r = new RegExp("^abc[]");</textarea>
