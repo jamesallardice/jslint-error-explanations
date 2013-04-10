@@ -1,0 +1,40 @@
+--- 
+title: "Option 'validthis' can't be used in a global scope"
+layout: post
+tags: jshint
+author: jallardice
+---
+<p>
+    <h3>When do I get this error?</h3>
+</p>
+<p>
+    JSHint will throw the "Option 'validthis' can't be used in a global scope" error when it encounters <strong>the <span class="code">validthis</span> JSHint option in a global scope</strong>. Here's a silly example in which we declare a function that must be called in the context of an object:
+</p>
+<textarea data-linter="JSHint">
+/*jshint validthis: true */
+function example() {
+    "use strict";
+    this.x = 10;
+}
+example.call({});</textarea>
+<p>
+    <h3>Why do I get this error?</h3>
+</p>
+<p>
+    This error is raised to highlight a <strong>breach of JSHint rules</strong>. Your code will most likely run without error if you do not fix this issue, but you are breaking the rules of JSHint and will be unable to validate the rest of your code.
+</p>
+<p>
+    The <span class="code">validthis</span> option is used to indicate to JSHint that a function including the use of <span class="code">this</span> is not going to violate the rules of strict mode. Since this applies only to functions, it makes no sense to define this option in the global scope. You should only use it (in function scope) when you are certain the function will be called with a context. Here's what the JSHint docs have to say:
+</p>
+<blockquote>This option suppresses warnings about possible strict violations when the code is running in strict mode and you use <span class="code">this</span> in a non-constructor function. You should use this option—in a function scope only—when you are positive that your use of <span class="code">this</span> is valid in the strict mode (for example, if you call your function using <span class="code">Function.call</span>).<br><br>
+Note: This option can be used only inside of a function scope. JSHint will fail with an error if you will try to set this option globally.</blockquote>
+<p>
+    To resolve this issue, you simply need to move the directive including the <span class="code">validthis</span> option into the function. You will need it in each function that runs in strict mode and contains references to <span class="code">this</span>:
+</p>
+<textarea data-linter="JSHint">
+function example() {
+    /*jshint validthis: true */
+    "use strict";
+    this.x = 10;
+}
+example.call({});</textarea>
