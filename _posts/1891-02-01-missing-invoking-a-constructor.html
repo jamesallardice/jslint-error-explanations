@@ -8,7 +8,7 @@ author: jallardice
     <h3>When do I get this error?</h3>
 </p>
 <p>
-    JSHint will throw the "Missing '()' invoking a constructor" error when it encounters <strong>a <span class="code">new<span> expression that is not immediately followed by a pair of parentheses</strong>. In the following example we create an instance of the built-in <span class="code">Date</span> constructor:
+    JSHint will throw the "Missing '()' invoking a constructor" error when it encounters <strong>a <span class="code">new</span> expression that is not immediately followed by a pair of parentheses</strong>. In the following example we create an instance of the built-in <span class="code">Date</span> constructor:
 </p>
 <textarea data-linter="JSHint">
 var d = new Date;</textarea>
@@ -40,5 +40,5 @@ var d = new Date();</textarea>
     There is no standard option to surpress this message. Note that JSLint also raises a warning in this situation, but it uses a more generic "Missing '{a}'" message which is used in several places.
 </p>
 <p class="standout">
-    In JSHint 1.0.0 and above you have the ability to ignore any warning with a <a href="http://jshint.com/docs/#options" target="_blank">special option syntax</a>. The identifier of this warning is <strong>W064</strong>. This means you can tell JSHint to not issue this warning with the <code>/*jshint -W064 */</code> directive.
+    In JSHint 1.0.0 and above you have the ability to ignore any warning with a <a href="http://jshint.com/docs/#options" target="_blank">special option syntax</a>. The identifier of this warning is <strong>W058</strong>. This means you can tell JSHint to not issue this warning with the <code>/*jshint -W058 */</code> directive.
 </p>
