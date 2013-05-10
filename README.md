@@ -11,17 +11,16 @@ If you discover a mistake in one of the existing error explanations, feel free t
 
 JSLint Error Explanations runs on Jekyll, and if you've already got that installed it's very straightforward to get up and running.
 
- - Install [Jekyll](https://github.com/mojombo/jekyll) (it's a Ruby gem)
+ - Install [Jekyll](https://github.com/mojombo/jekyll) (it's a Ruby gem); if you are on Linux, Unix or Mac OS X and have [Ruby](http://www.ruby-lang.org/) and [RubyGems](http://rubygems.org/) installed all you need to do is `gem install jekyll`
 
  - Fork this repository and clone it in your development environment
 
  - `cd` into the repository directory and run the following command:
 
-    `jekyll --auto --server --url localhost`
-
- - By setting the `--url` argument to `localhost`, the local version of the site will load unminified versions of JSLint and JSHint which is useful for debugging and investigating the messages they produce. If you'd rather load the minified files, just remove the `--url` argument.
+    `jekyll serve --watch`
 
  - Jekyll should now build the site automatically, and will watch for changes to any of the files, rebuilding when necessary.
+ 
  - Navigate to *http://localhost:4000* to see the site running on your machine (obviously, you will need to change the port if you have configured Jekyll differently. 4000 is the default.)
 
 ## Writing articles
