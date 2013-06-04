@@ -19,7 +19,7 @@ function multiply(num_one, num_two) {
     In this case JSHint isn't sure if you meant to return a boolean and just typoed it, or if you actually want to assign a value and return it in one line.  The easiest fix is to just be explicit:
 </p>
 <textarea data-linter="JSHint">
-function multiply(num, dec) {
+function multiply(num_one, num_two) {
     var result = num_one * num_two;
     return result;
 }
