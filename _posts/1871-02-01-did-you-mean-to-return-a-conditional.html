@@ -1,0 +1,26 @@
+---
+title: "Did you mean to return a conditional instead of an assignment?"
+layout: post
+tags: jshint
+author: jklein
+---
+<p>
+    <h3>When do I get this error?</h3>
+</p>
+<p>
+    JSHint will throw this error when a return clause contains an ambiguous assignment operator where a comparison operator could exist:
+</p>
+<textarea data-linter="JSHint">
+function multiply(num_one, num_two) {
+    return result = num_one * num_two;
+}
+</textarea>
+<p>
+    In this case JSHint isn't sure if you meant to return a boolean and just typoed it, or if you actually want to assign a value and return it in one line.  The easiest fix is to just be explicit:
+</p>
+<textarea data-linter="JSHint">
+function multiply(num, dec) {
+    var result = num_one * num_two;
+    return result;
+}
+</textarea>
