@@ -1,4 +1,4 @@
---- 
+---
 title: "Don't make functions within a loop"
 layout: post
 tags: jslint jshint
@@ -26,6 +26,14 @@ for (i = 0; i < elems.length; i++) {
 </p>
 <p>
     This error is raised to highlight a piece of code that <strong>may not work as you expect it to</strong> and could also indicate a <strong>misunderstanding of how the language works</strong>. Your code may run without any problems if you do not fix this error, but in some situations it could behave unexpectedly.
+</p>
+<p>
+    The fundamental problem here is that
+    <strong>the JavaScript interpreter will create an instance of the function per loop iteration.</strong>
+    It has to do this because it doesn't know if the function object will be modified elsewhere. Since functions are standard
+    JavaScript objects, they can have properties like any other object, which could be changed in the loop.  Thus by creating
+    the function in the loop context, you cause the interpreter to create multiple function instances, which can cause
+    unexpected behavior and performance problems.
 </p>
 <p>
     In the example above, when you click on one of the affected elements and trigger the event handler, the content will change to the final value of <span class="code">i</span>. If there are 4 elements in the <span class="code">NodeList</span> referred to by <span class="code">elems</span>, the content of each element will end up being "4".
