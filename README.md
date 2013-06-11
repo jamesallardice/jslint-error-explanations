@@ -34,6 +34,10 @@ The best way to understand the structure and style of the articles is to read th
  - All `textarea` elements are automatically converted into simple interactive JSLint-enabled editors. You can pass options to JSLint with the `data-jslintopts` attribute. Its value should be a JSON string:
 
    `<textarea data-jslintopts='{ "adsafe": true, "fragment": true }'></textarea>`
+   
+   You can also specify which validator the editor should default to with the `data-linter` attribute:
+   
+   `<textarea data-linter="JSHint"></textarea>`
 
 ## License
 
