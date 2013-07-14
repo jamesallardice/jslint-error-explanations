@@ -1,0 +1,15 @@
+---
+layout: default
+title: Making Your Feelings Better
+---
+
+{% assign title = "ESLint Error Messages" %}
+{% assign search = "Search ESLint error messages" %}
+{% assign type = "ESLint" %}
+{% assign posts = site.tags.eslint %}
+
+{% include titlesearch.html %}
+{% include posts.html %}
+{% include error.html %}
+
+{% capture num_posts %}{{ site.tags.eslint | size | divided_by:2 }}{% endcapture %}
