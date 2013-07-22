@@ -16,6 +16,15 @@ String = function () {
     return "Overwritten";
 };</textarea>
 <p>
+    As of July 2013, JSLint will also throw the "Read only" error when it encounters an assignment to an exception parameter. This previously generated the "<a href="/do-not-assign-to-the-exception-parameter">Do not assign to the exception parameter</a>" warning. See the page for that message for more details on the reasoning behind it:
+</p>
+<textarea>
+try {
+    var a; // ... some code that might throw an exception
+} catch (e) {
+    e = 10;
+}</textarea>
+<p>
     <h3>Why do I get this error?</h3>
 </p>
 <p>

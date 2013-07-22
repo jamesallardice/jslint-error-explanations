@@ -8,13 +8,26 @@ author: jallardice
     <h3>When do I get this error?</h3>
 </p>
 <p>
-    JSHint will throw the "Extra comma" error when it encounters <strong>a comma following the final element of an array or object literal</strong>, but only <strong>when the <span class="code">es5</span> option is not set to <span class="code">true</span></strong>. In the following example we declare an object literal <span class="code">x</span>:
+    JSHint (version 2.0.0 and above) will throw the "Extra comma" error when it encounters <strong>a comma following the final element of an array or object literal</strong>, but only <strong>when the <span class="code">es3</span> option is set to <span class="code">true</span></strong>. In the following example we declare an object literal <span class="code">x</span>:
 </p>
 <textarea data-linter="JSHint">
+/*jshint es3: true */
 var x = {
     prop1: 10,
     prop2: 20,
 };</textarea>
+<p>
+    Prior to version 2.0.0, JSHint raised the "Extra comma" error in the same situation, but only <strong>when the <span class="code">es5</span> option was not set to <span class="code">true</span></strong>. This time the example is using JSHint 1.0.0:
+</p>
+<textarea data-linter="JSHint" data-file="jshint-1.0.0.min.js">
+/*jshint es5: false */
+var x = {
+    prop1: 10,
+    prop2: 20,
+};</textarea>
+<p>
+    Prior to version 1.0.0, JSHint would raise this error regardless of the state of the aforementioned options.
+</p>
 <p>
     <h3>Why do I get this error?</h3>
 </p>
@@ -45,9 +58,9 @@ var x = {
     prop2: 20
 };</textarea>
 <p>
-    However, if you know you won't need to support these older environments, you can set the <span class="code">es5</span> option to tell JSHint to allow this syntax:
+    However, if you know you won't need to support these older environments (and you're using a version of JSHint older than 2.0.0), you can set the <span class="code">es5</span> option to tell JSHint to allow this syntax:
 </p>
-<textarea data-linter="JSHint">
+<textarea data-linter="JSHint" data-file="jshint-1.0.0.min.js">
 /*jshint es5: true */
 var x = {
     prop1: 10,

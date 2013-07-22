@@ -8,7 +8,7 @@ author: jallardice
     <h3>When do I get this error?</h3>
 </p>
 <p>
-    JSLint and JSHint will throw the "A regular expression literal can be confused with '/='" error when they encounter <strong>a regular expression literal that begins with the <span class="code">=</span> character</strong>. In the following example we attempt to assign a regular expression literal to match the string "<span class="code">=1</span>" to the variable <span class="code">x</span>:
+    JSLint and JSHint (prior to version 1.0.0) will throw the "A regular expression literal can be confused with '/='" error when they encounter <strong>a regular expression literal that begins with the <span class="code">=</span> character</strong>. In the following example we attempt to assign a regular expression literal to match the string "<span class="code">=1</span>" to the variable <span class="code">x</span>:
 </p>
 <textarea>
 var regex = /=1/;</textarea>
