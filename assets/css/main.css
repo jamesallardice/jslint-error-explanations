@@ -85,6 +85,9 @@ li .jslint.span12 .span7 {
     color: #333333;
     white-space: nowrap;
 }
+.table-striped {
+    table-layout: fixed;
+}
 
 /* Site styles */
 body {

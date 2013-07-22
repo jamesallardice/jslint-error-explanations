@@ -35,7 +35,11 @@ var fs = require("fs");
 
 fs.readdir("myDirectory", function (err, files) {
     "use strict";
-    // This callback is passed the data we need
+    if (!err) {
+        files.forEach(function (file) {
+            console.log(file);
+        });
+    }
 });</textarea>
 <p>
     Alternatively, if you have a real need to use synchronous methods, you can surpress this error by setting the <span class="code">stupid</span> option to <span class="code">true</span>. You can tell by the name of the option how Douglas Crockford, author of JSLint, feels about this:
