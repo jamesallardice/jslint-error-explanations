@@ -10,7 +10,7 @@ author: jallardice
 <p>
     JSHint (below version 1.0.0) will throw the "Too many parameters per function ({a})" error when it encounters <strong>a function signature with more named arguments than specified by the <span class="code">maxparams</span> option</strong>. Here's an example in which we attempt to declare a function that takes 3 arguments:
 </p>
-<textarea data-linter="JSHint">
+<textarea data-linter="JSHint" data-file="jshint-r12.min.js">
 /*jshint maxparams: 2 */
 function Person(name, age, gender) {
     "use strict";
@@ -35,7 +35,7 @@ function Person(name, age, gender) {
 <p>
     We could rewrite our <span class="code">Person</span> constructor above to accept two arguments and therefore conform to the specified coding style (this is not a great example - you would probably want to check for the existence of the various <span class="code">settings</span> keys and perhaps provide default values):
 </p>
-<textarea data-linter="JSHint">
+<textarea data-linter="JSHint" data-file="jshint-r12.min.js">
 /*jshint maxparams: 2 */
 function Person(settings) {
     "use strict";
