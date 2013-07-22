@@ -7,11 +7,14 @@ author: jklein
 <p>
     <h3>When do I get this error?</h3>
 </p>
+<p class="standout">
+    As of July 2013, JSLint has removed this warning and instead now issues the "<a href="/unexpected-assignment-expression">Unexpected assignment expression</a>" warning. More details may be found on the page for that message.
+</p>
 <p>
-    JSLint and JHint will throw this error when a clause exists in a <span class="code">while</span>, <span class="code">for</span>, or <span class="code">if</span> that contains an ambiguous assignment operator where a comparison operator could exist:
+    JSLint (prior to July 2013) and JHint will throw this error when a clause exists in a <span class="code">while</span>, <span class="code">for</span>, or <span class="code">if</span> that contains an ambiguous assignment operator where a comparison operator could exist:
 </p>
 
-<textarea>
+<textarea data-file="jslint-20130327.min.js">
 var x;
 if (x = 0) {
     var b = 1;
@@ -21,7 +24,7 @@ if (x = 0) {
 <p>
     The above example is clearly a bug, and the fix is to simply use a comparison operator instead of an assignment:
 </p>
-<textarea>
+<textarea data-file="jslint-20130327.min.js">
 var x;
 if (x === 0) {
     var b = 1;
@@ -33,7 +36,7 @@ if (x === 0) {
     There are also legitimate situations where you can get this error:
 </p>
 
-<textarea>
+<textarea data-file="jslint-20130327.min.js">
 function setHeight(someNode) {
     "use strict";
     do {
@@ -46,7 +49,7 @@ function setHeight(someNode) {
 In this case, you can force the expression to a conditional:
 </p>
 
-<textarea>
+<textarea data-file="jslint-20130327.min.js">
 function setHeight(someNode) {
     "use strict";
     do {
@@ -59,7 +62,7 @@ function setHeight(someNode) {
     This error can also show up if you don't initialize a loop variable to a value:
 </p>
 
-<textarea>
+<textarea data-file="jslint-20130327.min.js">
 var i = 0, foo;
 for (i < 10; i += 1) {
     foo += i;
@@ -68,7 +71,7 @@ for (i < 10; i += 1) {
 
 <p>The fix for this is simple, just set the loop iterator to a value in the beginning of the loop:</p>
 
-<textarea>
+<textarea data-file="jslint-20130327.min.js">
 var i = 0, foo;
 for (i = 0; i < 10; i += 1) {
     foo += i;

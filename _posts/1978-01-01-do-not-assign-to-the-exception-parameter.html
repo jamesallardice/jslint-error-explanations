@@ -8,7 +8,16 @@ author: jallardice
     <h3>When do I get this error?</h3>
 </p>
 <p>
-    JSLint and JSHint will throw the "Do not assign to the exception parameter" error when they encounter <strong>an assignment inside a <span class="code">catch</span> block to the identifer associated with that block</strong>. In the following example we attempt to assign a new value to the exception parameter <span class="code">e</span>:
+    JSLint (prior to July 2013) and JSHint will throw the "Do not assign to the exception parameter" error when they encounter <strong>an assignment inside a <span class="code">catch</span> block to the identifer associated with that block</strong>. In the following example we attempt to assign a new value to the exception parameter <span class="code">e</span>:
+</p>
+<textarea data-file="jslint-20130327.min.js">
+try {
+    // Some code that might throw an exception
+} catch (e) {
+    e = 10;
+}</textarea>
+<p>
+    Since July 2013, JSLint has removed this message and instead now reuses a different message, <a href="/read-only">"Read only"</a>. More detail may be found on the page for that message:
 </p>
 <textarea>
 try {

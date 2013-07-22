@@ -1,0 +1,18 @@
+---
+title: "Unexpected assignment expression"
+layout: post
+tags: jslint
+author: jallardice
+---
+<p>
+    <h3>When do I get this error?</h3>
+</p>
+<p>
+    JSLint (since July 2013) will throw this error when a clause exists in a <span class="code">while</span>, <span class="code">for</span>, or <span class="code">if</span> that contains an ambiguous assignment operator where a comparison operator could exist. This is a newer version of the old "<a href="/expected-a-conditional-expression-and-saw-an-assignment">Expected a conditional expression and instead saw an assignment</a>" JSLint and JSHint message:
+</p>
+<textarea>
+var x;
+if (x = 0) {
+    var b = 1;
+}
+</textarea>

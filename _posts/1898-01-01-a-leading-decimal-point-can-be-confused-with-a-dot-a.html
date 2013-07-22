@@ -8,9 +8,9 @@ author: jallardice
     <h3>When do I get this error?</h3>
 </p>
 <p>
-    JSLint and JSHint will throw the "A leading decimal point can be confused with a dot: '{a}'" error when they encounter <strong>a numeric literal preceded by a <span class="code">.</span> character which itself is not preceded by a decimal integer literal</strong>. Here's an example in which we attempt to assign the value <span class="code">0.5</span> to the variable <span class="code">x</span>:
+    JSLint (prior to July 2013) and JSHint will throw the "A leading decimal point can be confused with a dot: '{a}'" error when they encounter <strong>a numeric literal preceded by a <span class="code">.</span> character which itself is not preceded by a decimal integer literal</strong>. Here's an example in which we attempt to assign the value <span class="code">0.5</span> to the variable <span class="code">x</span>:
 </p>
-<textarea>
+<textarea data-file="jslint-20130327.min.js">
 var x = .5;</textarea>
 <p>
     <h3>Why do I get this error?</h3>
@@ -31,7 +31,7 @@ var x = .5;</textarea>
 <p>
     To fix this error, simply prepend a <span class="code">0</span> to your number:
 </p>
-<textarea>
+<textarea data-file="jslint-20130327.min.js">
 var x = 0.5;</textarea>
 <p class="standout">
     In JSHint 1.0.0 and above you have the ability to ignore any warning with a <a href="http://jshint.com/docs/#options" target="_blank">special option syntax</a>. The identifier of this warning is <strong>W008</strong>. This means you can tell JSHint to not issue this warning with the <code>/*jshint -W008 */</code> directive.
