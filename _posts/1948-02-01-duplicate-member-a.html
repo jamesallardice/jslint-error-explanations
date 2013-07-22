@@ -10,7 +10,7 @@ author: jallardice
 <p>
     JSHint (below version 1.0.0) will throw the "Duplicate member '{a}'" error when it encounters <strong>an object literal that contains more than one property with the same identifier</strong>. In the following example we attempt to assign an object containing two properties with the identifier <span class="code">y</span> to a variable <span class="code">x</span>:
 </p>
-<textarea data-linter="JSHint">
+<textarea data-linter="JSHint" data-file="jshint-r12.min.js">
 var x = {
     y: 10,
     y: 20
