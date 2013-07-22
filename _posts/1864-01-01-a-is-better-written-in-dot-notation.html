@@ -1,14 +1,14 @@
 --- 
 title: "['{a}'] is better written in dot notation"
 layout: post
-tags: jslint jshint
+tags: jslint jshint eslint
 author: jallardice
 ---
 <p>
     <h3>When do I get this error?</h3>
 </p>
 <p>
-    JSLint and JSHint will throw the "['{a}'] is better written in dot notation" error when they encounter an attempt to <strong>access a property using a string literal and square bracket notation, when that property name is not a reserved word</strong>. In the following example we attempt to access the <span class="code">prop</span> property of the <span class="code">x</span> object:
+    JSLint, JSHint and ESLint will throw the "['{a}'] is better written in dot notation" error when they encounter an attempt to <strong>access a property using a string literal and square bracket notation, when that property name is not a reserved word</strong>. JSHint and ESLint go a step further and ensure that <strong>the property in question is a valid identifier</strong> before issuing the warning. In the following example we attempt to access the <span class="code">prop</span> property of the <span class="code">x</span> object:
 </p>
 <textarea>
 var x = {

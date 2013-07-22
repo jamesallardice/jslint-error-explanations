@@ -1,14 +1,14 @@
 --- 
 title: "Do not use 'new' for side effects"
 layout: post
-tags: jslint jshint
+tags: jslint jshint eslint
 author: jallardice
 ---
 <p>
     <h3>When do I get this error?</h3>
 </p>
 <p>
-    JSLint and JSHint will throw the "Do not use 'new' for side effects" error when they encounter a <strong>function invocation preceded by the <span class="code">new</span> operator when not part of an assignment or comparison expression</strong>. JSHint will only issue this warning if <strong>the <span class="code">nonew</span> option is set to <span class="code">true</span></strong>. In the following example we call the built-in <span class="code">Date</span> function as a constructor but don't assign the returned instance to anything:
+    JSLint, JSHint and ESLint will throw the "Do not use 'new' for side effects" error when they encounter a <strong>function invocation preceded by the <span class="code">new</span> operator when not part of an assignment or comparison expression</strong>. JSHint will only issue this warning if <strong>the <span class="code">nonew</span> option is set to <span class="code">true</span></strong>. In the following example we call the built-in <span class="code">Date</span> function as a constructor but don't assign the returned instance to anything:
 </p>
 <textarea>
 /*jshint nonew: true */

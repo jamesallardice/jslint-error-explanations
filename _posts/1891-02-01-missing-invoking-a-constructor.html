@@ -1,14 +1,14 @@
 --- 
 title: "Missing '()' invoking a constructor"
 layout: post
-tags: jshint
+tags: jshint eslint
 author: jallardice
 ---
 <p>
     <h3>When do I get this error?</h3>
 </p>
 <p>
-    JSHint will throw the "Missing '()' invoking a constructor" error when it encounters <strong>a <span class="code">new</span> expression that is not immediately followed by a pair of parentheses</strong>. In the following example we create an instance of the built-in <span class="code">Date</span> constructor:
+    JSHint and ESLint will throw the "Missing '()' invoking a constructor" error when they encounter <strong>a <span class="code">new</span> expression that is not immediately followed by a pair of parentheses</strong>. In the following example we create an instance of the built-in <span class="code">Date</span> constructor:
 </p>
 <textarea data-linter="JSHint">
 var d = new Date;</textarea>

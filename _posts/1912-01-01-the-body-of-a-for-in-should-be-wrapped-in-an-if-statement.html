@@ -1,14 +1,14 @@
 --- 
 title: "The body of a for in should be wrapped in an if statement to filter unwanted properties from the prototype"
 layout: post
-tags: jslint jshint
+tags: jslint jshint eslint
 author: jallardice
 ---
 <p>
     <h3>When do I get this error?</h3>
 </p>
 <p>
-    JSLint will throw the "The body of a for in should be wrapped in an if statement to filter unwanted properties from the prototype" error when it encounters <strong>a <span class="code">for-in</span> statement in which the first statement is not an <span class="code">if</span> statement which contains a call to the <span class="code">hasOwnProperty</span> method</strong>. JSHint is a little more leniant and will throw this error when the first statement of the <span class="code">for-in</span> statement <strong>is not an <span class="code">if</span> statement, and the <span class="code">forin</span> option is set to <span class="code">true</span></strong>. Here's an example in which we attempt to enumerate the properties of an object:
+    JSLint will throw the "The body of a for in should be wrapped in an if statement to filter unwanted properties from the prototype" error when it encounters <strong>a <span class="code">for-in</span> statement in which the first statement is not an <span class="code">if</span> statement which contains a call to the <span class="code">hasOwnProperty</span> method</strong>. JSHint and ESLint are a little more leniant and will throw this error when the first statement of the <span class="code">for-in</span> statement <strong>is not an <span class="code">if</span> statement, although JSHint requires the <span class="code">forin</span> option be set to <span class="code">true</span></strong>. Here's an example in which we attempt to enumerate the properties of an object:
 </p>
 <textarea>
 /*jslint devel: true */
