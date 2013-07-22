@@ -46,6 +46,21 @@ var x = (function () {
 <p>
     Note that by fixing this error you are likely to end up with the related "<a href="../move-the-invocation-into-the-parens-that-contain-the-function/">Move the invocation into the parens that contain the function</a>" error, which should be very simple to fix at this point.
 </p>
+<p>
+    <h3>Edge cases</h3>
+</p>
+<p>
+    In some situations, both JSLint and JSHint will incorrectly raise a single warning when they should be raising 2. In the following example, the value of <span class="code">x</span> will be the result of the logical and operation on the return value of the two immediately-invoked function expressions. If the parentheses wrapping the entire expression are removed, two warnings are issues instead of one:
+</p>
+<textarea>
+/*jshint immed: true */
+var x = (function () {
+    "use strict";
+    return true;
+}() && function () {
+    "use strict";
+    return false;
+}());</textarea>
 <p class="standout">
     In JSHint 1.0.0 and above you have the ability to ignore any warning with a <a href="http://jshint.com/docs/#options" target="_blank">special option syntax</a>. The identifier of this warning is <strong>W062</strong>. This means you can tell JSHint to not issue this warning with the <code>/*jshint -W062 */</code> directive.
 </p>
