@@ -1,0 +1,42 @@
+--- 
+title: "Strings must use singlequote"
+layout: post
+tags: jshint
+author: jallardice
+---
+<p>
+    <h3>When do I get this error?</h3>
+</p>
+<p>
+    JSHint (since version r09) will throw the "Strings must use singlequote" error when it encounters a <strong>string literal delimited by double quote characters</strong>, but only when <strong><span class="code">quotmark</span> option is set to <span class="code">single</span></strong>. In the following example we attempt to assign a string literal to the variable <span class="code">x</span>:
+</p>
+<textarea data-linter="JSHint">
+/*jshint quotmark:single */
+var x = "My String";</textarea>
+<p>
+    JSHint will throw the related "Strings must use doublequote" error in the opposite situation, when the string is delimited by single quote characters and the <span class="code">quotmark</span> option is set to <span class="code">double</span>:
+</p>
+<textarea data-linter="JSHint">
+/*jshint quotmark:double */
+var x = 'My String';</textarea>
+<p>
+    <h3>Why do I get this error?</h3>
+</p>
+<p>
+    This error is raised to highlight a <strong>deviation from a specific coding style</strong>. There is no difference in JavaScript between single and double quotes. This is made clear by the grammar for string literals (<a href="http://es5.github.io/#x7.8.4" target="_blank">ES5 &sect;7.8.4</a>):
+</p>
+<blockquote><em>StringLiteral</em> ::<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="code">"</span> <em>DoubleStringCharacters</em><sub>opt</sub> <span class="code">"</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="code">'</span> <em>SingleStringCharacters</em><sub>opt</sub> <span class="code">'</span></blockquote>
+<p>
+    The only difference is that <em>DoubleStringCharacters</em> cannot contain another double quote, and <em>SingleStringCharacters</em> cannot contain a single quote (as that would terminate the string literal).
+</p>
+<p>
+    If this option is set then it is likely your codebase requires you to conform to a specific style in which one style of quote is preferred. To fix the error, simply use the correct type of quote:
+</p>
+<textarea data-linter="JSHint">
+/*jshint quotmark:single */
+var x = 'My String';</textarea>
+<p class="standout">
+    In JSHint 1.0.0 and above you have the ability to ignore any warning with a <a href="http://jshint.com/docs/#options" target="_blank">special option syntax</a>. The identifier of this warning is <strong>W109</strong> (for single quotes) and <strong>W110</strong> (for double quotes). This means you can tell JSHint to not issue this warning with the <code>/*jshint -W109 */</code> or <code>/*jshint -W110 */</code> directive.
+</p>
