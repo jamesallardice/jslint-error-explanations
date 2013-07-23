@@ -1,0 +1,51 @@
+--- 
+title: "Variable {a} was not declared correctly"
+layout: post
+tags: jslint jshint
+author: jallardice
+---
+<p>
+    <h3>When do I get this error?</h3>
+</p>
+<p>
+    JSLint and JSHint (prior to version 2.1.4) will throw the "Variable {a} was not declared correctly" error when they encounter <strong>more than one inline assignment</strong>. In this  example, we attempt to assign a string literal to the variables <span class="code">x</span>, <span class="code">y</span> and <span class="code">z</span>:
+</p>
+<textarea>
+function example() {
+    var x = y = z = "example";
+}
+
+example();</textarea>
+<p>
+    <h3>Why do I get this error?</h3>
+</p>
+<p>
+    This error is raised to highlight a potential <strong>lack of understanding</strong>. A relatively common beginner mistake is to use the above code to declare multiple variables and assign a single value to all of them at the same time. However, the above is actually equivalent to the following:
+</p>
+<textarea>
+function example() {
+    z = "example";
+    y = z;
+    var x = y;
+}
+
+example();</textarea>
+<p>
+    This makes the problem more obvious. Instead of declaring three variables, we have actually only declared one. <span class="code">y</span> and <span class="code">z</span> will refer to variables with those identifiers in ancestor scopes, or (assuming the code is not running in strict mode) will be created as properties of the global object.
+</p>
+<p>
+    If you intended to declare multiple variables, you can use commas to separate them instead:
+</p>
+<textarea>
+function example() {
+    "use strict";
+    var x, y, z;
+    x = y = z = "example";
+}
+
+example();</textarea>
+</p>
+ <p class="standout">
+    In JSHint 1.0.0 and above you have the ability to ignore any warning with a <a href="http://jshint.com/docs/#options" target="_blank">special option syntax</a>. Since this message (incorrectly) relates to an error, rather than a warning, you cannot disable it.<br><br>
+    As of JSHint 2.1.4, this error has changed to "<a href="/you-might-be-leaking-a-variable-here">You might be leaking a variable ({a}) here</a>". More detail may be found on the page for that message.
+</p>
