@@ -1,0 +1,35 @@
+--- 
+title: "'{a}' is not a function"
+layout: post
+tags: jslint jshint
+author: jallardice
+---
+<p>
+    <h3>When do I get this error?</h3>
+</p>
+<p>
+    JSLint and JSHint will throw the "'{a}' is not a function" error when they encounter <strong>an attempt to invoke the <span class="code">Math</span> object as a function</strong>. JSLint is designed to also raise this error when it encounters an attempt to invoke the <span class="code">JSON</span> object as a function, although this functionality is currently non-functional. Here's an example:
+</p>
+<textarea>
+var x = Math();</textarea>
+<p>
+    <h3>Why do I get this error?</h3>
+</p>
+<p>
+    This error is raised to highlight what is most likely a <strong>misunderstanding of the language</strong>. The <span class="code">Math</span> property of the global object is described in the specification as follows (<a href="http://es5.github.io/#x15.8" target="_blank">ES5 &sect;15.8</a>):
+</p>
+<blockquote>The Math object does not have a [[Construct]] internal property; it is not possible to use the Math object as a constructor with the <span class="code">new</span> operator.<br><br>
+The Math object does not have a [[Call]] internal property; it is not possible to invoke the Math object as a function.
+</blockquote>
+<p>
+	This makes it very clear that the <span class="code">Math</span> object cannot be invoked in the way you normally call a function or a constructor. Instead it is simply an object with a set of properties, some of which are functions.
+</p>
+<p>
+    <h3>JSLint bug alert!</h3>
+</p>
+<p>
+	The <span class="code">JSON</span> object is described by the spec in exactly the same way (see <a href="http://es5.github.io/#x15.12" target="_blank">ES5 &sect;15.12</a>), and JSLint contains code that is designed to raise this warning when it encounters attempted invocations of it. As of July 2013, there is a bug in JSLint that prevents warnings about the use of <span class="code">JSON</span> as a function. A <a href="https://github.com/douglascrockford/JSLint/pull/146" target="_blank">pull request</a> has been opened to fix this issue.
+</p>
+<p class="standout">
+    In JSHint 1.0.0 and above you have the ability to ignore any warning with a <a href="http://jshint.com/docs/#options" target="_blank">special option syntax</a>. The identifier of this warning is <strong>W063</strong>. This means you can tell JSHint to not issue this warning with the <code>/*jshint -W063 */</code> directive.
+</p>
