@@ -1,0 +1,27 @@
+--- 
+title: "You might be leaking a variable ({a}) here"
+layout: post
+tags: jshint
+author: jallardice
+---
+<p>
+    <h3>When do I get this error?</h3>
+</p>
+<p>
+    JSHint (version 2.1.4 and above) will throw the "You might be leaking a variable ({a}) here" error when it encounters <strong>more than one inline assignment</strong>. In this  example, we attempt to assign a string literal to the variables <span class="code">x</span>, <span class="code">y</span> and <span class="code">z</span>:
+</p>
+<textarea>
+function example() {
+    var x = y = z = "example";
+}
+
+example();</textarea>
+<p>
+    <h3>Why do I get this error?</h3>
+</p>
+<p>
+    This warning is the new version of the older JSLint and JSHint message "<a href="/variable-a-was-not-declared-correctly">Variable {a} was not declared correctly</a>". It is raised under the same circumstances, so more detail may be found on the page for that message.
+</p>
+<p class="standout">
+    In JSHint 1.0.0 and above you have the ability to ignore any warning with a <a href="http://jshint.com/docs/#options" target="_blank">special option syntax</a>. The identifier of this warning is <strong>W120</strong>. This means you can tell JSHint to not issue this warning with the <code>/*jshint -W120 */</code> directive.
+</p>
