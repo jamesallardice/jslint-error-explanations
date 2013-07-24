@@ -88,6 +88,9 @@ li .jslint.span12 .span7 {
 .table-striped {
     table-layout: fixed;
 }
+.article img {
+    width: 100%;
+}
 
 /* Site styles */
 body {

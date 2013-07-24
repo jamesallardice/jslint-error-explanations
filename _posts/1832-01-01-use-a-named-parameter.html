@@ -1,0 +1,38 @@
+--- 
+title: "Use a named parameter"
+layout: post
+tags: jslint
+author: jallardice
+---
+<p>
+    <h3>When do I get this error?</h3>
+</p>
+<p>
+    JSLint will throw the "Use a named parameter" error when it encounters an attempt to <strong>access a property of the <span class="code">arguments</span> object by numerical index</strong>. In the following example we assign the first function argument to <span class="code">x</span>:
+</p>
+<textarea>
+function add2() {
+    "use strict";
+    return arguments[0] + arguments[1];
+}</textarea>
+<p>
+    <h3>Why do I get this error?</h3>
+</p>
+<p>
+    This error is raised to highlight a <strong>potentially slow and potentially confusing piece of code</strong>. Using the <span class="code">arguments</span> object is slow. Many JavaScript engines will not actually create the object unless you access it within a function. Running <a href="http://jsperf.com/named-arguments-vs-arguments-object" target="_blank">a benchmark</a> in Chrome 30.0 reveals a 54% performance improvement when using named arguments:
+</p>
+<p>
+    <img src="/assets/images/1832-01-01-1.png" alt="JSPerf results">
+</p>
+<p>
+    As well as the performance issues, using the <span class="code">arguments</span> object over named parameters harms the readability of your code. It is much easier to understand what a function is going to do, and what you should be passing it, when that information is available from the signature. To solve this error, simply use named function parameters where possible:
+</p>
+<textarea>
+// This is much easier to understand
+function add2(firstNumber, secondNumber) {
+    "use strict";
+    return firstNumber + secondNumber;
+}</textarea>
+<p>
+    Note, however, that there are valid use cases for the <span class="code">arguments</span> object. JSLint will only warn when you attempt to access a property of it by numeric index. The reason for this is that if you know the position of the argument in the list, there should be no reason you cannot give it an identifier in the function signature.
+</p>
