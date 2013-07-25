@@ -46,7 +46,7 @@
 				"<ul class='dropdown-menu'>",
 					"<li><span class='heading'>JSLint Version</span></li>",
 					"<li class='divider'></li>",
-					"<li data-file='jslint-20130717.min.js'><a href='#'>2013-07-17 (Latest) <i class='icon-ok'></i></a></li>",
+					"<li data-file='jslint-20130722.min.js'><a href='#'>2013-07-22 (Latest) <i class='icon-ok'></i></a></li>",
 					"<li data-file='jslint-20130327.min.js'><a href='#'>2013-03-27</a></li>",
 					"<li data-file='jslint-20130205.min.js'><a href='#'>2013-02-05</a></li>",
 					"<li data-file='jslint-20121217.min.js'><a href='#'>2012-12-17</a></li>",
