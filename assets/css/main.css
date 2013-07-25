@@ -91,6 +91,9 @@ li .jslint.span12 .span7 {
 .article img {
     width: 100%;
 }
+.jslint-messages img {
+    width: 16px;
+}
 
 /* Site styles */
 body {

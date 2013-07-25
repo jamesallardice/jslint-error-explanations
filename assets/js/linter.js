@@ -52,6 +52,7 @@
 					"<li data-file='jslint-20121217.min.js'><a href='#'>2012-12-17</a></li>",
 					"<li data-file='jslint-20121214.min.js'><a href='#'>2012-12-14</a></li>",
 					"<li data-file='jslint-20120713.min.js'><a href='#'>2012-07-13</a></li>",
+					"<li data-file='jslint-20110613.min.js'><a href='#'>2011-06-13</a></li>",
 					"<li data-file='jslint-20110520.min.js'><a href='#'>2011-05-20</a></li>",
 				"</ul>",
 			"</div>"
