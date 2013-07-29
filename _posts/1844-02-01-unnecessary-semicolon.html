@@ -1,0 +1,40 @@
+--- 
+title: "Unnecessary semicolon"
+layout: post
+tags: jshint
+author: jallardice
+---
+<p>
+    <h3>When do I get this error?</h3>
+</p>
+<p>
+    JSHint will throw the "Unnecessary semicolon" error when it encounters <strong>a semicolon following a block statement or function declaration</strong>. In the following example we mistakenly include a semicolon after an <span class="code">if</span> statement body, and another after a function declaration:
+</p>
+<textarea data-linter="JSHint">
+function example(a) {
+    if (a) {
+        return true;
+    };
+};</textarea>
+<p>
+    <h3>Why do I get this error?</h3>
+</p>
+<p>
+    This error is raised to highlight a <strong>pointless piece of code</strong>. Semicolons are not required after block statements or function declarations. The specification makes it clear where semicolons are necessary. For example, compare the grammer for a variable statement (<a href="http://es5.github.io/#x12.2" target="_blank">ES5 &sect;12.2</a>) with the grammar for a block statement (<a href="http://es5.github.io/#x12.1" target="_blank">ES5 &sect;12.1</a>):
+</p>
+<blockquote><em>Block</em> :<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="code">{</span> <em>StatementList</em><sub>opt</sub> <span class="code">}</span></blockquote>
+<blockquote><em>VariableStatement</em> :<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="code">var</span> <em>VariableDeclarationList</em> <span class="code">;</span></blockquote>
+<p>
+    The grammar for the block statement clearly shows that no semicolon is required after the closing brace. This is also the case for function declarations. You can solve this error by simply removing any of these unnecessary semicolons:
+</p>
+<textarea data-linter="JSHint">
+function example(a) {
+    if (a) {
+        return true;
+    }
+}</textarea>
+<p class="standout">
+    In JSHint 1.0.0 and above you have the ability to ignore any warning with a <a href="http://jshint.com/docs/#options" target="_blank">special option syntax</a>. The identifier of this warning is <strong>W032</strong>. This means you can tell JSHint to not issue this warning with the <code>/*jshint -W032 */</code> directive.
+</p>
