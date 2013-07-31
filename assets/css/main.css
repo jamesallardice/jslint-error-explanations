@@ -178,6 +178,9 @@ h2.section-header {
 .form-horizontal {
     margin: 0 0 10px;
 }
+.legacy {
+    margin-bottom: 20px;
+}
 .posts {
     list-style-type: none;
     margin-left: 0;
