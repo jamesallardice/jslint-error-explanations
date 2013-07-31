@@ -7,6 +7,7 @@ $(function () {
 	var input = $("#filter"),
 		postColumns = $(".posts"),
 		error = $("#error"),
+		legacy = $(".legacy"),
 		posts = postColumns.find("li"),
 		rMultiSpaces = /\s{2,}/g,
 		rQuotes = /['"]/g,
@@ -21,32 +22,39 @@ $(function () {
 			visible;
 
 		$(".posts.dynamic").remove();
-		postColumns.hide();
 
-		visible = posts.filter(function () {
-			var title = $(this).find("h3").text().toLowerCase().replace(rQuotes, "").replace(rPlaceholder, "").replace(rMultiSpaces, " "),
-				normalisedSearch = search.replace(rMultiSpaces, " ").replace(rQuotes, "");
-			return title.indexOf(normalisedSearch) > -1;
-		});
+		if (this.value) {
+			postColumns.hide();
+			legacy.hide();
 
-		if (visible.length) {
-			error.hide();
-
-			perColumn = Math.ceil(visible.length / 2);
-
-			postColumns.eq(0).before(newColumn1);
-			postColumns.eq(1).before(newColumn2);
-
-			visible.each(function (i) {
-				if (i < perColumn) {
-					newColumn1.append(visible.eq(i).clone().show());
-				} else {
-					newColumn2.append(visible.eq(i).clone().show());
-				}
+			visible = posts.filter(function () {
+				var title = $(this).find("h3").text().toLowerCase().replace(rQuotes, "").replace(rPlaceholder, "").replace(rMultiSpaces, " "),
+					normalisedSearch = search.replace(rMultiSpaces, " ").replace(rQuotes, "");
+				return title.indexOf(normalisedSearch) > -1;
 			});
 
+			if (visible.length) {
+				error.hide();
+
+				perColumn = Math.ceil(visible.length / 2);
+
+				postColumns.eq(0).before(newColumn1);
+				postColumns.eq(1).before(newColumn2);
+
+				visible.each(function (i) {
+					if (i < perColumn) {
+						newColumn1.append(visible.eq(i).clone().show());
+					} else {
+						newColumn2.append(visible.eq(i).clone().show());
+					}
+				});
+
+			} else {
+				error.show();
+			}
 		} else {
-			error.show();
+			postColumns.show();
+			legacy.show();
 		}
 
 	});
