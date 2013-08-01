@@ -1,0 +1,31 @@
+--- 
+title: "Type confusion: {a} and {b}"
+layout: post
+tags: jslint
+author: jallardice
+---
+<p>
+    <h3>When do I get this error?</h3>
+</p>
+<p>
+    JSLint (for versions dated between June and July 2011) will throw the "Type confusion: {a} and {b}" error when it encounters <strong>an attempt to change the type of data assigned to a variable</strong>. Here's some example code:
+</p>
+<textarea data-file="jslint-20110613.min.js">
+var x = 1; // number
+x = "str"; // string</textarea>
+<p>
+    <h3>Why do I get this error?</h3>
+</p>
+<p>
+    This error is raised to highlight a <strong>potentially confusing piece of code</strong>. When you assign a value to a variable, it is common to expect the data type of that value to remain consistent throughout a program. However, in JavaScript you are free to assign values of any type to any variable, regardless of its current value, so there is no language-based reason for this warning.
+</p>
+<p>
+    In fact, the code within JSLint that leads to this warning lived such a short life in the wild that it was quite likely just an experiment, never really intended for public use. Unfortunately, it appears various IDEs or editors with built-in JavaScript linting functionality are stuck using an old version of JSLint in which type checking was available.
+</p>
+<p>
+    To resolve the issue (assuming you want to retain the ability to assign values of different types) you should upgrade to a more recent version of JSLint. If that is not possible, you can set the <span class="code">confusion</span> option:
+</p>
+<textarea data-file="jslint-20110613.min.js">
+/*jslint confusion: true */
+var x = 1; // number
+x = "str"; // string</textarea>
