@@ -8,7 +8,9 @@ $(function () {
 		postColumns = $(".posts"),
 		error = $("#error"),
 		posts = postColumns.find("li"),
-		rMultiSpaces = /\s{2,}/g;
+		rMultiSpaces = /\s{2,}/g,
+		rQuotes = /['"]/g,
+		rPlaceholder = /\{[ab]\}/g;
 
 	input.val("").on("keyup", function () {
 
@@ -22,7 +24,9 @@ $(function () {
 		postColumns.hide();
 
 		visible = posts.filter(function () {
-			return $(this).find("h3").text().toLowerCase().indexOf(search.replace(rMultiSpaces, " ")) > -1;
+			var title = $(this).find("h3").text().toLowerCase().replace(rQuotes, "").replace(rPlaceholder, "").replace(rMultiSpaces, " "),
+				normalisedSearch = search.replace(rMultiSpaces, " ").replace(rQuotes, "");
+			return title.indexOf(normalisedSearch) > -1;
 		});
 
 		if (visible.length) {
