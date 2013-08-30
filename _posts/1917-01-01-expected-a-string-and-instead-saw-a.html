@@ -1,0 +1,40 @@
+--- 
+title: "Expected a string and instead saw '{a}'"
+layout: post
+tags: jslint
+author: jallardice
+---
+<p>
+    <h3>When do I get this error?</h3>
+</p>
+<p>
+    JSLint (since late 2012) will throw the "Expected a string and instead saw '{a}'" error when it encounters <strong>a comparison operator in which one of the operands is a <span class="code">typeof</span> expression and the other operand is not a string literal</strong>. It will raise the same error when it encounters <strong>an unquoted JSON property</strong>. In the following example we attempt to compare the result of the <span class="code">typeof</span> operator with the value of a variable:
+</p>
+<textarea>
+var STRING_TYPE = "string",
+    isString = typeof "s" === STRING_TYPE;</textarea>
+<p>
+    And in the next example we have an unquoted JSON property:
+</p>
+<textarea>
+{
+    a: "JSON properties must be double-quoted"
+}</textarea>
+<p>
+    <h3>Why do I get this error?</h3>
+</p>
+<p>
+    In the <span class="code">typeof</span> case, this error is raised to highlight a <strong>potentially confusing piece of code</strong>. The code is perfectly valid and will work in all cases, but could be difficult to read or understand at first glance. If you want to store possible <span class="code">typeof</span> values instead of comparing to literals, you can safely ignore this warning.
+</p>
+<p>
+    However, it is a simple fix. Just replace the variable reference with the appropriate string literal:
+</p>
+<textarea>
+var isString = typeof "s" === "string";</textarea>
+<p>
+    In the JSON case, this error is raised to highlight a <strong>syntax error</strong>. The <a href="http://json.org/" target="_blank">JSON specification</a> states that property identifiers must be wrapped in double quotes:
+</p>
+<textarea>
+{
+    "a": "JSON properties must be double-quoted"
+}</textarea>
