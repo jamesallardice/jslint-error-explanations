@@ -13,7 +13,9 @@
     "contributors": [
         "jallardice"
     ],
-    "slug": "with-is-not-allowed-in-strict-mode"
+    "slugs": [
+        "with-is-not-allowed-in-strict-mode"
+    ]
 }
 -->
 

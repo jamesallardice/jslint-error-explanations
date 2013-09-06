@@ -14,7 +14,9 @@
     "contributors": [
         "jallardice"
     ],
-    "slug": "wrap-an-immediate-function-invocation-in-parentheses"
+    "slugs": [
+        "wrap-an-immediate-function-invocation-in-parentheses"
+    ]
 }
 -->
 

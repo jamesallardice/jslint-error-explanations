@@ -14,7 +14,10 @@
     "contributors": [
         "jallardice"
     ],
-    "slug": "you-might-be-leaking-a-variable-here"
+    "slugs": [
+        "variable-a-was-not-declared-correctly",
+        "you-might-be-leaking-a-variable-here"
+    ]
 }
 -->
 
