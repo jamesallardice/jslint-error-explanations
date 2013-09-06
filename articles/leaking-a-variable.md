@@ -60,5 +60,5 @@ x = y = z = "example";
 In JSHint 1.0.0 and above you have the ability to ignore any warning with a
 [special option syntax](http://jshint.com/docs/#options). In versions of JSHint prior to 2.1.4 this message was
 incorrectly classified as an error (rather than a warning) and therefore could not be disabled. In JSHint version 2.1.4
-and above the message is correctly classified. Its identifier is **W120**, meaning you can tell JSHint to not issue this
-warning with the `/*jshint -W120 */` directive.
+and above the message is correctly classified. Its identifier is **W120**, meaning you can tell JSHint to not issue
+this warning with the `/*jshint -W120 */` directive.
