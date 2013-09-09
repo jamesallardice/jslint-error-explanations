@@ -6,17 +6,18 @@
 			</div>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-		{% if site.url == "localhost" %}
+    {{#debugJs}}
 		<script src="/assets/linters/jslint/jslint-20130722.js"></script>
 		<script src="/assets/linters/jshint/jshint-2.1.4.js"></script>
 		<script src="/assets/codemirror/codemirror.js"></script>
 		<script src="/assets/codemirror/javascript.js"></script>
-		{% else %}
+    {{/debugJs}}
+    {{^debugJs}}
 		<script src="/assets/linters/jslint/jslint-20130722.min.js"></script>
 		<script src="/assets/linters/jshint/jshint-2.1.4.min.js"></script>
 		<script src="/assets/codemirror/codemirror.min.js"></script>
 		<script src="/assets/codemirror/javascript.min.js"></script>
-		{% endif %}
+    {{/debugJs}}
 		<script src="/assets/bootstrap/js/bootstrap.min.js"></script>
 		<script src="/assets/js/search.js"></script>
 		<script src="/assets/js/linter.js"></script>

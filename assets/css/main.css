@@ -237,3 +237,15 @@ p.standout {
 .footer {
     color: #666;
 }
+
+.label.jslint {
+  background-color: #468847;
+}
+.label.jshint {
+  background-color: #B94A48;
+}
+.label.adsafe {
+  background-color: #333;
+  color: #fff;
+}
+

@@ -3,3 +3,4 @@ _site/
 
 # Annoying OS X files
 .DS_Store
+node_modules
