@@ -4,7 +4,7 @@
   "description": "Explain hinting errors",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/*_test.js"
+    "test": "mocha -r test/setup.js test/*_test.js"
   },
   "repository": {
     "type": "git",
@@ -16,6 +16,11 @@
     "url": "https://github.com/timruffles/jslint-error-explanations/issues"
   },
   "dependencies": {
-    "express": "~3.4.0"
+    "express": "~> 3.4.0",
+    "shelljs": "~0.2.2"
+  },
+  "devDependencies": {
+    "mocha": "1.12.1",
+    "chai": "1.7.2"
   }
 }
