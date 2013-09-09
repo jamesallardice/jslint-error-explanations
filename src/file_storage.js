@@ -1,5 +1,7 @@
 var sh = require("shelljs");
 var ok = require("./ok.js")
+var path = require("path");
+var _ = require("underscore");
 
 var priv = {
   splitHeaderBody: function(contents) {
@@ -24,16 +26,31 @@ var priv = {
   parseHeader: function(header) {
     header  = "{" + header + "}";
     return JSON.parse(header);
+  },
+  parseContentAndFilename: function(path,content) {
+    var slugAndOrder = priv.jekyll.parseFilename(path);
+    var parts = priv.headerBody(content);
+    return _.extend(parts.header,slugAndOrder,{
+      body: parts.body
+    });
   }
+};
+priv.jekyll = {
+  parseFilename: function(fn) {
+    var base = path.basename(fn);
+    var matches = /(\d{4}-\d\d-\d\d)-([^\.]+)/.exec(base);
+    ok.ifDefined(matches,"Couldn't parse Jekyll file name " + fn);
+    return {order: matches[1], slug: matches[2]};
+  },
 };
 
 var api = {
   readPosts: function(path) {
-    return sh.ls(path).map(storage.readPost)
+    return sh.ls(path).map(api.readPost)
   },
   readPost: function(path) {
     var content = sh.cat(path);
-    var parts = priv.headerBody(content);
+    return priv.parseContentAndFilename(path,content);
   },
   "-private": priv
 }

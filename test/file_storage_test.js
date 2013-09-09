@@ -1,4 +1,5 @@
 var storage = require("../src/file_storage.js");
+var _ = require("underscore");
 
 var priv = storage["-private"];
 
@@ -10,21 +11,29 @@ describe("fileStorage",function() {
     var header = "\"title\": \"Unreticulated splines\",\n\"tags\": [\"a\", \"b\", \"c\"]\n\n\n  ";
     var body = "\n<h1>Hi!</h1>";
     var post = "\n\n---\n" + header + "\n---" + body;
+    var slug = "a-is-a-statement-label";
+    var fileName = "/foo/200bar/baz/2000-01-01-" + slug + ".html";
     
     var headerData = {
       title: "Unreticulated splines",
       tags: ["a","b","c"]
     };
 
-    var parts;
+    var post;
     before(function() {
-      parts = priv.headerBody(post);
+      post = priv.parseContentAndFilename(fileName,post);
     })
-    it("extracts body",function() {
-      assert.equal(parts.body,body);
+    it("has body",function() {
+      assert.equal(post.body,body);
     });
-    it("extracts header",function() {
-      assert.deepEqual(parts.header,headerData);
+    it("contains header field",function() {
+      _.each(headerData,function(v,k) {
+        assert.deepEqual(post[k],v);
+      })
+    });
+    it("contains slug",function() {
+      assert.equal(post.slug,slug);
     });
   });
+
 });
