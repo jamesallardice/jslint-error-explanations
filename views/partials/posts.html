@@ -1,0 +1,22 @@
+<div class="row">
+    {{#columns}}
+        <div class="span6">
+            <ul class="posts">
+                {{#posts}}
+                <li>
+                    <h3>
+                        {{#tags}}
+                          <a href="/{{ tag }}" class="label {{tag}}">{{name}}</a>
+                        {{/tags}}
+                        <a href="{{url}}/">{{title}}</a>
+                    </h3>
+                    <p>
+                    <!-- {{{ post.content | strip_html | strip_newlines | replace: "When do I get this error?", "" | truncatewords:30 }} -->
+                      {{{body}}}
+                    </p>
+                </li>
+                {{/posts}}
+            </ul>
+        </div>
+    {{/columns}}
+</div>

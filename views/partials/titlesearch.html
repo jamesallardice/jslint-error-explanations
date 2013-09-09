@@ -1,13 +1,13 @@
 <div class="row">
     <div class="span6">
         <h2 id="posts-title">
-            {{ title }}
+            {{{pageTitle}}}
         </h2>
-        {% if !noBack %}
+        {{#subsetOfMessages}}
         <h6>
             <i class="icon-arrow-left"></i> <a href="/">Back to all JSLint &amp; JSHint error messages</a>
         </h6>
-        {% endif %}
+        {{/subsetOfMessages}}
     </div>
     <div class="span6">
         <form class="form-horizontal pull-right">
@@ -17,7 +17,7 @@
                         <div class="input-prepend">
                             <span class="add-on">
                                 <img src="/assets/images/magnifier.png" alt="Search">
-                            </span><input id="filter" placeholder="{{ search }}">
+                            </span><input id="filter" placeholder="{{search}}">
                         </div>
                     </div>
                 </div>
