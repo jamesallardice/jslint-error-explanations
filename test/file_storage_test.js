@@ -8,7 +8,7 @@ describe("fileStorage",function() {
 
   context("reading post",function() {
 
-    var header = "\"title\": \"Unreticulated splines\",\n\"tags\": [\"a\", \"b\", \"c\"]\n\n\n  ";
+    var header = "title: Unreticulated splines\ntags: a b c\n\n\n  ";
     var body = "\n<h1>Hi!</h1>";
     var post = "\n\n---\n" + header + "\n---" + body;
     var slug = "a-is-a-statement-label";
@@ -16,7 +16,7 @@ describe("fileStorage",function() {
     
     var headerData = {
       title: "Unreticulated splines",
-      tags: ["a","b","c"]
+      tags: "a b c"
     };
 
     var post;

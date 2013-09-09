@@ -2,6 +2,7 @@ var sh = require("shelljs");
 var ok = require("./ok.js")
 var path = require("path");
 var _ = require("underscore");
+var yaml = require("js-yaml");
 
 var priv = {
   splitHeaderBody: function(contents) {
@@ -24,12 +25,22 @@ var priv = {
     return parts;
   },
   parseHeader: function(header) {
-    header  = "{" + header + "}";
-    return JSON.parse(header);
+    var header = yaml.safeLoad(header);
+    return priv.transformHeader(header);
+  },
+  transformHeader: function(header) {
+    if(header.tags) {
+      header.tags = header.tags.trim().split(/\s+/);
+    }
+    return header;
   },
   parseContentAndFilename: function(path,content) {
     var slugAndOrder = priv.jekyll.parseFilename(path);
-    var parts = priv.headerBody(content);
+    try {
+      var parts = priv.headerBody(content);
+    } catch(e) {
+      throw new Error("Error parsing " + path + ":" + e);
+    }
     return _.extend(parts.header,slugAndOrder,{
       body: parts.body
     });
@@ -45,8 +56,15 @@ priv.jekyll = {
 };
 
 var api = {
-  readPosts: function(path) {
-    return sh.ls(path).map(api.readPost)
+  readPage: function(path) {
+    try {
+    var parts = priv.headerBody(sh.cat(path));
+    return _.extend(parts.header,{
+      body: parts.body
+    });
+    } catch(e) {
+      throw new Error("Error parsing " + path + ":" + e);
+    }
   },
   readPost: function(path) {
     var content = sh.cat(path);
