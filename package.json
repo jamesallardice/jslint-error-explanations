@@ -6,6 +6,9 @@
   "scripts": {
     "test": "mocha -r test/setup.js test/*_test.js"
   },
+  "engines": {
+    "node" : "0.10.15"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/timruffles/jslint-error-explanations.git"
