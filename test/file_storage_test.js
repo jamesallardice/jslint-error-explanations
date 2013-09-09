@@ -16,7 +16,7 @@ describe("fileStorage",function() {
     
     var headerData = {
       title: "Unreticulated splines",
-      tags: "a b c"
+      tags: ["a","b","c"]
     };
 
     var post;
