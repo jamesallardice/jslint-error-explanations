@@ -77,12 +77,21 @@ pages.forEach(function(page) {
   });
 });
 
-app.get("/:slug",function(req,res) {
+app.get("/:slug.json",function(req,res) {
   var post = posts.findBySlug(req.params.slug);
   if(!post) {
     return res.send(500);
   }
-  var postOpts = _.extend(post,{});
+  res.send(post);
+});
+
+app.get("/:slug",function(req,res) {
+  var post = posts.findBySlug(req.params.slug);
+  if(!post) {
+    console.error("No slug for " + req.params.slug);
+    return res.send(404);
+  }
+  var postOpts = _.extend({},post);
   if(post.author) {
     postOpts.author = authors[post.author];
   }
