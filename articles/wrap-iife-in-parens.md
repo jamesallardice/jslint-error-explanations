@@ -1,7 +1,8 @@
 <!---
 {
     "titles": [
-        "Wrap an immediate function invocation in parentheses"
+        "Wrap an immediate function invocation in parentheses",
+        "W062"
     ],
     "tools": [
         "jslint",
@@ -15,7 +16,8 @@
         "jallardice"
     ],
     "slugs": [
-        "wrap-an-immediate-function-invocation-in-parentheses"
+        "wrap-an-immediate-function-invocation-in-parentheses",
+        "w062"
     ]
 }
 -->

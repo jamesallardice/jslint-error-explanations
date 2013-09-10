@@ -2,7 +2,8 @@
 {
     "titles": [
         "Use the object literal notation {}",
-        "The object literal notation {} is preferrable"
+        "The object literal notation {} is preferrable",
+        "W010"
     ],
     "tools": [
         "jslint",
@@ -16,7 +17,8 @@
     ],
     "slugs": [
         "use-the-object-literal-notation",
-        "the-object-literal-notation-is-preferrable"
+        "the-object-literal-notation-is-preferrable",
+        "w010"
     ]
 }
 -->

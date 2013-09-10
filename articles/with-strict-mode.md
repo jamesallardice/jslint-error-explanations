@@ -1,7 +1,8 @@
 <!---
 {
     "titles": [
-        "'with' is not allowed in strict mode"
+        "'with' is not allowed in strict mode",
+        "E010"
     ],
     "tools": [
         "jshint"
@@ -14,7 +15,8 @@
         "jallardice"
     ],
     "slugs": [
-        "with-is-not-allowed-in-strict-mode"
+        "with-is-not-allowed-in-strict-mode",
+        "e010"
     ]
 }
 -->

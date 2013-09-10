@@ -2,7 +2,9 @@
 {
     "titles": [
         "Variable {a} was not declared correctly",
-        "You might be leaking a variable ({a}) here"
+        "You might be leaking a variable ({a}) here",
+        "W120",
+        "E038"
     ],
     "tools": [
         "jslint",
@@ -16,7 +18,9 @@
     ],
     "slugs": [
         "variable-a-was-not-declared-correctly",
-        "you-might-be-leaking-a-variable-here"
+        "you-might-be-leaking-a-variable-here",
+        "w120",
+        "e038"
     ]
 }
 -->

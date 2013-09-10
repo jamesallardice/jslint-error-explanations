@@ -2,7 +2,8 @@
 {
     "titles": [
         "'{a}' was used before it was defined",
-        "'{a}' is not defined"
+        "'{a}' is not defined",
+        "W117"
     ],
     "tools": [
         "jslint",
@@ -16,7 +17,8 @@
     ],
     "slugs": [
         "a-was-used-before-it-was-defined",
-        "a-is-not-defined"
+        "a-is-not-defined",
+        "w117"
     ]
 }
 -->
@@ -104,3 +106,7 @@ Finally, common Node.js built-ins can be pre-defined with the use of the `node` 
 /*jslint node: true */
 var http = require("http");
 ```
+
+In JSHint 1.0.0 and above you have the ability to ignore any warning with a [special option
+syntax](http://jshint.com/docs/#options). The identifier of this warning is **W117**. This means you can tell JSHint to
+not issue this warning with the `/*jshint -W117 */` directive.
