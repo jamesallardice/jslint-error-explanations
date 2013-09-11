@@ -7,7 +7,7 @@
         "jslint"
     ],
     "tags": [
-        "variable"
+        "strict-mode"
     ],
     "contributors": [
         "jallardice"
