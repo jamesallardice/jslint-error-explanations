@@ -14,9 +14,8 @@
         "jallardice"
     ],
     "slugs": [
-        "a-was-used-before-it-was-defined",
-        "a-is-not-defined",
-        "w117"
+        "unexpected-else-after-return",
+        "unnecessary-else-after-disruption"
     ]
 }
 -->
