@@ -1,0 +1,37 @@
+--- 
+title: "Bad for in variable '{a}'"
+layout: post
+tags: jslint
+author: eduardomagaldi
+---
+<p>
+    <h3>When do I get this error?</h3>
+</p>
+<p>
+    JSLint will throw the "Bad for in variable '{a}'" error when it encounters <strong>an index variable in a for-in loop that is not declared locally</strong>. The variable cannot be declared inside the loop or the <a href="http://jslinterrors.com/move-var-declarations-to-the-top-of-the-function/">Move 'var' declarations to the top of the function</a> error will be thrown.
+</p>
+<textarea>
+var index; //bad for in variable
+
+function wrapper() {
+
+    var index, //GOOD for in variable
+          obj = {foo: 'bar'};
+
+    for (var index in obj) { //Move 'var' declarations to the top of the function
+        if (obj.hasOwnProperty(index)) {
+            // do stuff
+        }
+    }   
+}
+</textarea>
+<p>
+    <h3>Why do I get this error?</h3>
+</p>
+<p>
+    From Crockford himself:
+</p>
+<p>
+"It wants you to be using a local var. Using a parameter looks like a
+mistake." <a href="http://groups.yahoo.com/neo/groups/jslint_com/conversations/topics/1248">Check here</a>.
+</p>
