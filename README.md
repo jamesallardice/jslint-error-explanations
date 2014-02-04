@@ -39,6 +39,8 @@ The best way to understand the structure and style of the articles is to read th
    
    `<textarea data-linter="JSHint"></textarea>`
 
+ - The YAML front-matter should include the appropriate linter tags (currently that's just `jslint` and/or `jshint`) plus either the `current` or `legacy` tag, depending on whether the message is given by current versions of the appropriate linters. If you don't include one of those tags, the article will not show up at all.
+
 ## License
 
 All articles on the site are licensed under the <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License (CC BY-SA 3.0)</a>. That means you are free to do whatever you like with them, as long as you include a notice that the content was found on this site.
