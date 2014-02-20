@@ -52,7 +52,7 @@ for (i = 0; i < elems.length; i++) {
         elems[i].addEventListener("click", function () {
             this.innerHTML = i;
         });
-    }());
+    }(i));
 }</textarea>
 <p>
     This will work as we expect it to, with each element getting the correct value of <span class="code">i</span>, but it's definitely starting to look messy and becoming harder to read (and therefore harder to maintain). And in any case, since there's still a function within the loop, JSLint and JSHint will still complain. To fix the issue, we need to move the function out of the loop, and maintain the closure:
