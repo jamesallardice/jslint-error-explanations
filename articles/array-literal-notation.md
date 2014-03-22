@@ -1,8 +1,8 @@
 <!---
 {
     "titles": [
-        "Use the array literal notation []",
         "The array literal notation [] is preferrable",
+        "Use the array literal notation []",
         "W009"
     ],
     "tools": [
@@ -16,8 +16,8 @@
         "jallardice"
     ],
     "slugs": [
-        "use-the-object-literal-notation",
-        "the-object-literal-notation-is-preferrable",
+        "the-object-array-notation-is-preferrable",
+        "use-the-array-literal-notation",
         "w009"
     ]
 }
@@ -25,7 +25,7 @@
 
 ### History
 
-In both JSLint and JSHint this warning started life as "Use the object literal notation []". In JSHint 1.0.0 the message
+In both JSLint and JSHint this warning started life as "Use the array literal notation []". In JSHint 1.0.0 the message
 was changed to "The array literal notation [] is preferrable". The circumstances under which the warning is issued have
 not changed.
 

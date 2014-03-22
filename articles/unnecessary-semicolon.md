@@ -6,8 +6,8 @@
         "W032"
     ],
     "tools": [
-        "jshint",
-        "jslint"
+        "jslint",
+        "jshint"
     ],
     "tags": [
         "semicolon"

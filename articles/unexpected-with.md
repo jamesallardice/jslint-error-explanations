@@ -1,9 +1,9 @@
 <!---
 {
     "titles": [
+        "Don't use 'with'",
         "Expected an identifier and instead saw 'with'",
         "Unexpected 'with'",
-        "Don't use 'with'",
         "W085"
     ],
     "tools": [
@@ -17,9 +17,9 @@
         "jallardice"
     ],
     "slugs": [
+        "dont-use-with",
         "expected-an-identifier-and-instead-saw-with",
         "unexpected-with",
-        "dont-use-with",
         "w085"
     ]
 }

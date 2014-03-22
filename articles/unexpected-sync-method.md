@@ -61,6 +61,7 @@ fs.readdir("myDirectory", function (err, files) {
         });
     }
 });
+```
 
 Alternatively, if you have a real need to use synchronous methods, you can surpress this error by setting the `stupid`
 option to `true`. You can tell by the name of the option how Douglas Crockford, author of JSLint, feels about this:

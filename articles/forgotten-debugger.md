@@ -1,14 +1,14 @@
 <!---
 {
     "titles": [
+        "Forgotten 'debugger' statement?",
         "All 'debugger' statements should be removed",
-        "Forgotten 'debugger' statement",
         "Unexpected 'debugger'",
         "W087"
     ],
     "tools": [
-        "jshint",
-        "jslint"
+        "jslint",
+        "jshint"
     ],
     "tags": [
         "dev"
@@ -17,8 +17,8 @@
         "jallardice"
     ],
     "slugs": [
-        "all-debugger-statements-should-be-removed",
         "forgotten-debugger-statement",
+        "all-debugger-statements-should-be-removed",
         "unexpected-debugger",
         "w087"
     ]

@@ -1,8 +1,8 @@
 <!---
 {
     "titles": [
-        "Use the object literal notation {}",
         "The object literal notation {} is preferrable",
+        "Use the object literal notation {}",
         "W010"
     ],
     "tools": [
@@ -16,8 +16,8 @@
         "jallardice"
     ],
     "slugs": [
-        "use-the-object-literal-notation",
         "the-object-literal-notation-is-preferrable",
+        "use-the-object-literal-notation",
         "w010"
     ]
 }

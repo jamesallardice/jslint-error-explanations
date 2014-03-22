@@ -1,8 +1,8 @@
 <!---
 {
     "titles": [
-        "Unexpected 'else' after 'return'",
-        "Unnecessary 'else' after disruption"
+        "Unnecessary 'else' after disruption",
+        "Unexpected 'else' after 'return'"
     ],
     "tools": [
         "jslint"
@@ -14,8 +14,8 @@
         "jallardice"
     ],
     "slugs": [
-        "unexpected-else-after-return",
-        "unnecessary-else-after-disruption"
+        "unnecessary-else-after-disruption",
+        "unexpected-else-after-return"
     ]
 }
 -->

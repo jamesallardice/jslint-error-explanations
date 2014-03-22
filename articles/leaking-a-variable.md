@@ -1,8 +1,8 @@
 <!---
 {
     "titles": [
-        "Variable {a} was not declared correctly",
         "You might be leaking a variable ({a}) here",
+        "Variable {a} was not declared correctly",
         "W120",
         "E038"
     ],
@@ -17,8 +17,8 @@
         "jallardice"
     ],
     "slugs": [
-        "variable-a-was-not-declared-correctly",
         "you-might-be-leaking-a-variable-here",
+        "variable-a-was-not-declared-correctly",
         "w120",
         "e038"
     ]
