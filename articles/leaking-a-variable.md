@@ -10,12 +10,7 @@
         "jslint",
         "jshint"
     ],
-    "tags": [
-        "variable"
-    ],
-    "contributors": [
-        "jallardice"
-    ],
+    "author": "jallardice",
     "slugs": [
         "you-might-be-leaking-a-variable-here",
         "variable-a-was-not-declared-correctly",

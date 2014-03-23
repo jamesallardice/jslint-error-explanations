@@ -7,12 +7,7 @@
         "jslint",
         "jshint"
     ],
-    "tags": [
-        "assignment"
-    ],
-    "contributors": [
-        "jallardice"
-    ],
+    "author": "jallardice",
     "slugs": [
         "read-only"
     ]

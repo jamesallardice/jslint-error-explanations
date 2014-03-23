@@ -7,13 +7,7 @@
         "jslint",
         "jshint"
     ],
-    "tags": [
-        "assignment",
-        "exception"
-    ],
-    "contributors": [
-        "jallardice"
-    ],
+    "author": "jallardice",
     "slugs": [
         "no-exception-assignment"
     ]

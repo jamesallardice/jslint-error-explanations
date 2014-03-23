@@ -6,12 +6,7 @@
     "tools": [
         "jslint"
     ],
-    "tags": [
-        "operator"
-    ],
-    "contributors": [
-        "jallardice"
-    ],
+    "author": "jallardice",
     "slugs": [
         "use-the-or-operator"
     ]

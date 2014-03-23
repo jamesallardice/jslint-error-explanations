@@ -6,12 +6,7 @@
     "tools": [
         "jslint"
     ],
-    "tags": [
-        "function"
-    ],
-    "contributors": [
-        "jallardice"
-    ],
+    "author": "jallardice",
     "slugs": [
         "use-a-named-parameter"
     ]

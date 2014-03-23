@@ -9,12 +9,7 @@
         "jslint",
         "jshint"
     ],
-    "tags": [
-        "variable"
-    ],
-    "contributors": [
-        "jallardice"
-    ],
+    "author": "jallardice",
     "slugs": [
         "a-was-used-before-it-was-defined",
         "a-is-not-defined",

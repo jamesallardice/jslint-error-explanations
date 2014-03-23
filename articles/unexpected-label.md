@@ -9,12 +9,7 @@
         "jslint",
         "jshint"
     ],
-    "tags": [
-        "labelled-statement"
-    ],
-    "contributors": [
-        "jallardice"
-    ],
+    "author": "jallardice",
     "slugs": [
         "unexpected-label-a",
         "label-a-on-b-statement",

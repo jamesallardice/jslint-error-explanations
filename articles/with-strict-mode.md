@@ -7,13 +7,7 @@
     "tools": [
         "jshint"
     ],
-    "tags": [
-        "with-statement",
-        "strict-mode"
-    ],
-    "contributors": [
-        "jallardice"
-    ],
+    "author": "jallardice",
     "slugs": [
         "with-is-not-allowed-in-strict-mode",
         "e010"

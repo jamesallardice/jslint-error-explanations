@@ -7,12 +7,7 @@
         "jslint",
         "jshint"
     ],
-    "tags": [
-        "regex"
-    ],
-    "contributors": [
-        "jallardice"
-    ],
+    "author": "jallardice",
     "slugs": [
         "a-regular-expression-literal-can-be-confused-with"
     ]

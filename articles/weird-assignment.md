@@ -6,13 +6,7 @@
     "tools": [
         "jslint"
     ],
-    "tags": [
-        "variable",
-        "assignment"
-    ],
-    "contributors": [
-        "jallardice"
-    ],
+    "author": "jallardice",
     "slugs": [
         "weird-assignment"
     ]

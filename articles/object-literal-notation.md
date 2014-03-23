@@ -9,12 +9,7 @@
         "jslint",
         "jshint"
     ],
-    "tags": [
-        "object"
-    ],
-    "contributors": [
-        "jallardice"
-    ],
+    "author": "jallardice",
     "slugs": [
         "the-object-literal-notation-is-preferrable",
         "use-the-object-literal-notation",

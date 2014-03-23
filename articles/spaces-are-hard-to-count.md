@@ -7,12 +7,7 @@
         "jslint",
         "jshint"
     ],
-    "tags": [
-        "regexp"
-    ],
-    "contributors": [
-        "jallardice"
-    ],
+    "author": "jallardice",
     "slugs": [
         "spaces-are-hard-to-count-use-a"
     ]

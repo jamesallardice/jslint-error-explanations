@@ -8,12 +8,7 @@
         "jslint",
         "jshint"
     ],
-    "tags": [
-        "number"
-    ],
-    "contributors": [
-        "jallardice"
-    ],
+    "author": "jallardice",
     "slugs": [
         "missing-radix-parameter",
         "w065"

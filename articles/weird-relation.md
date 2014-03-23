@@ -6,12 +6,7 @@
     "tools": [
         "jslint"
     ],
-    "tags": [
-        "comparison"
-    ],
-    "contributors": [
-        "jallardice"
-    ],
+    "author": "jallardice",
     "slugs": [
         "weird-relation"
     ]

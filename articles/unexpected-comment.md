@@ -6,12 +6,7 @@
     "tools": [
         "jslint"
     ],
-    "tags": [
-        "comment"
-    ],
-    "contributors": [
-        "jallardice"
-    ],
+    "author": "jallardice",
     "slugs": [
         "unexpected-comment"
     ]

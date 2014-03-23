@@ -6,12 +6,7 @@
     "tools": [
         "jslint"
     ],
-    "tags": [
-        "strict-mode"
-    ],
-    "contributors": [
-        "jallardice"
-    ],
+    "author": "jallardice",
     "slugs": [
         "unnecessary-use-strict"
     ]

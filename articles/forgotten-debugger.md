@@ -10,12 +10,7 @@
         "jslint",
         "jshint"
     ],
-    "tags": [
-        "dev"
-    ],
-    "contributors": [
-        "jallardice"
-    ],
+    "author": "jallardice",
     "slugs": [
         "forgotten-debugger-statement",
         "all-debugger-statements-should-be-removed",

@@ -8,12 +8,7 @@
         "jslint",
         "jshint"
     ],
-    "tags": [
-        "variable"
-    ],
-    "contributors": [
-        "jallardice"
-    ],
+    "author": "jallardice",
     "slugs": [
         "it-is-not-necessary-to-initialize-a-to-undefined",
         "w080"

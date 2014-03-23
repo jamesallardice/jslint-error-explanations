@@ -9,12 +9,7 @@
         "jslint",
         "jshint"
     ],
-    "tags": [
-        "semicolon"
-    ],
-    "contributors": [
-        "jallardice"
-    ],
+    "author": "jallardice",
     "slugs": [
         "unnecessary-semicolon",
         "unexpected-semicolon",

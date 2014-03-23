@@ -10,12 +10,7 @@
         "jslint",
         "jshint"
     ],
-    "tags": [
-        "with-statement"
-    ],
-    "contributors": [
-        "jallardice"
-    ],
+    "author": "jallardice",
     "slugs": [
         "dont-use-with",
         "expected-an-identifier-and-instead-saw-with",

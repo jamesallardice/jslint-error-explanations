@@ -8,13 +8,7 @@
         "jslint",
         "jshint"
     ],
-    "tags": [
-        "function",
-        "iife"
-    ],
-    "contributors": [
-        "jallardice"
-    ],
+    "author": "jallardice",
     "slugs": [
         "wrap-an-immediate-function-invocation-in-parentheses",
         "w062"

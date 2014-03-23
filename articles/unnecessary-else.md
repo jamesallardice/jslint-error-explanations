@@ -7,12 +7,7 @@
     "tools": [
         "jslint"
     ],
-    "tags": [
-        "if-statement"
-    ],
-    "contributors": [
-        "jallardice"
-    ],
+    "author": "jallardice",
     "slugs": [
         "unnecessary-else-after-disruption",
         "unexpected-else-after-return"
