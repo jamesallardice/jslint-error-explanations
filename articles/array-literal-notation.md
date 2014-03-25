@@ -41,8 +41,9 @@ text of the warning itself.
 
 The "The array literal notation [] is preferrable" error (and the alternative
 "Use the array literal notation []" error) are thrown when JSLint or JSHint
-encounter **a call to the `Array` constructor preceded by the `new` operator**.
-Here's an example:
+encounter **a call to the `Array` constructor preceded by the `new` operator**
+with **no arguments** or **more than one argument** or **a single argument that
+is not a number**. Here's an example:
 
 <!---
 {
@@ -53,7 +54,9 @@ Here's an example:
 }
 -->
 ```javascript
-var x = new Array();
+var x = new Array(),
+    y = new Array(1, 2, 3),
+    z = new Array("not a number");
 ```
 
 ESLint is slightly more accurate and also warns when it encounters **a call to
@@ -66,15 +69,12 @@ behaves the same way in both situations ([ES5 &sect;15.4.1][es5-15.4.1]):
 > equivalent to the object creation expression `new Array(...)` with the same
 > arguments.
 
-All three linters are able to distinguish between calls that pass a number as
-the first argument. In that case they will not issue a warning.
-
 ### Why do I get this error?
 
 This error is raised to highlight a **potentially dangerous and unnecessarily
 verbose piece of code**. Before we look at why that above snippet is potentially
 dangerous, here's a rewritten version using array literal notation that passes
-JSLint and JSHint. Notice that it's significantly shorter:
+all three linters. Notice that it's significantly shorter:
 
 <!---
 {
@@ -95,8 +95,8 @@ like `Array = 50`, a type error would be thrown because `Array` is no longer a
 function.
 
 Here's an example in which we overwrite the `Array` constructor. Note that
-JSLint and JSHint do not know that's what has happened. Therefore, they take the
-safe approach and forbids the of the `Array` constructor completely:
+JSLint, JSHint and ESLint do not know that's what has happened. Therefore, they
+take the safe approach and forbids the of the `Array` constructor completely:
 
 <!---
 {
@@ -107,7 +107,7 @@ safe approach and forbids the of the `Array` constructor completely:
 }
 -->
 ```javascript
-window.Array = 50;
+Array = 50;
 var x = new Array(); //TypeError: Array is not a function
 ```
 
@@ -115,7 +115,7 @@ However there is one relatively common situation in which the `Array`
 constructor is correctly used and that's when you need to create an array of
 specific length. The array literal notation provides no mechanism to do this.
 All three linters cover this use case and do not warn when they encounter a call
-to the `Array` constructor with arguments:
+to the `Array` constructor with a single numeric argument:
 
 <!---
 {
@@ -133,6 +133,9 @@ In JSHint 1.0.0 and above you have the ability to ignore any warning with a
 [special option syntax][jshintopts]. The identifier of this
 warning is **W009**. This means you can tell JSHint to not issue this warning
 with the `/*jshint -W009 */` directive.
+
+In ESLint the rule that generates this warning is named `no-array-constructor`.
+You can disable it by setting it to `0`, or enable it by setting it to `1`.
 
 [jshintopts]: http://jshint.com/docs/#options
 [es5-15.4.1]: http://es5.github.io/#x15.4.1
