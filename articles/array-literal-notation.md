@@ -5,17 +5,17 @@
         "Use the array literal notation []",
         "W009"
     ],
-    "tools": [
-        "jslint",
-        "jshint",
-        "eslint"
-    ],
-    "author": "jallardice",
     "slugs": [
         "the-object-array-notation-is-preferrable",
         "use-the-array-literal-notation",
         "w009"
-    ]
+    ],
+    "linters": [
+        "jslint",
+        "jshint",
+        "eslint"
+    ],
+    "author": "jallardice"
 }
 -->
 
