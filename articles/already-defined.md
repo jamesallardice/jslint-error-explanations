@@ -10,7 +10,8 @@
     ],
     "linters": [
         "jslint",
-        "jshint"
+        "jshint",
+        "eslint"
     ],
     "author": "jallardice"
 }
@@ -27,7 +28,10 @@ variable `x` twice within the same scope:
 
 <!---
 {
-    "linter": "jshint"
+    "linter": "jshint",
+    "eslint": {
+        "no-redeclare": 1
+    }
 }
 -->
 ```javascript
@@ -56,7 +60,10 @@ appropriately:
 
 <!---
 {
-    "linter": "jshint"
+    "linter": "jshint",
+    "eslint": {
+        "no-redeclare": 1
+    }
 }
 -->
 ```javascript
@@ -72,7 +79,10 @@ a semicolon as a comma. In that case it's also an obvious fix:
 
 <!---
 {
-    "linter": "jshint"
+    "linter": "jshint",
+    "eslint": {
+        "no-redeclare": 1
+    }
 }
 -->
 ```javascript
