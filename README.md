@@ -87,10 +87,19 @@ the following format:
 ```html
 <!---
 {
-    "linter": "jslint"
+    "linter": "jslint",
+    "version": "2014-02-06"
 }
 -->
 ```
+
+Every code block requires one of these comments but some of the properties are
+optional:
+
+Property  | Type     | Description
+----------|----------|-------------
+`linter`  | `String` | The linter to use by default. Valid strings are "jslint", "jshint" and "eslint"
+`version` | `String` | (Optional) The version of the linter to use by default
 
 ### Conventions
 
