@@ -142,4 +142,148 @@ the filename of the new article next to it.
 
 ### JSHint
 
+ - Bad option: '{a}'
+ - Bad option value
+ - Unexpected early end of program
+ - Missing "use strict" statement
+ - Strict violation
+ - Option 'validthis' can't be used in a global scope
+ - 'with' is not allowed in strict mode
+ - const '{a}' has already been declared
+ - const '{a}' is initialized to 'undefined'
+ - Attempting to override '{a}' which is a constant
+ - A regular expression literal can be confused wtih '/='
+ - Unclosed regular expression
+ - Invalid regular expression
+ - Unclosed comment
+ - Unbegun comment
+ - Unmatched '{a}'
+ - Expected '{a}' to match '{b}' from line {c} and instead saw '{d}'
+ - Expected '{a}' and instead saw '{b}'
+ - Missing '{a}'
+ - Unexpected '{a}'
+ - Missing ':' on a case clause
+ - Missing '}' to match '{' from line {a}
+ - Missing ']' to match '[' from line {a}
+ - Illegal comma
+ - Unclosed string
+ - Expected an identifier and instead saw '{a}'
+ - Bad assignment
+ - Expected a small integer or 'false' and instead saw '{a}'
+ - Expected an operator and instead saw '{a}'
+ - get/set are ES5 features
+ - Missing property name
+ - Expected to see a statement and instead saw a block
+ - Function declarations are not invocable
+ - Each value should have its own case label
+ - Unrecoverable syntax error
+ - Too many errors
+ - Invalid for each loop
+ - A yield statement shall be within a generator function
+ - Let declaration not directly within a block
+ - A {a} cannot be named '{b}'
+ - Mozilla requires the yield expression to be parenthesized here
+ - Regular parameters cannot come after default parameters
+ - Unclosed template literal
+ - 'hasOwnProperty' is a really bad name
+ - Value of '{a}' may be overwritten in IE 8 and earlier
+ - '{a}' was used before it was defined
+ - '{a}' is already defined
+ - A dot following a number can be confused with a decimal point
+ - Confusing minuses
+ - Confusing pluses
+ - A leading decimal point can be confused with a dot
+ - `array-literal-notation.md` - ~~he array literal notation [] is preferable~~
+ - The object literal notation {} is preferable
+ - Unexpected use of '{a}'
+ - Bad operand
+ - Confusing use of '{a}'
+ - Use the isNaN function to compare with NaN
+ - Read only
+ - '{a}' is a function
+ - Do not assign to the exception parameter
+ - Expected an identifier in an assignment and instead saw a function invocation
+ - Expected an identifier and instead saw '{a}' (a reserved word)
+ - Missing name in function declaration
+ - Inner functions should be listed at the top of the outer function
+ - Unreachable '{a}' after '{b}'
+ - Label '{a}' on {b} statement
+ - Expected an assignment or function call and instead saw an expression
+ - Do not use 'new' for side effects
+ - Unnecessary semicolon
+ - Missing semicolon
+ - Unnecessary directive "{a}"
+ - '{a}' is a statement label
+ - '{a}' used out of scope
+ - '{a}' is not allowed
+ - Possible strict violation
+ - Use '{a}' to compare with '{b}'
+ - Bad or unnecessary escaping
+ - Bad number '{a}'
+ - Don't use extra leading zeros '{a}'
+ - A trailing decimal point can be confused with a dot
+ - Unexpected control character in regular expression
+ - Unexpected escaped character '{a}' in regular expression
+ - JavaScript URL
+ - Variables should not be deleted
+ - Unexpected '{a}'
+ - Do not use {a} as a constructor
+ - The Function constructor is a form of eval
+ - `bad-constructor.md` - ~~Bad constructor~~
+ - Weird constructorion. Is 'new' necessary?
+ - Missing '()' invoking a constructor
+ - `avoid-arguments.md` - ~~Avoid arguments.{a}~~
+ - document.write can be a form of eval
+ - eval can be harmful
+ - Math is not a function
+ - Missing radix parameter
+ - Implied eval. Consider passing a function instead of a string
+ - Bad invocation
+ - Extra comma
+ - This function has too many statements
+ - This function has too many parameters
+ - Blocks are nested too deeply
+ - This function's cyclomatic complexity is too high
+ - Duplicate key '{a}'
+ - Unexpected parameter '{a}' in get {b} function
+ - Expected a single parameter in set {a} function
+ - Setter is defined without getter
+ - Redefinition of '{a}'
+ - It's not necessary to initialize '{a}' to 'undefined'
+ - Function declarations should not be placed in blocks
+ - Don't make functions within a loop
+ - Expected a conditional expression and instead saw an assignment
+ - Don't use 'with'
+ - Expected a 'break' statement before '{a}'
+ - Forgotten 'debugger' statement
+ - `bad-for-in-variable.md` - ~~Creating global 'for' variable~~
+ - The body of a for in should be wrapped in an if statement
+ - '{a}' is not a statement label
+ - '{a}' is out of scope
+ - Did you mean to return a conditional instead of an assignment?
+ - Unexpected comma
+ - Expected a string and instead saw {a}
+ - The '{a}' key may produce unexpected results
+ - Use the function form of "use strict"
+ - '{a}' is defined but never used
+ - This character may get silently deleted by one or more browsers
+ - The '{a}' property is deprecated
+ - '{a}' is available in ES6 (use esnext option) or Mozilla JS extensions (use
+   moz)
+ - Unexpected {a} in '{b}'
+ - Script URL
+ - Unclosed string
+ - Control character in string
+ - Octal literals are not allowed in strict mode
+ - Expected '{a}' and instead saw '{b}'
+ - '{a}' is not defined
+ - '{a}' is only available in Mozilla JavaScript extensions (use moz option)
+ - '{a}' is only available in ES6 (use esnext option)
+ - You might be leaking a variable ({a}) here
+ - Extending prototype of native object
+ - Invalid typeof value
+ - '{a}' is already defined in outer scope
+ - A generator function shall contain a yield statement
+ - This line contains non-breaking spaces
+
 ### ESLint
