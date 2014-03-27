@@ -47,10 +47,7 @@ is not a number**. Here's an example:
 
 <!---
 {
-    "linter": "jslint",
-    "eslint": {
-        "no-array-constructor": 1
-    }
+    "linter": "jslint"
 }
 -->
 ```javascript
@@ -78,10 +75,7 @@ all three linters. Notice that it's significantly shorter:
 
 <!---
 {
-    "linter": "jslint",
-    "eslint": {
-        "no-array-constructor": 1
-    }
+    "linter": "jslint"
 }
 -->
 ```javascript
@@ -100,10 +94,7 @@ take the safe approach and forbids the of the `Array` constructor completely:
 
 <!---
 {
-    "linter": "jslint",
-    "eslint": {
-        "no-array-constructor": 1
-    }
+    "linter": "jslint"
 }
 -->
 ```javascript
@@ -119,10 +110,7 @@ to the `Array` constructor with a single numeric argument:
 
 <!---
 {
-    "linter": "jslint",
-    "eslint": {
-        "no-array-constructor": 1
-    }
+    "linter": "jslint"
 }
 -->
 ```javascript

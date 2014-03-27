@@ -59,10 +59,7 @@ constructor is the incrementation of a variable:
 
 <!---
 {
-    "linter": "jslint",
-    "eslint": {
-        "no-new": 1
-    }
+    "linter": "jslint"
 }
 -->
 ```js
@@ -86,10 +83,7 @@ counter without calling the constructor:
 
 <!---
 {
-    "linter": "jslint",
-    "eslint": {
-        "no-new": 1
-    }
+    "linter": "jslint"
 }
 -->
 ```js

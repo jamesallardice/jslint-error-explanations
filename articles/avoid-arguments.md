@@ -27,10 +27,7 @@ uses `arguments.callee` to call itself recursively:
 
 <!---
 {
-    "linter": "jslint",
-    "eslint": {
-        "no-caller": 1
-    }
+    "linter": "jslint"
 }
 -->
 ```javascript
@@ -58,10 +55,7 @@ expressions. To avoid this warning modify your code to use them instead:
 
 <!---
 {
-    "linter": "jslint",
-    "eslint": {
-        "no-caller": 1
-    }
+    "linter": "jslint"
 }
 -->
 ```javascript

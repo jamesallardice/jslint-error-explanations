@@ -46,10 +46,7 @@ and JSHint throw this error when we attempt to refer to the `x` variable:
 
 <!---
 {
-    "linter": "jslint",
-    "eslint": {
-        "no-label-var": 1
-    }
+    "linter": "jslint"
 }
 -->
 ```javascript
@@ -78,10 +75,7 @@ the same identifier:
 
 <!---
 {
-    "linter": "eslint",
-    "eslint": {
-        "no-label-var": 1
-    }
+    "linter": "eslint"
 }
 -->
 ```javascript
@@ -120,10 +114,7 @@ variables:
 
 <!---
 {
-    "linter": "eslint",
-    "eslint": {
-        "no-label-var": 1
-    }
+    "linter": "eslint"
 }
 -->
 ```javascript

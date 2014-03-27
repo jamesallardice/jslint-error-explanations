@@ -26,10 +26,7 @@ evaluate to `true` but has no other effect on the program:
 
 <!---
 {
-    "linter": "jslint",
-    "eslint": {
-        "no-unused-expressions": 1
-    }
+    "linter": "jslint"
 }
 -->
 ```javascript
@@ -48,10 +45,7 @@ assigning a value to a variable or invoking a function:
 
 <!---
 {
-    "linter": "jslint",
-    "eslint": {
-        "no-unused-expressions": 1
-    }
+    "linter": "jslint"
 }
 -->
 ```javascript

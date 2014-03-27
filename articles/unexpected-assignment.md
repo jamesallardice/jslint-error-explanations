@@ -48,10 +48,7 @@ conditional:
 
 <!---
 {
-    "linter": "jslint",
-    "eslint": {
-        "no-cond-assign": 1
-    }
+    "linter": "jslint"
 }
 -->
 ```javascript
@@ -77,10 +74,7 @@ ensure the use of a comparison rather than an assignment:
 
 <!---
 {
-    "linter": "jslint",
-    "eslint": {
-        "no-cond-assign": 1
-    }
+    "linter": "jslint"
 }
 -->
 ```javascript
@@ -96,10 +90,7 @@ heirarchy:
 
 <!---
 {
-    "linter": "jshint",
-    "eslint": {
-        "no-cond-assign": 1
-    }
+    "linter": "jshint"
 }
 -->
 ```javascript
@@ -121,10 +112,7 @@ expression" warning:
 <!---
 {
     "linter": "jshint",
-    "version": "2013-05-31",
-    "eslint": {
-        "no-cond-assign": 1
-    }
+    "version": "2013-05-31"
 }
 -->
 ```javascript
