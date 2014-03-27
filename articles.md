@@ -34,7 +34,8 @@ the filename of the new article next to it.
    saw an assignment~~
  - Confusing use of '{a}'
  - Confusing regular expression
- - A constructor name '{a}' should start with an uppercase letter
+ - `uppercase-constructor.md` - ~~A constructor name '{a}' should start with an
+   uppercase letter~~
  - Unexpected control character '{a}'
  - Unexpected dangling '_' in '{a}'
  - Only properties should be deleted
@@ -311,7 +312,8 @@ the filename of the new article next to it.
  - Too many nested callbacks
  - This function has too many parameters
  - This function has too many statements
- - A constructor name should start with an uppercase letter
+ - `uppercase-constructor.md` - ~~A constructor name should start with an
+   uppercase letter~~
  - Missing '()' invoking a constructor
  - Unexpected '{{name}}'
  - `array-literal-notation.md` - ~~The array literal notation [] is
