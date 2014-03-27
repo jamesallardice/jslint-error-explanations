@@ -29,7 +29,8 @@ the filename of the new article next to it.
  - Do not wrap function literals in parens unless they are to be immediately
    invoked
  - Combine this with the previous 'var' statement
- - Expected a conditional expression and instead saw an assignment
+ - `unexpected-assignment.md` - ~~Expected a conditional expression and instead
+   saw an assignment~~
  - Confusing use of '{a}'
  - Confusing regular expression
  - A constructor name '{a}' should start with an uppercase letter
@@ -168,7 +169,7 @@ the filename of the new article next to it.
  - Illegal comma
  - Unclosed string
  - Expected an identifier and instead saw '{a}'
- - Bad assignment
+ - `bad-assignment.md` - ~~Bad assignment~~
  - Expected a small integer or 'false' and instead saw '{a}'
  - Expected an operator and instead saw '{a}'
  - get/set are ES5 features
@@ -188,7 +189,7 @@ the filename of the new article next to it.
  - 'hasOwnProperty' is a really bad name
  - Value of '{a}' may be overwritten in IE 8 and earlier
  - '{a}' was used before it was defined
- - '{a}' is already defined
+ - `already-defined.md` - ~~'{a}' is already defined~~
  - A dot following a number can be confused with a decimal point
  - Confusing minuses
  - Confusing pluses
@@ -208,13 +209,14 @@ the filename of the new article next to it.
  - Inner functions should be listed at the top of the outer function
  - Unreachable '{a}' after '{b}'
  - Label '{a}' on {b} statement
- - Expected an assignment or function call and instead saw an expression
+ - `unused-expression.md` - ~~Expected an assignment or function call and
+   instead saw an expression~~
  - `new-side-effects.md` - ~~Do not use 'new' for side effects~~
  - Unnecessary semicolon
  - Missing semicolon
  - Unnecessary directive "{a}"
  - '{a}' is a statement label
- - '{a}' used out of scope
+ - `out-of-scope.md` - ~~'{a}' used out of scope~~
  - '{a}' is not allowed
  - Possible strict violation
  - Use '{a}' to compare with '{b}'
@@ -252,7 +254,8 @@ the filename of the new article next to it.
  - It's not necessary to initialize '{a}' to 'undefined'
  - Function declarations should not be placed in blocks
  - Don't make functions within a loop
- - Expected a conditional expression and instead saw an assignment
+ - `unexpected-assignment.md` - ~~Expected a conditional expression and instead
+   saw an assignment~~
  - Don't use 'with'
  - Expected a 'break' statement before '{a}'
  - Forgotten 'debugger' statement
@@ -287,3 +290,134 @@ the filename of the new article next to it.
  - This line contains non-breaking spaces
 
 ### ESLint
+
+ - `out-of-scope.md` - ~~'{{a}}' used outside of binding context~~
+ - Opening curly brace does not appear on the same line as controlling statement
+ - Closing curly brace does not appear on the same line as the subsequent block
+ - Identifier '{{name}}' is not in camel case
+ - Function '{{name}}' has a complexity of {{complexity}}
+ - Expected {a} return value
+ - Designated 'this' alias '{{alias}}' is not assigned to the currect execution
+   context
+ - Unexpected alias '{{alias}}' for 'this'
+ - ['{{a}}'] is better written in dot notation
+ - Expected '{{a}}' and instead saw '{{b}}'
+ - Missing function expression name
+ - Expected a function {{a}}
+ - The body of a for-in should be wrapped in an if statement
+ - Blocks are nested too deeply
+ - Line {{i}} exceeds the maximum line length
+ - Too many nested callbacks
+ - This function has too many parameters
+ - This function has too many statements
+ - A constructor name should start with an uppercase letter
+ - Missing '()' invoking a constructor
+ - Unexpected '{{name}}'
+ - `array-literal-notation.md` - ~~The array literal notation [] is
+   preferrable~~
+ - Unexpected use of '{{operator}}'
+ - `avoid-arguments.md` - ~~Avoid arguments.{{property}}~~
+ - Value of '{{name}}' may be overwritten in IE 8 and earlier
+ - Trailing comma
+ - `unexpected-assignment.md` - ~~Expected a conditional expression and instead
+   saw an assignment~~
+ - Unexpected console statement
+ - Unexpected constant condition
+ - Unexpected control character in regular expression
+ - Unexpected 'debugger' statement
+ - Variables should not be deleted
+ - A regular expression literal can be confused wtih '/='
+ - Duplicate key '{{key}}'
+ - Unexpected 'else' after 'return'
+ - Empty class
+ - Unexpected label {{l}}
+ - Empty {{a}} statement
+ - Use '===' to compare with 'null'
+ - eval can be harmful
+ - Do not assign to the exception parameter
+ - {{a}} prototype is read only, properties should not be added
+ - Redundant double negation in {{a}}
+ - Gratuitous parentheses around expression
+ - Unnecessary semicolon
+ - Unnecessary 'use strict'
+ - Multiple 'use strict' directives
+ - Expected a "break" statement before "{{code}}"
+ - A leading decimal point can be confused with a dot
+ - A trailing decimal point can be confused with a dot
+ - '{{name}}' is a function
+ - Use the function form of "use strict"
+ - Implied eval. Consider passing a function instead of a string
+ - Reserved name '__iterator__'
+ - `statement-label.md` - ~~Found identifier with same name as label~~
+ - Unexpected labeled statment
+ - Unexpected label in {{a}} statement
+ - Block is nested inside another block
+ - Don't make functions within a loop
+ - Do not mix 'require' and other declarations
+ - Do not mix core, module, file and computed requires
+ - Multiline support is limited to browsers supporting ES5 only
+ - {{a}} is a read-only native object
+ - Redefinition of '{{nativeObject}}'
+ - The 'in' expression's left operand is negated
+ - Do not nest ternary expressions
+ - The Function constructor is eval
+ - The object literal notation {} is preferrable
+ - Do not use {{fn}} as a constructor
+ - `new-side-effects.md` - ~~Do not use 'new' for side effects~~
+ - '{{name}}' is not a function
+ - Don't use octal '{{octalDigit}}'. Use '\u' instead
+ - Octal literals should not be used
+ - Use path.join() or parth.resolve() instead of + to create paths
+ - Unary operator '{{a}}' used
+ - Don't use process.exit(); throw an error instead
+ - The '__proto__' property is deprecated
+ - `already-defined.md` - ~~'{{a}}' is already defined~~
+ - Spaces are hard to count
+ - Return statement should not contain assignment
+ - Script URL is a form of eval
+ - Comparing to itself is potentially pointless
+ - Shadowing of global property "{{a}}"
+ - {{a}} is already declared in the upper scope
+ - Trailing whitespace before semicolon
+ - Spaced function application is not allowed
+ - Unexpected comma in middle of array
+ - Unexpected sync method
+ - Ternary operator used
+ - It's not necessary to initialize '{{name}}' to undefined
+ - '{{name}}' is not defined
+ - '{{name}}' is read only
+ - Unexpected dangling '_' in '{{a}}'
+ - Found unexpected statement after a {{type}}
+ - `unused-expression.md` - ~~Expected an assignment or function call and
+   instead saw an expression~~
+ - {{var}} is defined but never used
+ - {{a}} was used before it was defined
+ - Unexpected use of 'with' statement
+ - Wrapping non-IIFE function literals in parens is unnecessary
+ - Expected literal to be on the right side of {{a}}
+ - Combine this with the previous 'var' statement
+ - Non-quoted property '{{key}}' found
+ - String must use {{a}}
+ - Missing radix parameter
+ - Invalid radix parameter
+ - Missing semicolon
+ - Extra semicolon
+ - Variables within the same declaration block should be sorted alphabetically
+ - Missing "use strict" statement
+ - Use the isNaN function to compare with NaN
+ - JSDoc type missing brace
+ - JSDoc syntax error
+ - Missing JSDoc parameter type for '{{name}}'
+ - Missing JSDoc parameter description for '{{name}}'
+ - Duplicate JSDoc parameter '{{name}}'
+ - Unexpected @{{a}} tag; function has no return statement
+ - Missing JSDoc return type
+ - Missing JSDoc return description
+ - Use @{{name}} instead
+ - Missing JSDoc @returns for function
+ - Expected JSDoc for '{{name}}' but found '{{name}}'
+ - Missing JSDoc for parameter '{{name}}'
+ - Wrap an immediate function invocation in parentheses
+ - Wrap only the function expression in parens
+ - Move the invocation into the parens that contain the function
+ - Wrap the /regexp/ literal in parens to disambiguate the slash operator
