@@ -26,7 +26,8 @@ the filename of the new article next to it.
  - `new-side-effects.md` - ~~Do not use 'new' for side effects~~
  - Bad number '{a}'
  - Bad operand
- - Do not wrap function literals in parens unless they are to be immediately
+ - `unnecessary-function-parens.md` - ~~Do not wrap function literals in parens
+   unless they are to be immediately~~
    invoked
  - Combine this with the previous 'var' statement
  - `unexpected-assignment.md` - ~~Expected a conditional expression and instead
@@ -393,7 +394,8 @@ the filename of the new article next to it.
  - {{var}} is defined but never used
  - {{a}} was used before it was defined
  - Unexpected use of 'with' statement
- - Wrapping non-IIFE function literals in parens is unnecessary
+ - `unnecessary-function-parens.md` - ~~Wrapping non-IIFE function literals in
+   parens is unnecessary~~
  - Expected literal to be on the right side of {{a}}
  - Combine this with the previous 'var' statement
  - Non-quoted property '{{key}}' found
