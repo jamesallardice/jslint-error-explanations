@@ -29,7 +29,7 @@ the filename of the new article next to it.
  - `unnecessary-function-parens.md` - ~~Do not wrap function literals in parens
    unless they are to be immediately~~
    invoked
- - Combine this with the previous 'var' statement
+ - `combine-var.md` - ~~Combine this with the previous 'var' statement~~
  - `unexpected-assignment.md` - ~~Expected a conditional expression and instead
    saw an assignment~~
  - Confusing use of '{a}'
