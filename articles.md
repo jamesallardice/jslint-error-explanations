@@ -23,7 +23,7 @@ the filename of the new article next to it.
  - `bad-constructor.md` - ~~Bad constructor~~
  - `bad-for-in-variable.md` - ~~Bad for in variable '{a}'~~
  - Bad invocation
- - Do not use 'new' for side effects
+ - `new-side-effects.md` - ~~Do not use 'new' for side effects~~
  - Bad number '{a}'
  - Bad operand
  - Do not wrap function literals in parens unless they are to be immediately
@@ -209,7 +209,7 @@ the filename of the new article next to it.
  - Unreachable '{a}' after '{b}'
  - Label '{a}' on {b} statement
  - Expected an assignment or function call and instead saw an expression
- - Do not use 'new' for side effects
+ - `new-side-effects.md` - ~~Do not use 'new' for side effects~~
  - Unnecessary semicolon
  - Missing semicolon
  - Unnecessary directive "{a}"
