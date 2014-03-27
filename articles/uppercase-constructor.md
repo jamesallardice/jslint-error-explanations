@@ -2,7 +2,7 @@
 {
     "titles": [
         "A constructor name should start with an uppercase letter",
-        "A constructor name '{a}' should start with an uppercase letter"
+        "A constructor name '{a}' should start with an uppercase letter",
         "W055"
     ],
     "slugs": [
@@ -13,7 +13,7 @@
     "linters": [
         "jslint",
         "jshint",
-        "newcap"
+        "eslint"
     ],
     "author": "jallardice"
 }
