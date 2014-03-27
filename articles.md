@@ -37,7 +37,7 @@ the filename of the new article next to it.
  - `uppercase-constructor.md` - ~~A constructor name '{a}' should start with an
    uppercase letter~~
  - Unexpected control character '{a}'
- - Unexpected dangling '_' in '{a}'
+ - `dangling-underscore.md` - ~~Unexpected dangling '_' in '{a}'~~
  - Only properties should be deleted
  - Duplicate '{a}'
  - Empty block
@@ -389,7 +389,7 @@ the filename of the new article next to it.
  - It's not necessary to initialize '{{name}}' to undefined
  - '{{name}}' is not defined
  - '{{name}}' is read only
- - Unexpected dangling '_' in '{{a}}'
+ - `dangling-underscore.md` - ~~Unexpected dangling '_' in '{{a}}'~~
  - Found unexpected statement after a {{type}}
  - `unused-expression.md` - ~~Expected an assignment or function call and
    instead saw an expression~~
