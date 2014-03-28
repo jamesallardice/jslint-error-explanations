@@ -38,7 +38,7 @@ the filename of the new article next to it.
    uppercase letter~~
  - Unexpected control character '{a}'
  - `dangling-underscore.md` - ~~Unexpected dangling '_' in '{a}'~~
- - Only properties should be deleted
+ - `variable-delete.md` - ~~Only properties should be deleted~~
  - Duplicate '{a}'
  - Empty block
  - Empty case
@@ -229,7 +229,7 @@ the filename of the new article next to it.
  - Unexpected control character in regular expression
  - Unexpected escaped character '{a}' in regular expression
  - JavaScript URL
- - Variables should not be deleted
+ - `variable-delete.md` - ~~Variables should not be deleted~~
  - Unexpected '{a}'
  - Do not use {a} as a constructor
  - The Function constructor is a form of eval
@@ -328,7 +328,7 @@ the filename of the new article next to it.
  - Unexpected constant condition
  - Unexpected control character in regular expression
  - Unexpected 'debugger' statement
- - Variables should not be deleted
+ - `variable-delete.md` - ~~Variables should not be deleted~~
  - A regular expression literal can be confused wtih '/='
  - Duplicate key '{{key}}'
  - Unexpected 'else' after 'return'
