@@ -78,7 +78,7 @@ the filename of the new article next to it.
  - `unnamed-function.md` - ~~Missing name in function statement~~
  - Nested comment
  - Nested not
- - Do not use {a} as a constructor
+ - `literal-constructor.md` - ~~Do not use {a} as a constructor~~
  - '{a}' has not been fully defined yet
  - '{a}' is not a function
  - '{a}' is not a label
@@ -233,7 +233,7 @@ the filename of the new article next to it.
  - JavaScript URL
  - `variable-delete.md` - ~~Variables should not be deleted~~
  - Unexpected '{a}'
- - Do not use {a} as a constructor
+ - `literal-constructor.md` - ~~Do not use {a} as a constructor~~
  - The Function constructor is a form of eval
  - `bad-constructor.md` - ~~Bad constructor~~
  - Weird constructorion. Is 'new' necessary?
@@ -368,7 +368,7 @@ the filename of the new article next to it.
  - Do not nest ternary expressions
  - The Function constructor is eval
  - The object literal notation {} is preferrable
- - Do not use {{fn}} as a constructor
+ - `literal-constructor.md` - ~~Do not use {{fn}} as a constructor~~
  - `new-side-effects.md` - ~~Do not use 'new' for side effects~~
  - '{{name}}' is not a function
  - Don't use octal '{{octalDigit}}'. Use '\u' instead
