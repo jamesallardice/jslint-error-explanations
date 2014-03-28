@@ -81,7 +81,7 @@ the filename of the new article next to it.
  - `literal-constructor.md` - ~~Do not use {a} as a constructor~~
  - '{a}' has not been fully defined yet
  - `not-a-function.md` - ~~'{a}' is not a function~~
- - '{a}' is not a label
+ - `not-a-label.md` - ~~'{a}' is not a label~~
  - '{a}' is out of scope
  - '{a}' should not be greater than '{b}'
  - Don't use octal '{a}'. Use '\u' instead
@@ -265,7 +265,7 @@ the filename of the new article next to it.
  - Forgotten 'debugger' statement
  - `bad-for-in-variable.md` - ~~Creating global 'for' variable~~
  - The body of a for in should be wrapped in an if statement
- - '{a}' is not a statement label
+ - `not-a-label.md` - ~~'{a}' is not a statement label~~
  - '{a}' is out of scope
  - Did you mean to return a conditional instead of an assignment?
  - Unexpected comma
