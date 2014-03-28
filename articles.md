@@ -92,7 +92,8 @@ the filename of the new article next to it.
  - Read only
  - Redefinition of '{a}' from line {b}
  - Reserved name '{a}'
- - A regular expression literal can be confused with '/='
+ - `regex-division.md` - ~~A regular expression literal can be confused with
+   '/='~~
  - Expected to see a statement and instead saw a block
  - Stopping
  - Strange loop
@@ -155,7 +156,8 @@ the filename of the new article next to it.
  - const '{a}' has already been declared
  - const '{a}' is initialized to 'undefined'
  - Attempting to override '{a}' which is a constant
- - A regular expression literal can be confused wtih '/='
+ - `regex-division.md` - ~~A regular expression literal can be confused with
+   '/='~~
  - Unclosed regular expression
  - Invalid regular expression
  - Unclosed comment
@@ -329,7 +331,8 @@ the filename of the new article next to it.
  - Unexpected control character in regular expression
  - Unexpected 'debugger' statement
  - `variable-delete.md` - ~~Variables should not be deleted~~
- - A regular expression literal can be confused wtih '/='
+ - `regex-division.md` - ~~A regular expression literal can be confused wtih
+   '/='~~
  - Duplicate key '{{key}}'
  - Unexpected 'else' after 'return'
  - Empty class
