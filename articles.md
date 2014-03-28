@@ -80,7 +80,7 @@ the filename of the new article next to it.
  - Nested not
  - `literal-constructor.md` - ~~Do not use {a} as a constructor~~
  - '{a}' has not been fully defined yet
- - '{a}' is not a function
+ - `not-a-function.md` - ~~'{a}' is not a function~~
  - '{a}' is not a label
  - '{a}' is out of scope
  - '{a}' should not be greater than '{b}'
@@ -241,7 +241,7 @@ the filename of the new article next to it.
  - `avoid-arguments.md` - ~~Avoid arguments.{a}~~
  - document.write can be a form of eval
  - eval can be harmful
- - Math is not a function
+ - `not-a-function.md` - ~~Math is not a function~~
  - Missing radix parameter
  - Implied eval. Consider passing a function instead of a string
  - Bad invocation
@@ -370,7 +370,7 @@ the filename of the new article next to it.
  - The object literal notation {} is preferrable
  - `literal-constructor.md` - ~~Do not use {{fn}} as a constructor~~
  - `new-side-effects.md` - ~~Do not use 'new' for side effects~~
- - '{{name}}' is not a function
+ - `not-a-function.md` - ~~'{{name}}' is not a function~~
  - Don't use octal '{{octalDigit}}'. Use '\u' instead
  - Octal literals should not be used
  - Use path.join() or parth.resolve() instead of + to create paths
