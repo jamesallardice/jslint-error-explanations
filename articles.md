@@ -75,7 +75,7 @@ the filename of the new article next to it.
  - Missing 'use strict' statement
  - Move the invocation into the parens that contain the function
  - Move 'var' declarations to the top of the function
- - Missing name in function statement
+ - `unnamed-function.md` - ~~Missing name in function statement~~
  - Nested comment
  - Nested not
  - Do not use {a} as a constructor
@@ -209,7 +209,7 @@ the filename of the new article next to it.
  - Do not assign to the exception parameter
  - Expected an identifier in an assignment and instead saw a function invocation
  - Expected an identifier and instead saw '{a}' (a reserved word)
- - Missing name in function declaration
+ - `unnamed-function.md` - ~~Missing name in function declaration~~
  - Inner functions should be listed at the top of the outer function
  - Unreachable '{a}' after '{b}'
  - Label '{a}' on {b} statement
