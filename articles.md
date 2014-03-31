@@ -156,7 +156,8 @@ the filename of the new article next to it.
  - 'with' is not allowed in strict mode
  - const '{a}' has already been declared
  - const '{a}' is initialized to 'undefined'
- - Attempting to override '{a}' which is a constant
+ - `overriding-constant.md` - ~~Attempting to override '{a}' which is a
+   constant~~
  - `regex-division.md` - ~~A regular expression literal can be confused with
    '/='~~
  - Unclosed regular expression
