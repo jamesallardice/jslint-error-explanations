@@ -76,7 +76,7 @@ the filename of the new article next to it.
  - Move the invocation into the parens that contain the function
  - Move 'var' declarations to the top of the function
  - `unnamed-function.md` - ~~Missing name in function statement~~
- - Nested comment
+ - `nested-comment.md` - ~~Nested comment~~
  - Nested not
  - `literal-constructor.md` - ~~Do not use {a} as a constructor~~
  - '{a}' has not been fully defined yet
