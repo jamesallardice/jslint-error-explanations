@@ -152,7 +152,8 @@ the filename of the new article next to it.
  - Unexpected early end of program
  - Missing "use strict" statement
  - Strict violation
- - Option 'validthis' can't be used in a global scope
+ - `global-validthis.md` - ~~Option 'validthis' can't be used in a global
+   scope~~
  - 'with' is not allowed in strict mode
  - const '{a}' has already been declared
  - const '{a}' is initialized to 'undefined'
