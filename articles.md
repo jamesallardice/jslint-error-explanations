@@ -271,7 +271,8 @@ the filename of the new article next to it.
  - The body of a for in should be wrapped in an if statement
  - `not-a-label.md` - ~~'{a}' is not a statement label~~
  - '{a}' is out of scope
- - Did you mean to return a conditional instead of an assignment?
+ - `return-conditional.md` - ~~Did you mean to return a conditional instead of
+   an assignment?~~
  - Unexpected comma
  - Expected a string and instead saw {a}
  - The '{a}' key may produce unexpected results
@@ -384,7 +385,7 @@ the filename of the new article next to it.
  - The '__proto__' property is deprecated
  - `already-defined.md` - ~~'{{a}}' is already defined~~
  - Spaces are hard to count
- - Return statement should not contain assignment
+ - `return-conditional.md` - ~~Return statement should not contain assignment~~
  - Script URL is a form of eval
  - Comparing to itself is potentially pointless
  - Shadowing of global property "{{a}}"

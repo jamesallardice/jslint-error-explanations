@@ -58,6 +58,11 @@ if (x = 0) {
 }
 ```
 
+Since May 2013 JSLint will also generate this warning when it encounters a
+**return statement containing an assignment expression**. If that's the case in
+your code you'll want to read the page concerning the "[Did you mean to return a
+conditional instead of an assignment][returncond]" error instead.
+
 ### Why do I get this error?
 
 This error is raised to highlight a **possible mistake**. Your code is unlikely
@@ -132,4 +137,5 @@ This means you can tell JSHint to not issue this warning with the `/*jshint
 In ESLint the rule that generates this warning is named `no-cond-assign`. You
 can disable it by setting it to `0`, or enable it by setting it to `1`.
 
+[returncond]: /did-you-mean-to-return-a-conditional
 [jshintopts]: http://jshint.com/docs/#options
