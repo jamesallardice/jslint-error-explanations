@@ -90,7 +90,7 @@ the filename of the new article next to it.
    function~~
  - `expected-value-param.md` - ~~Expected parameter (value) set {a} function~~
  - `missing-radix.md` - ~~Missing radix parameter~~
- - Read only
+ - `read-only.md` - ~~Read only~~
  - Redefinition of '{a}' from line {b}
  - Reserved name '{a}'
  - `regex-division.md` - ~~A regular expression literal can be confused with
@@ -207,7 +207,7 @@ the filename of the new article next to it.
  - Bad operand
  - Confusing use of '{a}'
  - Use the isNaN function to compare with NaN
- - Read only
+ - `read-only.md` - ~~Read only~~
  - '{a}' is a function
  - `exception-assignment.md` - ~~Do not assign to the exception parameter~~
  - Expected an identifier in an assignment and instead saw a function invocation
@@ -366,7 +366,7 @@ the filename of the new article next to it.
  - Do not mix 'require' and other declarations
  - Do not mix core, module, file and computed requires
  - Multiline support is limited to browsers supporting ES5 only
- - {{a}} is a read-only native object
+ - `read-only.md` - ~~{{a}} is a read-only native object~~
  - Redefinition of '{{nativeObject}}'
  - The 'in' expression's left operand is negated
  - Do not nest ternary expressions
