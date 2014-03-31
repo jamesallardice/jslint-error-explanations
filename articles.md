@@ -99,7 +99,7 @@ the filename of the new article next to it.
  - Stopping
  - Strange loop
  - Strict violation
- - ['{a}'] is better written in dot notation
+ - `dot-notation.md` - ~~['{a}'] is better written in dot notation~~
  - Unexpected sync method '{a}'
  - A '&lt;{a}&gt;' must be within '&lt;{b}&gt;'
  - Unexpected TODO comment
@@ -309,7 +309,7 @@ the filename of the new article next to it.
  - Designated 'this' alias '{{alias}}' is not assigned to the currect execution
    context
  - Unexpected alias '{{alias}}' for 'this'
- - ['{{a}}'] is better written in dot notation
+ - `dot-notation.md` - ~~['{{a}}'] is better written in dot notation~~
  - Expected '{{a}}' and instead saw '{{b}}'
  - Missing function expression name
  - Expected a function {{a}}
