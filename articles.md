@@ -84,7 +84,7 @@ the filename of the new article next to it.
  - `not-a-label.md` - ~~'{a}' is not a label~~
  - '{a}' is out of scope
  - '{a}' should not be greater than '{b}'
- - Don't use octal '{a}'. Use '\u' instead
+ - `octal-literal.md` - ~~Don't use octal '{a}'. Use '\u' instead~~
  - Do not mutate parameter '{a}' when using 'arguments'
  - Unexpected parameter '{a}' in get {b} function
  - Expected parameter (value) set {a} function
@@ -281,7 +281,7 @@ the filename of the new article next to it.
  - Script URL
  - Unclosed string
  - Control character in string
- - Octal literals are not allowed in strict mode
+ - `octal-literal.md` - ~~Octal literals are not allowed in strict mode~~
  - Expected '{a}' and instead saw '{b}'
  - '{a}' is not defined
  - '{a}' is only available in Mozilla JavaScript extensions (use moz option)
