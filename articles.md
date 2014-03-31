@@ -365,7 +365,8 @@ the filename of the new article next to it.
  - Don't make functions within a loop
  - Do not mix 'require' and other declarations
  - Do not mix core, module, file and computed requires
- - Multiline support is limited to browsers supporting ES5 only
+ - `escaped-eol.md` - ~~Multiline support is limited to browsers supporting ES5
+   only~~
  - `read-only.md` - ~~{{a}} is a read-only native object~~
  - Redefinition of '{{nativeObject}}'
  - The 'in' expression's left operand is negated
