@@ -86,7 +86,8 @@ the filename of the new article next to it.
  - '{a}' should not be greater than '{b}'
  - `octal-literal.md` - ~~Don't use octal '{a}'. Use '\u' instead~~
  - Do not mutate parameter '{a}' when using 'arguments'
- - Unexpected parameter '{a}' in get {b} function
+ - `unexpected-get-param.md` - ~~Unexpected parameter '{a}' in get {b}
+   function~~
  - Expected parameter (value) set {a} function
  - Missing radix parameter
  - Read only
@@ -251,7 +252,8 @@ the filename of the new article next to it.
  - Blocks are nested too deeply
  - This function's cyclomatic complexity is too high
  - Duplicate key '{a}'
- - Unexpected parameter '{a}' in get {b} function
+ - `unexpected-get-param.md` - ~~Unexpected parameter '{a}' in get {b}
+   function~~
  - Expected a single parameter in set {a} function
  - Setter is defined without getter
  - Redefinition of '{a}'
