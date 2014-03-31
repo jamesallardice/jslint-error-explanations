@@ -92,4 +92,5 @@ This means you can tell JSHint to not issue this warning with the `/*jshint
 In ESLint the rule that generates this warning is named `no-native-reassign`.
 You can disable it by setting it to `0`, or enable it by setting it to `1`.
 
+[ro]: /read-only
 [jshintopts]: http://jshint.com/docs/#options
