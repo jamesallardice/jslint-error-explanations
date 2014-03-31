@@ -258,7 +258,7 @@ the filename of the new article next to it.
    function~~
  - Expected a single parameter in set {a} function
  - Setter is defined without getter
- - Redefinition of '{a}'
+ - `redefinition-of-native.md` - ~~Redefinition of '{a}'~~
  - It's not necessary to initialize '{a}' to 'undefined'
  - Function declarations should not be placed in blocks
  - Don't make functions within a loop
@@ -368,7 +368,7 @@ the filename of the new article next to it.
  - `escaped-eol.md` - ~~Multiline support is limited to browsers supporting ES5
    only~~
  - `read-only.md` - ~~{{a}} is a read-only native object~~
- - Redefinition of '{{nativeObject}}'
+ - `redefinition-of-native.md` - ~~Redefinition of '{{nativeObject}}'~~
  - The 'in' expression's left operand is negated
  - Do not nest ternary expressions
  - The Function constructor is eval
