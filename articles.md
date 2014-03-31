@@ -89,7 +89,7 @@ the filename of the new article next to it.
  - `unexpected-get-param.md` - ~~Unexpected parameter '{a}' in get {b}
    function~~
  - `expected-value-param.md` - ~~Expected parameter (value) set {a} function~~
- - Missing radix parameter
+ - `missing-radix.md` - ~~Missing radix parameter~~
  - Read only
  - Redefinition of '{a}' from line {b}
  - Reserved name '{a}'
@@ -245,7 +245,7 @@ the filename of the new article next to it.
  - document.write can be a form of eval
  - eval can be harmful
  - `not-a-function.md` - ~~Math is not a function~~
- - Missing radix parameter
+ - `missing-radix.md` - ~~Missing radix parameter~~
  - Implied eval. Consider passing a function instead of a string
  - Bad invocation
  - Extra comma
@@ -409,7 +409,7 @@ the filename of the new article next to it.
  - Combine this with the previous 'var' statement
  - Non-quoted property '{{key}}' found
  - String must use {{a}}
- - Missing radix parameter
+ - `missing-radix.md` - ~~Missing radix parameter~~
  - Invalid radix parameter
  - Missing semicolon
  - Extra semicolon
