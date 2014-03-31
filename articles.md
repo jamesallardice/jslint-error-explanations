@@ -209,7 +209,7 @@ the filename of the new article next to it.
  - Use the isNaN function to compare with NaN
  - Read only
  - '{a}' is a function
- - Do not assign to the exception parameter
+ - `exception-assignment.md` - ~~Do not assign to the exception parameter~~
  - Expected an identifier in an assignment and instead saw a function invocation
  - Expected an identifier and instead saw '{a}' (a reserved word)
  - `unnamed-function.md` - ~~Missing name in function declaration~~
@@ -344,7 +344,7 @@ the filename of the new article next to it.
  - Empty {{a}} statement
  - Use '===' to compare with 'null'
  - eval can be harmful
- - Do not assign to the exception parameter
+ - `exception-assignment.md` - ~~Do not assign to the exception parameter~~
  - {{a}} prototype is read only, properties should not be added
  - Redundant double negation in {{a}}
  - Gratuitous parentheses around expression
