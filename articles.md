@@ -88,7 +88,7 @@ the filename of the new article next to it.
  - Do not mutate parameter '{a}' when using 'arguments'
  - `unexpected-get-param.md` - ~~Unexpected parameter '{a}' in get {b}
    function~~
- - Expected parameter (value) set {a} function
+ - `expected-value-param.md` - ~~Expected parameter (value) set {a} function~~
  - Missing radix parameter
  - Read only
  - Redefinition of '{a}' from line {b}
