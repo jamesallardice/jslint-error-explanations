@@ -43,7 +43,7 @@ the filename of the new article next to it.
  - Empty block
  - Empty case
  - `empty-class.md` - ~~Empty class~~
- - eval is evil
+ - `eval.md` - ~~eval is evil~~
  - Expected '{a}' and instead saw '{b}'
  - Expected '{a}' to match '{b}' from line {c} and instead saw '{d}'
  - Expected '{a}' at column {b}, not column {c}
@@ -243,7 +243,7 @@ the filename of the new article next to it.
  - Missing '()' invoking a constructor
  - `avoid-arguments.md` - ~~Avoid arguments.{a}~~
  - document.write can be a form of eval
- - eval can be harmful
+ - `eval.md` - ~~eval can be harmful~~
  - `not-a-function.md` - ~~Math is not a function~~
  - `missing-radix.md` - ~~Missing radix parameter~~
  - Implied eval. Consider passing a function instead of a string
@@ -344,7 +344,7 @@ the filename of the new article next to it.
  - Unexpected label {{l}}
  - Empty {{a}} statement
  - Use '===' to compare with 'null'
- - eval can be harmful
+ - `eval.md` - ~~eval can be harmful~~
  - `exception-assignment.md` - ~~Do not assign to the exception parameter~~
  - {{a}} prototype is read only, properties should not be added
  - Redundant double negation in {{a}}
