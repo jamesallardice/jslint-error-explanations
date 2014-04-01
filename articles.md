@@ -42,7 +42,7 @@ the filename of the new article next to it.
  - Duplicate '{a}'
  - Empty block
  - Empty case
- - Empty class
+ - `empty-class.md` - ~~Empty class~~
  - eval is evil
  - Expected '{a}' and instead saw '{b}'
  - Expected '{a}' to match '{b}' from line {c} and instead saw '{d}'
@@ -340,7 +340,7 @@ the filename of the new article next to it.
    '/='~~
  - `duplicate-key.md` - ~~Duplicate key '{{key}}'~~
  - Unexpected 'else' after 'return'
- - Empty class
+ - `empty-class.md` - ~~Empty class~~
  - Unexpected label {{l}}
  - Empty {{a}} statement
  - Use '===' to compare with 'null'
