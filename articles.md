@@ -107,7 +107,7 @@ the filename of the new article next to it.
  - Too many errors
  - A trailing decimal point can be confused with a dot
  - `unclosed-string.md` - ~~Unclosed string~~
- - Unclosed comment
+ - `unclosed-comment.md` - ~~Unclosed comment~~
  - Unclosed regular expression
  - Unescaped '{a}'
  - Unexpected '{a}'
@@ -163,7 +163,7 @@ the filename of the new article next to it.
    '/='~~
  - Unclosed regular expression
  - Invalid regular expression
- - Unclosed comment
+ - `unclosed-comment.md` - ~~Unclosed comment~~
  - Unbegun comment
  - Unmatched '{a}'
  - Expected '{a}' to match '{b}' from line {c} and instead saw '{d}'
