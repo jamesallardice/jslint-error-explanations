@@ -112,7 +112,7 @@ the filename of the new article next to it.
  - Unescaped '{a}'
  - Unexpected '{a}'
  - Unexpected character '{a}'
- - Unexpected comment
+ - `unexpected-comment.md` - ~~Unexpected comment~~
  - Unexpected label '{a}'
  - Unexpected /*property*/ '{a}'
  - Unexpected space between '{a}' and '{b}'
