@@ -123,7 +123,7 @@ the filename of the new article next to it.
  - Unnecessary 'use strict'
  - Unreachable '{a}' after '{b}'
  - Unsafe character
- - Unused '{a}'
+ - `unused-var.md` - ~~Unused '{a}'~~
  - JavaScript URL
  - `array-literal-notation.md` - ~~Use the array literal notation []~~
  - Spaces are hard to count. Use {{a}}
@@ -277,7 +277,7 @@ the filename of the new article next to it.
  - Expected a string and instead saw {a}
  - The '{a}' key may produce unexpected results
  - Use the function form of "use strict"
- - '{a}' is defined but never used
+ - `unused-var.md` - ~~'{a}' is defined but never used~~
  - This character may get silently deleted by one or more browsers
  - The '{a}' property is deprecated
  - '{a}' is available in ES6 (use esnext option) or Mozilla JS extensions (use
@@ -402,7 +402,7 @@ the filename of the new article next to it.
  - Found unexpected statement after a {{type}}
  - `unused-expression.md` - ~~Expected an assignment or function call and
    instead saw an expression~~
- - {{var}} is defined but never used
+ - `unused-var.md` - ~~{{var}} is defined but never used~~
  - {{a}} was used before it was defined
  - Unexpected use of 'with' statement
  - `unnecessary-function-parens.md` - ~~Wrapping non-IIFE function literals in
