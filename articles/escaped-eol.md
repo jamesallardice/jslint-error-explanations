@@ -11,6 +11,7 @@
         "w043"
     ],
     "linters": [
+        "jslint",
         "jshint",
         "eslint"
     ],
@@ -26,8 +27,8 @@ three tools from some point since.
 
  - In JSLint the warning given since August 2013 is "Unexpected '\\'"
 
- - In JSLint between May 2011 and August 2013 the message used was "This is an
-   ES5 feature"
+ - In JSLint between May 2011 and August 2013 the message used was the more
+   generic "This is an ES5 feature"
 
  - Before May 2011 this functionality was not supported in JSLint
 
@@ -77,7 +78,8 @@ The ECMAScript specification was updated to allow multiline strings in version 5
 > way to cause a line terminator character to be part of the String value of a
 > string literal is to use an escape sequence such as `\n` or `\u000A`.
 
-If you're receiving this error in JSHint you can listen to the message and set the `multistr` option to allow the use of multiline strings:
+If you're receiving this error in JSHint you can listen to the message and set
+the `multistr` option to allow the use of multiline strings:
 
 <!---
 {
@@ -90,7 +92,8 @@ var myString = "Line 1 \
                 Line 2";
 ```
 
-If you're using a version of JSLint from between May 2011 and August 2013 you can avoid this warning by setting the `es5` option:
+If you're using a version of JSLint from between May 2011 and August 2013 you
+can avoid this warning by setting the `es5` option:
 
 <!---
 {

@@ -179,7 +179,7 @@ the filename of the new article next to it.
  - `bad-assignment.md` - ~~Bad assignment~~
  - Expected a small integer or 'false' and instead saw '{a}'
  - Expected an operator and instead saw '{a}'
- - get/set are ES5 features
+ - `get-set-es5.md` - ~~get/set are ES5 features~~
  - Missing property name
  - Expected to see a statement and instead saw a block
  - Function declarations are not invocable
