@@ -108,7 +108,7 @@ the filename of the new article next to it.
  - A trailing decimal point can be confused with a dot
  - `unclosed-string.md` - ~~Unclosed string~~
  - `unclosed-comment.md` - ~~Unclosed comment~~
- - Unclosed regular expression
+ - `unclosed-regex.md` - ~~Unclosed regular expression~~
  - Unescaped '{a}'
  - Unexpected '{a}'
  - Unexpected character '{a}'
@@ -161,7 +161,7 @@ the filename of the new article next to it.
    constant~~
  - `regex-division.md` - ~~A regular expression literal can be confused with
    '/='~~
- - Unclosed regular expression
+ - `unclosed-regex.md` - ~~Unclosed regular expression~~
  - Invalid regular expression
  - `unclosed-comment.md` - ~~Unclosed comment~~
  - Unbegun comment
