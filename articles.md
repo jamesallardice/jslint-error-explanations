@@ -49,7 +49,8 @@ the filename of the new article next to it.
  - Expected '{a}' at column {b}, not column {c}
  - Expected an id, and instead saw #{a}
  - Expected an identifier and instead saw '{a}'
- - Expected an identifier and instead saw '{a}' (a reserved word)
+ - `reserved-identifier.md` - ~~Expected an identifier and instead saw '{a}' (a
+   reserved word)~~
  - Expected a number and instead saw '{a}'
  - Expected an operator and instead saw '{a}'
  - Expected a positive number and instead saw '{a}'
@@ -211,7 +212,8 @@ the filename of the new article next to it.
  - '{a}' is a function
  - `exception-assignment.md` - ~~Do not assign to the exception parameter~~
  - Expected an identifier in an assignment and instead saw a function invocation
- - Expected an identifier and instead saw '{a}' (a reserved word)
+ - `reserved-identifier.md` - ~~Expected an identifier and instead saw '{a}' (a
+   reserved word)~~
  - `unnamed-function.md` - ~~Missing name in function declaration~~
  - Inner functions should be listed at the top of the outer function
  - Unreachable '{a}' after '{b}'
