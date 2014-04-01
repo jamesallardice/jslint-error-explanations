@@ -118,7 +118,7 @@ the filename of the new article next to it.
  - Unexpected space between '{a}' and '{b}'
  - Unexpected 'typeof'. Use '===' to compare directly with {a}
  - Uninitialized '{a}'
- - Unnecessary 'else' after disruption
+ - `unnecessary-else.md` - ~~Unnecessary 'else' after disruption~~
  - It is not necessary to initialize '{a}' to 'undefined'
  - Unnecessary 'use strict'
  - Unreachable '{a}' after '{b}'
@@ -339,7 +339,7 @@ the filename of the new article next to it.
  - `regex-division.md` - ~~A regular expression literal can be confused wtih
    '/='~~
  - `duplicate-key.md` - ~~Duplicate key '{{key}}'~~
- - Unexpected 'else' after 'return'
+ - `unnecessary-else.md` - ~~Unexpected 'else' after 'return'~~
  - `empty-class.md` - ~~Empty class~~
  - Unexpected label {{l}}
  - Empty {{a}} statement
