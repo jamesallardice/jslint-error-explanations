@@ -250,7 +250,7 @@ the filename of the new article next to it.
  - Bad invocation
  - Extra comma
  - This function has too many statements
- - This function has too many parameters
+ - `too-many-params.md` - ~~This function has too many parameters~~
  - Blocks are nested too deeply
  - This function's cyclomatic complexity is too high
  - Duplicate key '{a}'
@@ -317,7 +317,7 @@ the filename of the new article next to it.
  - Blocks are nested too deeply
  - Line {{i}} exceeds the maximum line length
  - Too many nested callbacks
- - This function has too many parameters
+ - `too-many-params.md` - ~~This function has too many parameters~~
  - This function has too many statements
  - `uppercase-constructor.md` - ~~A constructor name should start with an
    uppercase letter~~
