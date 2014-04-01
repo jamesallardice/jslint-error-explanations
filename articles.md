@@ -380,7 +380,7 @@ the filename of the new article next to it.
  - Don't use octal '{{octalDigit}}'. Use '\u' instead
  - Octal literals should not be used
  - Use path.join() or parth.resolve() instead of + to create paths
- - Unary operator '{{a}}' used
+ - `unexpected-increment.md` - ~~Unary operator '{{a}}' used~~
  - Don't use process.exit(); throw an error instead
  - The '__proto__' property is deprecated
  - `already-defined.md` - ~~'{{a}}' is already defined~~
