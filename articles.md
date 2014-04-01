@@ -253,7 +253,7 @@ the filename of the new article next to it.
  - `too-many-params.md` - ~~This function has too many parameters~~
  - Blocks are nested too deeply
  - This function's cyclomatic complexity is too high
- - Duplicate key '{a}'
+ - `duplicate-key.md` - ~~Duplicate key '{a}'~~
  - `unexpected-get-param.md` - ~~Unexpected parameter '{a}' in get {b}
    function~~
  - Expected a single parameter in set {a} function
@@ -338,7 +338,7 @@ the filename of the new article next to it.
  - `variable-delete.md` - ~~Variables should not be deleted~~
  - `regex-division.md` - ~~A regular expression literal can be confused wtih
    '/='~~
- - Duplicate key '{{key}}'
+ - `duplicate-key.md` - ~~Duplicate key '{{key}}'~~
  - Unexpected 'else' after 'return'
  - Empty class
  - Unexpected label {{l}}
