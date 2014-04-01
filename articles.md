@@ -102,7 +102,7 @@ the filename of the new article next to it.
  - `dot-notation.md` - ~~['{a}'] is better written in dot notation~~
  - Unexpected sync method '{a}'
  - A '&lt;{a}&gt;' must be within '&lt;{b}&gt;'
- - Unexpected TODO comment
+ - `todo-comment.md` - ~~Unexpected TODO comment~~
  - Line too long
  - Too many errors
  - A trailing decimal point can be confused with a dot
