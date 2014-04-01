@@ -266,7 +266,7 @@ the filename of the new article next to it.
    saw an assignment~~
  - Don't use 'with'
  - Expected a 'break' statement before '{a}'
- - Forgotten 'debugger' statement
+ - `debugger.md` - ~~Forgotten 'debugger' statement~~
  - `bad-for-in-variable.md` - ~~Creating global 'for' variable~~
  - The body of a for in should be wrapped in an if statement
  - `not-a-label.md` - ~~'{a}' is not a statement label~~
@@ -334,7 +334,7 @@ the filename of the new article next to it.
  - Unexpected console statement
  - Unexpected constant condition
  - Unexpected control character in regular expression
- - Unexpected 'debugger' statement
+ - `debugger.md` - ~~Unexpected 'debugger' statement~~
  - `variable-delete.md` - ~~Variables should not be deleted~~
  - `regex-division.md` - ~~A regular expression literal can be confused wtih
    '/='~~
