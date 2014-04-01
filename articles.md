@@ -219,7 +219,7 @@ the filename of the new article next to it.
  - `unused-expression.md` - ~~Expected an assignment or function call and
    instead saw an expression~~
  - `new-side-effects.md` - ~~Do not use 'new' for side effects~~
- - Unnecessary semicolon
+ - `unnecessary-semicolon.md` - ~~Unnecessary semicolon~~
  - Missing semicolon
  - Unnecessary directive "{a}"
  - '{a}' is a statement label
@@ -349,7 +349,7 @@ the filename of the new article next to it.
  - {{a}} prototype is read only, properties should not be added
  - Redundant double negation in {{a}}
  - Gratuitous parentheses around expression
- - Unnecessary semicolon
+ - `unnecessary-semicolon.md` - ~~Unnecessary semicolon~~
  - Unnecessary 'use strict'
  - Multiple 'use strict' directives
  - Expected a "break" statement before "{{code}}"
