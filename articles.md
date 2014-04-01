@@ -154,7 +154,7 @@ the filename of the new article next to it.
  - Strict violation
  - `global-validthis.md` - ~~Option 'validthis' can't be used in a global
    scope~~
- - 'with' is not allowed in strict mode
+ - `with-strict.md` - ~~'with' is not allowed in strict mode~~
  - `const-redeclared.md` - ~~const '{a}' has already been declared~~
  - const '{a}' is initialized to 'undefined'
  - `overriding-constant.md` - ~~Attempting to override '{a}' which is a
