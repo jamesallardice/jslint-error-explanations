@@ -264,7 +264,7 @@ the filename of the new article next to it.
  - Don't make functions within a loop
  - `unexpected-assignment.md` - ~~Expected a conditional expression and instead
    saw an assignment~~
- - Don't use 'with'
+ - `unexpected-width.md` - ~~Don't use 'with'~~
  - Expected a 'break' statement before '{a}'
  - `debugger.md` - ~~Forgotten 'debugger' statement~~
  - `bad-for-in-variable.md` - ~~Creating global 'for' variable~~
@@ -404,7 +404,7 @@ the filename of the new article next to it.
    instead saw an expression~~
  - `unused-var.md` - ~~{{var}} is defined but never used~~
  - {{a}} was used before it was defined
- - Unexpected use of 'with' statement
+ - `unexpected-with.md` - ~~Unexpected use of 'with' statement~~
  - `unnecessary-function-parens.md` - ~~Wrapping non-IIFE function literals in
    parens is unnecessary~~
  - Expected literal to be on the right side of {{a}}
