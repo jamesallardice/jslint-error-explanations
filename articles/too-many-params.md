@@ -105,7 +105,7 @@ function Person(options) {
 In JSHint 1.0.0 and above you have the ability to ignore any warning with a
 [special option syntax][jshintopts]. The identifier of this warning is **W072**.
 This means you can tell JSHint to not issue this warning with the `/*jshint
--W072 */` directive. You can also set the `sub` option to `true`.
+-W072 */` directive.
 
 In ESLint the rule that generates this warning is named `max-params`. You can
 disable it by setting it to `0`, or enable it by setting it to `1`.
