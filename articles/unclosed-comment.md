@@ -18,7 +18,9 @@
 
 ### When do I get this error?
 
-The "Unclosed comment" error is thrown when JSLint or JSHint encounters **a multiline comment that does not end with the character sequence `*/`**. Here's an example:
+The "Unclosed comment" error is thrown when JSLint or JSHint encounters **a
+multiline comment that does not end with the character sequence `*/`**. Here's
+an example:
 
 <!---
 {
@@ -34,12 +36,16 @@ The "Unclosed comment" error is thrown when JSLint or JSHint encounters **a mult
 ### Why do I get this error?
 
 This error is raised to highlight a **fatal JavaScript syntax error**. Your code
-will not run unless you fix this issue. The ECMAScript 5 specification lists the following grammar for multiline comments ([ES5 &sect;7.4][es5-7.4]):
+will not run unless you fix this issue. The ECMAScript 5 specification lists the
+following grammar for multiline comments ([ES5 &sect;7.4][es5-7.4]):
 
 > *MultiLineComment* ::<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;`/*` *MultiLineCommentChars*<sub>opt</sub> `*/`
 
-We can see from the above quote that multiline comments must end with the `*/` characters. If you have an unclosed multiline comment a syntax error will be thrown when the interpreter reaches the end of the file. Here's the above snippet once more, except we've closed the comment this time:
+We can see from the above quote that multiline comments must end with the `*/`
+characters. If you have an unclosed multiline comment a syntax error will be
+thrown when the interpreter reaches the end of the file. Here's the above
+snippet once more, except we've closed the comment this time:
 
 <!---
 {
