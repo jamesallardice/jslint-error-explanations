@@ -106,7 +106,7 @@ the filename of the new article next to it.
  - Line too long
  - Too many errors
  - A trailing decimal point can be confused with a dot
- - Unclosed string
+ - `unclosed-string.md` - ~~Unclosed string~~
  - Unclosed comment
  - Unclosed regular expression
  - Unescaped '{a}'
@@ -284,7 +284,7 @@ the filename of the new article next to it.
    moz)
  - Unexpected {a} in '{b}'
  - Script URL
- - Unclosed string
+ - `unclosed-string.md` - ~~Unclosed string~~
  - Control character in string
  - `octal-literal.md` - ~~Octal literals are not allowed in strict mode~~
  - Expected '{a}' and instead saw '{b}'
