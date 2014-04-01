@@ -393,7 +393,7 @@ the filename of the new article next to it.
  - Trailing whitespace before semicolon
  - Spaced function application is not allowed
  - Unexpected comma in middle of array
- - Unexpected sync method
+ - `unexpected-sync.md` - ~~Unexpected sync method~~
  - Ternary operator used
  - It's not necessary to initialize '{{name}}' to undefined
  - '{{name}}' is not defined
