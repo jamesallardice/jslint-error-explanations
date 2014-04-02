@@ -64,7 +64,7 @@ the filename of the new article next to it.
    blocks~~
  - `function-constructor.md` - ~~The Function constructor is eval~~
  - `function-in-loop.md` - ~~Don't make functions within a loop~~
- - Function statements are not invocable
+ - `invoked-declaration.md` - ~~Function statements are not invocable~~
  - Use the function form of 'use strict'
  - Expected an identifier in an assignment and instead saw a function invocation
  - Implied eval is evil. Pass a function instead of a string
@@ -188,7 +188,7 @@ the filename of the new article next to it.
  - `get-set-es5.md` - ~~get/set are ES5 features~~
  - Missing property name
  - Expected to see a statement and instead saw a block
- - Function declarations are not invocable
+ - `invoked-declaration.md` - ~~Function declarations are not invocable~~
  - Each value should have its own case label
  - Unrecoverable syntax error
  - Too many errors
