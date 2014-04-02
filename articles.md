@@ -58,7 +58,8 @@ the filename of the new article next to it.
  - `expected-one-space.md` - ~~Expected exactly one space between '{a}' and
    '{b}'~~
  - `expected-string.md` - ~~Expected a string and instead saw '{a}'~~
- - The body of a for in should be wrapped in an if statement
+ - `for-in-if.md` - ~~The body of a for in should be wrapped in an if
+   statement~~
  - Function statements should not be placed in blocks
  - The Function constructor is eval
  - Don't make functions within a loop
@@ -273,7 +274,8 @@ the filename of the new article next to it.
  - Expected a 'break' statement before '{a}'
  - `debugger.md` - ~~Forgotten 'debugger' statement~~
  - `bad-for-in-variable.md` - ~~Creating global 'for' variable~~
- - The body of a for in should be wrapped in an if statement
+ - `for-in-if.md` - ~~The body of a for in should be wrapped in an if
+   statement~~
  - `not-a-label.md` - ~~'{a}' is not a statement label~~
  - '{a}' is out of scope
  - `return-conditional.md` - ~~Did you mean to return a conditional instead of
@@ -318,7 +320,8 @@ the filename of the new article next to it.
  - Expected '{{a}}' and instead saw '{{b}}'
  - Missing function expression name
  - Expected a function {{a}}
- - The body of a for-in should be wrapped in an if statement
+ - `for-in-if.md` - ~~The body of a for-in should be wrapped in an if
+   statement~~
  - Blocks are nested too deeply
  - Line {{i}} exceeds the maximum line length
  - Too many nested callbacks
