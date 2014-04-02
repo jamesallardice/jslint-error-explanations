@@ -83,3 +83,4 @@ In ESLint the rule that generates this warning is named `no-extra-strict`. You
 can disable it by setting it to `0`, or enable it by setting it to `1`.
 
 [es5-10.1.1]: http://es5.github.io/#x10.1.1
+[jshintopts]: http://jshint.com/docs/#options
