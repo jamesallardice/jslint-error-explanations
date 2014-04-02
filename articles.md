@@ -57,7 +57,7 @@ the filename of the new article next to it.
  - Expected a small positive integer and instead saw '{a}'
  - `expected-one-space.md` - ~~Expected exactly one space between '{a}' and
    '{b}'~~
- - Expected a string and instead saw '{a}'
+ - `expected-string.md` - ~~Expected a string and instead saw '{a}'~~
  - The body of a for in should be wrapped in an if statement
  - Function statements should not be placed in blocks
  - The Function constructor is eval
