@@ -133,7 +133,8 @@ the filename of the new article next to it.
  - `array-literal-notation.md` - ~~Use the array literal notation []~~
  - `regex-spaces.md` - ~~Spaces are hard to count. Use {{a}}~~
  - Expected 'else { if' and instead saw 'else if'
- - Use the object literal notation {} or Object.create(null)
+ - `object-literal-notation.md` - ~~Use the object literal notation {} or
+   Object.create(null)~~
  - Use the || operator
  - Use a named parameter
  - Use spaces, not tabs
@@ -207,7 +208,8 @@ the filename of the new article next to it.
  - Confusing pluses
  - A leading decimal point can be confused with a dot
  - `array-literal-notation.md` - ~~he array literal notation [] is preferable~~
- - The object literal notation {} is preferable
+ - `object-literal-notation.md` - ~~The object literal notation {} is
+   preferable~~
  - Unexpected use of '{a}'
  - Bad operand
  - Confusing use of '{a}'
@@ -383,7 +385,8 @@ the filename of the new article next to it.
  - The 'in' expression's left operand is negated
  - Do not nest ternary expressions
  - `function-constructor.md` - ~~The Function constructor is eval~~
- - The object literal notation {} is preferrable
+ - `object-literal-notation.md` - ~~The object literal notation {} is
+   preferrable~~
  - `literal-constructor.md` - ~~Do not use {{fn}} as a constructor~~
  - `new-side-effects.md` - ~~Do not use 'new' for side effects~~
  - `not-a-function.md` - ~~'{{name}}' is not a function~~
