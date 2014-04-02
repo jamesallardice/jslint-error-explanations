@@ -136,7 +136,7 @@ the filename of the new article next to it.
  - `object-literal-notation.md` - ~~Use the object literal notation {} or
    Object.create(null)~~
  - `use-or.md` - ~~Use the || operator~~
- - Use a named parameter
+ - `use-named-param.md` - ~~Use a named parameter~~
  - Use spaces, not tabs
  - '{a}' was used before it was defined
  - Variable {a} was not declared correctly
