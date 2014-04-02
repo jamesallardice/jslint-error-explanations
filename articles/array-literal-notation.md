@@ -6,7 +6,7 @@
         "W009"
     ],
     "slugs": [
-        "the-object-array-notation-is-preferrable",
+        "the-array-literal-notation-is-preferrable",
         "use-the-array-literal-notation",
         "w009"
     ],
