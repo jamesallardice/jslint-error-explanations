@@ -127,5 +127,6 @@ In JSHint 1.0.0 and above you have the ability to ignore any warning with a
 This means you can tell JSHint to not issue this warning with the `/*jshint
 -W082 */` directive.
 
+[es5-10.5]: http://es5.github.io/#x10.5
 [es5-12]: http://es5.github.io/#x12
 [jshintopts]: http://jshint.com/docs/#options
