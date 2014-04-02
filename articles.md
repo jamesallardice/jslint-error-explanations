@@ -123,7 +123,7 @@ the filename of the new article next to it.
  - `unnecessary-else.md` - ~~Unnecessary 'else' after disruption~~
  - `init-undefined.md` - ~~It is not necessary to initialize '{a}' to
    'undefined'~~
- - Unnecessary 'use strict'
+ - `unnecessary-strict.md` - ~~Unnecessary 'use strict'~~
  - Unreachable '{a}' after '{b}'
  - Unsafe character
  - `unused-var.md` - ~~Unused '{a}'~~
@@ -225,7 +225,7 @@ the filename of the new article next to it.
  - `new-side-effects.md` - ~~Do not use 'new' for side effects~~
  - `unnecessary-semicolon.md` - ~~Unnecessary semicolon~~
  - Missing semicolon
- - Unnecessary directive "{a}"
+ - `unnecessary-strict.md` - ~~Unnecessary directive "{a}"~~
  - '{a}' is a statement label
  - `out-of-scope.md` - ~~'{a}' used out of scope~~
  - '{a}' is not allowed
@@ -355,7 +355,7 @@ the filename of the new article next to it.
  - Redundant double negation in {{a}}
  - Gratuitous parentheses around expression
  - `unnecessary-semicolon.md` - ~~Unnecessary semicolon~~
- - Unnecessary 'use strict'
+ - `unnecessary-strict.md` - ~~Unnecessary 'use strict'~~
  - Multiple 'use strict' directives
  - Expected a "break" statement before "{{code}}"
  - A leading decimal point can be confused with a dot
