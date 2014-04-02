@@ -90,7 +90,7 @@ function.
 
 Here's an example in which we overwrite the `Array` constructor. Note that
 JSLint, JSHint and ESLint do not know that's what has happened. Therefore, they
-take the safe approach and forbids the of the `Array` constructor completely:
+take the safe approach and forbid the use of the `Array` constructor completely:
 
 <!---
 {
