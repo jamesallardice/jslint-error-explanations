@@ -60,7 +60,8 @@ the filename of the new article next to it.
  - `expected-string.md` - ~~Expected a string and instead saw '{a}'~~
  - `for-in-if.md` - ~~The body of a for in should be wrapped in an if
    statement~~
- - Function statements should not be placed in blocks
+ - `function-in-block.md` - ~~Function statements should not be placed in
+   blocks~~
  - The Function constructor is eval
  - Don't make functions within a loop
  - Function statements are not invocable
@@ -266,7 +267,8 @@ the filename of the new article next to it.
  - `redefinition-of-native.md` - ~~Redefinition of '{a}'~~
  - `init-undefined.md` - ~~It's not necessary to initialize '{a}' to
    'undefined'~~
- - Function declarations should not be placed in blocks
+ - `function-in-block.md` - ~~Function declarations should not be placed in
+   blocks~~
  - Don't make functions within a loop
  - `unexpected-assignment.md` - ~~Expected a conditional expression and instead
    saw an assignment~~
