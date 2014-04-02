@@ -63,7 +63,7 @@ the filename of the new article next to it.
  - `function-in-block.md` - ~~Function statements should not be placed in
    blocks~~
  - `function-constructor.md` - ~~The Function constructor is eval~~
- - Don't make functions within a loop
+ - `function-in-loop.md` - ~~Don't make functions within a loop~~
  - Function statements are not invocable
  - Use the function form of 'use strict'
  - Expected an identifier in an assignment and instead saw a function invocation
@@ -271,7 +271,7 @@ the filename of the new article next to it.
    'undefined'~~
  - `function-in-block.md` - ~~Function declarations should not be placed in
    blocks~~
- - Don't make functions within a loop
+ - `function-in-loop.md` - ~~Don't make functions within a loop~~
  - `unexpected-assignment.md` - ~~Expected a conditional expression and instead
    saw an assignment~~
  - `unexpected-width.md` - ~~Don't use 'with'~~
@@ -375,7 +375,7 @@ the filename of the new article next to it.
  - Unexpected labeled statment
  - Unexpected label in {{a}} statement
  - Block is nested inside another block
- - Don't make functions within a loop
+ - `function-in-loop.md` - ~~Don't make functions within a loop~~
  - Do not mix 'require' and other declarations
  - Do not mix core, module, file and computed requires
  - `escaped-eol.md` - ~~Multiline support is limited to browsers supporting ES5
