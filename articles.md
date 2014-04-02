@@ -131,7 +131,7 @@ the filename of the new article next to it.
  - `unused-var.md` - ~~Unused '{a}'~~
  - JavaScript URL
  - `array-literal-notation.md` - ~~Use the array literal notation []~~
- - Spaces are hard to count. Use {{a}}
+ - `regex-spaces.md` - ~~Spaces are hard to count. Use {{a}}~~
  - Expected 'else { if' and instead saw 'else if'
  - Use the object literal notation {} or Object.create(null)
  - Use the || operator
@@ -394,7 +394,7 @@ the filename of the new article next to it.
  - Don't use process.exit(); throw an error instead
  - The '__proto__' property is deprecated
  - `already-defined.md` - ~~'{{a}}' is already defined~~
- - Spaces are hard to count
+ - `regex-spaces.md` - ~~Spaces are hard to count~~
  - `return-conditional.md` - ~~Return statement should not contain assignment~~
  - Script URL is a form of eval
  - Comparing to itself is potentially pointless
