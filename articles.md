@@ -135,7 +135,7 @@ the filename of the new article next to it.
  - Expected 'else { if' and instead saw 'else if'
  - `object-literal-notation.md` - ~~Use the object literal notation {} or
    Object.create(null)~~
- - Use the || operator
+ - `use-or.md` - ~~Use the || operator~~
  - Use a named parameter
  - Use spaces, not tabs
  - '{a}' was used before it was defined
