@@ -16,7 +16,7 @@
 ### When do I get this error?
 
 The "Expected exactly one space between '{a}' and '{b}'" error is thrown when
-JSLint encounters **a number of spaces that is not equal to one**in the
+JSLint encounters **a number of spaces that is not equal to one** in the
 following situations (there are numerous other examples that can cause this
 error, but these are some of the common ones):
 
