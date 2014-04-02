@@ -120,7 +120,8 @@ the filename of the new article next to it.
  - Unexpected 'typeof'. Use '===' to compare directly with {a}
  - Uninitialized '{a}'
  - `unnecessary-else.md` - ~~Unnecessary 'else' after disruption~~
- - It is not necessary to initialize '{a}' to 'undefined'
+ - `init-undefined.md` - ~~It is not necessary to initialize '{a}' to
+   'undefined'~~
  - Unnecessary 'use strict'
  - Unreachable '{a}' after '{b}'
  - Unsafe character
@@ -261,7 +262,8 @@ the filename of the new article next to it.
  - Expected a single parameter in set {a} function
  - Setter is defined without getter
  - `redefinition-of-native.md` - ~~Redefinition of '{a}'~~
- - It's not necessary to initialize '{a}' to 'undefined'
+ - `init-undefined.md` - ~~It's not necessary to initialize '{a}' to
+   'undefined'~~
  - Function declarations should not be placed in blocks
  - Don't make functions within a loop
  - `unexpected-assignment.md` - ~~Expected a conditional expression and instead
@@ -397,7 +399,8 @@ the filename of the new article next to it.
  - Unexpected comma in middle of array
  - `unexpected-sync.md` - ~~Unexpected sync method~~
  - Ternary operator used
- - It's not necessary to initialize '{{name}}' to undefined
+ - `init-undefined.md` - ~~It's not necessary to initialize '{{name}}' to
+   undefined~~
  - '{{name}}' is not defined
  - '{{name}}' is read only
  - `dangling-underscore.md` - ~~Unexpected dangling '_' in '{{a}}'~~
