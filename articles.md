@@ -62,7 +62,7 @@ the filename of the new article next to it.
    statement~~
  - `function-in-block.md` - ~~Function statements should not be placed in
    blocks~~
- - The Function constructor is eval
+ - `function-constructor.md` - ~~The Function constructor is eval~~
  - Don't make functions within a loop
  - Function statements are not invocable
  - Use the function form of 'use strict'
@@ -243,7 +243,7 @@ the filename of the new article next to it.
  - `variable-delete.md` - ~~Variables should not be deleted~~
  - Unexpected '{a}'
  - `literal-constructor.md` - ~~Do not use {a} as a constructor~~
- - The Function constructor is a form of eval
+ - `function-constructor.md` - ~~The Function constructor is a form of eval~~
  - `bad-constructor.md` - ~~Bad constructor~~
  - Weird constructorion. Is 'new' necessary?
  - Missing '()' invoking a constructor
@@ -382,7 +382,7 @@ the filename of the new article next to it.
  - `redefinition-of-native.md` - ~~Redefinition of '{{nativeObject}}'~~
  - The 'in' expression's left operand is negated
  - Do not nest ternary expressions
- - The Function constructor is eval
+ - `function-constructor.md` - ~~The Function constructor is eval~~
  - The object literal notation {} is preferrable
  - `literal-constructor.md` - ~~Do not use {{fn}} as a constructor~~
  - `new-side-effects.md` - ~~Do not use 'new' for side effects~~
