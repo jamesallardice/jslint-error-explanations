@@ -80,7 +80,7 @@ the filename of the new article next to it.
  - `missing-strict.md` - ~~Missing 'use strict' statement~~
  - `move-parens.md` - ~~Move the invocation into the parens that contain the
    function~~
- - Move 'var' declarations to the top of the function
+ - `move-var.md` - ~~Move 'var' declarations to the top of the function~~
  - `unnamed-function.md` - ~~Missing name in function statement~~
  - `nested-comment.md` - ~~Nested comment~~
  - Nested not
