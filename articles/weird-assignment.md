@@ -32,9 +32,15 @@ x = x;
 
 ### Why do I get this error?
 
-This error is raised to highlight a **potentially confusing and completely pointless piece of code**. There are almost no situations in which you would need to assign something to itself. There is, however, at least one valid use case.
+This error is raised to highlight a **potentially confusing and completely
+pointless piece of code**. There are almost no situations in which you would
+need to assign something to itself. There is, however, at least one valid use
+case.
 
-In the browser you can assign `window.location` to itself to force a page reload without reposting any form data. Calling `window.location.reload()` can cause a browser warning when form data will be reposted. To avoid that warning it's common to use one of the following patterns:
+In the browser you can assign `window.location` to itself to force a page reload
+without reposting any form data. Calling `window.location.reload()` can cause a
+browser warning when form data will be reposted. To avoid that warning it's
+common to use one of the following patterns:
 
 <!---
 {
@@ -47,7 +53,10 @@ window.location = window.location;
 window.location.href = window.location.href;
 ```
 
-As you can see, both of those cause the "Weird assignment" error. It's a simple fix though. Since `window.location` is effectively an alias for `window.location.href` they are interchangable which means we can make the two sides of the assignment different:
+As you can see, both of those cause the "Weird assignment" error. It's a simple
+fix though. Since `window.location` is effectively an alias for
+`window.location.href` they are interchangable which means we can make the two
+sides of the assignment different:
 
 <!---
 {
