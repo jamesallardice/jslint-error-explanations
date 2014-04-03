@@ -102,7 +102,7 @@ the filename of the new article next to it.
  - `regex-division.md` - ~~A regular expression literal can be confused with
    '/='~~
  - Expected to see a statement and instead saw a block
- - Stopping
+ - `stopping.md` - ~~Stopping~~
  - Strange loop
  - Strict violation
  - `dot-notation.md` - ~~['{a}'] is better written in dot notation~~
@@ -232,7 +232,7 @@ the filename of the new article next to it.
  - `unnecessary-semicolon.md` - ~~Unnecessary semicolon~~
  - Missing semicolon
  - `unnecessary-strict.md` - ~~Unnecessary directive "{a}"~~
- - '{a}' is a statement label
+ - `statement-label.md` - ~~'{a}' is a statement label~~
  - `out-of-scope.md` - ~~'{a}' used out of scope~~
  - '{a}' is not allowed
  - Possible strict violation
