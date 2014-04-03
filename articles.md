@@ -72,7 +72,7 @@ the filename of the new article next to it.
  - Unexpected 'in'. Compare with undefined or use the hasOwnProperty method
  - Insecure '{a}'
  - `use-isnan.md` - ~~Use the isNaN function to compare with NaN~~
- - A leading decimal point can be confused with a dot
+ - `leading-decimal.md` - ~~A leading decimal point can be confused with a dot~~
  - Missing '{a}'
  - Missing '{a}' after '{b}'
  - Missing property name
@@ -207,7 +207,7 @@ the filename of the new article next to it.
  - A dot following a number can be confused with a decimal point
  - Confusing minuses
  - Confusing pluses
- - A leading decimal point can be confused with a dot
+ - `leading-decimal.md` - ~~A leading decimal point can be confused with a dot~~
  - `array-literal-notation.md` - ~~he array literal notation [] is preferable~~
  - `object-literal-notation.md` - ~~The object literal notation {} is
    preferable~~
@@ -367,7 +367,7 @@ the filename of the new article next to it.
  - `unnecessary-strict.md` - ~~Unnecessary 'use strict'~~
  - Multiple 'use strict' directives
  - Expected a "break" statement before "{{code}}"
- - A leading decimal point can be confused with a dot
+ - `leading-decimal.md` - ~~A leading decimal point can be confused with a dot~~
  - A trailing decimal point can be confused with a dot
  - '{{name}}' is a function
  - Use the function form of "use strict"
