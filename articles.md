@@ -77,7 +77,7 @@ the filename of the new article next to it.
  - Missing '{a}' after '{b}'
  - Missing property name
  - Missing space between '{a}' and '{b}'
- - Missing 'use strict' statement
+ - `missing-strict.md` - ~~Missing 'use strict' statement~~
  - Move the invocation into the parens that contain the function
  - Move 'var' declarations to the top of the function
  - `unnamed-function.md` - ~~Missing name in function statement~~
@@ -157,7 +157,7 @@ the filename of the new article next to it.
  - Bad option: '{a}'
  - Bad option value
  - Unexpected early end of program
- - Missing "use strict" statement
+ - `missing-strict.md` - ~~Missing "use strict" statement~~
  - Strict violation
  - `global-validthis.md` - ~~Option 'validthis' can't be used in a global
    scope~~
@@ -433,7 +433,7 @@ the filename of the new article next to it.
  - Missing semicolon
  - Extra semicolon
  - Variables within the same declaration block should be sorted alphabetically
- - Missing "use strict" statement
+ - `missing-strict.md` - ~~Missing "use strict" statement~~
  - `use-isnan.md` - ~~Use the isNaN function to compare with NaN~~
  - JSDoc type missing brace
  - JSDoc syntax error
