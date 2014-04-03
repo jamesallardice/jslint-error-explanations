@@ -71,7 +71,7 @@ the filename of the new article next to it.
    string~~
  - Unexpected 'in'. Compare with undefined or use the hasOwnProperty method
  - Insecure '{a}'
- - Use the isNaN function to compare with NaN
+ - `use-isnan.md` - ~~Use the isNaN function to compare with NaN~~
  - A leading decimal point can be confused with a dot
  - Missing '{a}'
  - Missing '{a}' after '{b}'
@@ -214,7 +214,7 @@ the filename of the new article next to it.
  - Unexpected use of '{a}'
  - Bad operand
  - Confusing use of '{a}'
- - Use the isNaN function to compare with NaN
+ - `use-isnan.md` - ~~Use the isNaN function to compare with NaN~~
  - `read-only.md` - ~~Read only~~
  - '{a}' is a function
  - `exception-assignment.md` - ~~Do not assign to the exception parameter~~
@@ -434,7 +434,7 @@ the filename of the new article next to it.
  - Extra semicolon
  - Variables within the same declaration block should be sorted alphabetically
  - Missing "use strict" statement
- - Use the isNaN function to compare with NaN
+ - `use-isnan.md` - ~~Use the isNaN function to compare with NaN~~
  - JSDoc type missing brace
  - JSDoc syntax error
  - Missing JSDoc parameter type for '{{name}}'
