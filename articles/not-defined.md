@@ -114,7 +114,45 @@ In the case of environment-specific global identifiers (like `window` or
 options that you can set to let the linter know what environment the code is
 expected to run in:
 
- -
+ - `browser` - JSLint, JSHint and ESLint. Defines global variables available in
+   the browser.
+
+ - `devel` - JSLint and JSHint. Defines global variables that are only used in
+   a development environment (such as `alert` and `console`).
+
+ - `node` - JSLint, JSHint and ESLint. Defines global variables available in
+   Node.js.
+
+ - `couch` - JSLint and JSHint. Defines global variables available in CouchDB.
+
+ - `rhino` - JSLint and JSHint. Defines global variables available in Rhino.
+
+ - `phantom` - JSHint only. Defines global variables available in PhantomJS.
+
+ - `shelljs` - JSHint only. Defines global variables available in ShellJS
+
+ - `typed` - JSHint only. Defines global typed array variables (such as
+   `Int32Array` and `ArrayBuffer`)
+
+ - `wsh` - JSHint only. Defines global variables available in Windows Script
+   Host
+
+ - `mocha` - ESLint only. Defines global variables available in the Mocha test
+   framework
+
+JSHint also has a set options that tell it about libraries your script has
+access to. They can be set in the same way as the environment options listed
+above:
+
+ - `dojo` - Defines global variables provided by the Dojo Toolkit
+
+ - `jquery` - Defines global variables provided by jQuery
+
+ - `mootools` - Defines global variables provided by Mootools
+
+ - `prototypejs` - Defines global variables provided by PrototypeJS
+
+ - `yui` - Defines global variables provided by YUI
 
 In JSHint 1.0.0 and above you have the ability to ignore any warning with a
 [special option syntax][jshintopts]. The identifier of this warning is **W117**.

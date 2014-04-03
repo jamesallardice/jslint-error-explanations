@@ -138,7 +138,7 @@ the filename of the new article next to it.
  - `use-or.md` - ~~Use the || operator~~
  - `use-named-param.md` - ~~Use a named parameter~~
  - Use spaces, not tabs
- - '{a}' was used before it was defined
+ - `not-defined.md` - ~~'{a}' was used before it was defined~~
  - Variable {a} was not declared correctly
  - Don't declare variables in a loop
  - Weird assignment
@@ -299,7 +299,7 @@ the filename of the new article next to it.
  - Control character in string
  - `octal-literal.md` - ~~Octal literals are not allowed in strict mode~~
  - Expected '{a}' and instead saw '{b}'
- - '{a}' is not defined
+ - `not-defined.md` - ~~'{a}' is not defined~~
  - '{a}' is only available in Mozilla JavaScript extensions (use moz option)
  - '{a}' is only available in ES6 (use esnext option)
  - You might be leaking a variable ({a}) here
@@ -410,7 +410,7 @@ the filename of the new article next to it.
  - Ternary operator used
  - `init-undefined.md` - ~~It's not necessary to initialize '{{name}}' to
    undefined~~
- - '{{name}}' is not defined
+ - `not-defined.md` - ~~'{{name}}' is not defined~~
  - '{{name}}' is read only
  - `dangling-underscore.md` - ~~Unexpected dangling '_' in '{{a}}'~~
  - Found unexpected statement after a {{type}}
