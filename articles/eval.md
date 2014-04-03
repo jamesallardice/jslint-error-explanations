@@ -6,8 +6,8 @@
         "W061"
     ],
     "slugs": [
-        "unexpected-else-after-return",
-        "unnecessary-else-after-disruption",
+        "eval-is-evil",
+        "eval-can-be-harmful",
         "w061"
     ],
     "linters": [
