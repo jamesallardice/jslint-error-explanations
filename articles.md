@@ -78,7 +78,8 @@ the filename of the new article next to it.
  - Missing property name
  - Missing space between '{a}' and '{b}'
  - `missing-strict.md` - ~~Missing 'use strict' statement~~
- - Move the invocation into the parens that contain the function
+ - `move-parens.md` - ~~Move the invocation into the parens that contain the
+   function~~
  - Move 'var' declarations to the top of the function
  - `unnamed-function.md` - ~~Missing name in function statement~~
  - `nested-comment.md` - ~~Nested comment~~
@@ -449,5 +450,6 @@ the filename of the new article next to it.
  - Missing JSDoc for parameter '{{name}}'
  - `wrap-iife.md` - ~~Wrap an immediate function invocation in parentheses~~
  - Wrap only the function expression in parens
- - Move the invocation into the parens that contain the function
+ - `move-parens.md` - ~~Move the invocation into the parens that contain the
+   function~~
  - Wrap the /regexp/ literal in parens to disambiguate the slash operator
