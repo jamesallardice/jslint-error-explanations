@@ -140,7 +140,7 @@ the filename of the new article next to it.
  - `use-named-param.md` - ~~Use a named parameter~~
  - Use spaces, not tabs
  - `not-defined.md` - ~~'{a}' was used before it was defined~~
- - Variable {a} was not declared correctly
+ - `bad-declaration.md` - ~~Variable {a} was not declared correctly~~
  - Don't declare variables in a loop
  - Weird assignment
  - Weird condition
@@ -304,7 +304,7 @@ the filename of the new article next to it.
  - `not-defined.md` - ~~'{a}' is not defined~~
  - '{a}' is only available in Mozilla JavaScript extensions (use moz option)
  - '{a}' is only available in ES6 (use esnext option)
- - You might be leaking a variable ({a}) here
+ - `bad-declaration.md` - ~~You might be leaking a variable ({a}) here~~
  - Extending prototype of native object
  - Invalid typeof value
  - '{a}' is already defined in outer scope
