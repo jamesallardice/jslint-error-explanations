@@ -427,7 +427,7 @@ the filename of the new article next to it.
  - Expected literal to be on the right side of {{a}}
  - Combine this with the previous 'var' statement
  - Non-quoted property '{{key}}' found
- - String must use {{a}}
+ - `use-quote.md` - ~~String must use {{a}}~~
  - `missing-radix.md` - ~~Missing radix parameter~~
  - Invalid radix parameter
  - Missing semicolon
