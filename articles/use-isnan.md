@@ -20,7 +20,10 @@
 ### When do I get this error?
 
 The "Use the isNaN function to compare with NaN" error is thrown when JSLint,
-JSHint and ESLint encounter **a comparison in which one side is `NaN`**. In the following example we attempt to convert a string into a number with the `parseInt` function, which returns `NaN` when it can't perform such a conversion:
+JSHint and ESLint encounter **a comparison in which one side is `NaN`**. In the
+following example we attempt to convert a string into a number with the
+`parseInt` function, which returns `NaN` when it can't perform such a
+conversion:
 
 <!---
 {
