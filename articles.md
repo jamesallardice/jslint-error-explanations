@@ -148,7 +148,7 @@ the filename of the new article next to it.
  - Weird program
  - `weird-relation.md` - ~~Weird relation~~
  - Weird ternary
- - Wrap an immediate function invocation in parentheses
+ - `wrap-iife.md` - ~~Wrap an immediate function invocation in parentheses~~
  - Wrap the /regexp/ literal in parens to disambiguate the slash operator
  - document.write can be a form of eval
 
@@ -447,7 +447,7 @@ the filename of the new article next to it.
  - Missing JSDoc @returns for function
  - Expected JSDoc for '{{name}}' but found '{{name}}'
  - Missing JSDoc for parameter '{{name}}'
- - Wrap an immediate function invocation in parentheses
+ - `wrap-iife.md` - ~~Wrap an immediate function invocation in parentheses~~
  - Wrap only the function expression in parens
  - Move the invocation into the parens that contain the function
  - Wrap the /regexp/ literal in parens to disambiguate the slash operator
