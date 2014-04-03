@@ -67,7 +67,8 @@ the filename of the new article next to it.
  - `invoked-declaration.md` - ~~Function statements are not invocable~~
  - Use the function form of 'use strict'
  - Expected an identifier in an assignment and instead saw a function invocation
- - Implied eval is evil. Pass a function instead of a string
+ - `implied-eval.md` - ~~Implied eval is evil. Pass a function instead of a
+   string~~
  - Unexpected 'in'. Compare with undefined or use the hasOwnProperty method
  - Insecure '{a}'
  - Use the isNaN function to compare with NaN
@@ -254,7 +255,8 @@ the filename of the new article next to it.
  - `eval.md` - ~~eval can be harmful~~
  - `not-a-function.md` - ~~Math is not a function~~
  - `missing-radix.md` - ~~Missing radix parameter~~
- - Implied eval. Consider passing a function instead of a string
+ - `implied-eval.md` - ~~Implied eval. Consider passing a function instead of a
+   string~~
  - Bad invocation
  - Extra comma
  - This function has too many statements
@@ -369,7 +371,8 @@ the filename of the new article next to it.
  - A trailing decimal point can be confused with a dot
  - '{{name}}' is a function
  - Use the function form of "use strict"
- - Implied eval. Consider passing a function instead of a string
+ - `implied-eval.md` - ~~Implied eval. Consider passing a function instead of a
+   string~~
  - Reserved name '__iterator__'
  - `statement-label.md` - ~~Found identifier with same name as label~~
  - Unexpected labeled statment
