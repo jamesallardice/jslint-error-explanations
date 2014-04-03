@@ -146,7 +146,7 @@ the filename of the new article next to it.
  - Weird condition
  - Weird construction. Delete 'new'
  - Weird program
- - Weird relation
+ - `weird-relation.md` - ~~Weird relation~~
  - Weird ternary
  - Wrap an immediate function invocation in parentheses
  - Wrap the /regexp/ literal in parens to disambiguate the slash operator
@@ -403,7 +403,7 @@ the filename of the new article next to it.
  - `regex-spaces.md` - ~~Spaces are hard to count~~
  - `return-conditional.md` - ~~Return statement should not contain assignment~~
  - Script URL is a form of eval
- - Comparing to itself is potentially pointless
+ - `weird-relation.md` - ~~Comparing to itself is potentially pointless~~
  - Shadowing of global property "{{a}}"
  - {{a}} is already declared in the upper scope
  - Trailing whitespace before semicolon
