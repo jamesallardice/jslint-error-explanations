@@ -259,7 +259,7 @@ the filename of the new article next to it.
  - `implied-eval.md` - ~~Implied eval. Consider passing a function instead of a
    string~~
  - Bad invocation
- - Extra comma
+ - `extra-comma.md` - ~~Extra comma~~
  - This function has too many statements
  - `too-many-params.md` - ~~This function has too many parameters~~
  - Blocks are nested too deeply
@@ -343,7 +343,7 @@ the filename of the new article next to it.
  - Unexpected use of '{{operator}}'
  - `avoid-arguments.md` - ~~Avoid arguments.{{property}}~~
  - Value of '{{name}}' may be overwritten in IE 8 and earlier
- - Trailing comma
+ - `extra-comma.md` - ~~Trailing comma~~
  - `unexpected-assignment.md` - ~~Expected a conditional expression and instead
    saw an assignment~~
  - Unexpected console statement
