@@ -249,7 +249,7 @@ the filename of the new article next to it.
  - `function-constructor.md` - ~~The Function constructor is a form of eval~~
  - `bad-constructor.md` - ~~Bad constructor~~
  - Weird constructorion. Is 'new' necessary?
- - Missing '()' invoking a constructor
+ - `missing-parens.md` - ~~Missing '()' invoking a constructor~~
  - `avoid-arguments.md` - ~~Avoid arguments.{a}~~
  - document.write can be a form of eval
  - `eval.md` - ~~eval can be harmful~~
@@ -335,7 +335,7 @@ the filename of the new article next to it.
  - This function has too many statements
  - `uppercase-constructor.md` - ~~A constructor name should start with an
    uppercase letter~~
- - Missing '()' invoking a constructor
+ - `missing-parens.md` - ~~Missing '()' invoking a constructor~~
  - Unexpected '{{name}}'
  - `array-literal-notation.md` - ~~The array literal notation [] is
    preferrable~~
