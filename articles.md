@@ -142,7 +142,7 @@ the filename of the new article next to it.
  - `not-defined.md` - ~~'{a}' was used before it was defined~~
  - `bad-declaration.md` - ~~Variable {a} was not declared correctly~~
  - Don't declare variables in a loop
- - Weird assignment
+ - `weird-assignment.md` - ~~Weird assignment~~
  - Weird condition
  - Weird construction. Delete 'new'
  - Weird program
