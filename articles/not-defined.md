@@ -3,12 +3,14 @@
     "titles": [
         "'{a}' was used before it was defined",
         "'{a}' is not defined",
-        "W117"
+        "W117",
+        "W003"
     ],
     "slugs": [
         "a-was-used-before-it-was-defined",
         "a-is-not-defined",
-        "w117"
+        "w117",
+        "w003"
     ],
     "linters": [
         "jslint",
@@ -28,6 +30,9 @@ ever since.
  - In JSLint the warning given is *"'{a}' was used before it was defined"*
 
  - In JSHint and ESLint the message has always been *"'{a}' is not defined"*
+
+ - In JSHint and ESLint the message *"'{a}' was used before it was defined"* is
+   issued under closely related circumstances
 
 The situations that produce the warning have not changed despite changes to the
 text of the warning itself.
@@ -58,6 +63,26 @@ In the following example we attempt to set the value of the undeclared variable
 x = 10;
 alert("Errors...");
 console.log("Errors everywhere");
+```
+
+In JSHint and ESLint the "'{a}' was used before it was defined" error (as
+opposed to the "'{a}' is not defined" error) is raised when a **reference to an
+identifier occurs before the declaration** of that identifier. In the following
+example we reference the variable `a` before we declare it:
+
+<!---
+{
+    "linter": "jshint"
+}
+-->
+```javascript
+/*jshint latedef: true */
+function test() {
+    "use strict";
+    a = 1;
+    var a;
+    return a;
+}
 ```
 
 ### Why do I get this error?

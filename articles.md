@@ -203,7 +203,7 @@ the filename of the new article next to it.
  - Unclosed template literal
  - `hasownproperty.md` - ~~'hasOwnProperty' is a really bad name~~
  - `catch-leak.md` - ~~Value of '{a}' may be overwritten in IE 8 and earlier~~
- - '{a}' was used before it was defined
+ - `not-defined.md` - ~~'{a}' was used before it was defined~~
  - `already-defined.md` - ~~'{a}' is already defined~~
  - A dot following a number can be confused with a decimal point
  - Confusing minuses
@@ -422,7 +422,7 @@ the filename of the new article next to it.
  - `unused-expression.md` - ~~Expected an assignment or function call and
    instead saw an expression~~
  - `unused-var.md` - ~~{{var}} is defined but never used~~
- - {{a}} was used before it was defined
+ - `not-defined.md` - ~~{{a}} was used before it was defined~~
  - `unexpected-with.md` - ~~Unexpected use of 'with' statement~~
  - `unnecessary-function-parens.md` - ~~Wrapping non-IIFE function literals in
    parens is unnecessary~~
