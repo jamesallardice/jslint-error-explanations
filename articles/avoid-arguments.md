@@ -1,10 +1,12 @@
 <!---
 {
     "titles": [
-        "Avoid arguments.{a}"
+        "Avoid arguments.{a}",
+        "W059"
     ],
     "slugs": [
-        "avoid-arguments"
+        "avoid-arguments",
+        "w059"
     ],
     "linters": [
         "jslint",

@@ -1,10 +1,12 @@
 <!---
 {
     "titles": [
-        "A regular expression literal can be confused with '/='"
+        "A regular expression literal can be confused with '/='",
+        "E014"
     ],
     "slugs": [
-        "a-regular-expression-literal-can-be-confused-with"
+        "a-regular-expression-literal-can-be-confused-with",
+        "e014"
     ],
     "linters": [
         "jslint",
