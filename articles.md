@@ -202,7 +202,7 @@ the filename of the new article next to it.
  - Regular parameters cannot come after default parameters
  - Unclosed template literal
  - `hasownproperty.md` - ~~'hasOwnProperty' is a really bad name~~
- - Value of '{a}' may be overwritten in IE 8 and earlier
+ - `catch-leak.md` - ~~Value of '{a}' may be overwritten in IE 8 and earlier~~
  - '{a}' was used before it was defined
  - `already-defined.md` - ~~'{a}' is already defined~~
  - A dot following a number can be confused with a decimal point
@@ -342,7 +342,8 @@ the filename of the new article next to it.
    preferrable~~
  - Unexpected use of '{{operator}}'
  - `avoid-arguments.md` - ~~Avoid arguments.{{property}}~~
- - Value of '{{name}}' may be overwritten in IE 8 and earlier
+ - `catch-leak.md` - ~~Value of '{{name}}' may be overwritten in IE 8 and
+   earlier~~`
  - `extra-comma.md` - ~~Trailing comma~~
  - `unexpected-assignment.md` - ~~Expected a conditional expression and instead
    saw an assignment~~
