@@ -111,7 +111,8 @@ the filename of the new article next to it.
  - `todo-comment.md` - ~~Unexpected TODO comment~~
  - Line too long
  - Too many errors
- - A trailing decimal point can be confused with a dot
+ - `trailing-decimal.md` - ~~A trailing decimal point can be confused with a
+   dot~~
  - `unclosed-string.md` - ~~Unclosed string~~
  - `unclosed-comment.md` - ~~Unclosed comment~~
  - `unclosed-regex.md` - ~~Unclosed regular expression~~
@@ -205,7 +206,8 @@ the filename of the new article next to it.
  - `catch-leak.md` - ~~Value of '{a}' may be overwritten in IE 8 and earlier~~
  - `not-defined.md` - ~~'{a}' was used before it was defined~~
  - `already-defined.md` - ~~'{a}' is already defined~~
- - A dot following a number can be confused with a decimal point
+ - `valid-trailing-decimal.md` - ~~A dot following a number can be confused with
+   a decimal point~~
  - Confusing minuses
  - Confusing pluses
  - `leading-decimal.md` - ~~A leading decimal point can be confused with a dot~~
@@ -240,7 +242,8 @@ the filename of the new article next to it.
  - Bad or unnecessary escaping
  - Bad number '{a}'
  - Don't use extra leading zeros '{a}'
- - A trailing decimal point can be confused with a dot
+ - `trailing-decimal.md` - ~~A trailing decimal point can be confused with a
+   dot~~
  - Unexpected control character in regular expression
  - Unexpected escaped character '{a}' in regular expression
  - JavaScript URL
@@ -370,7 +373,8 @@ the filename of the new article next to it.
  - Multiple 'use strict' directives
  - Expected a "break" statement before "{{code}}"
  - `leading-decimal.md` - ~~A leading decimal point can be confused with a dot~~
- - A trailing decimal point can be confused with a dot
+ - `trailing-decimal.md` - ~~A trailing decimal point can be confused with a
+   dot~~
  - '{{name}}' is a function
  - Use the function form of "use strict"
  - `implied-eval.md` - ~~Implied eval. Consider passing a function instead of a
