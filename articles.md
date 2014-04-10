@@ -209,7 +209,7 @@ the filename of the new article next to it.
  - `valid-trailing-decimal.md` - ~~A dot following a number can be confused with
    a decimal point~~
  - Confusing minuses
- - Confusing pluses
+ - `confusing-pluses.md` - ~~Confusing pluses~~
  - `leading-decimal.md` - ~~A leading decimal point can be confused with a dot~~
  - `array-literal-notation.md` - ~~he array literal notation [] is preferable~~
  - `object-literal-notation.md` - ~~The object literal notation {} is
