@@ -3,12 +3,12 @@
     "titles": [
         "Confusing pluses",
         "Confusing plusses",
-        "W006"
+        "W007"
     ],
     "slugs": [
         "confusing-pluses",
         "confusing-plusses",
-        "w006"
+        "w007"
     ],
     "linters": [
         "jslint",
@@ -92,8 +92,8 @@ var a = "5",
 
 In JSHint 1.0.0 and above you have the ability to ignore any warning with a
 [special option syntax][jshintopts]. The identifier of this
-warning is **W006**. This means you can tell JSHint to not issue this warning
-with the `/*jshint -W006 */` directive.
+warning is **W007**. This means you can tell JSHint to not issue this warning
+with the `/*jshint -W007 */` directive.
 
 [es5-11.4.6]: http://es5.github.io/#x11.4.6
 [jshintopts]: http://jshint.com/docs/#options
