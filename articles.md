@@ -201,7 +201,7 @@ the filename of the new article next to it.
  - Mozilla requires the yield expression to be parenthesized here
  - Regular parameters cannot come after default parameters
  - Unclosed template literal
- - 'hasOwnProperty' is a really bad name
+ - `hasownproperty.md` - ~~'hasOwnProperty' is a really bad name~~
  - Value of '{a}' may be overwritten in IE 8 and earlier
  - '{a}' was used before it was defined
  - `already-defined.md` - ~~'{a}' is already defined~~
