@@ -208,7 +208,7 @@ the filename of the new article next to it.
  - `already-defined.md` - ~~'{a}' is already defined~~
  - `valid-trailing-decimal.md` - ~~A dot following a number can be confused with
    a decimal point~~
- - Confusing minuses
+ - `confusing-minuses.md` - ~~Confusing minuses~~
  - `confusing-pluses.md` - ~~Confusing pluses~~
  - `leading-decimal.md` - ~~A leading decimal point can be confused with a dot~~
  - `array-literal-notation.md` - ~~he array literal notation [] is preferable~~
