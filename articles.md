@@ -310,7 +310,7 @@ the filename of the new article next to it.
  - '{a}' is only available in ES6 (use esnext option)
  - `bad-declaration.md` - ~~You might be leaking a variable ({a}) here~~
  - Extending prototype of native object
- - Invalid typeof value
+ - `invalid-typeof-value.md` - ~~Invalid typeof value~~
  - '{a}' is already defined in outer scope
  - A generator function shall contain a yield statement
  - This line contains non-breaking spaces
