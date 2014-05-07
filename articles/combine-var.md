@@ -6,8 +6,8 @@
         "W081"
     ],
     "slugs": [
-        "do-not-wrap-function-literals-in-parens",
-        "wrapping-non-iife-functions-in-parens-is-unnecessary",
+        "combine-this-with-the-previous-var-statement",
+        "too-many-var-statements",
         "w081"
     ],
     "linters": [
