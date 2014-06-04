@@ -65,7 +65,7 @@ the filename of the new article next to it.
  - `function-constructor.md` - ~~The Function constructor is eval~~
  - `function-in-loop.md` - ~~Don't make functions within a loop~~
  - `invoked-declaration.md` - ~~Function statements are not invocable~~
- - Use the function form of 'use strict'
+ - `function-strict.md§ - ~~Use the function form of 'use strict'~~
  - Expected an identifier in an assignment and instead saw a function invocation
  - `implied-eval.md` - ~~Implied eval is evil. Pass a function instead of a
    string~~
@@ -293,7 +293,7 @@ the filename of the new article next to it.
  - Unexpected comma
  - Expected a string and instead saw {a}
  - The '{a}' key may produce unexpected results
- - Use the function form of "use strict"
+ - `function-strict.md` - ~~Use the function form of "use strict"~~
  - `unused-var.md` - ~~'{a}' is defined but never used~~
  - This character may get silently deleted by one or more browsers
  - The '{a}' property is deprecated
@@ -376,7 +376,7 @@ the filename of the new article next to it.
  - `trailing-decimal.md` - ~~A trailing decimal point can be confused with a
    dot~~
  - '{{name}}' is a function
- - Use the function form of "use strict"
+ - `function-strict.md` - ~~Use the function form of "use strict"~~
  - `implied-eval.md` - ~~Implied eval. Consider passing a function instead of a
    string~~
  - Reserved name '__iterator__'
