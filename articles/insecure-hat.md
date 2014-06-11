@@ -27,8 +27,8 @@ JSLint will only raise this warning if the `regexp` option is set to true.
 }
 -->
 ```javascript
- "Hello Bob".match(/[^a-z]/g);
- // Returns [ 'H', ' ', 'B' ]
+"Hello Bob".match(/[^a-z]/g);
+// Returns [ 'H', ' ', 'B' ]
 ```
 
 ### Why do I get this error?
@@ -44,7 +44,7 @@ It is safe to ignore or disable this error if you are only matching in order to 
 -->
 ```javascript
 /*jslint regexp:true*/ // Allow ^ because we're only using it to remove the matching characters
- "Hello Bob".replace(/[^A-Z]/g, "");
- /*jslint regexp:false*/
- // Returns "HB"
+"Hello Bob".replace(/[^A-Z]/g, "");
+/*jslint regexp:false*/
+// Returns "HB"
 ```
