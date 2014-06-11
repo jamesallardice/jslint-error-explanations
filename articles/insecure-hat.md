@@ -18,10 +18,9 @@
 
 ### When do I get this error?
 
-The "Insecure ^" error is thrown when JSLint, JSHint or ESLint
-encounters a regular expression containing the negation operator ^.
+The "Insecure ^" error is thrown when JSLint encounters a regular expression containing the negation operator ^.
 
-JSLint will only raise this warning if the `regexp` option is set to true. The following example runs the RegExp `/[^l]/g` on the string "Hello Bob", which matches any character that is not "l". We set the `g` global flag so that it examines every character of the input string. Any character apart from "l" is matched.
+JSLint will only raise this warning if the `regexp` option is set to true.
 <!---
 {
     "linter": "jslint"
