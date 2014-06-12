@@ -65,3 +65,7 @@ project with multiple developers to help keep things consistent.
 Note that this is an *enforcing* option which means JSHint does not apply it by
 default. If you do not explicitly set this option to `true` JSHint will allow
 the use of bitwise operators anywhere in your code.
+
+#### Recommendation
+
+Set this option to `true` (enforces the use of camel case and constant case).
