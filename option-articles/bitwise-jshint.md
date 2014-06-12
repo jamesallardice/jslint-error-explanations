@@ -19,9 +19,9 @@
 The JSHint `bitwise` option is used to disallow the usage of any bitwise
 operators. In JavaScript the available bitwise operators are `<<` (bitwise left
 shift), `>>` (bitwise right shift), `>>>` (unsigned bitwise right shift), `&`
-(bitwise AND), `|` (bitwise OR) and `^` (bitwise XOR). In the following example
-we are using the bitwise OR operator to round a number down to the closest
-integer which is a relatively common shorthand trick:
+(bitwise AND), `|` (bitwise OR), `^` (bitwise XOR) and `~` (bitwise NOT). In the
+following example we are using the bitwise OR operator to round a number down to
+the closest integer which is a relatively common shorthand trick:
 
 <!---
 {
