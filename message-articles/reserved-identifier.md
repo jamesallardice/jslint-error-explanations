@@ -115,7 +115,7 @@ the code is in strict mode or not. Here's the list:
  - `static`
  - `yield`
 
-You may not use any of the words listed above as an identifer. The only way to
+You may not use any of the words listed above as an identifier. The only way to
 fix this issue is to change the name of your variable to something more
 sensible.
 

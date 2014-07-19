@@ -32,8 +32,8 @@ var a = 5.4.toString();
 ```
 
 Note that this is slightly different to closely related "[A trailing decimal
-point can be consued with a dot][trailing]" error, although JSLint will use that
-message in this situation too.
+point can be confused with a dot][trailing]" error, although JSLint will use
+that message in this situation too.
 
 ### Why do I get this error?
 
@@ -42,7 +42,7 @@ Your script will run without error if you do not change it, but it could be
 confusing to other developers, especially at first glance.
 
 Since a number can only contain a single decimal point the parser is able to
-determine that any subsequent occurences of the character after a numeric
+determine that any subsequent occurrences of the character after a numeric
 literal can only be intended as a member operator. In other words the ambiguity
 of the `.` character is removed. However the construct can appear confusing at
 first glance.

@@ -49,7 +49,7 @@ reversed then the function would return `true` when `c` is truthy and either `a`
 or `b` is truthy.
 
 To avoid potential confusion around operator precedence JSLint prefers that the
-order of operation be explicity defined by parentheses:
+order of operation be explicitly defined by parentheses:
 
 <!---
 {

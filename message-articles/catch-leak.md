@@ -20,8 +20,8 @@
 
 The "Value of '{a}' may be overwritten in IE8 and earlier" error is thrown when
 JSHint or ESLint encounters **a `try...catch` statement in which the `catch`
-identifier is the same as a variable or function identifer**. The error is only
-raised when the identifer in question is declared in the same scope as the
+identifier is the same as a variable or function identifier**. The error is only
+raised when the identifier in question is declared in the same scope as the
 `catch`. In the following example we declare a variable, `a`, and then use `a`
 as the identifier in the `catch` block:
 
@@ -71,10 +71,10 @@ which its identifier is bound. When the `catch` block has been executed the
 running execution context's lexical environment is reset to the state it was in
 before the `catch` block. The running execution context is the scope in which
 the `catch` block occurs. This works as stated in all modern browsers but in
-Internet Explorer 8 and below the identifer of the `catch` block appears to be
+Internet Explorer 8 and below the identifier of the `catch` block appears to be
 bound to the running execution context's lexical environment rather than that of
 the `catch` block. The result is that an existing variable with the same
-identifer will be overwritten with the value of the exception. For an excellent
+identifier will be overwritten with the value of the exception. For an excellent
 in-depth analysis of this bug see [The "catch" with try...catch][ben] by Ben
 Alman.
 

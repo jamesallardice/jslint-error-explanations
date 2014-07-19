@@ -87,7 +87,7 @@ function example() {
 
 If you rely upon the behaviour of the `with` statement for a valid use-case,
 your only option is to ensure your code does not run in strict mode. This
-results in a different message from JSHint, but one that can be surpressed (in
+results in a different message from JSHint, but one that can be suppressed (in
 version 1.0.0 and above) with the appropriate warning identifier flag. See the
 page on the "[Don't use with][with]" error for more details:
 

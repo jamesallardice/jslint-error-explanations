@@ -21,7 +21,7 @@ In JSLint and JSHint the `indent` option is used to enforce a specific tab width
 in your code. Both tools make their own assumptions about when indentation
 should occur but are largely identical in this regard. In the following example
 we specify an indentation width of 4 spaces. Both tools expect the body of an
-`if` statement to be indented so both will warn if the identation is not of the
+`if` statement to be indented so both will warn if the indentation is not of the
 required width:
 
 <!---

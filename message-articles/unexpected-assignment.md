@@ -111,7 +111,7 @@ In this case you can disable the warning (if you're using JSHint or ESLint) or
 force the expression to become conditional, but only if you're using JSHint,
 ESLint or a version JSLint from before July 2013 (the message will be "Expected
 a conditional expression and instead saw an assignment"). If you're using a more
-recent version there appears to be no way to supress the "Unexpected assignment
+recent version there appears to be no way to suppress the "Unexpected assignment
 expression" warning:
 
 <!---

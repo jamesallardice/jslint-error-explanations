@@ -73,7 +73,7 @@ This behaviour is described in the specification ([ES5
 > the same magnitude but opposite sign.
 
 However, when the subtraction operator is used adjacent to the unary `-`
-operator an unforunate resemblance to the decrement operator arises. The
+operator an unfortunate resemblance to the decrement operator arises. The
 decrement operator, `--`, is used to subtract 1 from its operand. It can be used
 as a postfix or prefix operator which means it can appear after or before its
 operand. This makes the above example slightly confusing on first glance.

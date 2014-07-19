@@ -55,7 +55,7 @@ window.location.href = window.location.href;
 
 As you can see, both of those cause the "Weird assignment" error. It's a simple
 fix though. Since `window.location` is effectively an alias for
-`window.location.href` they are interchangable which means we can make the two
+`window.location.href` they are interchangeable which means we can make the two
 sides of the assignment different:
 
 <!---

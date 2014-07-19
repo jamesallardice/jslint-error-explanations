@@ -75,7 +75,7 @@ is a function then it will be invoked and the code may work but would be very
 misleading to anyone else reading.
 
 The solution to this error is to simply not use `hasOwnProperty` as a property
-identifer. If you are concerned that the value of `hasOwnProperty` is no longer
+identifier. If you are concerned that the value of `hasOwnProperty` is no longer
 the native function you may want to call the native function in the context of
 your object in `for...in` loop guards:
 

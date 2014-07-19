@@ -20,7 +20,7 @@
 The "ES5 option is now set per default" error is thrown when JSHint (version
 2.0.0 and above only) encounters **the `es5` option with a value of `true`**.
 Here's an example in which we set the `es5` option so we can use reserved words
-as property identifers (which was not allowed in ES3):
+as property identifiers (which was not allowed in ES3):
 
 <!---
 {

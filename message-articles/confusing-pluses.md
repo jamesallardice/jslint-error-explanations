@@ -71,7 +71,7 @@ This behaviour is described in the specification ([ES5
 > 2. Return ToNumber(GetValue(*expr*))
 
 However, when the addition operator is used adjacent to the unary `+` operator
-an unforunate resemblance to the increment operator arises. The increment
+an unfortunate resemblance to the increment operator arises. The increment
 operator, `++`, is used to add 1 to its operand. It can be used as a postfix or
 prefix operator which means it can appear after or before its operand. This
 makes the above example slightly confusing on first glance, especially as the
