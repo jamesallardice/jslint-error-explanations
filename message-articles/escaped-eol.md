@@ -49,7 +49,7 @@ text of the warning itself.
 The "Bad escapement of EOL. Use option multistr if needed" error, and the
 alternative "Multiline support is limited to browsers supporting ES5 only", is
 thrown when JSHint or ESLint encounters **a multiline string**. JSHint will only
-issue this warning the the `multistr` option is not set to `true`. In the
+issue this warning if the `multistr` option is not set to `true`. In the
 following example we attempt to assign a multiline string to the variable
 `myString`:
 
