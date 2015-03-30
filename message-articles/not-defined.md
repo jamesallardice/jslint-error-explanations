@@ -134,6 +134,24 @@ scope in which it should be available:
 var x = 10;
 ```
 
+If you understand the concept of hoisting and prefer to define functions after
+they are used (perhaps at the end of a file) you can tell JSHint to allow that
+specific use case by setting the `latedef` option to `nofunc`:
+
+<!---
+{
+    "linter": "jshint"
+}
+-->
+```javascript
+/*jshint latedef: nofunc */
+doStuff();
+
+function doStuff() {
+  return 1;
+}
+```
+
 In the case of environment-specific global identifiers (like `window` or
 `document` in the browser or `module` in Node.js) there are a few JSLint/JSHint
 options that you can set to let the linter know what environment the code is
