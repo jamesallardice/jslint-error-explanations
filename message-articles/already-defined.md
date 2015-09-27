@@ -2,6 +2,7 @@
 {
     "titles": [
         "{a} is already defined",
+        "Redefinition of '{a}' from line {b}",
         "W004"
     ],
     "slugs": [
@@ -16,6 +17,21 @@
     "author": "jallardice"
 }
 -->
+
+### History
+
+This warning has existed in two forms across JSLint and JSHint. It was
+introduced in the original version of JSLint and has remained in both tools
+ever since.
+
+ - In JSLint releases prior to May 2015 and all versions of JSHint the warning
+   given is *"{a} is already defined"*
+
+ - In JSLint releases from May 2015 and later the warning is *"Redefinition of
+   '{a}' from line {b}"*
+
+The situations that produce the warning have not changed despite changes to the
+text of the warning itself.
 
 ### When do I get this error?
 
