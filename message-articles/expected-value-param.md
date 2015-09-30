@@ -28,11 +28,11 @@ and setter. The getter will always return half of the set value:
 ```javascript
 var x = {
     actual: 10,
-    get x () {
+    get y() {
         "use strict";
         return this.actual / 2;
     },
-    set x (val) {
+    set y() {
         "use strict";
         this.actual = val;
     }
@@ -63,11 +63,11 @@ parameter accordingly:
 ```javascript
 var x = {
     actual: 10,
-    get x () {
+    get y() {
         "use strict";
         return this.actual / 2;
     },
-    set x (value) {
+    set y(value) {
         "use strict";
         this.actual = value;
     }
