@@ -36,7 +36,7 @@ Anyone! There are no restrictions whatsoever but please be sensible. But if you
 are planning on making thousands of requests over short periods of time please
 let me know or I'll probably throttle you.
 
-[site]: http://jslinterrors.com/
+[site]: http://linterrors.com/
 [contrib]: CONTRIBUTING.md
-[api]: http://jslinterrors.com/api/
+[api]: http://linterrors.com/api/
 [ccasa3]: http://creativecommons.org/licenses/by-sa/3.0/
