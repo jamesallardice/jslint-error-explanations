@@ -44,7 +44,7 @@ to reduce HTTP requests in production environments. If one of those files has a
 global strict mode directive and others do not, the concatenation would result
 in all scripts running in strict mode. If one the those scripts depends upon
 features that are disallowed in strict mode you may run into errors. Consider
-the following example which shows the previous script concatentated with another
+the following example which shows the previous script concatenated with another
 that relies upon features that are illegal in strict mode:
 
 <!---

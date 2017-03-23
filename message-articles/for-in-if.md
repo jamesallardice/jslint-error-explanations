@@ -24,7 +24,7 @@ The "The body of a for in should be wrapped in an if statement to filter
 unwanted properties from the prototype" error is thrown when JSLint encounters
 **a `for-in` statement in which the first statement is not an `if` statement
 containing a call to the `hasOwnProperty` method**. JSHint and ESLint are a
-little more leniant and do not enable this feature by default. They will only
+little more lenient and do not enable this feature by default. They will only
 warn when they encounter a `for-in` statement in which the first statement is
 not an `if` statement, regardless of the condition of that `if` statement.
 Here's an example in which we attempt to enumerate the properties of an object:

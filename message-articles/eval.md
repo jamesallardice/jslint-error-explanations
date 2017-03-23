@@ -82,7 +82,7 @@ var myString = "x",
     value = myObject[myString];
 ```
 
-The `eval` function is slow. If you're using it unecessarily, you're slowing
+The `eval` function is slow. If you're using it unnecessarily, you're slowing
 down your program for no reason. One cause of this is the fact that the engine
 has to parse the argument as a complete new program ([ES5
 &sect;15.1.2.1][es5-15.1.2.1]):

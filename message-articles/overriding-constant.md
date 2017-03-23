@@ -18,7 +18,7 @@
 ### When do I get this error?
 
 The "Attempting to override '{a}' which is a constant" error is thrown when
-JSHint encounters an **assignment expression with an identifer that has been
+JSHint encounters an **assignment expression with an identifier that has been
 declared in a constant variable statement**. In the following example we declare
 a constant `MY_CONST` and assign a value to it, and then attempt to change its
 value:

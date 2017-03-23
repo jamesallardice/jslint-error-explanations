@@ -21,7 +21,7 @@
 
 The "Do not assign to the exception parameter" error is thrown when JSLint,
 JSHint or ESLint encounters **an assignment inside a `catch` block to the
-identifer associated with that block**. In the following example we attempt to
+identifier associated with that block**. In the following example we attempt to
 assign a new value to the exception parameter `e`:
 
 <!---
@@ -92,7 +92,7 @@ in the `catch` block will cease to exist (since the lexical environment that
 contained it no longer exists).
 
 However, in Internet Explorer 8 and below, the `catch` block identifier leaks
-into the outer scope. In those browsers, you could accidently be assigning a
+into the outer scope. In those browsers, you could accidentally be assigning a
 value to the exception parameter, rather than a variable with the same
 identifier in an outer scope. For more information, have a read of this
 [excellent article][catch] by Ben Alman.

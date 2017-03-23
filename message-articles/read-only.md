@@ -52,7 +52,7 @@ String = function () {
 ```
 
 Between April 2013 and August 2013 JSLint also produced this message when it
-encountered **an assignment inside a `catch` block to the identifer associated
+encountered **an assignment inside a `catch` block to the identifier associated
 with that block**. This message was used instead of the older "[Do not assign to
 the exception parameter][exassign]" warning. Please see the page for that
 message for more details. The rest of this article will apply only to the above

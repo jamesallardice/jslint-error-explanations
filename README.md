@@ -18,7 +18,7 @@ here this is the place for all discussion around the site and API too.
 
 There is a simple API that can be used to find an explanation for linter
 messages dynamically. It's designed for integration into IDEs or web UIs. All
-responses are served wtih an `Access-Control-Allow-Origin: *` header so you can
+responses are served with an `Access-Control-Allow-Origin: *` header so you can
 request explanations from client-side JavaScript. See the [documentation][api]
 for all the details.
 

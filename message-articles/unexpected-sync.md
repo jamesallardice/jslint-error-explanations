@@ -41,7 +41,7 @@ parentheses follow the identifier).
 
 This error is raised to highlight a **lack of convention** and possible **bad
 practice**. Your code should run without problems if you don't change it, but
-it's likely there are better ways to acheive the same result.
+it's likely there are better ways to achieve the same result.
 
 In Node.js in particular, there are many asynchronous methods that provide
 synchronous equivalents. For example, there is a [`readdir`][readdir] method
@@ -72,7 +72,7 @@ fs.readdir("myDirectory", function (err, files) {
 ```
 
 Alternatively, if you have a real need to use synchronous methods, you can
-surpress this error by setting the `stupid` option to `true`. You can tell by
+suppress this error by setting the `stupid` option to `true`. You can tell by
 the name of the option how Douglas Crockford, author of JSLint, feels about
 this:
 

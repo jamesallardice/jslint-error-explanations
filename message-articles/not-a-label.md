@@ -97,7 +97,7 @@ function demo() {
 }
 ```
 
-Or alternatively by adding a label with the correct identifer to the label set
+Or alternatively by adding a label with the correct identifier to the label set
 of the `for` statement (although since November 2013 this will cause JSLint to
 raise a different warning, because it is now of the opinion that label
 statements should not be used at all):

@@ -41,7 +41,7 @@ new Date();
 
 ### Why do I get this error?
 
-This error is raised to highlight a a **lack of convention**. While the code is
+This error is raised to highlight a **lack of convention**. While the code is
 perfectly valid it contravenes best practice, and in the case of the example
 above it indicates completely pointless code.
 

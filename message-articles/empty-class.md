@@ -49,7 +49,7 @@ expression in the example above will always fail to match. Since it's unlikely
 you intended such behaviour, a warning is raised to highlight the fact that you
 may have overlooked something, or simply made a small typo.
 
-There is no JSLint or JSHint option that can be set to surpress this error. The
+There is no JSLint or JSHint option that can be set to suppress this error. The
 best way to resolve it is to simply remove any empty character classes from the
 regular expressions in question:
 

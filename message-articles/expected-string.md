@@ -71,7 +71,7 @@ function demo(a) {
 }
 ```
 
-In the case of unquoted JSON property identifer this error is raised to
+In the case of unquoted JSON property identifier this error is raised to
 highlight a **fatal syntax error**. The [JSON specification][json] states that
 property identifiers must be wrapped in double quotes:
 

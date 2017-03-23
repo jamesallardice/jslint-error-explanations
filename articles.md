@@ -355,7 +355,7 @@ the filename of the new article next to it.
  - Unexpected control character in regular expression
  - `debugger.md` - ~~Unexpected 'debugger' statement~~
  - `variable-delete.md` - ~~Variables should not be deleted~~
- - `regex-division.md` - ~~A regular expression literal can be confused wtih
+ - `regex-division.md` - ~~A regular expression literal can be confused with
    '/='~~
  - `duplicate-key.md` - ~~Duplicate key '{{key}}'~~
  - `unnecessary-else.md` - ~~Unexpected 'else' after 'return'~~

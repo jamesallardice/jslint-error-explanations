@@ -74,7 +74,7 @@ Property  | Type     | Description
 
 Most articles will include blocks of code. The [JSLint Errors website][site]
 converts each code block into an interactive editor and runs a linter on the
-contents of it. You can specifiy options that tell consumers which linter the
+contents of it. You can specify options that tell consumers which linter the
 block should apply to by default. Add an HTML comment before the code block of
 the following format:
 
