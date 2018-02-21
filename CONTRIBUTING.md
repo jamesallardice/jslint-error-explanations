@@ -103,5 +103,5 @@ Property  | Type     | Description
  - Prefer fenced code blocks to traditional indented blocks
  - If an article includes headings they should be of `h3` level and below
 
-[site]: http://jslinterrors.com/
+[site]: http://linterrors.com/
 [gfm]: http://github.github.com/github-flavored-markdown/
