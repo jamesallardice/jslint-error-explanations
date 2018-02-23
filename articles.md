@@ -70,7 +70,7 @@ the filename of the new article next to it.
  - `implied-eval.md` - ~~Implied eval is evil. Pass a function instead of a
    string~~
  - Unexpected 'in'. Compare with undefined or use the hasOwnProperty method
- - Insecure '{a}'
+ - `Insecure '{a}'` - Insecure ^
  - `use-isnan.md` - ~~Use the isNaN function to compare with NaN~~
  - `leading-decimal.md` - ~~A leading decimal point can be confused with a dot~~
  - Missing '{a}'
